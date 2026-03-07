@@ -20,4 +20,28 @@ describe('URL utils', () => {
       expect(decodeCompareParams('')).toEqual([])
     })
   })
+
+  describe('encodeFilterParams', () => {
+    it('should encode filters as URLSearchParams', () => {
+      const result = encodeFilterParams({ type: 'commercial', page: 1 })
+      expect(result.get('type')).toBe('commercial')
+      expect(result.get('page')).toBe('1')
+    })
+
+    it('should skip undefined values', () => {
+      const result = encodeFilterParams({ type: 'open-source', provider: undefined })
+      expect(result.get('type')).toBe('open-source')
+      expect(result.has('provider')).toBe(false)
+    })
+
+    it('should skip empty string values', () => {
+      const result = encodeFilterParams({ search: '' })
+      expect(result.has('search')).toBe(false)
+    })
+
+    it('should return empty params for empty object', () => {
+      const result = encodeFilterParams({})
+      expect(result.toString()).toBe('')
+    })
+  })
 })
