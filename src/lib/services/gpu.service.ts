@@ -1,5 +1,6 @@
 import { getConnection } from '@/lib/db/connection'
 import { GpuReferenceModel } from '@/lib/db/models/gpu-reference'
+import { serialize } from '@/lib/utils/serialize'
 
 interface GpuQuery {
   readonly category?: string
@@ -13,5 +14,6 @@ export async function getGpuList(query: GpuQuery) {
   if (query.category) filter.category = query.category
   if (query.minVram) filter.vram = { $gte: query.minVram }
 
-  return GpuReferenceModel.find(filter).sort({ vram: -1 }).lean()
+  const gpus = await GpuReferenceModel.find(filter).sort({ vram: -1 }).lean()
+  return serialize(gpus)
 }

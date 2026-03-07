@@ -1,14 +1,17 @@
 import { getConnection } from '@/lib/db/connection'
 import { IndustryPresetModel } from '@/lib/db/models/industry-preset'
+import { serialize } from '@/lib/utils/serialize'
 
 export async function getAllPresets() {
   await getConnection()
-  return IndustryPresetModel.find().lean()
+  const presets = await IndustryPresetModel.find().lean()
+  return serialize(presets)
 }
 
 export async function getPresetsByCategory(categorySlug: string) {
   await getConnection()
-  return IndustryPresetModel.find({ categorySlug }).lean()
+  const presets = await IndustryPresetModel.find({ categorySlug }).lean()
+  return serialize(presets)
 }
 
 export async function getPresetCategories() {

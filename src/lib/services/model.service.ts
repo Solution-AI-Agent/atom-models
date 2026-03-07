@@ -1,5 +1,6 @@
 import { getConnection } from '@/lib/db/connection'
 import { ModelModel } from '@/lib/db/models/model'
+import { serialize } from '@/lib/utils/serialize'
 import type { IModelListQuery } from '@/lib/types/model'
 
 export interface ModelListResult {
@@ -47,12 +48,13 @@ export async function getModels(query: IModelListQuery): Promise<ModelListResult
     ModelModel.countDocuments(filter),
   ])
 
-  return { models, total, page, limit }
+  return { models: serialize(models), total, page, limit }
 }
 
 export async function getModelBySlug(slug: string) {
   await getConnection()
-  return ModelModel.findOne({ slug }).lean()
+  const model = await ModelModel.findOne({ slug }).lean()
+  return model ? serialize(model) : null
 }
 
 export async function getSimilarModels(slug: string, limitCount = 4) {
@@ -60,7 +62,7 @@ export async function getSimilarModels(slug: string, limitCount = 4) {
   const model = await ModelModel.findOne({ slug }).lean()
   if (!model) return []
 
-  return ModelModel
+  const similar = await ModelModel
     .find({
       slug: { $ne: slug },
       $or: [
@@ -70,6 +72,7 @@ export async function getSimilarModels(slug: string, limitCount = 4) {
     })
     .limit(limitCount)
     .lean()
+  return serialize(similar)
 }
 
 export async function getNewModels(limitCount = 6) {
@@ -77,11 +80,12 @@ export async function getNewModels(limitCount = 6) {
   const thirtyDaysAgo = new Date()
   thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
 
-  return ModelModel
+  const models = await ModelModel
     .find({ releaseDate: { $gte: thirtyDaysAgo } })
     .sort({ releaseDate: -1 })
     .limit(limitCount)
     .lean()
+  return serialize(models)
 }
 
 export async function getModelCount() {
