@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getPresetCategories } from '@/lib/services/preset.service'
 import { IndustryCategoryList } from '@/components/recommendations/industry-category-list'
 

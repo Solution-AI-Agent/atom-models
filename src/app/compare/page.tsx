@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { Suspense, useEffect, useState, useCallback } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useCompare } from '@/contexts/compare-context'
 import { CompareGrid } from '@/components/compare/compare-grid'
@@ -13,6 +13,19 @@ import { Trash2 } from 'lucide-react'
 import type { IModel } from '@/lib/types/model'
 
 export default function ComparePage() {
+  return (
+    <Suspense fallback={
+      <div className="space-y-6 p-6">
+        <h1 className="text-2xl font-bold">모델 비교</h1>
+        <div className="flex items-center justify-center py-20 text-muted-foreground">로딩 중...</div>
+      </div>
+    }>
+      <ComparePageContent />
+    </Suspense>
+  )
+}
+
+function ComparePageContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { models: contextSlugs, addModel, removeModel, clearAll } = useCompare()

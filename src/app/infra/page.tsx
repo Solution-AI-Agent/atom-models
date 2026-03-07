@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getGpuList } from '@/lib/services/gpu.service'
 import { GpuTable } from '@/components/infra/gpu-table'
 import type { IGpuReference } from '@/lib/types/gpu'

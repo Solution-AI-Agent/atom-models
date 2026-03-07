@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { notFound } from 'next/navigation'
 import { getModelBySlug, getSimilarModels } from '@/lib/services/model.service'
 import { ModelHeader } from '@/components/detail/model-header'

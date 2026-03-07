@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getModels } from '@/lib/services/model.service'
 import { ExploreClient } from '@/components/explore/explore-client'
 import type { IModelListQuery, ModelType } from '@/lib/types/model'
