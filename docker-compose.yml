@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3100:3000"
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+    restart: unless-stopped

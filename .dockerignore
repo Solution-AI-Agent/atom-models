@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+*.md
+data/
+scripts/
+src/__tests__/
+e2e/
+jest.config.ts
+jest.setup.ts
