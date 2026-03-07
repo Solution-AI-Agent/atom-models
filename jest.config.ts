@@ -13,4 +13,15 @@ const config: Config = {
   modulePathIgnorePatterns: ['<rootDir>/.next/'],
 }
 
-export default createJestConfig(config)
+const jestConfig = async () => {
+  const fn = createJestConfig(config)
+  const resolved = await fn()
+  return {
+    ...resolved,
+    transformIgnorePatterns: [
+      'node_modules/(?!(bson)/)',
+    ],
+  }
+}
+
+export default jestConfig
