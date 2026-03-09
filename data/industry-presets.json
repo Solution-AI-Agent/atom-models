@@ -26,7 +26,7 @@
       ],
       "openSource": [
         { "modelSlug": "qwen-3-30b-a3b", "reason": "3B 활성 파라미터로 매우 빠른 추론, 한중일 강점" },
-        { "modelSlug": "llama-3-1-8b", "reason": "경량 모델로 온프레미스 운영 비용 최소화" },
+        { "modelSlug": "mistral-small-3-1", "reason": "24B 경량 모델로 빠른 추론, 온프레미스 운영 비용 최소화" },
         { "modelSlug": "phi-4-mini", "reason": "초소형 모델로 엣지 배포 가능" }
       ]
     },
@@ -60,7 +60,7 @@
       ],
       "openSource": [
         { "modelSlug": "qwen-3-32b", "reason": "32B 밀집 모델로 추론 품질 우수, 한중일 지원" },
-        { "modelSlug": "llama-3-3-70b", "reason": "검증된 70B 모델로 복잡한 대화 처리" },
+        { "modelSlug": "deepseek-v3", "reason": "671B MoE로 복잡한 대화 처리 능력 우수" },
         { "modelSlug": "gemma-3-27b", "reason": "다국어 지원이 뛰어나 글로벌 CS에 적합" }
       ]
     },
@@ -127,7 +127,7 @@
         { "modelSlug": "deepseek-v3", "reason": "상용급 문서 품질에 최저 비용" }
       ],
       "openSource": [
-        { "modelSlug": "llama-3-3-70b", "reason": "고품질 영문 기술 문서 생성" },
+        { "modelSlug": "deepseek-v3-2", "reason": "최신 685B MoE로 고품질 기술 문서 생성" },
         { "modelSlug": "qwen-3-32b", "reason": "다국어 문서화에 강점" },
         { "modelSlug": "gemma-3-27b", "reason": "140+ 언어 지원으로 글로벌 문서화" }
       ]
@@ -163,7 +163,7 @@
       "openSource": [
         { "modelSlug": "qwen-3-235b-a22b", "reason": "오픈소스 최상위 추론, MoE 효율" },
         { "modelSlug": "deepseek-r1", "reason": "강력한 추론으로 복잡한 워크플로우 처리" },
-        { "modelSlug": "llama-4-maverick", "reason": "400B MoE로 고성능 에이전트 가능" }
+        { "modelSlug": "kimi-k2-5", "reason": "에이전트 도구 사용과 자율 추론 능력 최상위" }
       ]
     },
     "description": "AI 에이전트가 도구를 활용하여 자율적으로 복잡한 작업을 수행하는 워크플로우. 도구 호출, 계획 수립, 자가 수정 능력 필요.",
@@ -196,7 +196,7 @@
       ],
       "openSource": [
         { "modelSlug": "qwen-3-32b", "reason": "한중일 비즈니스 커뮤니케이션에 강점" },
-        { "modelSlug": "llama-3-3-70b", "reason": "영문 비즈니스 이메일 품질 우수" },
+        { "modelSlug": "exaone-3-5-32b", "reason": "한국어 비즈니스 문체에 특화된 국산 모델" },
         { "modelSlug": "gemma-3-27b", "reason": "다국어 마케팅 콘텐츠 생성" }
       ]
     },
@@ -229,7 +229,7 @@
         { "modelSlug": "deepseek-v3", "reason": "비용 대비 우수한 콘텐츠 품질" }
       ],
       "openSource": [
-        { "modelSlug": "llama-4-maverick", "reason": "400B MoE로 고품질 멀티모달 콘텐츠" },
+        { "modelSlug": "kimi-k2-5", "reason": "멀티모달 지원과 창의적 콘텐츠 생성 능력" },
         { "modelSlug": "qwen-3-235b-a22b", "reason": "다국어 콘텐츠 생성 최상위" },
         { "modelSlug": "qwen-3-32b", "reason": "로컬 실행 가능한 고품질 콘텐츠 모델" }
       ]
@@ -265,7 +265,7 @@
       "openSource": [
         { "modelSlug": "qwen-3-30b-a3b", "reason": "3B 활성으로 매우 빠른 추론, 대량 처리" },
         { "modelSlug": "phi-4", "reason": "14B로 준수한 추론, 빠른 처리" },
-        { "modelSlug": "llama-3-1-8b", "reason": "파인튜닝으로 리드 스코어링 특화 가능" }
+        { "modelSlug": "mistral-small-3-1", "reason": "24B로 빠른 분류와 스코어링, 파인튜닝 용이" }
       ]
     },
     "description": "고객 데이터 분석 기반 리드 우선순위 자동 판정. 구매 의향, 적합도, 긴급도 등 멀티팩터 스코어링.",
@@ -299,7 +299,7 @@
       "openSource": [
         { "modelSlug": "deepseek-r1", "reason": "추론 특화로 복잡한 금융 분석 가능" },
         { "modelSlug": "qwen-3-235b-a22b", "reason": "대형 MoE로 정밀한 수치 분석" },
-        { "modelSlug": "llama-4-maverick", "reason": "400B MoE로 대규모 데이터 분석" }
+        { "modelSlug": "glm-4-7", "reason": "355B MoE로 강력한 추론 기반 금융 분석" }
       ]
     },
     "description": "재무제표, 리서치 리포트, 시장 데이터 분석 및 리스크 평가. 정량 분석과 논리적 추론이 핵심.",
@@ -332,7 +332,7 @@
       ],
       "openSource": [
         { "modelSlug": "qwen-3-32b", "reason": "금융 용어에 강한 한중일 모델" },
-        { "modelSlug": "llama-3-3-70b", "reason": "검증된 70B로 신뢰성 높은 상담" },
+        { "modelSlug": "exaone-3-5-32b", "reason": "한국어 금융 용어에 강한 국산 32B 모델" },
         { "modelSlug": "gemma-3-27b", "reason": "다국어 지원으로 글로벌 금융 상담" }
       ]
     },
@@ -400,7 +400,7 @@
       ],
       "openSource": [
         { "modelSlug": "qwen-3-32b", "reason": "한중일 이커머스 콘텐츠 생성 특화" },
-        { "modelSlug": "llama-4-scout", "reason": "멀티모달로 이미지 기반 설명 생성" },
+        { "modelSlug": "kimi-k2-5", "reason": "멀티모달로 이미지 기반 상품 설명 생성" },
         { "modelSlug": "gemma-3-27b", "reason": "이미지 이해 가능한 오픈소스 모델" }
       ]
     },
