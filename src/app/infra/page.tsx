@@ -9,6 +9,7 @@ export default async function InfraPage() {
 
   const serialized: IGpuReference[] = gpus.map((gpu) => ({
     name: gpu.name,
+    slug: gpu.slug,
     vendor: gpu.vendor,
     vram: gpu.vram,
     memoryType: gpu.memoryType,

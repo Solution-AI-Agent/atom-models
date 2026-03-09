@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import type { IGpuReference } from '@/lib/types/gpu'
@@ -18,7 +19,9 @@ export function GpuCard({ gpu }: GpuCardProps) {
       <CardContent className="space-y-3 p-4">
         <div className="flex items-start justify-between">
           <div>
-            <h3 className="font-semibold">{gpu.name}</h3>
+            <Link href={`/infra/${gpu.slug}`} className="hover:underline">
+              <h3 className="font-semibold">{gpu.name}</h3>
+            </Link>
             <p className="text-sm text-muted-foreground">{gpu.vendor}</p>
           </div>
           <Badge variant="outline">{categoryLabels[gpu.category] || gpu.category}</Badge>

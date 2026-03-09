@@ -18,8 +18,8 @@ beforeAll(() => {
 })
 
 const mockGpus = [
-  { name: 'A100 80GB', vendor: 'NVIDIA', vram: 80, memoryType: 'HBM2e', fp16Tflops: 312, int8Tops: 624, tdp: 300, msrp: 10000, cloudHourly: 1.10, category: 'datacenter' as const, notes: '' },
-  { name: 'RTX 4090', vendor: 'NVIDIA', vram: 24, memoryType: 'GDDR6X', fp16Tflops: 165, int8Tops: 660, tdp: 450, msrp: 1599, cloudHourly: 0.40, category: 'consumer' as const, notes: '' },
+  { name: 'A100 80GB', slug: 'a100-80gb', vendor: 'NVIDIA', vram: 80, memoryType: 'HBM2e', fp16Tflops: 312, int8Tops: 624, tdp: 300, msrp: 10000, cloudHourly: 1.10, category: 'datacenter' as const, notes: '' },
+  { name: 'RTX 4090', slug: 'rtx-4090', vendor: 'NVIDIA', vram: 24, memoryType: 'GDDR6X', fp16Tflops: 165, int8Tops: 660, tdp: 450, msrp: 1599, cloudHourly: 0.40, category: 'consumer' as const, notes: '' },
 ]
 
 describe('GpuTable', () => {

@@ -2,6 +2,7 @@ import mongoose, { Schema, Document, Model } from 'mongoose'
 
 export interface IGpuReferenceDocument extends Document {
   name: string
+  slug: string
   vendor: string
   vram: number
   memoryType: string
@@ -16,6 +17,7 @@ export interface IGpuReferenceDocument extends Document {
 
 const GpuReferenceSchema = new Schema({
   name:         { type: String, required: true, unique: true },
+  slug:         { type: String, required: true, unique: true },
   vendor:       String,
   vram:         Number,
   memoryType:   String,

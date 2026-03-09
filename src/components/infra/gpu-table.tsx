@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import Link from 'next/link'
 import {
   Table,
   TableBody,
@@ -109,7 +110,11 @@ export function GpuTable({ gpus }: GpuTableProps) {
             <TableBody>
               {filteredGpus.map((gpu) => (
                 <TableRow key={gpu.name}>
-                  <TableCell className="font-medium">{gpu.name}</TableCell>
+                  <TableCell className="font-medium">
+                    <Link href={`/infra/${gpu.slug}`} className="hover:underline">
+                      {gpu.name}
+                    </Link>
+                  </TableCell>
                   <TableCell>{gpu.vendor}</TableCell>
                   <TableCell>{gpu.vram} GB</TableCell>
                   <TableCell>{gpu.memoryType}</TableCell>

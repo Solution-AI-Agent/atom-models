@@ -1,6 +1,7 @@
 [
   {
     "name": "NVIDIA H100 80GB SXM",
+    "slug": "nvidia-h100-80gb-sxm",
     "vendor": "NVIDIA",
     "vram": 80,
     "memoryType": "HBM3",
@@ -14,6 +15,7 @@
   },
   {
     "name": "NVIDIA A100 80GB SXM",
+    "slug": "nvidia-a100-80gb-sxm",
     "vendor": "NVIDIA",
     "vram": 80,
     "memoryType": "HBM2e",
@@ -27,6 +29,7 @@
   },
   {
     "name": "NVIDIA A100 40GB PCIe",
+    "slug": "nvidia-a100-40gb-pcie",
     "vendor": "NVIDIA",
     "vram": 40,
     "memoryType": "HBM2e",
@@ -40,6 +43,7 @@
   },
   {
     "name": "NVIDIA L40S",
+    "slug": "nvidia-l40s",
     "vendor": "NVIDIA",
     "vram": 48,
     "memoryType": "GDDR6",
@@ -53,6 +57,7 @@
   },
   {
     "name": "NVIDIA L4",
+    "slug": "nvidia-l4",
     "vendor": "NVIDIA",
     "vram": 24,
     "memoryType": "GDDR6",
@@ -66,6 +71,7 @@
   },
   {
     "name": "NVIDIA RTX 4090",
+    "slug": "nvidia-rtx-4090",
     "vendor": "NVIDIA",
     "vram": 24,
     "memoryType": "GDDR6X",
@@ -79,6 +85,7 @@
   },
   {
     "name": "NVIDIA RTX 4080",
+    "slug": "nvidia-rtx-4080",
     "vendor": "NVIDIA",
     "vram": 16,
     "memoryType": "GDDR6X",
@@ -92,6 +99,7 @@
   },
   {
     "name": "NVIDIA RTX 3090",
+    "slug": "nvidia-rtx-3090",
     "vendor": "NVIDIA",
     "vram": 24,
     "memoryType": "GDDR6X",
@@ -105,6 +113,7 @@
   },
   {
     "name": "NVIDIA RTX 6000 Ada",
+    "slug": "nvidia-rtx-6000-ada",
     "vendor": "NVIDIA",
     "vram": 48,
     "memoryType": "GDDR6 ECC",
@@ -118,6 +127,7 @@
   },
   {
     "name": "NVIDIA A6000",
+    "slug": "nvidia-a6000",
     "vendor": "NVIDIA",
     "vram": 48,
     "memoryType": "GDDR6 ECC",
@@ -131,6 +141,7 @@
   },
   {
     "name": "NVIDIA RTX 5090",
+    "slug": "nvidia-rtx-5090",
     "vendor": "NVIDIA",
     "vram": 32,
     "memoryType": "GDDR7",
