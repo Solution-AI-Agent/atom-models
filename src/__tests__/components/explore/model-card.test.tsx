@@ -6,33 +6,33 @@ jest.mock('@/contexts/compare-context', () => ({
 }))
 
 const mockModel = {
-  name: 'Llama 4 Maverick', slug: 'llama-4-maverick', provider: 'Meta',
-  type: 'open-source' as const, tier: 'flagship' as const, parameterSize: 400,
-  pricing: { input: 0.2, output: 0.6, cachingDiscount: 0, batchDiscount: 0 },
-  scores: { quality: 80, speed: 88, reasoning: 72, coding: 75, multimodal: 78 },
-  contextWindow: 1048576,
-  infrastructure: { minGpu: '4x A100 80GB', vramFp16: 280, vramInt8: 140, vramInt4: 70, recommendedFramework: ['vLLM'], estimatedTps: 45 },
-  releaseDate: '2025-04-05', isRecentlyReleased: false,
-  activeParameters: 17, architecture: 'moe' as const,
-  maxOutput: 16384, license: 'Llama 4 Community',
+  name: 'DeepSeek V3.2', slug: 'deepseek-v3-2', provider: 'DeepSeek',
+  type: 'open-source' as const, tier: 'flagship' as const, parameterSize: 685,
+  pricing: { input: 0.1, output: 0.2, cachingDiscount: 0, batchDiscount: 0 },
+  scores: { quality: 92, speed: 72, reasoning: 93, coding: 90, multimodal: 20 },
+  contextWindow: 163840,
+  infrastructure: { minGpu: '8x A100 80GB', vramFp16: 1370, vramInt8: 685, vramInt4: 343, recommendedFramework: ['vLLM', 'SGLang'], estimatedTps: 55 },
+  releaseDate: '2025-06-25', isRecentlyReleased: false,
+  activeParameters: 37, architecture: 'moe' as const,
+  maxOutput: 16384, license: 'MIT',
   languageScores: {}, benchmarks: {},
-  memo: '', sourceUrls: [], colorCode: '#3B82F6', lastVerifiedAt: '2026-03-01',
+  memo: '', sourceUrls: [], colorCode: '#4D6BFE', lastVerifiedAt: '2026-03-01',
 }
 
 describe('ModelCard', () => {
   it('should render model name and provider', () => {
     render(<ModelCard model={mockModel} />)
-    expect(screen.getByText('Llama 4 Maverick')).toBeInTheDocument()
-    expect(screen.getByText('Meta')).toBeInTheDocument()
+    expect(screen.getByText('DeepSeek V3.2')).toBeInTheDocument()
+    expect(screen.getByText('DeepSeek')).toBeInTheDocument()
   })
 
   it('should show infrastructure info for open-source models', () => {
     render(<ModelCard model={mockModel} />)
-    expect(screen.getByText(/4x A100 80GB/)).toBeInTheDocument()
+    expect(screen.getByText(/8x A100 80GB/)).toBeInTheDocument()
   })
 
   it('should show parameter size', () => {
     render(<ModelCard model={mockModel} />)
-    expect(screen.getByText(/400B/)).toBeInTheDocument()
+    expect(screen.getByText(/685B/)).toBeInTheDocument()
   })
 })
