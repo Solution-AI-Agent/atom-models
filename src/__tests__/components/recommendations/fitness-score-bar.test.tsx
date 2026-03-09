@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react'
 import { FitnessScoreBar } from '@/components/recommendations/fitness-score-bar'
 
 const mockRankedModels = [
-  { slug: 'model-a', name: 'Model A', provider: 'TestCo', score: 87.5, breakdown: {} },
-  { slug: 'model-b', name: 'Model B', provider: 'TestCo', score: 72.3, breakdown: {} },
+  { slug: 'model-a', name: 'Model A', provider: 'TestCo', type: 'commercial' as const, score: 87.5, breakdown: {}, infra: null },
+  { slug: 'model-b', name: 'Model B', provider: 'TestCo', type: 'open-source' as const, score: 72.3, breakdown: {}, infra: null },
 ]
 
 describe('FitnessScoreBar', () => {

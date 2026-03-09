@@ -2,9 +2,10 @@ import type { IRankedModel } from '@/lib/types/preset'
 
 interface FitnessScoreBarProps {
   readonly rankedModels: readonly IRankedModel[]
+  readonly barColorClass?: string
 }
 
-export function FitnessScoreBar({ rankedModels }: FitnessScoreBarProps) {
+export function FitnessScoreBar({ rankedModels, barColorClass = 'bg-primary/80' }: FitnessScoreBarProps) {
   const maxScore = rankedModels.length > 0 ? rankedModels[0].score : 100
 
   return (
@@ -24,7 +25,7 @@ export function FitnessScoreBar({ rankedModels }: FitnessScoreBarProps) {
               </div>
               <div className="flex-1">
                 <div
-                  className="h-5 rounded bg-primary/80 transition-all"
+                  className={`h-5 rounded transition-all ${barColorClass}`}
                   style={{ width: `${widthPercent}%` }}
                 />
               </div>

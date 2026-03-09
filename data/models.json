@@ -240,6 +240,54 @@
     "lastVerifiedAt": "2025-04-01"
   },
   {
+    "name": "o3",
+    "slug": "o3",
+    "provider": "OpenAI",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 200000,
+    "maxOutput": 100000,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 2.0,
+      "output": 8.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 93,
+      "speed": 35,
+      "reasoning": 97,
+      "coding": 94,
+      "multimodal": 75
+    },
+    "languageScores": {
+      "ko": 85,
+      "en": 97,
+      "ja": 85,
+      "zh": 87
+    },
+    "benchmarks": {
+      "mmlu": 93.3,
+      "gpqa": 83.4,
+      "swe_bench": 69.1,
+      "aime": 98.1,
+      "hle": 14.0,
+      "mgsm": 95.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-04-16",
+    "memo": "Full o3 reasoning model. Top-tier math and science. Replaced o1 as primary reasoning model.",
+    "sourceUrls": [
+      "https://openai.com/index/introducing-o3-and-o4-mini/"
+    ],
+    "colorCode": "#10A37F",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
     "name": "o4-mini",
     "slug": "o4-mini",
     "provider": "OpenAI",
@@ -288,6 +336,294 @@
     "lastVerifiedAt": "2025-05-01"
   },
   {
+    "name": "GPT-4.1",
+    "slug": "gpt-4-1",
+    "provider": "OpenAI",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 1047576,
+    "maxOutput": 32768,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 2.0,
+      "output": 8.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 88,
+      "speed": 78,
+      "reasoning": 82,
+      "coding": 90,
+      "multimodal": 85
+    },
+    "languageScores": {
+      "ko": 83,
+      "en": 96,
+      "ja": 84,
+      "zh": 86
+    },
+    "benchmarks": {
+      "mmlu": 89.0,
+      "gpqa": 60.0,
+      "swe_bench": 54.6,
+      "aime": 30.0,
+      "hle": 4.0,
+      "mgsm": 91.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-04-14",
+    "memo": "1M context window. Optimized for coding and instruction following. Strong agentic performance.",
+    "sourceUrls": [
+      "https://openai.com/index/gpt-4-1/"
+    ],
+    "colorCode": "#10A37F",
+    "lastVerifiedAt": "2025-05-01"
+  },
+  {
+    "name": "GPT-4.1 Mini",
+    "slug": "gpt-4-1-mini",
+    "provider": "OpenAI",
+    "type": "commercial",
+    "tier": "small",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 1047576,
+    "maxOutput": 32768,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 0.4,
+      "output": 1.6,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 78,
+      "speed": 90,
+      "reasoning": 72,
+      "coding": 80,
+      "multimodal": 78
+    },
+    "languageScores": {
+      "ko": 75,
+      "en": 92,
+      "ja": 76,
+      "zh": 80
+    },
+    "benchmarks": {
+      "mmlu": 85.0,
+      "gpqa": 48.0,
+      "swe_bench": 38.0,
+      "aime": 18.0,
+      "hle": 2.0,
+      "mgsm": 88.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-04-14",
+    "memo": "Compact version of GPT-4.1. 1M context at low cost. Good balance for most use cases.",
+    "sourceUrls": [
+      "https://openai.com/index/gpt-4-1/"
+    ],
+    "colorCode": "#10A37F",
+    "lastVerifiedAt": "2025-05-01"
+  },
+  {
+    "name": "GPT-4.1 Nano",
+    "slug": "gpt-4-1-nano",
+    "provider": "OpenAI",
+    "type": "commercial",
+    "tier": "micro",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 1047576,
+    "maxOutput": 32768,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 0.1,
+      "output": 0.4,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 65,
+      "speed": 96,
+      "reasoning": 55,
+      "coding": 62,
+      "multimodal": 65
+    },
+    "languageScores": {
+      "ko": 62,
+      "en": 86,
+      "ja": 64,
+      "zh": 68
+    },
+    "benchmarks": {
+      "mmlu": 78.0,
+      "gpqa": 35.0,
+      "swe_bench": 22.0,
+      "aime": 8.0,
+      "hle": 0.8,
+      "mgsm": 80.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-04-14",
+    "memo": "Cheapest OpenAI model. Ideal for classification, extraction, and high-volume simple tasks.",
+    "sourceUrls": [
+      "https://openai.com/index/gpt-4-1/"
+    ],
+    "colorCode": "#10A37F",
+    "lastVerifiedAt": "2025-05-01"
+  },
+  {
+    "name": "GPT-5",
+    "slug": "gpt-5",
+    "provider": "OpenAI",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 400000,
+    "maxOutput": 32768,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 1.25,
+      "output": 10.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 93,
+      "speed": 65,
+      "reasoning": 95,
+      "coding": 94,
+      "multimodal": 92
+    },
+    "languageScores": {
+      "ko": 88,
+      "en": 97,
+      "ja": 88,
+      "zh": 90
+    },
+    "benchmarks": {
+      "mmlu": 93.5,
+      "gpqa": 80.0,
+      "swe_bench": 55.0,
+      "aime": 88.0,
+      "hle": 15.0,
+      "mgsm": 95.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-06-15",
+    "memo": "First model in GPT-5 family. Major leap in reasoning and multimodal. 400K context window.",
+    "sourceUrls": [
+      "https://openai.com/index/gpt-5/"
+    ],
+    "colorCode": "#10A37F",
+    "lastVerifiedAt": "2026-03-08"
+  },
+  {
+    "name": "GPT-5.2",
+    "slug": "gpt-5-2",
+    "provider": "OpenAI",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 400000,
+    "maxOutput": 128000,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 1.75,
+      "output": 14.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 95,
+      "speed": 60,
+      "reasoning": 96,
+      "coding": 95,
+      "multimodal": 93
+    },
+    "languageScores": {
+      "ko": 90,
+      "en": 98,
+      "ja": 90,
+      "zh": 92
+    },
+    "benchmarks": {
+      "mmlu": 94.0,
+      "gpqa": 82.0,
+      "swe_bench": 60.0,
+      "aime": 90.0,
+      "hle": 18.0,
+      "mgsm": 96.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-11-10",
+    "memo": "GPT-5.2 with 128K output. Enhanced reasoning and coding. Stronger agentic capabilities.",
+    "sourceUrls": [
+      "https://openai.com/index/gpt-5-2/"
+    ],
+    "colorCode": "#10A37F",
+    "lastVerifiedAt": "2026-03-08"
+  },
+  {
+    "name": "GPT-5.4",
+    "slug": "gpt-5-4",
+    "provider": "OpenAI",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 272000,
+    "maxOutput": 128000,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 2.5,
+      "output": 15.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 96,
+      "speed": 55,
+      "reasoning": 97,
+      "coding": 96,
+      "multimodal": 94
+    },
+    "languageScores": {
+      "ko": 92,
+      "en": 98,
+      "ja": 91,
+      "zh": 93
+    },
+    "benchmarks": {
+      "mmlu": 95.0,
+      "gpqa": 85.0,
+      "swe_bench": 65.0,
+      "aime": 93.0,
+      "hle": 22.0,
+      "mgsm": 97.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2026-03-05",
+    "memo": "Latest GPT-5 iteration. State-of-the-art reasoning and coding. Released March 2026.",
+    "sourceUrls": [
+      "https://openai.com/index/gpt-5-4/"
+    ],
+    "colorCode": "#10A37F",
+    "lastVerifiedAt": "2026-03-08"
+  },
+  {
     "name": "Claude Opus 4.5",
     "slug": "claude-opus-4-5",
     "provider": "Anthropic",
@@ -321,19 +657,19 @@
     "benchmarks": {
       "mmlu": 90.5,
       "gpqa": 74.8,
-      "swe_bench": 62.3,
+      "swe_bench": 80.9,
       "aime": 76.7,
       "hle": 9.3,
       "mgsm": 95.0
     },
     "infrastructure": null,
-    "releaseDate": "2025-05-22",
+    "releaseDate": "2025-11-24",
     "memo": "Most capable Claude model. Deep reasoning, exceptional coding, strong creative writing.",
     "sourceUrls": [
       "https://www.anthropic.com/news/claude-opus-4-5"
     ],
     "colorCode": "#D97706",
-    "lastVerifiedAt": "2026-03-08"
+    "lastVerifiedAt": "2026-03-09"
   },
   {
     "name": "Claude Sonnet 4.5",
@@ -368,20 +704,20 @@
     },
     "benchmarks": {
       "mmlu": 89.0,
-      "gpqa": 65.0,
-      "swe_bench": 55.0,
+      "gpqa": 83.4,
+      "swe_bench": 77.2,
       "aime": 55.0,
       "hle": 5.5,
       "mgsm": 93.0
     },
     "infrastructure": null,
-    "releaseDate": "2025-05-22",
+    "releaseDate": "2025-09-29",
     "memo": "Best balance of intelligence and speed in Claude family. Ideal for coding and complex tasks.",
     "sourceUrls": [
       "https://www.anthropic.com/news/claude-sonnet-4-5"
     ],
     "colorCode": "#D97706",
-    "lastVerifiedAt": "2026-03-08"
+    "lastVerifiedAt": "2026-03-09"
   },
   {
     "name": "Claude Haiku 3.5",
@@ -430,6 +766,151 @@
     ],
     "colorCode": "#D97706",
     "lastVerifiedAt": "2025-04-01"
+  },
+  {
+    "name": "Claude Haiku 4.5",
+    "slug": "claude-haiku-4-5",
+    "provider": "Anthropic",
+    "type": "commercial",
+    "tier": "mini",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 200000,
+    "maxOutput": 8192,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 1.0,
+      "output": 5.0,
+      "cachingDiscount": 0.9,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 78,
+      "speed": 92,
+      "reasoning": 72,
+      "coding": 78,
+      "multimodal": 68
+    },
+    "languageScores": {
+      "ko": 78,
+      "en": 92,
+      "ja": 78,
+      "zh": 80
+    },
+    "benchmarks": {
+      "mmlu": 85.0,
+      "gpqa": 45.0,
+      "swe_bench": 30.0,
+      "aime": 20.0,
+      "hle": 2.0,
+      "mgsm": 89.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-05-22",
+    "memo": "Fast and capable. Significant upgrade from Haiku 3.5. Good for latency-sensitive agentic tasks.",
+    "sourceUrls": [
+      "https://www.anthropic.com/news/claude-haiku-4-5"
+    ],
+    "colorCode": "#D97706",
+    "lastVerifiedAt": "2026-03-08"
+  },
+  {
+    "name": "Claude Opus 4.6",
+    "slug": "claude-opus-4-6",
+    "provider": "Anthropic",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 200000,
+    "maxOutput": 32000,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 5.0,
+      "output": 25.0,
+      "cachingDiscount": 0.9,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 97,
+      "speed": 42,
+      "reasoning": 97,
+      "coding": 97,
+      "multimodal": 85
+    },
+    "languageScores": {
+      "ko": 92,
+      "en": 99,
+      "ja": 90,
+      "zh": 90
+    },
+    "benchmarks": {
+      "mmlu": 92.0,
+      "gpqa": 78.0,
+      "swe_bench": 72.0,
+      "aime": 82.0,
+      "hle": 12.0,
+      "arc_agi_2": 68.8,
+      "mgsm": 96.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2026-02-05",
+    "memo": "Most capable Claude model. 68.8% ARC-AGI-2. Exceptional coding and deep reasoning. Extended thinking support.",
+    "sourceUrls": [
+      "https://www.anthropic.com/news/claude-opus-4-6"
+    ],
+    "colorCode": "#D97706",
+    "lastVerifiedAt": "2026-03-08"
+  },
+  {
+    "name": "Claude Sonnet 4.6",
+    "slug": "claude-sonnet-4-6",
+    "provider": "Anthropic",
+    "type": "commercial",
+    "tier": "mid",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 200000,
+    "maxOutput": 16000,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 3.0,
+      "output": 15.0,
+      "cachingDiscount": 0.9,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 93,
+      "speed": 70,
+      "reasoning": 92,
+      "coding": 95,
+      "multimodal": 82
+    },
+    "languageScores": {
+      "ko": 90,
+      "en": 97,
+      "ja": 88,
+      "zh": 88
+    },
+    "benchmarks": {
+      "mmlu": 91.0,
+      "gpqa": 72.0,
+      "swe_bench": 79.6,
+      "aime": 68.0,
+      "hle": 8.0,
+      "mgsm": 95.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2026-02-17",
+    "memo": "Best coding model in Claude family. 79.6% SWE-bench. Excellent speed-to-quality ratio.",
+    "sourceUrls": [
+      "https://www.anthropic.com/news/claude-sonnet-4-6"
+    ],
+    "colorCode": "#D97706",
+    "lastVerifiedAt": "2026-03-08"
   },
   {
     "name": "Gemini 2.5 Pro",
@@ -576,192 +1057,210 @@
     "lastVerifiedAt": "2025-07-01"
   },
   {
-    "name": "Llama 4 Maverick",
-    "slug": "llama-4-maverick",
-    "provider": "Meta",
-    "type": "open-source",
+    "name": "Gemini 2.5 Flash-Lite",
+    "slug": "gemini-2-5-flash-lite",
+    "provider": "Google",
+    "type": "commercial",
+    "tier": "mini",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "moe",
+    "contextWindow": 1000000,
+    "maxOutput": 8192,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 0.075,
+      "output": 0.3,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 72,
+      "speed": 96,
+      "reasoning": 60,
+      "coding": 65,
+      "multimodal": 78
+    },
+    "languageScores": {
+      "ko": 68,
+      "en": 88,
+      "ja": 70,
+      "zh": 72
+    },
+    "benchmarks": {
+      "mmlu": 80.0,
+      "gpqa": 38.0,
+      "swe_bench": 20.0,
+      "aime": 15.0,
+      "hle": 1.0,
+      "mgsm": 82.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-06-17",
+    "memo": "Ultra-low latency and cost. Optimized for high-volume tasks. 1M context window.",
+    "sourceUrls": [
+      "https://deepmind.google/technologies/gemini/flash/"
+    ],
+    "colorCode": "#4285F4",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Gemini 3 Pro",
+    "slug": "gemini-3-pro",
+    "provider": "Google",
+    "type": "commercial",
     "tier": "flagship",
-    "parameterSize": 400,
-    "activeParameters": 17,
+    "parameterSize": null,
+    "activeParameters": null,
     "architecture": "moe",
-    "contextWindow": 1048576,
-    "maxOutput": 16384,
-    "license": "Llama 4 Community",
+    "contextWindow": 1000000,
+    "maxOutput": 65536,
+    "license": "Proprietary",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "input": 1.5,
+      "output": 10.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
     },
     "scores": {
-      "quality": 87,
-      "speed": 70,
-      "reasoning": 82,
-      "coding": 84,
-      "multimodal": 88
+      "quality": 94,
+      "speed": 58,
+      "reasoning": 95,
+      "coding": 93,
+      "multimodal": 96
     },
     "languageScores": {
-      "ko": 78,
-      "en": 93,
-      "ja": 80,
-      "zh": 82
+      "ko": 90,
+      "en": 97,
+      "ja": 90,
+      "zh": 92
     },
     "benchmarks": {
-      "mmlu": 89.2,
-      "gpqa": 69.8,
-      "swe_bench": 42.0,
-      "aime": 50.0,
-      "hle": 5.0,
-      "mgsm": 91.0
+      "mmlu": 93.0,
+      "gpqa": 78.0,
+      "swe_bench": 65.0,
+      "aime": 90.0,
+      "hle": 20.0,
+      "mgsm": 95.0
     },
-    "infrastructure": {
-      "minGpu": "4x A100 80GB",
-      "vramFp16": 800,
-      "vramInt8": 400,
-      "vramInt4": 200,
-      "recommendedFramework": [
-        "vLLM",
-        "TGI"
-      ],
-      "estimatedTps": 30
-    },
-    "releaseDate": "2025-04-05",
-    "memo": "400B MoE with 128 experts, 17B active. Natively multimodal with 1M context. First open MoE model at this scale.",
+    "infrastructure": null,
+    "releaseDate": "2025-11-15",
+    "memo": "Gemini 3 flagship with 1M context. Major upgrade in reasoning and multimodal. Native tool use.",
     "sourceUrls": [
-      "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+      "https://deepmind.google/technologies/gemini/"
     ],
-    "colorCode": "#0668E1",
-    "lastVerifiedAt": "2025-05-01"
+    "colorCode": "#4285F4",
+    "lastVerifiedAt": "2026-03-08"
   },
   {
-    "name": "Llama 4 Scout",
-    "slug": "llama-4-scout",
-    "provider": "Meta",
-    "type": "open-source",
+    "name": "Gemini 3 Flash",
+    "slug": "gemini-3-flash",
+    "provider": "Google",
+    "type": "commercial",
     "tier": "mid",
-    "parameterSize": 109,
-    "activeParameters": 17,
+    "parameterSize": null,
+    "activeParameters": null,
     "architecture": "moe",
-    "contextWindow": 10000000,
-    "maxOutput": 16384,
-    "license": "Llama 4 Community",
+    "contextWindow": 1000000,
+    "maxOutput": 65536,
+    "license": "Proprietary",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "input": 0.5,
+      "output": 3.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
     },
     "scores": {
-      "quality": 80,
-      "speed": 80,
-      "reasoning": 75,
-      "coding": 78,
-      "multimodal": 82
+      "quality": 88,
+      "speed": 88,
+      "reasoning": 90,
+      "coding": 88,
+      "multimodal": 90
     },
     "languageScores": {
-      "ko": 72,
-      "en": 90,
-      "ja": 75,
-      "zh": 78
+      "ko": 85,
+      "en": 95,
+      "ja": 85,
+      "zh": 87
     },
     "benchmarks": {
-      "mmlu": 86.5,
-      "gpqa": 58.0,
-      "swe_bench": 34.0,
-      "aime": 36.0,
-      "hle": 3.5,
-      "mgsm": 89.0
+      "mmlu": 90.0,
+      "gpqa": 70.0,
+      "swe_bench": 78.0,
+      "aime": 78.0,
+      "hle": 13.0,
+      "mgsm": 93.0
     },
-    "infrastructure": {
-      "minGpu": "1x H100 80GB",
-      "vramFp16": 218,
-      "vramInt8": 109,
-      "vramInt4": 55,
-      "recommendedFramework": [
-        "vLLM",
-        "TGI"
-      ],
-      "estimatedTps": 55
-    },
-    "releaseDate": "2025-04-05",
-    "memo": "109B MoE with 16 experts, 17B active. 10M context window. Fits on single H100 in Int4.",
+    "infrastructure": null,
+    "releaseDate": "2025-12-05",
+    "memo": "Fast and capable. 78% SWE-bench at Flash-tier pricing. 1M context with built-in thinking.",
     "sourceUrls": [
-      "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+      "https://deepmind.google/technologies/gemini/flash/"
     ],
-    "colorCode": "#0668E1",
-    "lastVerifiedAt": "2025-05-01"
+    "colorCode": "#4285F4",
+    "lastVerifiedAt": "2026-03-08"
   },
   {
-    "name": "Llama 3.3 70B",
-    "slug": "llama-3-3-70b",
-    "provider": "Meta",
-    "type": "open-source",
-    "tier": "mid",
-    "parameterSize": 70,
-    "activeParameters": 70,
-    "architecture": "dense",
-    "contextWindow": 128000,
-    "maxOutput": 8192,
-    "license": "Llama 3.3 Community",
+    "name": "Gemini 3.1 Pro",
+    "slug": "gemini-3-1-pro",
+    "provider": "Google",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "moe",
+    "contextWindow": 1000000,
+    "maxOutput": 65536,
+    "license": "Proprietary",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "input": 2.0,
+      "output": 12.0,
+      "cachingDiscount": 0.5,
+      "batchDiscount": 0.5
     },
     "scores": {
-      "quality": 82,
+      "quality": 96,
       "speed": 55,
-      "reasoning": 78,
-      "coding": 80,
-      "multimodal": 20
+      "reasoning": 97,
+      "coding": 95,
+      "multimodal": 97
     },
     "languageScores": {
-      "ko": 72,
-      "en": 92,
-      "ja": 74,
-      "zh": 78
+      "ko": 92,
+      "en": 98,
+      "ja": 92,
+      "zh": 94
     },
     "benchmarks": {
-      "mmlu": 86.0,
-      "gpqa": 50.5,
-      "swe_bench": 30.0,
-      "aime": 30.0,
-      "hle": 2.5,
-      "mgsm": 91.0
+      "mmlu": 94.5,
+      "gpqa": 82.0,
+      "swe_bench": 70.0,
+      "aime": 92.0,
+      "hle": 25.0,
+      "arc_agi_2": 77.1,
+      "mgsm": 96.0
     },
-    "infrastructure": {
-      "minGpu": "2x A100 80GB",
-      "vramFp16": 140,
-      "vramInt8": 70,
-      "vramInt4": 35,
-      "recommendedFramework": [
-        "vLLM",
-        "TGI",
-        "llama.cpp"
-      ],
-      "estimatedTps": 45
-    },
-    "releaseDate": "2024-12-06",
-    "memo": "Text-only 70B dense model. Strong multilingual performance at cost of Llama 3.1 405B quality.",
+    "infrastructure": null,
+    "releaseDate": "2026-02-19",
+    "memo": "Google latest flagship. 77.1% ARC-AGI-2. Best multimodal model available. Deep thinking with 1M context.",
     "sourceUrls": [
-      "https://ai.meta.com/blog/llama-3-3/"
+      "https://deepmind.google/technologies/gemini/"
     ],
-    "colorCode": "#0668E1",
-    "lastVerifiedAt": "2025-04-01"
+    "colorCode": "#4285F4",
+    "lastVerifiedAt": "2026-03-08"
   },
   {
-    "name": "Llama 3.1 8B",
-    "slug": "llama-3-1-8b",
-    "provider": "Meta",
+    "name": "Gemma 3 27B",
+    "slug": "gemma-3-27b",
+    "provider": "Google",
     "type": "open-source",
-    "tier": "micro",
-    "parameterSize": 8,
-    "activeParameters": 8,
+    "tier": "mid",
+    "parameterSize": 27,
+    "activeParameters": 27,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 8192,
-    "license": "Llama 3.1 Community",
+    "license": "Gemma",
     "pricing": {
       "input": 0.0,
       "output": 0.0,
@@ -769,44 +1268,103 @@
       "batchDiscount": 0
     },
     "scores": {
-      "quality": 58,
-      "speed": 95,
-      "reasoning": 48,
-      "coding": 52,
-      "multimodal": 10
+      "quality": 78,
+      "speed": 72,
+      "reasoning": 72,
+      "coding": 74,
+      "multimodal": 75
     },
     "languageScores": {
-      "ko": 50,
-      "en": 82,
-      "ja": 55,
-      "zh": 58
+      "ko": 68,
+      "en": 90,
+      "ja": 72,
+      "zh": 75
     },
     "benchmarks": {
-      "mmlu": 73.0,
-      "gpqa": 30.0,
-      "swe_bench": 12.0,
-      "aime": 6.0,
-      "hle": 0.5,
-      "mgsm": 70.0
+      "mmlu": 83.0,
+      "gpqa": 45.0,
+      "swe_bench": 25.0,
+      "aime": 22.0,
+      "hle": 1.5,
+      "mgsm": 86.0
     },
     "infrastructure": {
-      "minGpu": "1x RTX 4090",
-      "vramFp16": 16,
-      "vramInt8": 8,
-      "vramInt4": 4,
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 54,
+      "vramInt8": 27,
+      "vramInt4": 14,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
         "Ollama"
       ],
-      "estimatedTps": 120
+      "estimatedTps": 60
     },
-    "releaseDate": "2024-07-23",
-    "memo": "Lightweight model for edge deployment and fine-tuning. Runs on consumer GPUs.",
+    "releaseDate": "2025-03-12",
+    "memo": "Google open-weight multimodal model. 128K context, 140+ languages. Good for on-prem deployment.",
     "sourceUrls": [
-      "https://ai.meta.com/blog/meta-llama-3-1/"
+      "https://deepmind.google/models/gemma/gemma-3/"
     ],
-    "colorCode": "#0668E1",
+    "colorCode": "#4285F4",
+    "lastVerifiedAt": "2025-04-01"
+  },
+  {
+    "name": "Gemma 3 12B",
+    "slug": "gemma-3-12b",
+    "provider": "Google",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 12,
+    "activeParameters": 12,
+    "architecture": "dense",
+    "contextWindow": 128000,
+    "maxOutput": 8192,
+    "license": "Gemma",
+    "pricing": {
+      "input": 0.0,
+      "output": 0.0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 70,
+      "speed": 85,
+      "reasoning": 65,
+      "coding": 66,
+      "multimodal": 68
+    },
+    "languageScores": {
+      "ko": 60,
+      "en": 86,
+      "ja": 64,
+      "zh": 68
+    },
+    "benchmarks": {
+      "mmlu": 79.0,
+      "gpqa": 36.0,
+      "swe_bench": 18.0,
+      "aime": 14.0,
+      "hle": 0.8,
+      "mgsm": 80.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 24,
+      "vramInt8": 12,
+      "vramInt4": 6,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 90
+    },
+    "releaseDate": "2025-03-12",
+    "memo": "Compact multimodal model from Google. Good balance of size and capability.",
+    "sourceUrls": [
+      "https://deepmind.google/models/gemma/gemma-3/"
+    ],
+    "colorCode": "#4285F4",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -916,62 +1474,110 @@
     "lastVerifiedAt": "2025-04-01"
   },
   {
-    "name": "Mixtral 8x22B",
-    "slug": "mixtral-8x22b",
+    "name": "Mistral Medium 3",
+    "slug": "mistral-medium-3",
     "provider": "Mistral",
-    "type": "open-source",
+    "type": "commercial",
     "tier": "mid",
-    "parameterSize": 176,
-    "activeParameters": 44,
-    "architecture": "moe",
-    "contextWindow": 65536,
-    "maxOutput": 8192,
-    "license": "Apache 2.0",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 131072,
+    "maxOutput": 16384,
+    "license": "Proprietary",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0.4,
+      "output": 2.0,
       "cachingDiscount": 0,
-      "batchDiscount": 0
+      "batchDiscount": 0.5
     },
     "scores": {
-      "quality": 76,
-      "speed": 50,
-      "reasoning": 70,
-      "coding": 74,
-      "multimodal": 10
+      "quality": 85,
+      "speed": 72,
+      "reasoning": 82,
+      "coding": 84,
+      "multimodal": 78
     },
     "languageScores": {
-      "ko": 62,
-      "en": 88,
-      "ja": 65,
-      "zh": 68
+      "ko": 72,
+      "en": 93,
+      "ja": 74,
+      "zh": 78
     },
     "benchmarks": {
-      "mmlu": 84.0,
-      "gpqa": 42.0,
-      "swe_bench": 22.0,
-      "aime": 18.0,
-      "hle": 1.0,
-      "mgsm": 85.0
+      "mmlu": 87.0,
+      "gpqa": 58.0,
+      "swe_bench": 40.0,
+      "aime": 35.0,
+      "hle": 3.5,
+      "mgsm": 90.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-05-07",
+    "memo": "Frontier-class multimodal. Strong coding and STEM at competitive pricing.",
+    "sourceUrls": [
+      "https://mistral.ai/news/mistral-medium-3"
+    ],
+    "colorCode": "#FF7000",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Mistral Large 3",
+    "slug": "mistral-large-3",
+    "provider": "Mistral",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 675,
+    "activeParameters": 41,
+    "architecture": "moe",
+    "contextWindow": 262000,
+    "maxOutput": 16384,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 2.0,
+      "output": 6.0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0.5
+    },
+    "scores": {
+      "quality": 88,
+      "speed": 62,
+      "reasoning": 86,
+      "coding": 88,
+      "multimodal": 80
+    },
+    "languageScores": {
+      "ko": 75,
+      "en": 94,
+      "ja": 76,
+      "zh": 80
+    },
+    "benchmarks": {
+      "mmlu": 89.0,
+      "gpqa": 62.0,
+      "swe_bench": 42.0,
+      "aime": 40.0,
+      "hle": 4.0,
+      "mgsm": 92.0
     },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
-      "vramFp16": 352,
-      "vramInt8": 176,
-      "vramInt4": 88,
+      "vramFp16": 1350,
+      "vramInt8": 675,
+      "vramInt4": 338,
       "recommendedFramework": [
         "vLLM",
         "TGI"
       ],
-      "estimatedTps": 25
+      "estimatedTps": 35
     },
-    "releaseDate": "2024-04-17",
-    "memo": "Large MoE model. 176B total, 44B active per forward pass. Strong coding and math.",
+    "releaseDate": "2025-12-15",
+    "memo": "Mistral flagship upgrade. Improved reasoning and multimodal. Strong European language support.",
     "sourceUrls": [
-      "https://mistral.ai/news/mixtral-8x22b"
+      "https://mistral.ai/news/mistral-large-3"
     ],
     "colorCode": "#FF7000",
-    "lastVerifiedAt": "2025-04-01"
+    "lastVerifiedAt": "2026-03-09"
   },
   {
     "name": "DeepSeek V3",
@@ -1088,6 +1694,122 @@
     ],
     "colorCode": "#4D6BFE",
     "lastVerifiedAt": "2025-04-01"
+  },
+  {
+    "name": "DeepSeek R1-0528",
+    "slug": "deepseek-r1-0528",
+    "provider": "DeepSeek",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 685,
+    "activeParameters": 37,
+    "architecture": "moe",
+    "contextWindow": 128000,
+    "maxOutput": 16384,
+    "license": "MIT",
+    "pricing": {
+      "input": 0.55,
+      "output": 2.19,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 92,
+      "speed": 38,
+      "reasoning": 97,
+      "coding": 92,
+      "multimodal": 15
+    },
+    "languageScores": {
+      "ko": 78,
+      "en": 96,
+      "ja": 80,
+      "zh": 97
+    },
+    "benchmarks": {
+      "mmlu": 91.0,
+      "gpqa": 75.0,
+      "swe_bench": 52.0,
+      "aime": 85.0,
+      "hle": 10.0,
+      "mgsm": 94.0
+    },
+    "infrastructure": {
+      "minGpu": "8x A100 80GB",
+      "vramFp16": 1370,
+      "vramInt8": 685,
+      "vramInt4": 343,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 28
+    },
+    "releaseDate": "2025-05-28",
+    "memo": "Major R1 upgrade. Enhanced reasoning with more compute. MIT license. 685B MoE, 37B active.",
+    "sourceUrls": [
+      "https://github.com/deepseek-ai/DeepSeek-R1"
+    ],
+    "colorCode": "#4D6BFE",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "DeepSeek V3.2",
+    "slug": "deepseek-v3-2",
+    "provider": "DeepSeek",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 685,
+    "activeParameters": 37,
+    "architecture": "moe",
+    "contextWindow": 128000,
+    "maxOutput": 16384,
+    "license": "MIT",
+    "pricing": {
+      "input": 0.1,
+      "output": 0.2,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 92,
+      "speed": 72,
+      "reasoning": 93,
+      "coding": 90,
+      "multimodal": 20
+    },
+    "languageScores": {
+      "ko": 78,
+      "en": 95,
+      "ja": 80,
+      "zh": 97
+    },
+    "benchmarks": {
+      "mmlu": 91.5,
+      "gpqa": 72.0,
+      "swe_bench": 58.0,
+      "aime": 75.0,
+      "hle": 9.0,
+      "mgsm": 94.0
+    },
+    "infrastructure": {
+      "minGpu": "8x A100 80GB",
+      "vramFp16": 1370,
+      "vramInt8": 685,
+      "vramInt4": 343,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 65
+    },
+    "releaseDate": "2026-01-15",
+    "memo": "Reasoning-first V3.2 with MIT license. Unified reasoning and chat. Near-frontier at fraction of cost.",
+    "sourceUrls": [
+      "https://github.com/deepseek-ai/DeepSeek-V3"
+    ],
+    "colorCode": "#4D6BFE",
+    "lastVerifiedAt": "2026-03-08"
   },
   {
     "name": "Qwen 3 235B-A22B",
@@ -1266,6 +1988,123 @@
     "lastVerifiedAt": "2025-05-01"
   },
   {
+    "name": "Qwen 3 30B-A3B",
+    "slug": "qwen-3-30b-a3b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 30,
+    "activeParameters": 3,
+    "architecture": "moe",
+    "contextWindow": 131072,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0.0,
+      "output": 0.0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 70,
+      "speed": 92,
+      "reasoning": 68,
+      "coding": 68,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 62,
+      "en": 86,
+      "ja": 68,
+      "zh": 90
+    },
+    "benchmarks": {
+      "mmlu": 80.0,
+      "gpqa": 42.0,
+      "swe_bench": 22.0,
+      "aime": 28.0,
+      "hle": 1.5,
+      "mgsm": 82.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 60,
+      "vramInt8": 30,
+      "vramInt4": 15,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 130
+    },
+    "releaseDate": "2025-04-28",
+    "memo": "30B MoE with only 3B active. Extremely efficient inference. Runs fast on consumer GPUs.",
+    "sourceUrls": [
+      "https://qwenlm.github.io/blog/qwen3/"
+    ],
+    "colorCode": "#6F42C1",
+    "lastVerifiedAt": "2025-05-01"
+  },
+  {
+    "name": "Qwen 3.5 397B-A17B",
+    "slug": "qwen-3-5-397b-a17b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 397,
+    "activeParameters": 17,
+    "architecture": "moe",
+    "contextWindow": 262144,
+    "maxOutput": 16384,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0.0,
+      "output": 0.0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 92,
+      "speed": 65,
+      "reasoning": 93,
+      "coding": 92,
+      "multimodal": 20
+    },
+    "languageScores": {
+      "ko": 80,
+      "en": 95,
+      "ja": 85,
+      "zh": 98
+    },
+    "benchmarks": {
+      "mmlu": 87.8,
+      "gpqa": 88.4,
+      "swe_bench": 76.4,
+      "aime": 91.3,
+      "hle": 10.0,
+      "mgsm": 94.0
+    },
+    "infrastructure": {
+      "minGpu": "4x A100 80GB",
+      "vramFp16": 794,
+      "vramInt8": 397,
+      "vramInt4": 199,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 45
+    },
+    "releaseDate": "2026-02-16",
+    "memo": "397B MoE with 512 experts, 17B active. Apache 2.0. 201 languages. Rivals Claude Sonnet 4.5 performance.",
+    "sourceUrls": [
+      "https://qwenlm.github.io/blog/qwen3.5/"
+    ],
+    "colorCode": "#6F42C1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
     "name": "Grok 3",
     "slug": "grok-3",
     "provider": "xAI",
@@ -1362,6 +2201,151 @@
     "lastVerifiedAt": "2025-07-01"
   },
   {
+    "name": "Grok 4",
+    "slug": "grok-4",
+    "provider": "xAI",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 256000,
+    "maxOutput": 32768,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 3.0,
+      "output": 15.0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 90,
+      "speed": 60,
+      "reasoning": 90,
+      "coding": 88,
+      "multimodal": 75
+    },
+    "languageScores": {
+      "ko": 75,
+      "en": 95,
+      "ja": 76,
+      "zh": 80
+    },
+    "benchmarks": {
+      "mmlu": 90.0,
+      "gpqa": 72.0,
+      "swe_bench": 48.0,
+      "aime": 72.0,
+      "hle": 8.0,
+      "mgsm": 92.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-07-15",
+    "memo": "Major upgrade over Grok 3. Strong reasoning with real-time data integration via X.",
+    "sourceUrls": [
+      "https://x.ai/blog/grok-4"
+    ],
+    "colorCode": "#1DA1F2",
+    "lastVerifiedAt": "2026-03-08"
+  },
+  {
+    "name": "Grok 4 Fast",
+    "slug": "grok-4-fast",
+    "provider": "xAI",
+    "type": "commercial",
+    "tier": "mid",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 2000000,
+    "maxOutput": 65536,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 0.2,
+      "output": 0.5,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 90,
+      "speed": 75,
+      "reasoning": 90,
+      "coding": 88,
+      "multimodal": 70
+    },
+    "languageScores": {
+      "ko": 72,
+      "en": 95,
+      "ja": 74,
+      "zh": 78
+    },
+    "benchmarks": {
+      "mmlu": 88.0,
+      "gpqa": 82.0,
+      "swe_bench": 50.0,
+      "aime": 78.0,
+      "hle": 8.0,
+      "mgsm": 92.0
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-09-19",
+    "memo": "40% fewer thinking tokens than Grok 4. 2M context. Ultra-aggressive pricing.",
+    "sourceUrls": [
+      "https://x.ai/news/grok-4-fast"
+    ],
+    "colorCode": "#1DA1F2",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Grok 4.1",
+    "slug": "grok-4-1",
+    "provider": "xAI",
+    "type": "commercial",
+    "tier": "flagship",
+    "parameterSize": null,
+    "activeParameters": null,
+    "architecture": "dense",
+    "contextWindow": 2000000,
+    "maxOutput": 65536,
+    "license": "Proprietary",
+    "pricing": {
+      "input": 0.2,
+      "output": 0.5,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 94,
+      "speed": 72,
+      "reasoning": 93,
+      "coding": 92,
+      "multimodal": 80
+    },
+    "languageScores": {
+      "ko": 82,
+      "en": 96,
+      "ja": 82,
+      "zh": 85
+    },
+    "benchmarks": {
+      "mmlu": 92.0,
+      "gpqa": 78.0,
+      "swe_bench": 55.0,
+      "aime": 85.0,
+      "hle": 14.0,
+      "mgsm": 94.0,
+      "lmarena_elo": 1483
+    },
+    "infrastructure": null,
+    "releaseDate": "2025-11-20",
+    "memo": "#1 LMArena Elo 1483. 2M context window. Aggressive pricing at $0.20/$0.50 per million tokens.",
+    "sourceUrls": [
+      "https://x.ai/blog/grok-4-1"
+    ],
+    "colorCode": "#1DA1F2",
+    "lastVerifiedAt": "2026-03-08"
+  },
+  {
     "name": "Command R+",
     "slug": "command-r-plus",
     "provider": "Cohere",
@@ -1456,6 +2440,64 @@
     ],
     "colorCode": "#39594D",
     "lastVerifiedAt": "2025-04-01"
+  },
+  {
+    "name": "Command A",
+    "slug": "command-a",
+    "provider": "Cohere",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 111,
+    "activeParameters": 111,
+    "architecture": "dense",
+    "contextWindow": 256000,
+    "maxOutput": 8192,
+    "license": "CC-BY-NC-4.0",
+    "pricing": {
+      "input": 2.5,
+      "output": 10.0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 82,
+      "speed": 55,
+      "reasoning": 75,
+      "coding": 72,
+      "multimodal": 15
+    },
+    "languageScores": {
+      "ko": 72,
+      "en": 91,
+      "ja": 70,
+      "zh": 73
+    },
+    "benchmarks": {
+      "mmlu": 84.0,
+      "gpqa": 45.0,
+      "swe_bench": 28.0,
+      "aime": 18.0,
+      "hle": 2.0,
+      "mgsm": 87.0
+    },
+    "infrastructure": {
+      "minGpu": "2x A100 80GB",
+      "vramFp16": 222,
+      "vramInt8": 111,
+      "vramInt4": 56,
+      "recommendedFramework": [
+        "vLLM",
+        "TGI"
+      ],
+      "estimatedTps": 35
+    },
+    "releaseDate": "2025-03-13",
+    "memo": "111B enterprise agent model. 150% higher throughput than R+. Strong RAG and tool use.",
+    "sourceUrls": [
+      "https://cohere.com/blog/command-a"
+    ],
+    "colorCode": "#39594D",
+    "lastVerifiedAt": "2026-03-09"
   },
   {
     "name": "Nova Pro",
@@ -1613,364 +2655,6 @@
     "lastVerifiedAt": "2025-04-01"
   },
   {
-    "name": "Gemma 3 27B",
-    "slug": "gemma-3-27b",
-    "provider": "Google",
-    "type": "open-source",
-    "tier": "mid",
-    "parameterSize": 27,
-    "activeParameters": 27,
-    "architecture": "dense",
-    "contextWindow": 128000,
-    "maxOutput": 8192,
-    "license": "Gemma",
-    "pricing": {
-      "input": 0.0,
-      "output": 0.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
-    },
-    "scores": {
-      "quality": 78,
-      "speed": 72,
-      "reasoning": 72,
-      "coding": 74,
-      "multimodal": 75
-    },
-    "languageScores": {
-      "ko": 68,
-      "en": 90,
-      "ja": 72,
-      "zh": 75
-    },
-    "benchmarks": {
-      "mmlu": 83.0,
-      "gpqa": 45.0,
-      "swe_bench": 25.0,
-      "aime": 22.0,
-      "hle": 1.5,
-      "mgsm": 86.0
-    },
-    "infrastructure": {
-      "minGpu": "1x A100 80GB",
-      "vramFp16": 54,
-      "vramInt8": 27,
-      "vramInt4": 14,
-      "recommendedFramework": [
-        "vLLM",
-        "llama.cpp",
-        "Ollama"
-      ],
-      "estimatedTps": 60
-    },
-    "releaseDate": "2025-03-12",
-    "memo": "Google open-weight multimodal model. 128K context, 140+ languages. Good for on-prem deployment.",
-    "sourceUrls": [
-      "https://deepmind.google/models/gemma/gemma-3/"
-    ],
-    "colorCode": "#4285F4",
-    "lastVerifiedAt": "2025-04-01"
-  },
-  {
-    "name": "Yi Lightning",
-    "slug": "yi-lightning",
-    "provider": "01.AI",
-    "type": "open-source",
-    "tier": "mid",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "moe",
-    "contextWindow": 16384,
-    "maxOutput": 4096,
-    "license": "Apache 2.0",
-    "pricing": {
-      "input": 0.14,
-      "output": 0.14,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
-    },
-    "scores": {
-      "quality": 78,
-      "speed": 90,
-      "reasoning": 72,
-      "coding": 74,
-      "multimodal": 10
-    },
-    "languageScores": {
-      "ko": 60,
-      "en": 90,
-      "ja": 65,
-      "zh": 92
-    },
-    "benchmarks": {
-      "mmlu": 85.0,
-      "gpqa": 48.0,
-      "swe_bench": 25.0,
-      "aime": 20.0,
-      "hle": 1.5,
-      "mgsm": 85.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2024-10-16",
-    "memo": "Fast MoE-based model with excellent inference speed. Strong Chinese language performance.",
-    "sourceUrls": [
-      "https://www.lingyiwanwu.com/en"
-    ],
-    "colorCode": "#E8590C",
-    "lastVerifiedAt": "2025-04-01"
-  },
-  {
-    "name": "Claude Haiku 4.5",
-    "slug": "claude-haiku-4-5",
-    "provider": "Anthropic",
-    "type": "commercial",
-    "tier": "mini",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 200000,
-    "maxOutput": 8192,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 1.0,
-      "output": 5.0,
-      "cachingDiscount": 0.9,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 78,
-      "speed": 92,
-      "reasoning": 72,
-      "coding": 78,
-      "multimodal": 68
-    },
-    "languageScores": {
-      "ko": 78,
-      "en": 92,
-      "ja": 78,
-      "zh": 80
-    },
-    "benchmarks": {
-      "mmlu": 85.0,
-      "gpqa": 45.0,
-      "swe_bench": 30.0,
-      "aime": 20.0,
-      "hle": 2.0,
-      "mgsm": 89.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-05-22",
-    "memo": "Fast and capable. Significant upgrade from Haiku 3.5. Good for latency-sensitive agentic tasks.",
-    "sourceUrls": [
-      "https://www.anthropic.com/news/claude-haiku-4-5"
-    ],
-    "colorCode": "#D97706",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "GPT-4.1",
-    "slug": "gpt-4-1",
-    "provider": "OpenAI",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 1047576,
-    "maxOutput": 32768,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 2.0,
-      "output": 8.0,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 88,
-      "speed": 78,
-      "reasoning": 82,
-      "coding": 90,
-      "multimodal": 85
-    },
-    "languageScores": {
-      "ko": 83,
-      "en": 96,
-      "ja": 84,
-      "zh": 86
-    },
-    "benchmarks": {
-      "mmlu": 89.0,
-      "gpqa": 60.0,
-      "swe_bench": 54.6,
-      "aime": 30.0,
-      "hle": 4.0,
-      "mgsm": 91.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-04-14",
-    "memo": "1M context window. Optimized for coding and instruction following. Strong agentic performance.",
-    "sourceUrls": [
-      "https://openai.com/index/gpt-4-1/"
-    ],
-    "colorCode": "#10A37F",
-    "lastVerifiedAt": "2025-05-01"
-  },
-  {
-    "name": "GPT-4.1 Mini",
-    "slug": "gpt-4-1-mini",
-    "provider": "OpenAI",
-    "type": "commercial",
-    "tier": "small",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 1047576,
-    "maxOutput": 32768,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 0.4,
-      "output": 1.6,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 78,
-      "speed": 90,
-      "reasoning": 72,
-      "coding": 80,
-      "multimodal": 78
-    },
-    "languageScores": {
-      "ko": 75,
-      "en": 92,
-      "ja": 76,
-      "zh": 80
-    },
-    "benchmarks": {
-      "mmlu": 85.0,
-      "gpqa": 48.0,
-      "swe_bench": 38.0,
-      "aime": 18.0,
-      "hle": 2.0,
-      "mgsm": 88.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-04-14",
-    "memo": "Compact version of GPT-4.1. 1M context at low cost. Good balance for most use cases.",
-    "sourceUrls": [
-      "https://openai.com/index/gpt-4-1/"
-    ],
-    "colorCode": "#10A37F",
-    "lastVerifiedAt": "2025-05-01"
-  },
-  {
-    "name": "GPT-4.1 Nano",
-    "slug": "gpt-4-1-nano",
-    "provider": "OpenAI",
-    "type": "commercial",
-    "tier": "micro",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 1047576,
-    "maxOutput": 32768,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 0.1,
-      "output": 0.4,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 65,
-      "speed": 96,
-      "reasoning": 55,
-      "coding": 62,
-      "multimodal": 65
-    },
-    "languageScores": {
-      "ko": 62,
-      "en": 86,
-      "ja": 64,
-      "zh": 68
-    },
-    "benchmarks": {
-      "mmlu": 78.0,
-      "gpqa": 35.0,
-      "swe_bench": 22.0,
-      "aime": 8.0,
-      "hle": 0.8,
-      "mgsm": 80.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-04-14",
-    "memo": "Cheapest OpenAI model. Ideal for classification, extraction, and high-volume simple tasks.",
-    "sourceUrls": [
-      "https://openai.com/index/gpt-4-1/"
-    ],
-    "colorCode": "#10A37F",
-    "lastVerifiedAt": "2025-05-01"
-  },
-  {
-    "name": "Qwen 3 30B-A3B",
-    "slug": "qwen-3-30b-a3b",
-    "provider": "Alibaba",
-    "type": "open-source",
-    "tier": "small",
-    "parameterSize": 30,
-    "activeParameters": 3,
-    "architecture": "moe",
-    "contextWindow": 131072,
-    "maxOutput": 8192,
-    "license": "Apache 2.0",
-    "pricing": {
-      "input": 0.0,
-      "output": 0.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
-    },
-    "scores": {
-      "quality": 70,
-      "speed": 92,
-      "reasoning": 68,
-      "coding": 68,
-      "multimodal": 10
-    },
-    "languageScores": {
-      "ko": 62,
-      "en": 86,
-      "ja": 68,
-      "zh": 90
-    },
-    "benchmarks": {
-      "mmlu": 80.0,
-      "gpqa": 42.0,
-      "swe_bench": 22.0,
-      "aime": 28.0,
-      "hle": 1.5,
-      "mgsm": 82.0
-    },
-    "infrastructure": {
-      "minGpu": "1x RTX 4090",
-      "vramFp16": 60,
-      "vramInt8": 30,
-      "vramInt4": 15,
-      "recommendedFramework": [
-        "vLLM",
-        "llama.cpp",
-        "Ollama"
-      ],
-      "estimatedTps": 130
-    },
-    "releaseDate": "2025-04-28",
-    "memo": "30B MoE with only 3B active. Extremely efficient inference. Runs fast on consumer GPUs.",
-    "sourceUrls": [
-      "https://qwenlm.github.io/blog/qwen3/"
-    ],
-    "colorCode": "#6F42C1",
-    "lastVerifiedAt": "2025-05-01"
-  },
-  {
     "name": "Phi-4-mini",
     "slug": "phi-4-mini",
     "provider": "Microsoft",
@@ -2030,663 +2714,178 @@
     "lastVerifiedAt": "2025-04-01"
   },
   {
-    "name": "Gemma 3 12B",
-    "slug": "gemma-3-12b",
-    "provider": "Google",
+    "name": "Yi Lightning",
+    "slug": "yi-lightning",
+    "provider": "01.AI",
     "type": "open-source",
-    "tier": "small",
-    "parameterSize": 12,
-    "activeParameters": 12,
-    "architecture": "dense",
-    "contextWindow": 128000,
-    "maxOutput": 8192,
-    "license": "Gemma",
+    "tier": "mid",
+    "parameterSize": 394,
+    "activeParameters": 22,
+    "architecture": "moe",
+    "contextWindow": 16384,
+    "maxOutput": 4096,
+    "license": "Apache 2.0",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0.14,
+      "output": 0.14,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
     "scores": {
-      "quality": 70,
-      "speed": 85,
-      "reasoning": 65,
-      "coding": 66,
-      "multimodal": 68
+      "quality": 78,
+      "speed": 90,
+      "reasoning": 72,
+      "coding": 74,
+      "multimodal": 10
     },
     "languageScores": {
       "ko": 60,
-      "en": 86,
-      "ja": 64,
-      "zh": 68
+      "en": 90,
+      "ja": 65,
+      "zh": 92
     },
     "benchmarks": {
-      "mmlu": 79.0,
-      "gpqa": 36.0,
-      "swe_bench": 18.0,
-      "aime": 14.0,
-      "hle": 0.8,
-      "mgsm": 80.0
+      "mmlu": 85.0,
+      "gpqa": 48.0,
+      "swe_bench": 25.0,
+      "aime": 20.0,
+      "hle": 1.5,
+      "mgsm": 85.0
     },
     "infrastructure": {
-      "minGpu": "1x RTX 4090",
-      "vramFp16": 24,
-      "vramInt8": 12,
-      "vramInt4": 6,
+      "minGpu": "2x A100 80GB",
+      "vramFp16": 788,
+      "vramInt8": 394,
+      "vramInt4": 197,
       "recommendedFramework": [
         "vLLM",
-        "llama.cpp",
-        "Ollama"
+        "SGLang"
       ],
-      "estimatedTps": 90
+      "estimatedTps": 55
     },
-    "releaseDate": "2025-03-12",
-    "memo": "Compact multimodal model from Google. Good balance of size and capability.",
+    "releaseDate": "2024-10-16",
+    "memo": "Fast MoE-based model with excellent inference speed. Strong Chinese language performance.",
     "sourceUrls": [
-      "https://deepmind.google/models/gemma/gemma-3/"
+      "https://www.lingyiwanwu.com/en"
     ],
-    "colorCode": "#4285F4",
+    "colorCode": "#E8590C",
     "lastVerifiedAt": "2025-04-01"
   },
   {
-    "name": "GPT-5",
-    "slug": "gpt-5",
-    "provider": "OpenAI",
-    "type": "commercial",
+    "name": "Kimi K2",
+    "slug": "kimi-k2",
+    "provider": "Moonshot AI",
+    "type": "open-source",
     "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 400000,
-    "maxOutput": 32768,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 1.25,
-      "output": 10.0,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 93,
-      "speed": 65,
-      "reasoning": 95,
-      "coding": 94,
-      "multimodal": 92
-    },
-    "languageScores": {
-      "ko": 88,
-      "en": 97,
-      "ja": 88,
-      "zh": 90
-    },
-    "benchmarks": {
-      "mmlu": 93.5,
-      "gpqa": 80.0,
-      "swe_bench": 55.0,
-      "aime": 88.0,
-      "hle": 15.0,
-      "mgsm": 95.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-06-15",
-    "memo": "First model in GPT-5 family. Major leap in reasoning and multimodal. 400K context window.",
-    "sourceUrls": [
-      "https://openai.com/index/gpt-5/"
-    ],
-    "colorCode": "#10A37F",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "GPT-5.2",
-    "slug": "gpt-5-2",
-    "provider": "OpenAI",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 400000,
-    "maxOutput": 128000,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 1.75,
-      "output": 14.0,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 95,
-      "speed": 60,
-      "reasoning": 96,
-      "coding": 95,
-      "multimodal": 93
-    },
-    "languageScores": {
-      "ko": 90,
-      "en": 98,
-      "ja": 90,
-      "zh": 92
-    },
-    "benchmarks": {
-      "mmlu": 94.0,
-      "gpqa": 82.0,
-      "swe_bench": 60.0,
-      "aime": 90.0,
-      "hle": 18.0,
-      "mgsm": 96.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-11-10",
-    "memo": "GPT-5.2 with 128K output. Enhanced reasoning and coding. Stronger agentic capabilities.",
-    "sourceUrls": [
-      "https://openai.com/index/gpt-5-2/"
-    ],
-    "colorCode": "#10A37F",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "GPT-5.4",
-    "slug": "gpt-5-4",
-    "provider": "OpenAI",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 272000,
-    "maxOutput": 128000,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 2.5,
-      "output": 15.0,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 96,
-      "speed": 55,
-      "reasoning": 97,
-      "coding": 96,
-      "multimodal": 94
-    },
-    "languageScores": {
-      "ko": 92,
-      "en": 98,
-      "ja": 91,
-      "zh": 93
-    },
-    "benchmarks": {
-      "mmlu": 95.0,
-      "gpqa": 85.0,
-      "swe_bench": 65.0,
-      "aime": 93.0,
-      "hle": 22.0,
-      "mgsm": 97.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2026-03-05",
-    "memo": "Latest GPT-5 iteration. State-of-the-art reasoning and coding. Released March 2026.",
-    "sourceUrls": [
-      "https://openai.com/index/gpt-5-4/"
-    ],
-    "colorCode": "#10A37F",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Claude Opus 4.6",
-    "slug": "claude-opus-4-6",
-    "provider": "Anthropic",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 200000,
-    "maxOutput": 32000,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 5.0,
-      "output": 25.0,
-      "cachingDiscount": 0.9,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 97,
-      "speed": 42,
-      "reasoning": 97,
-      "coding": 97,
-      "multimodal": 85
-    },
-    "languageScores": {
-      "ko": 92,
-      "en": 99,
-      "ja": 90,
-      "zh": 90
-    },
-    "benchmarks": {
-      "mmlu": 92.0,
-      "gpqa": 78.0,
-      "swe_bench": 72.0,
-      "aime": 82.0,
-      "hle": 12.0,
-      "arc_agi_2": 68.8,
-      "mgsm": 96.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2026-02-05",
-    "memo": "Most capable Claude model. 68.8% ARC-AGI-2. Exceptional coding and deep reasoning. Extended thinking support.",
-    "sourceUrls": [
-      "https://www.anthropic.com/news/claude-opus-4-6"
-    ],
-    "colorCode": "#D97706",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Claude Sonnet 4.6",
-    "slug": "claude-sonnet-4-6",
-    "provider": "Anthropic",
-    "type": "commercial",
-    "tier": "mid",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 200000,
-    "maxOutput": 16000,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 3.0,
-      "output": 15.0,
-      "cachingDiscount": 0.9,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 93,
-      "speed": 70,
-      "reasoning": 92,
-      "coding": 95,
-      "multimodal": 82
-    },
-    "languageScores": {
-      "ko": 90,
-      "en": 97,
-      "ja": 88,
-      "zh": 88
-    },
-    "benchmarks": {
-      "mmlu": 91.0,
-      "gpqa": 72.0,
-      "swe_bench": 79.6,
-      "aime": 68.0,
-      "hle": 8.0,
-      "mgsm": 95.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2026-02-17",
-    "memo": "Best coding model in Claude family. 79.6% SWE-bench. Excellent speed-to-quality ratio.",
-    "sourceUrls": [
-      "https://www.anthropic.com/news/claude-sonnet-4-6"
-    ],
-    "colorCode": "#D97706",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Gemini 3 Pro",
-    "slug": "gemini-3-pro",
-    "provider": "Google",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
+    "parameterSize": 1000,
+    "activeParameters": 32,
     "architecture": "moe",
-    "contextWindow": 1000000,
-    "maxOutput": 65536,
-    "license": "Proprietary",
+    "contextWindow": 256000,
+    "maxOutput": 16384,
+    "license": "Modified MIT",
     "pricing": {
-      "input": 1.5,
-      "output": 10.0,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 94,
-      "speed": 58,
-      "reasoning": 95,
-      "coding": 93,
-      "multimodal": 96
-    },
-    "languageScores": {
-      "ko": 90,
-      "en": 97,
-      "ja": 90,
-      "zh": 92
-    },
-    "benchmarks": {
-      "mmlu": 93.0,
-      "gpqa": 78.0,
-      "swe_bench": 65.0,
-      "aime": 90.0,
-      "hle": 20.0,
-      "mgsm": 95.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-11-15",
-    "memo": "Gemini 3 flagship with 1M context. Major upgrade in reasoning and multimodal. Native tool use.",
-    "sourceUrls": [
-      "https://deepmind.google/technologies/gemini/"
-    ],
-    "colorCode": "#4285F4",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Gemini 3 Flash",
-    "slug": "gemini-3-flash",
-    "provider": "Google",
-    "type": "commercial",
-    "tier": "mid",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "moe",
-    "contextWindow": 1000000,
-    "maxOutput": 65536,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 0.5,
-      "output": 3.0,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
+      "input": 0.55,
+      "output": 2.2,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
     },
     "scores": {
       "quality": 88,
-      "speed": 88,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 90
-    },
-    "languageScores": {
-      "ko": 85,
-      "en": 95,
-      "ja": 85,
-      "zh": 87
-    },
-    "benchmarks": {
-      "mmlu": 90.0,
-      "gpqa": 70.0,
-      "swe_bench": 78.0,
-      "aime": 78.0,
-      "hle": 13.0,
-      "mgsm": 93.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-12-05",
-    "memo": "Fast and capable. 78% SWE-bench at Flash-tier pricing. 1M context with built-in thinking.",
-    "sourceUrls": [
-      "https://deepmind.google/technologies/gemini/flash/"
-    ],
-    "colorCode": "#4285F4",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Gemini 3.1 Pro",
-    "slug": "gemini-3-1-pro",
-    "provider": "Google",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "moe",
-    "contextWindow": 1000000,
-    "maxOutput": 65536,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 2.0,
-      "output": 12.0,
-      "cachingDiscount": 0.5,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 96,
-      "speed": 55,
-      "reasoning": 97,
-      "coding": 95,
-      "multimodal": 97
-    },
-    "languageScores": {
-      "ko": 92,
-      "en": 98,
-      "ja": 92,
-      "zh": 94
-    },
-    "benchmarks": {
-      "mmlu": 94.5,
-      "gpqa": 82.0,
-      "swe_bench": 70.0,
-      "aime": 92.0,
-      "hle": 25.0,
-      "arc_agi_2": 77.1,
-      "mgsm": 96.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2026-02-19",
-    "memo": "Google latest flagship. 77.1% ARC-AGI-2. Best multimodal model available. Deep thinking with 1M context.",
-    "sourceUrls": [
-      "https://deepmind.google/technologies/gemini/"
-    ],
-    "colorCode": "#4285F4",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Grok 4",
-    "slug": "grok-4",
-    "provider": "xAI",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 256000,
-    "maxOutput": 32768,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 3.0,
-      "output": 15.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
-    },
-    "scores": {
-      "quality": 90,
       "speed": 60,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 75
+      "reasoning": 85,
+      "coding": 90,
+      "multimodal": 20
     },
     "languageScores": {
-      "ko": 75,
-      "en": 95,
-      "ja": 76,
-      "zh": 80
+      "ko": 68,
+      "en": 93,
+      "ja": 72,
+      "zh": 95
     },
     "benchmarks": {
-      "mmlu": 90.0,
-      "gpqa": 72.0,
-      "swe_bench": 48.0,
-      "aime": 72.0,
-      "hle": 8.0,
-      "mgsm": 92.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-07-15",
-    "memo": "Major upgrade over Grok 3. Strong reasoning with real-time data integration via X.",
-    "sourceUrls": [
-      "https://x.ai/blog/grok-4"
-    ],
-    "colorCode": "#1DA1F2",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Grok 4.1",
-    "slug": "grok-4-1",
-    "provider": "xAI",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 2000000,
-    "maxOutput": 65536,
-    "license": "Proprietary",
-    "pricing": {
-      "input": 0.2,
-      "output": 0.5,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
-    },
-    "scores": {
-      "quality": 94,
-      "speed": 72,
-      "reasoning": 93,
-      "coding": 92,
-      "multimodal": 80
-    },
-    "languageScores": {
-      "ko": 82,
-      "en": 96,
-      "ja": 82,
-      "zh": 85
-    },
-    "benchmarks": {
-      "mmlu": 92.0,
-      "gpqa": 78.0,
+      "mmlu": 89.0,
+      "gpqa": 65.0,
       "swe_bench": 55.0,
-      "aime": 85.0,
-      "hle": 14.0,
-      "mgsm": 94.0,
-      "lmarena_elo": 1483
+      "aime": 70.0,
+      "hle": 6.0,
+      "mgsm": 90.0
     },
-    "infrastructure": null,
-    "releaseDate": "2025-11-20",
-    "memo": "#1 LMArena Elo 1483. 2M context window. Aggressive pricing at $0.20/$0.50 per million tokens.",
+    "infrastructure": {
+      "minGpu": "8x A100 80GB",
+      "vramFp16": 2000,
+      "vramInt8": 1000,
+      "vramInt4": 500,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 35
+    },
+    "releaseDate": "2025-07-11",
+    "memo": "1T MoE with 32B active. Strong coding/agentic capabilities. Open-weight under Modified MIT.",
     "sourceUrls": [
-      "https://x.ai/blog/grok-4-1"
+      "https://github.com/MoonshotAI/Kimi-K2"
     ],
-    "colorCode": "#1DA1F2",
-    "lastVerifiedAt": "2026-03-08"
+    "colorCode": "#5B21B6",
+    "lastVerifiedAt": "2026-03-09"
   },
   {
-    "name": "DeepSeek V3.2",
-    "slug": "deepseek-v3-2",
-    "provider": "DeepSeek",
+    "name": "Kimi K2.5",
+    "slug": "kimi-k2-5",
+    "provider": "Moonshot AI",
     "type": "open-source",
     "tier": "flagship",
-    "parameterSize": 685,
-    "activeParameters": 37,
+    "parameterSize": 1000,
+    "activeParameters": 32,
     "architecture": "moe",
-    "contextWindow": 128000,
+    "contextWindow": 256000,
     "maxOutput": 16384,
-    "license": "MIT",
+    "license": "Modified MIT",
     "pricing": {
-      "input": 0.1,
-      "output": 0.2,
+      "input": 0.6,
+      "output": 2.5,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
     "scores": {
       "quality": 92,
-      "speed": 72,
-      "reasoning": 93,
+      "speed": 55,
+      "reasoning": 92,
       "coding": 92,
-      "multimodal": 20
+      "multimodal": 82
     },
     "languageScores": {
-      "ko": 78,
+      "ko": 72,
       "en": 95,
-      "ja": 80,
-      "zh": 97
+      "ja": 75,
+      "zh": 96
     },
     "benchmarks": {
-      "mmlu": 91.5,
-      "gpqa": 72.0,
+      "mmlu": 90.0,
+      "gpqa": 78.5,
       "swe_bench": 58.0,
-      "aime": 75.0,
-      "hle": 9.0,
-      "mgsm": 94.0
+      "aime": 96.1,
+      "hle": 50.2,
+      "mgsm": 93.0
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
-      "vramFp16": 1370,
-      "vramInt8": 685,
-      "vramInt4": 343,
+      "vramFp16": 2000,
+      "vramInt8": 1000,
+      "vramInt4": 500,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
       ],
-      "estimatedTps": 65
+      "estimatedTps": 35
     },
     "releaseDate": "2026-01-15",
-    "memo": "Reasoning-first V3.2 with MIT license. Unified reasoning and chat. Near-frontier at fraction of cost.",
+    "memo": "1T MoE with 32B active. Agent Swarm (100 parallel agents). Outperforms GPT-5.2 on vision benchmarks.",
     "sourceUrls": [
-      "https://github.com/deepseek-ai/DeepSeek-V3"
+      "https://kimi.moonshot.cn/"
     ],
-    "colorCode": "#4D6BFE",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Qwen 3.5 72B",
-    "slug": "qwen-3-5-72b",
-    "provider": "Alibaba",
-    "type": "open-source",
-    "tier": "flagship",
-    "parameterSize": 72,
-    "activeParameters": 72,
-    "architecture": "dense",
-    "contextWindow": 131072,
-    "maxOutput": 16384,
-    "license": "Apache 2.0",
-    "pricing": {
-      "input": 0.0,
-      "output": 0.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
-    },
-    "scores": {
-      "quality": 90,
-      "speed": 55,
-      "reasoning": 92,
-      "coding": 90,
-      "multimodal": 15
-    },
-    "languageScores": {
-      "ko": 80,
-      "en": 95,
-      "ja": 85,
-      "zh": 98
-    },
-    "benchmarks": {
-      "mmlu": 91.0,
-      "gpqa": 70.0,
-      "swe_bench": 50.0,
-      "aime": 65.0,
-      "hle": 7.0,
-      "mgsm": 94.0
-    },
-    "infrastructure": {
-      "minGpu": "2x A100 80GB",
-      "vramFp16": 144,
-      "vramInt8": 72,
-      "vramInt4": 36,
-      "recommendedFramework": [
-        "vLLM",
-        "SGLang",
-        "llama.cpp"
-      ],
-      "estimatedTps": 40
-    },
-    "releaseDate": "2026-02-10",
-    "memo": "Dense 72B with strong reasoning. Apache 2.0 license. Best open-source dense model at this scale.",
-    "sourceUrls": [
-      "https://qwenlm.github.io/blog/qwen3.5/"
-    ],
-    "colorCode": "#6F42C1",
-    "lastVerifiedAt": "2026-03-08"
+    "colorCode": "#5B21B6",
+    "lastVerifiedAt": "2026-03-09"
   },
   {
     "name": "GLM-5",
@@ -2695,7 +2894,7 @@
     "type": "open-source",
     "tier": "flagship",
     "parameterSize": 744,
-    "activeParameters": 40,
+    "activeParameters": 44,
     "architecture": "moe",
     "contextWindow": 200000,
     "maxOutput": 16384,
@@ -2707,25 +2906,25 @@
       "batchDiscount": 0
     },
     "scores": {
-      "quality": 88,
-      "speed": 60,
-      "reasoning": 88,
-      "coding": 86,
+      "quality": 92,
+      "speed": 58,
+      "reasoning": 93,
+      "coding": 90,
       "multimodal": 15
     },
     "languageScores": {
-      "ko": 68,
+      "ko": 70,
       "en": 92,
-      "ja": 72,
-      "zh": 96
+      "ja": 65,
+      "zh": 94
     },
     "benchmarks": {
-      "mmlu": 89.0,
-      "gpqa": 65.0,
-      "swe_bench": 42.0,
-      "aime": 52.0,
-      "hle": 5.0,
-      "mgsm": 91.0
+      "mmlu": 90.0,
+      "gpqa": 82.0,
+      "swe_bench": 68.0,
+      "aime": 82.0,
+      "hle": 50.4,
+      "mgsm": 92.0
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -2747,109 +2946,1723 @@
     "lastVerifiedAt": "2026-03-08"
   },
   {
-    "name": "Mistral Large 3",
-    "slug": "mistral-large-3",
-    "provider": "Mistral",
-    "type": "commercial",
-    "tier": "flagship",
-    "parameterSize": null,
-    "activeParameters": null,
-    "architecture": "dense",
-    "contextWindow": 128000,
-    "maxOutput": 16384,
-    "license": "Mistral Research",
-    "pricing": {
-      "input": 2.0,
-      "output": 6.0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0.5
-    },
-    "scores": {
-      "quality": 88,
-      "speed": 62,
-      "reasoning": 86,
-      "coding": 88,
-      "multimodal": 80
-    },
-    "languageScores": {
-      "ko": 75,
-      "en": 94,
-      "ja": 76,
-      "zh": 80
-    },
-    "benchmarks": {
-      "mmlu": 89.0,
-      "gpqa": 62.0,
-      "swe_bench": 42.0,
-      "aime": 40.0,
-      "hle": 4.0,
-      "mgsm": 92.0
-    },
-    "infrastructure": null,
-    "releaseDate": "2025-12-15",
-    "memo": "Mistral flagship upgrade. Improved reasoning and multimodal. Strong European language support.",
-    "sourceUrls": [
-      "https://mistral.ai/news/mistral-large-3"
-    ],
-    "colorCode": "#FF7000",
-    "lastVerifiedAt": "2026-03-08"
-  },
-  {
-    "name": "Llama 4 Behemoth",
-    "slug": "llama-4-behemoth",
-    "provider": "Meta",
+    "name": "EXAONE 3.5 32B",
+    "slug": "exaone-3-5-32b",
+    "provider": "LG AI Research",
     "type": "open-source",
-    "tier": "flagship",
-    "parameterSize": 2000,
-    "activeParameters": 288,
-    "architecture": "moe",
-    "contextWindow": 1048576,
-    "maxOutput": 16384,
-    "license": "Llama 4 Community",
+    "tier": "mid",
+    "parameterSize": 32,
+    "activeParameters": 32,
+    "architecture": "dense",
+    "contextWindow": 32768,
+    "maxOutput": 4096,
+    "license": "EXAONE AI Model License",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
     "scores": {
-      "quality": 94,
-      "speed": 30,
-      "reasoning": 94,
-      "coding": 92,
-      "multimodal": 90
+      "quality": 80,
+      "speed": 65,
+      "reasoning": 78,
+      "coding": 76,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 88,
+      "en": 85,
+      "ja": 70,
+      "zh": 72
+    },
+    "benchmarks": {
+      "mmlu": 82.0,
+      "gpqa": 50.0,
+      "swe_bench": 28.0,
+      "aime": 25.0,
+      "hle": 2.0,
+      "mgsm": 88.0
+    },
+    "infrastructure": {
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 64,
+      "vramInt8": 32,
+      "vramInt4": 16,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 50
+    },
+    "releaseDate": "2024-12-18",
+    "memo": "Korean-specialized LLM from LG AI Research. Top-tier Korean language understanding and generation.",
+    "sourceUrls": [
+      "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-32B-Instruct"
+    ],
+    "colorCode": "#A50034",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "EXAONE 3.5 7.8B",
+    "slug": "exaone-3-5-7-8b",
+    "provider": "LG AI Research",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 7.8,
+    "activeParameters": 7.8,
+    "architecture": "dense",
+    "contextWindow": 32768,
+    "maxOutput": 4096,
+    "license": "EXAONE AI Model License",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 68,
+      "speed": 88,
+      "reasoning": 62,
+      "coding": 60,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 82,
+      "en": 78,
+      "ja": 60,
+      "zh": 62
+    },
+    "benchmarks": {
+      "mmlu": 72.0,
+      "gpqa": 35.0,
+      "swe_bench": 15.0,
+      "aime": 12.0,
+      "hle": 0.5,
+      "mgsm": 80.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 16,
+      "vramInt8": 8,
+      "vramInt4": 4,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 100
+    },
+    "releaseDate": "2024-12-18",
+    "memo": "Compact Korean-focused model. Excellent Korean performance for its size.",
+    "sourceUrls": [
+      "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+    ],
+    "colorCode": "#C0003A",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Solar Pro",
+    "slug": "solar-pro",
+    "provider": "Upstage",
+    "type": "open-source",
+    "tier": "mid",
+    "parameterSize": 22,
+    "activeParameters": 22,
+    "architecture": "dense",
+    "contextWindow": 4096,
+    "maxOutput": 4096,
+    "license": "CC-BY-NC-4.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 75,
+      "speed": 72,
+      "reasoning": 70,
+      "coding": 68,
+      "multimodal": 10
     },
     "languageScores": {
       "ko": 85,
-      "en": 96,
-      "ja": 85,
+      "en": 82,
+      "ja": 68,
+      "zh": 65
+    },
+    "benchmarks": {
+      "mmlu": 78.0,
+      "gpqa": 42.0,
+      "swe_bench": 20.0,
+      "aime": 15.0,
+      "hle": 1.0,
+      "mgsm": 82.0
+    },
+    "infrastructure": {
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 44,
+      "vramInt8": 22,
+      "vramInt4": 11,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp"
+      ],
+      "estimatedTps": 60
+    },
+    "releaseDate": "2024-09-10",
+    "memo": "Korean-optimized model from Upstage. Strong Korean NLP and document understanding.",
+    "sourceUrls": [
+      "https://huggingface.co/upstage/solar-pro-preview-instruct"
+    ],
+    "colorCode": "#FF6B00",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Mistral Small 3.1 24B",
+    "slug": "mistral-small-3-1",
+    "provider": "Mistral",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 24,
+    "activeParameters": 24,
+    "architecture": "dense",
+    "contextWindow": 128000,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 78,
+      "speed": 82,
+      "reasoning": 72,
+      "coding": 76,
+      "multimodal": 72
+    },
+    "languageScores": {
+      "ko": 65,
+      "en": 90,
+      "ja": 68,
+      "zh": 70
+    },
+    "benchmarks": {
+      "mmlu": 81.0,
+      "gpqa": 48.0,
+      "swe_bench": 30.0,
+      "aime": 22.0,
+      "hle": 1.5,
+      "mgsm": 85.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 48,
+      "vramInt8": 24,
+      "vramInt4": 12,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 70
+    },
+    "releaseDate": "2025-03-20",
+    "memo": "Fast and efficient small model with vision capabilities. Best-in-class for its size.",
+    "sourceUrls": [
+      "https://mistral.ai/news/mistral-small-3-1"
+    ],
+    "colorCode": "#FF7000",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Granite 3.1 8B",
+    "slug": "granite-3-1-8b",
+    "provider": "IBM",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 8,
+    "activeParameters": 8,
+    "architecture": "dense",
+    "contextWindow": 128000,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 65,
+      "speed": 90,
+      "reasoning": 60,
+      "coding": 62,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 45,
+      "en": 85,
+      "ja": 50,
+      "zh": 55
+    },
+    "benchmarks": {
+      "mmlu": 70.0,
+      "gpqa": 32.0,
+      "swe_bench": 18.0,
+      "aime": 10.0,
+      "hle": 0.5,
+      "mgsm": 72.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 16,
+      "vramInt8": 8,
+      "vramInt4": 4,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 110
+    },
+    "releaseDate": "2024-12-18",
+    "memo": "Enterprise-focused model from IBM. Strong RAG and tool-use capabilities with safety guardrails.",
+    "sourceUrls": [
+      "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct"
+    ],
+    "colorCode": "#0F62FE",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Falcon 3 10B",
+    "slug": "falcon-3-10b",
+    "provider": "TII",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 10,
+    "activeParameters": 10,
+    "architecture": "dense",
+    "contextWindow": 32768,
+    "maxOutput": 8192,
+    "license": "TII Falcon 3 License",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 66,
+      "speed": 88,
+      "reasoning": 62,
+      "coding": 60,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 48,
+      "en": 84,
+      "ja": 52,
+      "zh": 55
+    },
+    "benchmarks": {
+      "mmlu": 72.0,
+      "gpqa": 35.0,
+      "swe_bench": 16.0,
+      "aime": 12.0,
+      "hle": 0.5,
+      "mgsm": 70.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 20,
+      "vramInt8": 10,
+      "vramInt4": 5,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 100
+    },
+    "releaseDate": "2024-12-12",
+    "memo": "Efficient multilingual model from Technology Innovation Institute. Good general-purpose performance.",
+    "sourceUrls": [
+      "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "InternLM 3 8B",
+    "slug": "internlm-3-8b",
+    "provider": "Shanghai AI Lab",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 8,
+    "activeParameters": 8,
+    "architecture": "dense",
+    "contextWindow": 32768,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 70,
+      "speed": 88,
+      "reasoning": 68,
+      "coding": 70,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 55,
+      "en": 85,
+      "ja": 62,
+      "zh": 90
+    },
+    "benchmarks": {
+      "mmlu": 76.0,
+      "gpqa": 40.0,
+      "swe_bench": 22.0,
+      "aime": 18.0,
+      "hle": 1.0,
+      "mgsm": 78.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 16,
+      "vramInt8": 8,
+      "vramInt4": 4,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 110
+    },
+    "releaseDate": "2025-01-15",
+    "memo": "Strong tool-use and agentic capabilities. Excellent Chinese and English bilingual performance.",
+    "sourceUrls": [
+      "https://huggingface.co/internlm/internlm3-8b-instruct"
+    ],
+    "colorCode": "#06B6D4",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Jamba 1.5 Large",
+    "slug": "jamba-1-5-large",
+    "provider": "AI21",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 398,
+    "activeParameters": 94,
+    "architecture": "moe",
+    "contextWindow": 256000,
+    "maxOutput": 8192,
+    "license": "Jamba Open Model License",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 78,
+      "speed": 55,
+      "reasoning": 72,
+      "coding": 68,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 58,
+      "en": 88,
+      "ja": 60,
+      "zh": 62
+    },
+    "benchmarks": {
+      "mmlu": 80.0,
+      "gpqa": 45.0,
+      "swe_bench": 22.0,
+      "aime": 18.0,
+      "hle": 1.5,
+      "mgsm": 76.0
+    },
+    "infrastructure": {
+      "minGpu": "4x A100 80GB",
+      "vramFp16": 796,
+      "vramInt8": 398,
+      "vramInt4": 199,
+      "recommendedFramework": [
+        "vLLM"
+      ],
+      "estimatedTps": 30
+    },
+    "releaseDate": "2024-08-22",
+    "memo": "Hybrid SSM-Transformer architecture (Mamba + MoE). Extremely long context with efficient inference.",
+    "sourceUrls": [
+      "https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large"
+    ],
+    "colorCode": "#8B5CF6",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "OLMo 2 13B",
+    "slug": "olmo-2-13b",
+    "provider": "Allen AI",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 13,
+    "activeParameters": 13,
+    "architecture": "dense",
+    "contextWindow": 4096,
+    "maxOutput": 4096,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 65,
+      "speed": 82,
+      "reasoning": 60,
+      "coding": 58,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 42,
+      "en": 82,
+      "ja": 45,
+      "zh": 48
+    },
+    "benchmarks": {
+      "mmlu": 68.0,
+      "gpqa": 32.0,
+      "swe_bench": 14.0,
+      "aime": 8.0,
+      "hle": 0.3,
+      "mgsm": 65.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 26,
+      "vramInt8": 13,
+      "vramInt4": 7,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 80
+    },
+    "releaseDate": "2025-02-05",
+    "memo": "Fully open research model. Training data, code, and weights all publicly available.",
+    "sourceUrls": [
+      "https://huggingface.co/allenai/OLMo-2-0225-13B-Instruct"
+    ],
+    "colorCode": "#10B981",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Nemotron Ultra 253B",
+    "slug": "nemotron-ultra-253b",
+    "provider": "NVIDIA",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 253,
+    "activeParameters": 253,
+    "architecture": "dense",
+    "contextWindow": 128000,
+    "maxOutput": 8192,
+    "license": "Llama 3.1 Community",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 86,
+      "speed": 42,
+      "reasoning": 88,
+      "coding": 86,
+      "multimodal": 20
+    },
+    "languageScores": {
+      "ko": 72,
+      "en": 92,
+      "ja": 70,
+      "zh": 75
+    },
+    "benchmarks": {
+      "mmlu": 88.0,
+      "gpqa": 60.0,
+      "swe_bench": 40.0,
+      "aime": 35.0,
+      "hle": 3.5,
+      "mgsm": 88.0
+    },
+    "infrastructure": {
+      "minGpu": "4x H100 80GB",
+      "vramFp16": 506,
+      "vramInt8": 253,
+      "vramInt4": 127,
+      "recommendedFramework": [
+        "vLLM",
+        "TensorRT-LLM",
+        "NeMo"
+      ],
+      "estimatedTps": 25
+    },
+    "releaseDate": "2025-03-18",
+    "memo": "NVIDIA flagship reasoning model based on Llama architecture. Optimized for NVIDIA hardware.",
+    "sourceUrls": [
+      "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1"
+    ],
+    "colorCode": "#76B900",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3 0.6B",
+    "slug": "qwen-3-0-6b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "micro",
+    "parameterSize": 0.6,
+    "activeParameters": 0.6,
+    "architecture": "dense",
+    "contextWindow": 32768,
+    "maxOutput": 4096,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 35,
+      "speed": 98,
+      "reasoning": 25,
+      "coding": 28,
+      "multimodal": 5
+    },
+    "languageScores": {
+      "ko": 30,
+      "en": 55,
+      "ja": 28,
+      "zh": 60
+    },
+    "benchmarks": {
+      "mmlu": 40.0,
+      "gpqa": 10.0,
+      "swe_bench": 2.0,
+      "aime": 2.0,
+      "hle": 0.0,
+      "mgsm": 35.0
+    },
+    "infrastructure": {
+      "minGpu": "CPU",
+      "vramFp16": 1.2,
+      "vramInt8": 0.6,
+      "vramInt4": 0.3,
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama",
+        "ONNX"
+      ],
+      "estimatedTps": 350
+    },
+    "releaseDate": "2025-04-28",
+    "memo": "Ultra-lightweight model for edge/mobile deployment. Minimal resource requirements.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3-0.6B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3 1.7B",
+    "slug": "qwen-3-1-7b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "mini",
+    "parameterSize": 1.7,
+    "activeParameters": 1.7,
+    "architecture": "dense",
+    "contextWindow": 32768,
+    "maxOutput": 4096,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 45,
+      "speed": 96,
+      "reasoning": 38,
+      "coding": 40,
+      "multimodal": 5
+    },
+    "languageScores": {
+      "ko": 38,
+      "en": 65,
+      "ja": 35,
+      "zh": 70
+    },
+    "benchmarks": {
+      "mmlu": 52.0,
+      "gpqa": 15.0,
+      "swe_bench": 5.0,
+      "aime": 5.0,
+      "hle": 0.1,
+      "mgsm": 48.0
+    },
+    "infrastructure": {
+      "minGpu": "CPU",
+      "vramFp16": 3.4,
+      "vramInt8": 1.7,
+      "vramInt4": 0.9,
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama",
+        "ONNX"
+      ],
+      "estimatedTps": 280
+    },
+    "releaseDate": "2025-04-28",
+    "memo": "Lightweight model for on-device inference. Good balance of size and capability.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3-1.7B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3 4B",
+    "slug": "qwen-3-4b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "mini",
+    "parameterSize": 4,
+    "activeParameters": 4,
+    "architecture": "dense",
+    "contextWindow": 131072,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 55,
+      "speed": 94,
+      "reasoning": 50,
+      "coding": 52,
+      "multimodal": 8
+    },
+    "languageScores": {
+      "ko": 48,
+      "en": 75,
+      "ja": 45,
+      "zh": 80
+    },
+    "benchmarks": {
+      "mmlu": 62.0,
+      "gpqa": 22.0,
+      "swe_bench": 10.0,
+      "aime": 8.0,
+      "hle": 0.2,
+      "mgsm": 58.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 3060",
+      "vramFp16": 8,
+      "vramInt8": 4,
+      "vramInt4": 2,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 200
+    },
+    "releaseDate": "2025-04-28",
+    "memo": "Compact model suitable for consumer GPUs. 128K context with good reasoning for its size.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3-4B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3 14B",
+    "slug": "qwen-3-14b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 14,
+    "activeParameters": 14,
+    "architecture": "dense",
+    "contextWindow": 131072,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 75,
+      "speed": 78,
+      "reasoning": 72,
+      "coding": 74,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 65,
+      "en": 86,
+      "ja": 62,
       "zh": 88
     },
     "benchmarks": {
-      "mmlu": 93.0,
-      "gpqa": 78.0,
-      "swe_bench": 60.0,
-      "aime": 82.0,
-      "hle": 12.0,
-      "mgsm": 95.0
+      "mmlu": 79.0,
+      "gpqa": 42.0,
+      "swe_bench": 25.0,
+      "aime": 20.0,
+      "hle": 1.2,
+      "mgsm": 78.0
     },
     "infrastructure": {
-      "minGpu": "16x H100 80GB",
-      "vramFp16": 4000,
-      "vramInt8": 2000,
-      "vramInt4": 1000,
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 28,
+      "vramInt8": 14,
+      "vramInt4": 7,
       "recommendedFramework": [
         "vLLM",
-        "TGI"
+        "llama.cpp",
+        "Ollama"
       ],
-      "estimatedTps": 15
+      "estimatedTps": 80
     },
-    "releaseDate": "2025-08-20",
-    "memo": "Largest open model. 2T total params, 288B active. 16 experts. Frontier-level open-source model.",
+    "releaseDate": "2025-04-28",
+    "memo": "Mid-range model with strong multilingual capabilities. Good for single-GPU deployment.",
     "sourceUrls": [
-      "https://ai.meta.com/blog/llama-4-behemoth/"
+      "https://huggingface.co/Qwen/Qwen3-14B"
     ],
-    "colorCode": "#0668E1",
-    "lastVerifiedAt": "2026-03-08"
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 2.5 Coder 32B",
+    "slug": "qwen-2-5-coder-32b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "mid",
+    "parameterSize": 32,
+    "activeParameters": 32,
+    "architecture": "dense",
+    "contextWindow": 131072,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 78,
+      "speed": 65,
+      "reasoning": 75,
+      "coding": 92,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 60,
+      "en": 88,
+      "ja": 55,
+      "zh": 85
+    },
+    "benchmarks": {
+      "mmlu": 78.0,
+      "gpqa": 45.0,
+      "swe_bench": 48.0,
+      "aime": 25.0,
+      "hle": 1.5,
+      "mgsm": 75.0
+    },
+    "infrastructure": {
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 64,
+      "vramInt8": 32,
+      "vramInt4": 16,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 55
+    },
+    "releaseDate": "2024-11-12",
+    "memo": "Code-specialized model. Top-tier performance on SWE-bench and coding benchmarks.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "QwQ 32B",
+    "slug": "qwq-32b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "mid",
+    "parameterSize": 32,
+    "activeParameters": 32,
+    "architecture": "dense",
+    "contextWindow": 131072,
+    "maxOutput": 65536,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 82,
+      "speed": 45,
+      "reasoning": 92,
+      "coding": 85,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 72,
+      "en": 90,
+      "ja": 68,
+      "zh": 92
+    },
+    "benchmarks": {
+      "mmlu": 85.0,
+      "gpqa": 62.0,
+      "swe_bench": 38.0,
+      "aime": 58.0,
+      "hle": 4.0,
+      "mgsm": 88.0
+    },
+    "infrastructure": {
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 64,
+      "vramInt8": 32,
+      "vramInt4": 16,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang",
+        "llama.cpp"
+      ],
+      "estimatedTps": 35
+    },
+    "releaseDate": "2025-03-06",
+    "memo": "Reasoning-focused model with chain-of-thought. Competitive with DeepSeek R1 at fraction of the size.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/QwQ-32B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "GLM-4 9B",
+    "slug": "glm-4-9b",
+    "provider": "Zhipu AI",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 9,
+    "activeParameters": 9,
+    "architecture": "dense",
+    "contextWindow": 131072,
+    "maxOutput": 8192,
+    "license": "GLM-4 License",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 72,
+      "speed": 85,
+      "reasoning": 68,
+      "coding": 70,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 55,
+      "en": 85,
+      "ja": 58,
+      "zh": 90
+    },
+    "benchmarks": {
+      "mmlu": 75.0,
+      "gpqa": 38.0,
+      "swe_bench": 18.0,
+      "aime": 15.0,
+      "hle": 0.8,
+      "mgsm": 75.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 18,
+      "vramInt8": 9,
+      "vramInt4": 5,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp"
+      ],
+      "estimatedTps": 100
+    },
+    "releaseDate": "2024-06-06",
+    "memo": "Open-source version of GLM-4. Strong Chinese language and tool-use capabilities with 128K context.",
+    "sourceUrls": [
+      "https://huggingface.co/THUDM/glm-4-9b-chat"
+    ],
+    "colorCode": "#3B82F6",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3.5 27B",
+    "slug": "qwen-3-5-27b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "mid",
+    "parameterSize": 27,
+    "activeParameters": 27,
+    "architecture": "dense",
+    "contextWindow": 262144,
+    "maxOutput": 16384,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 90,
+      "speed": 60,
+      "reasoning": 90,
+      "coding": 88,
+      "multimodal": 78
+    },
+    "languageScores": {
+      "ko": 78,
+      "en": 94,
+      "ja": 75,
+      "zh": 92
+    },
+    "benchmarks": {
+      "mmlu_pro": 86.1,
+      "gpqa": 85.5,
+      "swe_bench": 72.4,
+      "hle": 24.3,
+      "mmmu": 82.3,
+      "mgsm": 92.0
+    },
+    "infrastructure": {
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 54,
+      "vramInt8": 27,
+      "vramInt4": 14,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang",
+        "llama.cpp"
+      ],
+      "estimatedTps": 55
+    },
+    "releaseDate": "2026-02-24",
+    "memo": "Hybrid GDN+Attention architecture. SWE-bench 72.4, GPQA 85.5. Native 262K context, 201 languages.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3.5-27B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3.5 35B-A3B",
+    "slug": "qwen-3-5-35b-a3b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 35,
+    "activeParameters": 3,
+    "architecture": "moe",
+    "contextWindow": 262144,
+    "maxOutput": 16384,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 80,
+      "speed": 88,
+      "reasoning": 82,
+      "coding": 78,
+      "multimodal": 65
+    },
+    "languageScores": {
+      "ko": 70,
+      "en": 90,
+      "ja": 68,
+      "zh": 88
+    },
+    "benchmarks": {
+      "mmlu": 88.0,
+      "gpqa": 72.0,
+      "aime": 65.0,
+      "mgsm": 88.0
+    },
+    "infrastructure": {
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 70,
+      "vramInt8": 35,
+      "vramInt4": 18,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang",
+        "llama.cpp"
+      ],
+      "estimatedTps": 110
+    },
+    "releaseDate": "2026-02-24",
+    "memo": "MoE with 8.6% activation ratio. Surpasses Qwen3-235B-A22B. 111 tok/s on RTX 3090 at Q4.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3.5-35B-A3B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3.5 122B-A10B",
+    "slug": "qwen-3-5-122b-a10b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 122,
+    "activeParameters": 10,
+    "architecture": "moe",
+    "contextWindow": 262144,
+    "maxOutput": 16384,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 88,
+      "speed": 70,
+      "reasoning": 88,
+      "coding": 86,
+      "multimodal": 75
+    },
+    "languageScores": {
+      "ko": 75,
+      "en": 92,
+      "ja": 72,
+      "zh": 90
+    },
+    "benchmarks": {
+      "gpqa": 82.0,
+      "aime": 85.0,
+      "bfcl_v4": 72.2,
+      "mgsm": 90.0
+    },
+    "infrastructure": {
+      "minGpu": "2x A100 80GB",
+      "vramFp16": 244,
+      "vramInt8": 122,
+      "vramInt4": 61,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 65
+    },
+    "releaseDate": "2026-02-24",
+    "memo": "MoE flagship. BFCL-V4 72.2 (tool use) outperforms GPT-5 mini by 30%. AIME 2026 85%.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3.5 9B",
+    "slug": "qwen-3-5-9b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 9,
+    "activeParameters": 9,
+    "architecture": "dense",
+    "contextWindow": 262144,
+    "maxOutput": 16384,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 78,
+      "speed": 82,
+      "reasoning": 82,
+      "coding": 75,
+      "multimodal": 70
+    },
+    "languageScores": {
+      "ko": 68,
+      "en": 88,
+      "ja": 65,
+      "zh": 88
+    },
+    "benchmarks": {
+      "gpqa": 81.7,
+      "hmmt": 83.2,
+      "mmmu_pro": 70.1,
+      "omnidoc": 87.7
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 18,
+      "vramInt8": 9,
+      "vramInt4": 5,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 90
+    },
+    "releaseDate": "2026-03-02",
+    "memo": "Beats GPT-OSS-120B (13x larger) on GPQA Diamond 81.7. Hybrid GDN+Attention. 262K context.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3.5-9B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3.5 4B",
+    "slug": "qwen-3-5-4b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "mini",
+    "parameterSize": 4,
+    "activeParameters": 4,
+    "architecture": "dense",
+    "contextWindow": 262144,
+    "maxOutput": 16384,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 62,
+      "speed": 92,
+      "reasoning": 60,
+      "coding": 58,
+      "multimodal": 55
+    },
+    "languageScores": {
+      "ko": 55,
+      "en": 80,
+      "ja": 52,
+      "zh": 82
+    },
+    "benchmarks": {
+      "gpqa": 55.0,
+      "mgsm": 70.0
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 3060",
+      "vramFp16": 8,
+      "vramInt8": 4,
+      "vramInt4": 2,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 180
+    },
+    "releaseDate": "2026-03-02",
+    "memo": "Compact model with 262K context. Hybrid GDN architecture for efficient long-context inference.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3.5-4B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3.5 2B",
+    "slug": "qwen-3-5-2b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "mini",
+    "parameterSize": 2,
+    "activeParameters": 2,
+    "architecture": "dense",
+    "contextWindow": 262144,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 50,
+      "speed": 95,
+      "reasoning": 45,
+      "coding": 45,
+      "multimodal": 40
+    },
+    "languageScores": {
+      "ko": 42,
+      "en": 72,
+      "ja": 40,
+      "zh": 75
+    },
+    "benchmarks": {
+      "gpqa": 38.0,
+      "mgsm": 55.0
+    },
+    "infrastructure": {
+      "minGpu": "CPU",
+      "vramFp16": 4,
+      "vramInt8": 2,
+      "vramInt4": 1,
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama",
+        "ONNX"
+      ],
+      "estimatedTps": 250
+    },
+    "releaseDate": "2026-03-02",
+    "memo": "Lightweight for on-device deployment. 262K context with hybrid attention.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3.5-2B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Qwen 3.5 0.8B",
+    "slug": "qwen-3-5-0-8b",
+    "provider": "Alibaba",
+    "type": "open-source",
+    "tier": "micro",
+    "parameterSize": 0.8,
+    "activeParameters": 0.8,
+    "architecture": "dense",
+    "contextWindow": 262144,
+    "maxOutput": 8192,
+    "license": "Apache 2.0",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 38,
+      "speed": 98,
+      "reasoning": 30,
+      "coding": 32,
+      "multimodal": 30
+    },
+    "languageScores": {
+      "ko": 32,
+      "en": 60,
+      "ja": 30,
+      "zh": 65
+    },
+    "benchmarks": {
+      "gpqa": 25.0,
+      "mgsm": 40.0
+    },
+    "infrastructure": {
+      "minGpu": "CPU",
+      "vramFp16": 1.6,
+      "vramInt8": 0.8,
+      "vramInt4": 0.4,
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama",
+        "ONNX"
+      ],
+      "estimatedTps": 400
+    },
+    "releaseDate": "2026-03-02",
+    "memo": "Ultra-compact for mobile/IoT. Runs video on phones. 262K context.",
+    "sourceUrls": [
+      "https://huggingface.co/Qwen/Qwen3.5-0.8B"
+    ],
+    "colorCode": "#6366F1",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "GLM-4.5",
+    "slug": "glm-4-5",
+    "provider": "Zhipu AI",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 355,
+    "activeParameters": 32,
+    "architecture": "moe",
+    "contextWindow": 128000,
+    "maxOutput": 16384,
+    "license": "MIT",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 86,
+      "speed": 55,
+      "reasoning": 85,
+      "coding": 85,
+      "multimodal": 15
+    },
+    "languageScores": {
+      "ko": 65,
+      "en": 90,
+      "ja": 62,
+      "zh": 92
+    },
+    "benchmarks": {
+      "aggregate_12": 63.2,
+      "tool_use": 90.6
+    },
+    "infrastructure": {
+      "minGpu": "8x A100 80GB",
+      "vramFp16": 710,
+      "vramInt8": 355,
+      "vramInt4": 178,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 45
+    },
+    "releaseDate": "2025-07-15",
+    "memo": "Hybrid thinking/non-thinking modes. 3rd place on 12-benchmark aggregate (63.2). Tool-use 90.6% accuracy, surpassing Claude Sonnet 4.",
+    "sourceUrls": [
+      "https://huggingface.co/zai-org/GLM-4.5"
+    ],
+    "colorCode": "#3B82F6",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "GLM-4.5-Air",
+    "slug": "glm-4-5-air",
+    "provider": "Zhipu AI",
+    "type": "open-source",
+    "tier": "mid",
+    "parameterSize": 106,
+    "activeParameters": 12,
+    "architecture": "moe",
+    "contextWindow": 128000,
+    "maxOutput": 16384,
+    "license": "MIT",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 78,
+      "speed": 70,
+      "reasoning": 76,
+      "coding": 74,
+      "multimodal": 15
+    },
+    "languageScores": {
+      "ko": 58,
+      "en": 86,
+      "ja": 55,
+      "zh": 90
+    },
+    "benchmarks": {
+      "aggregate_12": 59.8
+    },
+    "infrastructure": {
+      "minGpu": "2x A100 80GB",
+      "vramFp16": 212,
+      "vramInt8": 106,
+      "vramInt4": 53,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 80
+    },
+    "releaseDate": "2025-07-15",
+    "memo": "Efficient variant of GLM-4.5. 106B total / 12B active. Good cost-performance balance.",
+    "sourceUrls": [
+      "https://huggingface.co/zai-org/GLM-4.5"
+    ],
+    "colorCode": "#3B82F6",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "GLM-4.7",
+    "slug": "glm-4-7",
+    "provider": "Zhipu AI",
+    "type": "open-source",
+    "tier": "flagship",
+    "parameterSize": 355,
+    "activeParameters": 32,
+    "architecture": "moe",
+    "contextWindow": 200000,
+    "maxOutput": 131072,
+    "license": "MIT",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 92,
+      "speed": 62,
+      "reasoning": 95,
+      "coding": 93,
+      "multimodal": 15
+    },
+    "languageScores": {
+      "ko": 70,
+      "en": 92,
+      "ja": 65,
+      "zh": 94
+    },
+    "benchmarks": {
+      "gpqa": 85.7,
+      "swe_bench": 73.8,
+      "hle": 42.8,
+      "aime": 95.7,
+      "tau2_bench": 87.4
+    },
+    "infrastructure": {
+      "minGpu": "8x A100 80GB",
+      "vramFp16": 710,
+      "vramInt8": 355,
+      "vramInt4": 178,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 55
+    },
+    "releaseDate": "2025-12-22",
+    "memo": "Flagship coding/reasoning. SWE-bench 73.8 (OSS SOTA), AIME 95.7, HLE 42.8. Three thinking modes. 200K ctx, 128K output.",
+    "sourceUrls": [
+      "https://huggingface.co/zai-org/GLM-4.7"
+    ],
+    "colorCode": "#3B82F6",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Kimi-VL A3B",
+    "slug": "kimi-vl-a3b",
+    "provider": "Moonshot AI",
+    "type": "open-source",
+    "tier": "mini",
+    "parameterSize": 16,
+    "activeParameters": 3,
+    "architecture": "moe",
+    "contextWindow": 128000,
+    "maxOutput": 8192,
+    "license": "MIT",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 62,
+      "speed": 90,
+      "reasoning": 55,
+      "coding": 48,
+      "multimodal": 78
+    },
+    "languageScores": {
+      "ko": 50,
+      "en": 82,
+      "ja": 52,
+      "zh": 85
+    },
+    "benchmarks": {
+      "mmmu": 64.0,
+      "mathvision": 36.8,
+      "longvideobench": 64.5,
+      "mmbench": 84.4
+    },
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 32,
+      "vramInt8": 16,
+      "vramInt4": 8,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 120
+    },
+    "releaseDate": "2025-04-15",
+    "memo": "Vision-language MoE. MoonViT encoder, native 1792x1792 resolution. 3B active for fast multimodal reasoning.",
+    "sourceUrls": [
+      "https://github.com/MoonshotAI/Kimi-VL"
+    ],
+    "colorCode": "#F59E0B",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Kimi-Dev 72B",
+    "slug": "kimi-dev-72b",
+    "provider": "Moonshot AI",
+    "type": "open-source",
+    "tier": "mid",
+    "parameterSize": 72,
+    "activeParameters": 72,
+    "architecture": "dense",
+    "contextWindow": 131072,
+    "maxOutput": 16384,
+    "license": "MIT",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 82,
+      "speed": 50,
+      "reasoning": 80,
+      "coding": 90,
+      "multimodal": 15
+    },
+    "languageScores": {
+      "ko": 62,
+      "en": 90,
+      "ja": 60,
+      "zh": 88
+    },
+    "benchmarks": {
+      "swe_bench": 60.4
+    },
+    "infrastructure": {
+      "minGpu": "2x A100 80GB",
+      "vramFp16": 144,
+      "vramInt8": 72,
+      "vramInt4": 36,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 40
+    },
+    "releaseDate": "2025-06-15",
+    "memo": "Code-specialized (Qwen2.5-72B base). SWE-bench Verified 60.4% (OSS SOTA at release). RL-trained on real repos.",
+    "sourceUrls": [
+      "https://huggingface.co/moonshotai/Kimi-Dev-72B"
+    ],
+    "colorCode": "#F59E0B",
+    "lastVerifiedAt": "2026-03-09"
+  },
+  {
+    "name": "Kimi Linear 48B-A3B",
+    "slug": "kimi-linear-48b-a3b",
+    "provider": "Moonshot AI",
+    "type": "open-source",
+    "tier": "small",
+    "parameterSize": 48,
+    "activeParameters": 3,
+    "architecture": "moe",
+    "contextWindow": 1000000,
+    "maxOutput": 16384,
+    "license": "MIT",
+    "pricing": {
+      "input": 0,
+      "output": 0,
+      "cachingDiscount": 0,
+      "batchDiscount": 0
+    },
+    "scores": {
+      "quality": 70,
+      "speed": 92,
+      "reasoning": 65,
+      "coding": 62,
+      "multimodal": 10
+    },
+    "languageScores": {
+      "ko": 55,
+      "en": 85,
+      "ja": 55,
+      "zh": 86
+    },
+    "benchmarks": {
+      "mmlu_pro": 51.0,
+      "ruler_128k": 84.3
+    },
+    "infrastructure": {
+      "minGpu": "1x A100 80GB",
+      "vramFp16": 96,
+      "vramInt8": 48,
+      "vramInt4": 24,
+      "recommendedFramework": [
+        "vLLM",
+        "SGLang"
+      ],
+      "estimatedTps": 150
+    },
+    "releaseDate": "2025-10-20",
+    "memo": "Delta Attention (KDA) architecture. 1M context, 75% KV cache reduction, 6x decode speedup. Pareto-optimal RULER 128K.",
+    "sourceUrls": [
+      "https://huggingface.co/moonshotai/Kimi-Linear-48B-A3B-Instruct"
+    ],
+    "colorCode": "#F59E0B",
+    "lastVerifiedAt": "2026-03-09"
   }
 ]

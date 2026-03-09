@@ -31,10 +31,23 @@ export interface IIndustryPreset {
   readonly keyFactors: readonly string[]
 }
 
+export interface IRankedModelInfra {
+  readonly parameterSize: number | null
+  readonly activeParameters: number | null
+  readonly architecture: 'dense' | 'moe' | null
+  readonly contextWindow: number
+  readonly license: string
+  readonly minGpu: string | null
+  readonly vramInt4: number | null
+  readonly estimatedTps: number | null
+}
+
 export interface IRankedModel {
   readonly slug: string
   readonly name: string
   readonly provider: string
+  readonly type: 'commercial' | 'open-source'
   readonly score: number
   readonly breakdown: Record<string, number>
+  readonly infra: IRankedModelInfra | null
 }
