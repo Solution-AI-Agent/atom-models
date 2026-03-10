@@ -1,21 +1,26 @@
 'use client'
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { SlidersHorizontalIcon } from 'lucide-react'
+import { BENCHMARKS } from '@/lib/constants/benchmarks'
 
-const COLUMNS = [
+type ColumnKey = 'type' | keyof typeof BENCHMARKS | 'context'
+
+const benchmarkColumns: readonly { readonly key: ColumnKey; readonly label: string }[] =
+  Object.entries(BENCHMARKS).map(([key, meta]) => ({
+    key: key as keyof typeof BENCHMARKS,
+    label: meta.label,
+  }))
+
+const COLUMNS: readonly { readonly key: ColumnKey; readonly label: string }[] = [
   { key: 'type', label: '유형' },
-  { key: 'scores', label: '평가' },
+  ...benchmarkColumns,
   { key: 'context', label: '컨텍스트' },
-] as const
-
-type ColumnKey = typeof COLUMNS[number]['key']
+]
 
 interface ColumnCustomizerProps {
   readonly visibleColumns: readonly ColumnKey[]

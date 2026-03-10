@@ -16,8 +16,14 @@ export interface IModelScores {
 export interface IModelInfrastructure {
   readonly minGpu: string
   readonly vramFp16: number
+  readonly vramFp8?: number
   readonly vramInt8: number
   readonly vramInt4: number
+  readonly vramQ6k?: number
+  readonly vramQ5k?: number
+  readonly vramQ4kM?: number
+  readonly vramQ3k?: number
+  readonly vramQ2k?: number
   readonly recommendedFramework: readonly string[]
   readonly estimatedTps: number
 }

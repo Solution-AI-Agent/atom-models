@@ -2,7 +2,8 @@ import { getConnection } from '@/lib/db/connection'
 import { GpuReferenceModel } from '@/lib/db/models/gpu-reference'
 import { ModelModel } from '@/lib/db/models/model'
 import { serialize } from '@/lib/utils/serialize'
-import type { ICompatibleModel, QuantizationLevel } from '@/lib/types/gpu'
+import { QUANTIZATION_LEVELS } from '@/lib/constants/quantizations'
+import type { ICompatibleModel, ITpsFormula, QuantizationLevel } from '@/lib/types/gpu'
 
 interface GpuQuery {
   readonly category?: string
@@ -43,23 +44,50 @@ function extractGpuName(minGpu: string): string {
   return minGpu.trim()
 }
 
+interface QuantizationEntry {
+  readonly level: QuantizationLevel
+  readonly vramRequired: number
+  readonly fits: boolean
+}
+
+/** Maps QuantizationLevel key to the corresponding infrastructure VRAM field name */
+const QUANT_VRAM_FIELD_MAP: Readonly<Record<QuantizationLevel, string>> = {
+  fp16: 'vramFp16',
+  fp8: 'vramFp8',
+  int8: 'vramInt8',
+  int4: 'vramInt4',
+  q6_k: 'vramQ6k',
+  q5_k: 'vramQ5k',
+  q4_k_m: 'vramQ4kM',
+  q3_k: 'vramQ3k',
+  q2_k: 'vramQ2k',
+}
+
 function computeQuantizations(
-  vramFp16: number,
-  vramInt8: number,
-  vramInt4: number,
+  infra: Record<string, any>,
   gpuVram: number,
-): readonly { readonly level: QuantizationLevel; readonly vramRequired: number; readonly fits: boolean }[] {
-  return [
-    { level: 'fp16' as const, vramRequired: vramFp16, fits: vramFp16 <= gpuVram },
-    { level: 'int8' as const, vramRequired: vramInt8, fits: vramInt8 <= gpuVram },
-    { level: 'int4' as const, vramRequired: vramInt4, fits: vramInt4 <= gpuVram },
-  ]
+): readonly QuantizationEntry[] {
+  const result: QuantizationEntry[] = []
+
+  for (const meta of QUANTIZATION_LEVELS) {
+    const fieldName = QUANT_VRAM_FIELD_MAP[meta.key]
+    const vramValue = infra[fieldName]
+    if (vramValue == null) continue
+
+    result.push({
+      level: meta.key,
+      vramRequired: vramValue,
+      fits: vramValue <= gpuVram,
+    })
+  }
+
+  return result
 }
 
 function determineBestQuantization(
-  allQuantizations: readonly { readonly level: QuantizationLevel; readonly vramRequired: number; readonly fits: boolean }[],
+  allQuantizations: readonly QuantizationEntry[],
 ): { readonly level: QuantizationLevel; readonly vramRequired: number } | null {
-  // fp16 > int8 > int4 (highest precision first)
+  // Ordered by precision (highest first, driven by QUANTIZATION_LEVELS)
   for (const q of allQuantizations) {
     if (q.fits) {
       return { level: q.level, vramRequired: q.vramRequired }
@@ -88,12 +116,7 @@ export async function getCompatibleModels(
     const infra = model.infrastructure
     if (!infra) continue
 
-    const allQuantizations = computeQuantizations(
-      infra.vramFp16,
-      infra.vramInt8,
-      infra.vramInt4,
-      gpuVram,
-    )
+    const allQuantizations = computeQuantizations(infra, gpuVram)
 
     const best = determineBestQuantization(allQuantizations)
     if (!best) continue
@@ -101,8 +124,19 @@ export async function getCompatibleModels(
     // TPS scaling based on GPU performance ratio
     const refGpuName = extractGpuName(infra.minGpu)
     const refTflops = refTflopsMap.get(refGpuName)
-    const estimatedTps = refTflops
-      ? Math.round(infra.estimatedTps * (gpuFp16Tflops / refTflops) * 10) / 10
+
+    const tpsFormula: ITpsFormula | null = refTflops
+      ? {
+          baseTps: infra.estimatedTps,
+          refGpuName,
+          refTflops,
+          targetTflops: gpuFp16Tflops,
+          ratio: Math.round((gpuFp16Tflops / refTflops) * 1000) / 1000,
+        }
+      : null
+
+    const estimatedTps = tpsFormula
+      ? Math.round(infra.estimatedTps * tpsFormula.ratio * 10) / 10
       : infra.estimatedTps
 
     compatible.push({
@@ -115,6 +149,7 @@ export async function getCompatibleModels(
       vramRequired: best.vramRequired,
       estimatedTps,
       allQuantizations,
+      tpsFormula,
     })
   }
 

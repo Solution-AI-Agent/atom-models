@@ -13,25 +13,29 @@ import {
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { ArrowUpDown } from 'lucide-react'
+import { SortableHeader } from '@/components/shared/sortable-header'
+import { TpsFormulaInfo } from '@/components/infra/tps-formula-info'
 import { useIsMobile } from '@/hooks/use-mobile'
+import { QUANTIZATION_LEVELS } from '@/lib/constants/quantizations'
 import type { ICompatibleModel, QuantizationLevel } from '@/lib/types/gpu'
 
 interface CompatibleModelsTableProps {
   readonly models: readonly ICompatibleModel[]
 }
 
-const quantizationTabs: { value: string; label: string }[] = [
-  { value: 'all', label: '전체' },
-  { value: 'fp16', label: 'FP16' },
-  { value: 'int8', label: 'INT8' },
-  { value: 'int4', label: 'INT4' },
-]
+type SortField = 'name' | 'parameterSize' | 'vramRequired' | 'estimatedTps'
+type SortOrder = 'asc' | 'desc'
 
 const quantizationBadgeVariant: Record<QuantizationLevel, 'default' | 'secondary' | 'outline'> = {
   fp16: 'default',
+  fp8: 'default',
   int8: 'secondary',
   int4: 'outline',
+  q6_k: 'secondary',
+  q5_k: 'secondary',
+  q4_k_m: 'outline',
+  q3_k: 'outline',
+  q2_k: 'outline',
 }
 
 function formatParams(size: number | null): string {
@@ -39,23 +43,47 @@ function formatParams(size: number | null): string {
   return `${size}B`
 }
 
+function buildQuantizationTabs(models: readonly ICompatibleModel[]) {
+  const presentLevels = new Set(models.map((m) => m.bestQuantization))
+  const tabs = QUANTIZATION_LEVELS
+    .filter((q) => presentLevels.has(q.key))
+    .map((q) => ({ value: q.key, label: q.label }))
+  return [{ value: 'all', label: '전체' }, ...tabs]
+}
+
 export function CompatibleModelsTable({ models }: CompatibleModelsTableProps) {
   const [filter, setFilter] = useState('all')
-  const [sortAsc, setSortAsc] = useState(false)
+  const [sortField, setSortField] = useState<SortField>('estimatedTps')
+  const [sortOrder, setSortOrder] = useState<SortOrder>('desc')
   const isMobile = useIsMobile()
+
+  const quantizationTabs = useMemo(() => buildQuantizationTabs(models), [models])
 
   const filteredModels = useMemo(() => {
     const filtered = filter === 'all'
       ? models
       : models.filter((m) => m.bestQuantization === filter)
 
-    return [...filtered].sort((a, b) =>
-      sortAsc ? a.estimatedTps - b.estimatedTps : b.estimatedTps - a.estimatedTps
-    )
-  }, [models, filter, sortAsc])
+    return [...filtered].sort((a, b) => {
+      const aVal = a[sortField]
+      const bVal = b[sortField]
+      if (typeof aVal === 'string' && typeof bVal === 'string') {
+        return sortOrder === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal)
+      }
+      const aNum = typeof aVal === 'number' ? aVal : 0
+      const bNum = typeof bVal === 'number' ? bVal : 0
+      return sortOrder === 'asc' ? aNum - bNum : bNum - aNum
+    })
+  }, [models, filter, sortField, sortOrder])
 
-  const handleSortToggle = () => {
-    setSortAsc((prev) => !prev)
+  const handleSort = (field: string) => {
+    const f = field as SortField
+    if (sortField === f) {
+      setSortOrder((prev) => (prev === 'asc' ? 'desc' : 'asc'))
+    } else {
+      setSortField(f)
+      setSortOrder('desc')
+    }
   }
 
   if (models.length === 0) {
@@ -80,6 +108,10 @@ export function CompatibleModelsTable({ models }: CompatibleModelsTableProps) {
         <h2 className="text-lg font-semibold">배포 가능한 OSS 모델</h2>
         <Badge variant="secondary">{filteredModels.length}</Badge>
       </div>
+
+      {models[0]?.tpsFormula && (
+        <TpsFormulaInfo formula={models[0].tpsFormula} />
+      )}
 
       <Tabs value={filter} onValueChange={setFilter}>
         <TabsList>
@@ -133,20 +165,20 @@ export function CompatibleModelsTable({ models }: CompatibleModelsTableProps) {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>모델명</TableHead>
+                <SortableHeader field="name" currentField={sortField} currentOrder={sortOrder} onSort={handleSort}>
+                  모델명
+                </SortableHeader>
                 <TableHead>프로바이더</TableHead>
-                <TableHead>파라미터</TableHead>
+                <SortableHeader field="parameterSize" currentField={sortField} currentOrder={sortOrder} onSort={handleSort}>
+                  파라미터
+                </SortableHeader>
                 <TableHead>최적 양자화</TableHead>
-                <TableHead>VRAM 사용량</TableHead>
-                <TableHead
-                  className="cursor-pointer select-none"
-                  onClick={handleSortToggle}
-                >
-                  <div className="flex items-center gap-1">
-                    추정 TPS
-                    <ArrowUpDown className="h-3 w-3" />
-                  </div>
-                </TableHead>
+                <SortableHeader field="vramRequired" currentField={sortField} currentOrder={sortOrder} onSort={handleSort}>
+                  VRAM 사용량
+                </SortableHeader>
+                <SortableHeader field="estimatedTps" currentField={sortField} currentOrder={sortOrder} onSort={handleSort}>
+                  추정 TPS
+                </SortableHeader>
               </TableRow>
             </TableHeader>
             <TableBody>

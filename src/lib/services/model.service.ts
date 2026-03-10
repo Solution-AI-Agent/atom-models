@@ -1,7 +1,16 @@
 import { getConnection } from '@/lib/db/connection'
 import { ModelModel } from '@/lib/db/models/model'
 import { serialize } from '@/lib/utils/serialize'
+import { BENCHMARKS } from '@/lib/constants/benchmarks'
 import type { IModelListQuery } from '@/lib/types/model'
+
+const ALLOWED_SORT_FIELDS = new Set([
+  'name',
+  'provider',
+  'pricing.output',
+  'contextWindow',
+  ...Object.keys(BENCHMARKS).map((key) => `benchmarks.${key}`),
+])
 
 export interface ModelListResult {
   readonly models: readonly any[]
@@ -35,7 +44,7 @@ export async function getModels(query: IModelListQuery): Promise<ModelListResult
 
   const page = query.page || 1
   const limit = query.limit || 50
-  const sortField = query.sort || 'name'
+  const sortField = query.sort && ALLOWED_SORT_FIELDS.has(query.sort) ? query.sort : 'name'
   const sortOrder = query.order === 'desc' ? -1 : 1
 
   const [models, total] = await Promise.all([

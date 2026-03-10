@@ -23,22 +23,38 @@ function ExploreContent({ models, total, page, limit }: ExploreClientProps) {
   const searchParams = useSearchParams()
   const view = (searchParams.get('view') as ViewMode) || 'table'
   const search = searchParams.get('search') || ''
+  const sort = searchParams.get('sort') || ''
+  const order = (searchParams.get('order') as 'asc' | 'desc') || 'desc'
 
-  const handleSearch = (value: string) => {
+  const updateParams = (updates: Record<string, string | null>) => {
     const params = new URLSearchParams(searchParams.toString())
-    if (value) {
-      params.set('search', value)
-    } else {
-      params.delete('search')
+    for (const [key, value] of Object.entries(updates)) {
+      if (value === null) {
+        params.delete(key)
+      } else {
+        params.set(key, value)
+      }
     }
-    params.delete('page')
     router.push(`/explore?${params.toString()}`)
   }
 
+  const handleSearch = (value: string) => {
+    updateParams({
+      search: value || null,
+      page: null,
+    })
+  }
+
   const handlePageChange = (newPage: number) => {
-    const params = new URLSearchParams(searchParams.toString())
-    params.set('page', String(newPage))
-    router.push(`/explore?${params.toString()}`)
+    updateParams({ page: String(newPage) })
+  }
+
+  const handleSort = (field: string) => {
+    if (sort === field) {
+      updateParams({ order: order === 'asc' ? 'desc' : 'asc' })
+    } else {
+      updateParams({ sort: field, order: 'desc' })
+    }
   }
 
   return (
@@ -62,7 +78,7 @@ function ExploreContent({ models, total, page, limit }: ExploreClientProps) {
       </div>
 
       {view === 'table' ? (
-        <ModelTable models={models} />
+        <ModelTable models={models} sort={sort} order={order} onSort={handleSort} />
       ) : (
         <ModelCardGrid models={models} />
       )}

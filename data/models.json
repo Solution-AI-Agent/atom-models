@@ -1291,8 +1291,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 54,
+      "vramFp8": 27,
       "vramInt8": 27,
       "vramInt4": 14,
+      "vramQ6k": 24,
+      "vramQ5k": 20,
+      "vramQ4kM": 16,
+      "vramQ3k": 12,
+      "vramQ2k": 8,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -1350,8 +1356,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 24,
+      "vramFp8": 12,
       "vramInt8": 12,
       "vramInt4": 6,
+      "vramQ6k": 11,
+      "vramQ5k": 9,
+      "vramQ4kM": 7,
+      "vramQ3k": 5,
+      "vramQ2k": 4,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -1457,8 +1469,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 48,
+      "vramFp8": 24,
       "vramInt8": 24,
       "vramInt4": 12,
+      "vramQ6k": 22,
+      "vramQ5k": 18,
+      "vramQ4kM": 14,
+      "vramQ3k": 11,
+      "vramQ2k": 7,
       "recommendedFramework": [
         "vLLM",
         "TGI"
@@ -1563,8 +1581,14 @@
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 1350,
+      "vramFp8": 675,
       "vramInt8": 675,
       "vramInt4": 338,
+      "vramQ6k": 37,
+      "vramQ5k": 31,
+      "vramQ4kM": 25,
+      "vramQ3k": 18,
+      "vramQ2k": 12,
       "recommendedFramework": [
         "vLLM",
         "TGI"
@@ -1621,8 +1645,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1342,
+      "vramFp8": 671,
       "vramInt8": 671,
       "vramInt4": 336,
+      "vramQ6k": 33,
+      "vramQ5k": 28,
+      "vramQ4kM": 22,
+      "vramQ3k": 17,
+      "vramQ2k": 11,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -1679,8 +1709,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1342,
+      "vramFp8": 671,
       "vramInt8": 671,
       "vramInt4": 336,
+      "vramQ6k": 33,
+      "vramQ5k": 28,
+      "vramQ4kM": 22,
+      "vramQ3k": 17,
+      "vramQ2k": 11,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -1737,8 +1773,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1370,
+      "vramFp8": 685,
       "vramInt8": 685,
       "vramInt4": 343,
+      "vramQ6k": 33,
+      "vramQ5k": 28,
+      "vramQ4kM": 22,
+      "vramQ3k": 17,
+      "vramQ2k": 11,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -1795,8 +1837,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1370,
+      "vramFp8": 685,
       "vramInt8": 685,
       "vramInt4": 343,
+      "vramQ6k": 33,
+      "vramQ5k": 28,
+      "vramQ4kM": 22,
+      "vramQ3k": 17,
+      "vramQ2k": 11,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -1853,8 +1901,14 @@
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 470,
+      "vramFp8": 235,
       "vramInt8": 235,
       "vramInt4": 118,
+      "vramQ6k": 20,
+      "vramQ5k": 16,
+      "vramQ4kM": 13,
+      "vramQ3k": 10,
+      "vramQ2k": 7,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -1911,8 +1965,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 64,
+      "vramFp8": 32,
       "vramInt8": 32,
       "vramInt4": 16,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -1970,8 +2030,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 16,
+      "vramFp8": 8,
       "vramInt8": 8,
       "vramInt4": 4,
+      "vramQ6k": 7,
+      "vramQ5k": 6,
+      "vramQ4kM": 5,
+      "vramQ3k": 4,
+      "vramQ2k": 2,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -2029,8 +2095,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 60,
+      "vramFp8": 30,
       "vramInt8": 30,
       "vramInt4": 15,
+      "vramQ6k": 3,
+      "vramQ5k": 2,
+      "vramQ4kM": 2,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -2088,8 +2160,14 @@
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 794,
+      "vramFp8": 397,
       "vramInt8": 397,
       "vramInt4": 199,
+      "vramQ6k": 15,
+      "vramQ5k": 13,
+      "vramQ4kM": 10,
+      "vramQ3k": 8,
+      "vramQ2k": 5,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -2483,8 +2561,14 @@
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 222,
+      "vramFp8": 111,
       "vramInt8": 111,
       "vramInt4": 56,
+      "vramQ6k": 100,
+      "vramQ5k": 83,
+      "vramQ4kM": 67,
+      "vramQ3k": 50,
+      "vramQ2k": 33,
       "recommendedFramework": [
         "vLLM",
         "TGI"
@@ -2637,8 +2721,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 28,
+      "vramFp8": 14,
       "vramInt8": 14,
       "vramInt4": 7,
+      "vramQ6k": 13,
+      "vramQ5k": 10,
+      "vramQ4kM": 8,
+      "vramQ3k": 6,
+      "vramQ2k": 4,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -2696,8 +2786,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 8,
+      "vramFp8": 4,
       "vramInt8": 4,
       "vramInt4": 2,
+      "vramQ6k": 3,
+      "vramQ5k": 3,
+      "vramQ4kM": 2,
+      "vramQ3k": 2,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "llama.cpp",
         "Ollama",
@@ -2755,8 +2851,14 @@
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 788,
+      "vramFp8": 394,
       "vramInt8": 394,
       "vramInt4": 197,
+      "vramQ6k": 20,
+      "vramQ5k": 16,
+      "vramQ4kM": 13,
+      "vramQ3k": 10,
+      "vramQ2k": 7,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -2813,8 +2915,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 2000,
+      "vramFp8": 1000,
       "vramInt8": 1000,
       "vramInt4": 500,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -2871,8 +2979,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 2000,
+      "vramFp8": 1000,
       "vramInt8": 1000,
       "vramInt4": 500,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -2929,8 +3043,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1488,
+      "vramFp8": 744,
       "vramInt8": 744,
       "vramInt4": 372,
+      "vramQ6k": 40,
+      "vramQ5k": 33,
+      "vramQ4kM": 26,
+      "vramQ3k": 20,
+      "vramQ2k": 13,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -2987,8 +3107,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 64,
+      "vramFp8": 32,
       "vramInt8": 32,
       "vramInt4": 16,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3046,8 +3172,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 16,
+      "vramFp8": 8,
       "vramInt8": 8,
       "vramInt4": 4,
+      "vramQ6k": 7,
+      "vramQ5k": 6,
+      "vramQ4kM": 5,
+      "vramQ3k": 4,
+      "vramQ2k": 2,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3105,8 +3237,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 44,
+      "vramFp8": 22,
       "vramInt8": 22,
       "vramInt4": 11,
+      "vramQ6k": 20,
+      "vramQ5k": 16,
+      "vramQ4kM": 13,
+      "vramQ3k": 10,
+      "vramQ2k": 7,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp"
@@ -3163,8 +3301,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 48,
+      "vramFp8": 24,
       "vramInt8": 24,
       "vramInt4": 12,
+      "vramQ6k": 22,
+      "vramQ5k": 18,
+      "vramQ4kM": 14,
+      "vramQ3k": 11,
+      "vramQ2k": 7,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3222,8 +3366,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 16,
+      "vramFp8": 8,
       "vramInt8": 8,
       "vramInt4": 4,
+      "vramQ6k": 7,
+      "vramQ5k": 6,
+      "vramQ4kM": 5,
+      "vramQ3k": 4,
+      "vramQ2k": 2,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3281,8 +3431,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 20,
+      "vramFp8": 10,
       "vramInt8": 10,
       "vramInt4": 5,
+      "vramQ6k": 9,
+      "vramQ5k": 8,
+      "vramQ4kM": 6,
+      "vramQ3k": 4,
+      "vramQ2k": 3,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3340,8 +3496,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 16,
+      "vramFp8": 8,
       "vramInt8": 8,
       "vramInt4": 4,
+      "vramQ6k": 7,
+      "vramQ5k": 6,
+      "vramQ4kM": 5,
+      "vramQ3k": 4,
+      "vramQ2k": 2,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3399,8 +3561,14 @@
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 796,
+      "vramFp8": 398,
       "vramInt8": 398,
       "vramInt4": 199,
+      "vramQ6k": 85,
+      "vramQ5k": 70,
+      "vramQ4kM": 56,
+      "vramQ3k": 42,
+      "vramQ2k": 28,
       "recommendedFramework": [
         "vLLM"
       ],
@@ -3456,8 +3624,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 26,
+      "vramFp8": 13,
       "vramInt8": 13,
       "vramInt4": 7,
+      "vramQ6k": 12,
+      "vramQ5k": 10,
+      "vramQ4kM": 8,
+      "vramQ3k": 6,
+      "vramQ2k": 4,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3515,8 +3689,14 @@
     "infrastructure": {
       "minGpu": "4x H100 80GB",
       "vramFp16": 506,
+      "vramFp8": 253,
       "vramInt8": 253,
       "vramInt4": 127,
+      "vramQ6k": 228,
+      "vramQ5k": 190,
+      "vramQ4kM": 152,
+      "vramQ3k": 114,
+      "vramQ2k": 76,
       "recommendedFramework": [
         "vLLM",
         "TensorRT-LLM",
@@ -3574,8 +3754,14 @@
     "infrastructure": {
       "minGpu": "CPU",
       "vramFp16": 1.2,
+      "vramFp8": 1,
       "vramInt8": 0.6,
       "vramInt4": 0.3,
+      "vramQ6k": 1,
+      "vramQ5k": 1,
+      "vramQ4kM": 1,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "llama.cpp",
         "Ollama",
@@ -3633,8 +3819,14 @@
     "infrastructure": {
       "minGpu": "CPU",
       "vramFp16": 3.4,
+      "vramFp8": 2,
       "vramInt8": 1.7,
       "vramInt4": 0.9,
+      "vramQ6k": 2,
+      "vramQ5k": 1,
+      "vramQ4kM": 1,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "llama.cpp",
         "Ollama",
@@ -3692,8 +3884,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 8,
+      "vramFp8": 4,
       "vramInt8": 4,
       "vramInt4": 2,
+      "vramQ6k": 4,
+      "vramQ5k": 3,
+      "vramQ4kM": 2,
+      "vramQ3k": 2,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3751,8 +3949,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 28,
+      "vramFp8": 14,
       "vramInt8": 14,
       "vramInt4": 7,
+      "vramQ6k": 13,
+      "vramQ5k": 10,
+      "vramQ4kM": 8,
+      "vramQ3k": 6,
+      "vramQ2k": 4,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3810,8 +4014,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 64,
+      "vramFp8": 32,
       "vramInt8": 32,
       "vramInt4": 16,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -3869,8 +4079,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 64,
+      "vramFp8": 32,
       "vramInt8": 32,
       "vramInt4": 16,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "SGLang",
@@ -3928,8 +4144,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 18,
+      "vramFp8": 9,
       "vramInt8": 9,
       "vramInt4": 5,
+      "vramQ6k": 8,
+      "vramQ5k": 7,
+      "vramQ4kM": 5,
+      "vramQ3k": 4,
+      "vramQ2k": 3,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp"
@@ -3986,8 +4208,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 54,
+      "vramFp8": 27,
       "vramInt8": 27,
       "vramInt4": 14,
+      "vramQ6k": 24,
+      "vramQ5k": 20,
+      "vramQ4kM": 16,
+      "vramQ3k": 12,
+      "vramQ2k": 8,
       "recommendedFramework": [
         "vLLM",
         "SGLang",
@@ -4043,8 +4271,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 70,
+      "vramFp8": 35,
       "vramInt8": 35,
       "vramInt4": 18,
+      "vramQ6k": 3,
+      "vramQ5k": 2,
+      "vramQ4kM": 2,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "vLLM",
         "SGLang",
@@ -4100,8 +4334,14 @@
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 244,
+      "vramFp8": 122,
       "vramInt8": 122,
       "vramInt4": 61,
+      "vramQ6k": 9,
+      "vramQ5k": 8,
+      "vramQ4kM": 6,
+      "vramQ3k": 4,
+      "vramQ2k": 3,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -4156,8 +4396,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 18,
+      "vramFp8": 9,
       "vramInt8": 9,
       "vramInt4": 5,
+      "vramQ6k": 8,
+      "vramQ5k": 7,
+      "vramQ4kM": 5,
+      "vramQ3k": 4,
+      "vramQ2k": 3,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -4211,8 +4457,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 8,
+      "vramFp8": 4,
       "vramInt8": 4,
       "vramInt4": 2,
+      "vramQ6k": 4,
+      "vramQ5k": 3,
+      "vramQ4kM": 2,
+      "vramQ3k": 2,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -4266,8 +4518,14 @@
     "infrastructure": {
       "minGpu": "CPU",
       "vramFp16": 4,
+      "vramFp8": 2,
       "vramInt8": 2,
       "vramInt4": 1,
+      "vramQ6k": 2,
+      "vramQ5k": 2,
+      "vramQ4kM": 1,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "llama.cpp",
         "Ollama",
@@ -4321,8 +4579,14 @@
     "infrastructure": {
       "minGpu": "CPU",
       "vramFp16": 1.6,
+      "vramFp8": 1,
       "vramInt8": 0.8,
       "vramInt4": 0.4,
+      "vramQ6k": 1,
+      "vramQ5k": 1,
+      "vramQ4kM": 1,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "llama.cpp",
         "Ollama",
@@ -4376,8 +4640,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 710,
+      "vramFp8": 355,
       "vramInt8": 355,
       "vramInt4": 178,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -4429,8 +4699,14 @@
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 212,
+      "vramFp8": 106,
       "vramInt8": 106,
       "vramInt4": 53,
+      "vramQ6k": 11,
+      "vramQ5k": 9,
+      "vramQ4kM": 7,
+      "vramQ3k": 5,
+      "vramQ2k": 4,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -4486,8 +4762,14 @@
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 710,
+      "vramFp8": 355,
       "vramInt8": 355,
       "vramInt4": 178,
+      "vramQ6k": 29,
+      "vramQ5k": 24,
+      "vramQ4kM": 19,
+      "vramQ3k": 14,
+      "vramQ2k": 10,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -4542,8 +4824,14 @@
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 32,
+      "vramFp8": 16,
       "vramInt8": 16,
       "vramInt4": 8,
+      "vramQ6k": 3,
+      "vramQ5k": 2,
+      "vramQ4kM": 2,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -4595,8 +4883,14 @@
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 144,
+      "vramFp8": 72,
       "vramInt8": 72,
       "vramInt4": 36,
+      "vramQ6k": 65,
+      "vramQ5k": 54,
+      "vramQ4kM": 43,
+      "vramQ3k": 32,
+      "vramQ2k": 22,
       "recommendedFramework": [
         "vLLM",
         "SGLang"
@@ -4649,8 +4943,14 @@
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 96,
+      "vramFp8": 48,
       "vramInt8": 48,
       "vramInt4": 24,
+      "vramQ6k": 3,
+      "vramQ5k": 2,
+      "vramQ4kM": 2,
+      "vramQ3k": 1,
+      "vramQ2k": 1,
       "recommendedFramework": [
         "vLLM",
         "SGLang"

@@ -2,16 +2,24 @@
 
 import Link from 'next/link'
 import { TableRow, TableCell } from '@/components/ui/table'
-import { ScoreBadge } from '@/components/shared/score-badge'
 import { NewBadge } from '@/components/shared/new-badge'
 import { ModelTypeBadge } from '@/components/shared/model-type-badge'
 import { PriceDisplay } from '@/components/shared/price-display'
 import { useCompare } from '@/contexts/compare-context'
 import { formatContextWindow } from '@/lib/utils/format'
+import { BENCHMARKS } from '@/lib/constants/benchmarks'
 import type { IModel } from '@/lib/types/model'
+
+const benchmarkKeys = Object.keys(BENCHMARKS) as readonly (keyof typeof BENCHMARKS)[]
 
 interface ModelTableRowProps {
   readonly model: IModel
+}
+
+function getBenchmarkValue(benchmarks: Record<string, number>, key: string): string {
+  const value = benchmarks[key]
+  if (value === undefined || value === null) return '-'
+  return String(value)
 }
 
 export function ModelTableRow({ model }: ModelTableRowProps) {
@@ -55,12 +63,11 @@ export function ModelTableRow({ model }: ModelTableRowProps) {
       <TableCell>
         <PriceDisplay input={model.pricing.input} output={model.pricing.output} />
       </TableCell>
-      <TableCell>
-        <div className="flex flex-wrap gap-1">
-          <ScoreBadge label="품질" value={model.scores.quality} />
-          <ScoreBadge label="속도" value={model.scores.speed} />
-        </div>
-      </TableCell>
+      {benchmarkKeys.map((key) => (
+        <TableCell key={key} className="text-right tabular-nums">
+          {getBenchmarkValue(model.benchmarks, key)}
+        </TableCell>
+      ))}
       <TableCell>{formatContextWindow(model.contextWindow)}</TableCell>
     </TableRow>
   )

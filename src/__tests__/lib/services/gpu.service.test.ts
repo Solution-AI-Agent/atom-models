@@ -2,6 +2,7 @@
  * @jest-environment node
  */
 import { getGpuList, getGpuBySlug, getCompatibleModels } from '@/lib/services/gpu.service'
+import { ModelModel } from '@/lib/db/models/model'
 
 const mockGpus = [
   { name: 'A100 80GB', slug: 'a100-80gb', vendor: 'NVIDIA', vram: 80, memoryType: 'HBM2e', fp16Tflops: 312, int8Tops: 624, tdp: 300, msrp: 10000, cloudHourly: 1.10, category: 'datacenter', notes: '' },
@@ -129,6 +130,168 @@ describe('GPU Service', () => {
       const llama = result.find((m) => m.name === 'Llama 3.3 8B')
       // baseTps=80, ratio=330/165=2.0, scaled=160
       expect(llama!.estimatedTps).toBe(160)
+    })
+  })
+
+  describe('getCompatibleModels — expanded quantizations', () => {
+    const mockModelsWithAllQuant = [
+      {
+        name: 'FullQuant 7B', slug: 'fullquant-7b', provider: 'TestCo',
+        type: 'open-source', parameterSize: 7, architecture: 'dense',
+        infrastructure: {
+          minGpu: 'NVIDIA RTX 4090', estimatedTps: 60, recommendedFramework: ['vLLM'],
+          vramFp16: 14, vramFp8: 8, vramInt8: 7, vramInt4: 4,
+          vramQ6k: 6, vramQ5k: 5, vramQ4kM: 3.5, vramQ3k: 3, vramQ2k: 2.5,
+        },
+      },
+    ]
+
+    const mockModelsLegacyOnly = [
+      {
+        name: 'Legacy 7B', slug: 'legacy-7b', provider: 'OldCo',
+        type: 'open-source', parameterSize: 7, architecture: 'dense',
+        infrastructure: {
+          minGpu: 'NVIDIA RTX 4090', estimatedTps: 50, recommendedFramework: ['vLLM'],
+          vramFp16: 14, vramInt8: 7, vramInt4: 4,
+        },
+      },
+    ]
+
+    function setMockModels(models: readonly any[]) {
+      jest.mocked(ModelModel.find).mockImplementation(() => ({
+        lean: jest.fn().mockResolvedValue(models),
+      } as any))
+    }
+
+    it('should return all 9 quantization levels when model has all VRAM fields', async () => {
+      setMockModels(mockModelsWithAllQuant)
+      const result = await getCompatibleModels(24, 165)
+      const model = result.find((m) => m.name === 'FullQuant 7B')!
+      expect(model.allQuantizations).toHaveLength(9)
+    })
+
+    it('should return only 3 quantization levels for legacy models', async () => {
+      setMockModels(mockModelsLegacyOnly)
+      const result = await getCompatibleModels(24, 165)
+      const model = result.find((m) => m.name === 'Legacy 7B')!
+      expect(model.allQuantizations).toHaveLength(3)
+      const levels = model.allQuantizations.map((q) => q.level)
+      expect(levels).toEqual(['fp16', 'int8', 'int4'])
+    })
+
+    it('should include new quantization levels when model has those VRAM fields', async () => {
+      setMockModels(mockModelsWithAllQuant)
+      const result = await getCompatibleModels(24, 165)
+      const model = result.find((m) => m.name === 'FullQuant 7B')!
+      const levels = model.allQuantizations.map((q) => q.level)
+      expect(levels).toContain('fp8')
+      expect(levels).toContain('q6_k')
+      expect(levels).toContain('q5_k')
+      expect(levels).toContain('q4_k_m')
+      expect(levels).toContain('q3_k')
+      expect(levels).toContain('q2_k')
+    })
+
+    it('should order quantization levels by precision (fp16 first, q2_k last)', async () => {
+      setMockModels(mockModelsWithAllQuant)
+      const result = await getCompatibleModels(24, 165)
+      const model = result.find((m) => m.name === 'FullQuant 7B')!
+      const levels = model.allQuantizations.map((q) => q.level)
+      expect(levels).toEqual([
+        'fp16', 'fp8', 'int8', 'int4', 'q6_k', 'q5_k', 'q4_k_m', 'q3_k', 'q2_k',
+      ])
+    })
+
+    it('should pick bestQuantization as highest precision that fits', async () => {
+      // With 24GB VRAM: fp16=14 fits, fp8=8 fits, etc. -> best should be fp16
+      setMockModels(mockModelsWithAllQuant)
+      const result = await getCompatibleModels(24, 165)
+      const model = result.find((m) => m.name === 'FullQuant 7B')!
+      expect(model.bestQuantization).toBe('fp16')
+    })
+
+    it('should pick fp8 as best when fp16 does not fit', async () => {
+      setMockModels(mockModelsWithAllQuant)
+      // 10GB VRAM: fp16=14 no, fp8=8 yes -> best=fp8
+      const result = await getCompatibleModels(10, 165)
+      const model = result.find((m) => m.name === 'FullQuant 7B')!
+      expect(model.bestQuantization).toBe('fp8')
+    })
+
+    it('should pick q4_k_m as best when only smaller levels fit', async () => {
+      setMockModels(mockModelsWithAllQuant)
+      // 3.5GB: fp16=14 no, fp8=8 no, int8=7 no, int4=4 no, q6_k=6 no, q5_k=5 no, q4_k_m=3.5 yes
+      const result = await getCompatibleModels(3.5, 165)
+      const model = result.find((m) => m.name === 'FullQuant 7B')!
+      expect(model.bestQuantization).toBe('q4_k_m')
+    })
+
+    afterEach(() => {
+      // Restore default mock
+      jest.mocked(ModelModel.find).mockImplementation(() => ({
+        lean: jest.fn().mockResolvedValue(mockOssModels),
+      } as any))
+    })
+  })
+
+  describe('getCompatibleModels — tpsFormula metadata', () => {
+    it('should include tpsFormula field in each compatible model', async () => {
+      const result = await getCompatibleModels(24, 165)
+      for (const model of result) {
+        expect(model).toHaveProperty('tpsFormula')
+      }
+    })
+
+    it('should contain correct tpsFormula fields when ref GPU is found', async () => {
+      const result = await getCompatibleModels(24, 165)
+      const llama = result.find((m) => m.name === 'Llama 3.3 8B')!
+      expect(llama.tpsFormula).not.toBeNull()
+      expect(llama.tpsFormula).toEqual({
+        baseTps: 80,
+        refGpuName: 'NVIDIA RTX 4090',
+        refTflops: 165,
+        targetTflops: 165,
+        ratio: 1,
+      })
+    })
+
+    it('should have tpsFormula as null when ref GPU TFLOPS cannot be determined', async () => {
+      const mockModelsUnknownGpu = [
+        {
+          name: 'Unknown GPU Model', slug: 'unknown-gpu', provider: 'TestCo',
+          type: 'open-source', parameterSize: 7, architecture: 'dense',
+          infrastructure: {
+            minGpu: 'Unknown GPU XYZ', estimatedTps: 50, recommendedFramework: ['vLLM'],
+            vramFp16: 14, vramInt8: 7, vramInt4: 4,
+          },
+        },
+      ]
+      jest.mocked(ModelModel.find).mockImplementation(() => ({
+        lean: jest.fn().mockResolvedValue(mockModelsUnknownGpu),
+      } as any))
+
+      const result = await getCompatibleModels(24, 165)
+      const model = result.find((m) => m.name === 'Unknown GPU Model')!
+      expect(model.tpsFormula).toBeNull()
+    })
+
+    it('should calculate ratio correctly as targetTflops / refTflops', async () => {
+      // RTX 4090 refTflops = 165, target = 330 -> ratio = 2.0
+      const result = await getCompatibleModels(24, 330)
+      const llama = result.find((m) => m.name === 'Llama 3.3 8B')!
+      expect(llama.tpsFormula).toEqual({
+        baseTps: 80,
+        refGpuName: 'NVIDIA RTX 4090',
+        refTflops: 165,
+        targetTflops: 330,
+        ratio: 2,
+      })
+    })
+
+    afterEach(() => {
+      jest.mocked(ModelModel.find).mockImplementation(() => ({
+        lean: jest.fn().mockResolvedValue(mockOssModels),
+      } as any))
     })
   })
 })

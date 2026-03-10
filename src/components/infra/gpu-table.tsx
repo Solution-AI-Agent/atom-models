@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/table'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { GpuCard } from './gpu-card'
-import { ArrowUpDown } from 'lucide-react'
+import { SortableHeader } from '@/components/shared/sortable-header'
 import { useIsMobile } from '@/hooks/use-mobile'
 import type { IGpuReference, GpuCategory } from '@/lib/types/gpu'
 
@@ -62,16 +62,15 @@ export function GpuTable({ gpus }: GpuTableProps) {
     }
   }
 
-  const SortableHeader = ({ field, children }: { field: SortField; children: React.ReactNode }) => (
-    <TableHead
-      className="cursor-pointer select-none"
-      onClick={() => handleSort(field)}
+  const renderSortableHeader = (field: SortField, children: React.ReactNode) => (
+    <SortableHeader
+      field={field}
+      currentField={sortField}
+      currentOrder={sortOrder}
+      onSort={(f) => handleSort(f as SortField)}
     >
-      <div className="flex items-center gap-1">
-        {children}
-        <ArrowUpDown className="h-3 w-3" />
-      </div>
-    </TableHead>
+      {children}
+    </SortableHeader>
   )
 
   return (
@@ -97,14 +96,14 @@ export function GpuTable({ gpus }: GpuTableProps) {
           <Table>
             <TableHeader>
               <TableRow>
-                <SortableHeader field="name">이름</SortableHeader>
+                {renderSortableHeader('name', '이름')}
                 <TableHead>벤더</TableHead>
-                <SortableHeader field="vram">VRAM</SortableHeader>
+                {renderSortableHeader('vram', 'VRAM')}
                 <TableHead>메모리</TableHead>
-                <SortableHeader field="fp16Tflops">FP16</SortableHeader>
-                <SortableHeader field="tdp">TDP</SortableHeader>
-                <SortableHeader field="msrp">MSRP</SortableHeader>
-                <SortableHeader field="cloudHourly">클라우드</SortableHeader>
+                {renderSortableHeader('fp16Tflops', 'FP16')}
+                {renderSortableHeader('tdp', 'TDP')}
+                {renderSortableHeader('msrp', 'MSRP')}
+                {renderSortableHeader('cloudHourly', '클라우드')}
               </TableRow>
             </TableHeader>
             <TableBody>

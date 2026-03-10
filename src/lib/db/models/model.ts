@@ -30,8 +30,14 @@ export interface IModelDocument extends Document {
   infrastructure: {
     minGpu: string
     vramFp16: number
+    vramFp8?: number
     vramInt8: number
     vramInt4: number
+    vramQ6k?: number
+    vramQ5k?: number
+    vramQ4kM?: number
+    vramQ3k?: number
+    vramQ2k?: number
     recommendedFramework: string[]
     estimatedTps: number
   } | null
@@ -78,8 +84,14 @@ export const ModelSchema = new Schema({
   infrastructure: {
     minGpu:               String,
     vramFp16:             Number,
+    vramFp8:              Number,
     vramInt8:             Number,
     vramInt4:             Number,
+    vramQ6k:              Number,
+    vramQ5k:              Number,
+    vramQ4kM:             Number,
+    vramQ3k:              Number,
+    vramQ2k:              Number,
     recommendedFramework: [String],
     estimatedTps:         Number,
   },

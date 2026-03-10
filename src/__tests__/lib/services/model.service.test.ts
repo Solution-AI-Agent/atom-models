@@ -132,5 +132,34 @@ describe('Model Service', () => {
       await getModels({ sort: 'name', order: 'desc' })
       expect(mockSort).toHaveBeenCalledWith({ name: -1 })
     })
+
+    it('should support dot notation sort fields like benchmarks.mmlu', async () => {
+      await getModels({ sort: 'benchmarks.mmlu', order: 'desc' })
+      expect(mockSort).toHaveBeenCalledWith({ 'benchmarks.mmlu': -1 })
+    })
+
+    it('should fall back to name for disallowed sort fields', async () => {
+      await getModels({ sort: '__v', order: 'desc' })
+      expect(mockSort).toHaveBeenCalledWith({ name: -1 })
+    })
+
+    it('should fall back to name for arbitrary sort fields', async () => {
+      await getModels({ sort: 'password', order: 'asc' })
+      expect(mockSort).toHaveBeenCalledWith({ name: 1 })
+    })
+
+    it('should allow all benchmark sort fields', async () => {
+      for (const key of ['mmlu', 'gpqa', 'swe_bench', 'aime', 'hle', 'mgsm']) {
+        jest.clearAllMocks()
+        mockSort.mockReturnValue({ skip: mockSkip, limit: mockLimit })
+        mockSkip.mockReturnValue({ limit: mockLimit })
+        mockLimit.mockReturnValue({ lean: mockLean })
+        mockLean.mockResolvedValue([])
+        mockCountDocuments.mockResolvedValue(0)
+
+        await getModels({ sort: `benchmarks.${key}`, order: 'desc' })
+        expect(mockSort).toHaveBeenCalledWith({ [`benchmarks.${key}`]: -1 })
+      }
+    })
   })
 })

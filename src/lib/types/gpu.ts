@@ -1,6 +1,6 @@
 export type GpuCategory = 'datacenter' | 'consumer' | 'workstation'
 
-export type QuantizationLevel = 'fp16' | 'int8' | 'int4'
+export type QuantizationLevel = 'fp16' | 'fp8' | 'int8' | 'int4' | 'q6_k' | 'q5_k' | 'q4_k_m' | 'q3_k' | 'q2_k'
 
 export interface IGpuReference {
   readonly _id?: string
@@ -18,6 +18,14 @@ export interface IGpuReference {
   readonly notes: string
 }
 
+export interface ITpsFormula {
+  readonly baseTps: number
+  readonly refGpuName: string
+  readonly refTflops: number
+  readonly targetTflops: number
+  readonly ratio: number
+}
+
 export interface ICompatibleModel {
   readonly name: string
   readonly slug: string
@@ -32,4 +40,5 @@ export interface ICompatibleModel {
     readonly vramRequired: number
     readonly fits: boolean
   }[]
+  readonly tpsFormula: ITpsFormula | null
 }
