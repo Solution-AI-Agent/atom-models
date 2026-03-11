@@ -45,6 +45,7 @@ export interface IModelDocument extends Document {
   memo: string
   sourceUrls: string[]
   colorCode: string
+  openRouterModelId: string | null
   lastVerifiedAt: Date
   isRecentlyReleased: boolean
 }
@@ -99,7 +100,8 @@ export const ModelSchema = new Schema({
   releaseDate:    { type: Date, required: true },
   memo:           String,
   sourceUrls:     [String],
-  colorCode:      String,
+  colorCode:          String,
+  openRouterModelId:  { type: String, default: null },
   lastVerifiedAt: { type: Date, default: Date.now },
 }, {
   timestamps: true,
