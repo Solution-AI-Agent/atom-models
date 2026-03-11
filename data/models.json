@@ -25,7 +25,14 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 91.0,
+      "gpqa": 94.4,
+      "swe_bench": 77.2,
+      "aime": 100.0,
+      "hle": 58.7,
+      "mgsm": 96.0
+    },
     "infrastructure": null,
     "releaseDate": "2026-03-05",
     "memo": "OpenAI flagship pro model with extended reasoning capabilities.",
@@ -60,7 +67,14 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 91.0,
+      "gpqa": 92.0,
+      "swe_bench": 52.8,
+      "aime": 100.0,
+      "hle": 42.0,
+      "mgsm": 96.0
+    },
     "infrastructure": null,
     "releaseDate": "2026-03-05",
     "memo": "OpenAI cost-efficient flagship model.",
@@ -95,7 +109,14 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 88.7,
+      "gpqa": 50.6,
+      "swe_bench": 33.2,
+      "aime": 12.0,
+      "hle": 2.7,
+      "mgsm": 90.6
+    },
     "infrastructure": null,
     "releaseDate": "2024-05-13",
     "memo": "OpenAI multimodal model with vision and text capabilities.",
@@ -130,7 +151,11 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 82.0,
+      "gpqa": 40.2,
+      "aime": 11.5
+    },
     "infrastructure": null,
     "releaseDate": "2024-07-18",
     "memo": "Cost-efficient small model replacing GPT-3.5 Turbo.",
@@ -165,7 +190,11 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 90.2,
+      "gpqa": 66.3,
+      "swe_bench": 54.6
+    },
     "infrastructure": null,
     "releaseDate": "2025-04-14",
     "memo": "OpenAI mid-tier model with 1M context window.",
@@ -200,7 +229,11 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 87.5,
+      "gpqa": 58.5,
+      "swe_bench": 48.2
+    },
     "infrastructure": null,
     "releaseDate": "2025-04-14",
     "memo": "Compact version of GPT-4.1 with 1M context.",
@@ -235,7 +268,10 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 80.1,
+      "gpqa": 50.3
+    },
     "infrastructure": null,
     "releaseDate": "2025-04-14",
     "memo": "Smallest and cheapest GPT-4.1 variant.",
@@ -270,7 +306,14 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 91.0,
+      "gpqa": 91.3,
+      "swe_bench": 80.8,
+      "aime": 100.0,
+      "hle": 53.1,
+      "mgsm": 96.0
+    },
     "infrastructure": null,
     "releaseDate": "2026-02-05",
     "memo": "Anthropic flagship model with deepest reasoning capabilities.",
@@ -305,7 +348,12 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 74.1,
+      "swe_bench": 79.6,
+      "aime": 83.0,
+      "hle": 49.0
+    },
     "infrastructure": null,
     "releaseDate": "2026-02-17",
     "memo": "Anthropic balanced flagship model for coding and analysis.",
@@ -340,7 +388,12 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 67.2,
+      "swe_bench": 73.3,
+      "aime": 83.7,
+      "hle": 9.7
+    },
     "infrastructure": null,
     "releaseDate": "2025-10-01",
     "memo": "Anthropic fast and affordable small model.",
@@ -375,7 +428,14 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 92.6,
+      "gpqa": 94.3,
+      "swe_bench": 80.6,
+      "aime": 92.0,
+      "hle": 51.4,
+      "mgsm": 95.5
+    },
     "infrastructure": null,
     "releaseDate": "2026-02-19",
     "memo": "Google latest flagship model with 1M context window.",
@@ -410,7 +470,13 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 91.8,
+      "gpqa": 91.9,
+      "swe_bench": 76.2,
+      "aime": 95.0,
+      "hle": 37.0
+    },
     "infrastructure": null,
     "releaseDate": "2026-01-15",
     "memo": "Google Gemini 3 Pro flagship model.",
@@ -445,7 +511,13 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 91.8,
+      "gpqa": 90.4,
+      "swe_bench": 78.0,
+      "aime": 90.4,
+      "hle": 34.7
+    },
     "infrastructure": null,
     "releaseDate": "2026-01-15",
     "memo": "Google fast mid-tier model with 1M context.",
@@ -480,7 +552,12 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 88.9,
+      "gpqa": 86.9,
+      "swe_bench": 35.0,
+      "hle": 16.0
+    },
     "infrastructure": null,
     "releaseDate": "2026-03-03",
     "memo": "Google lightweight flash model for cost-sensitive workloads.",
@@ -515,7 +592,13 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 89.8,
+      "gpqa": 84.0,
+      "swe_bench": 63.8,
+      "aime": 86.7,
+      "hle": 18.8
+    },
     "infrastructure": null,
     "releaseDate": "2025-06-17",
     "memo": "Google Gemini 2.5 Pro with 1M context window.",
@@ -550,7 +633,12 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 82.9,
+      "gpqa": 82.8,
+      "swe_bench": 60.4,
+      "aime": 72.0
+    },
     "infrastructure": null,
     "releaseDate": "2025-06-17",
     "memo": "Google fast mid-tier model balancing speed and capability.",
@@ -620,7 +708,11 @@
       "dataExclusion": false
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 88.0,
+      "gpqa": 88.0,
+      "aime": 95.0
+    },
     "infrastructure": null,
     "releaseDate": "2025-11-19",
     "memo": "xAI flagship model with 2M context window.",
@@ -655,7 +747,11 @@
       "dataExclusion": false
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 63.7,
+      "aime": 34.3,
+      "hle": 5.0
+    },
     "infrastructure": null,
     "releaseDate": "2025-11-19",
     "memo": "xAI fast inference model with 2M context.",
@@ -690,7 +786,13 @@
       "dataExclusion": false
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 86.6,
+      "gpqa": 88.0,
+      "swe_bench": 69.1,
+      "aime": 95.0,
+      "hle": 44.4
+    },
     "infrastructure": null,
     "releaseDate": "2025-07-01",
     "memo": "xAI previous-gen flagship reasoning model.",
@@ -760,7 +862,11 @@
       "dataExclusion": false
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 92.7,
+      "gpqa": 84.6,
+      "aime": 93.3
+    },
     "infrastructure": null,
     "releaseDate": "2025-02-01",
     "memo": "xAI Grok 3 dense architecture model.",
@@ -795,7 +901,9 @@
       "dataExclusion": false
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "aime": 95.8
+    },
     "infrastructure": null,
     "releaseDate": "2025-02-01",
     "memo": "xAI compact model for cost-efficient tasks.",
@@ -830,14 +938,22 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 90.0,
+      "gpqa": 80.1,
+      "swe_bench": 62.4,
+      "aime": 96.6
+    },
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 240,
       "vramFp8": 120,
       "vramInt8": 120,
       "vramInt4": 60,
-      "recommendedFramework": ["vLLM", "llama.cpp"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp"
+      ],
       "estimatedTps": 30
     },
     "releaseDate": "2025-08-05",
@@ -873,14 +989,23 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 85.3,
+      "gpqa": 71.5,
+      "swe_bench": 60.7,
+      "aime": 98.7
+    },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 40,
       "vramFp8": 20,
       "vramInt8": 20,
       "vramInt4": 10,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 80
     },
     "releaseDate": "2025-08-05",
@@ -916,14 +1041,20 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 42.4
+    },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 54,
       "vramFp8": 27,
       "vramInt8": 27,
       "vramInt4": 14,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 60
     },
     "releaseDate": "2025-03-10",
@@ -966,7 +1097,11 @@
       "vramFp8": 12,
       "vramInt8": 12,
       "vramInt4": 6,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 90
     },
     "releaseDate": "2025-03-10",
@@ -1009,7 +1144,10 @@
       "vramFp8": 4,
       "vramInt8": 4,
       "vramInt4": 2,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 150
     },
     "releaseDate": "2025-03-10",
@@ -1052,7 +1190,10 @@
       "vramFp8": 1,
       "vramInt8": 1,
       "vramInt4": 0.5,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 300
     },
     "releaseDate": "2025-03-10",
@@ -1088,14 +1229,21 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 86.0,
+      "swe_bench": 77.8,
+      "aime": 92.7,
+      "hle": 50.4
+    },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1490,
       "vramFp8": 745,
       "vramInt8": 745,
       "vramInt4": 373,
-      "recommendedFramework": ["vLLM"],
+      "recommendedFramework": [
+        "vLLM"
+      ],
       "estimatedTps": 15
     },
     "releaseDate": "2026-02-11",
@@ -1131,14 +1279,21 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 85.7,
+      "swe_bench": 73.8,
+      "aime": 95.7,
+      "hle": 42.8
+    },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 710,
       "vramFp8": 355,
       "vramInt8": 355,
       "vramInt4": 178,
-      "recommendedFramework": ["vLLM"],
+      "recommendedFramework": [
+        "vLLM"
+      ],
       "estimatedTps": 25
     },
     "releaseDate": "2025-12-22",
@@ -1174,14 +1329,20 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 75.2,
+      "swe_bench": 59.2,
+      "aime": 91.6
+    },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 710,
       "vramFp8": 355,
       "vramInt8": 355,
       "vramInt4": 178,
-      "recommendedFramework": ["vLLM"],
+      "recommendedFramework": [
+        "vLLM"
+      ],
       "estimatedTps": 40
     },
     "releaseDate": "2025-12-22",
@@ -1217,14 +1378,22 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 94.3,
+      "gpqa": 87.6,
+      "swe_bench": 76.8,
+      "aime": 96.1,
+      "hle": 51.8
+    },
     "infrastructure": {
       "minGpu": "8x H100 80GB",
       "vramFp16": 2000,
       "vramFp8": 1000,
       "vramInt8": 1000,
       "vramInt4": 500,
-      "recommendedFramework": ["vLLM"],
+      "recommendedFramework": [
+        "vLLM"
+      ],
       "estimatedTps": 10
     },
     "releaseDate": "2026-01-27",
@@ -1260,14 +1429,21 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 89.5,
+      "gpqa": 75.1,
+      "swe_bench": 65.8,
+      "aime": 49.5
+    },
     "infrastructure": {
       "minGpu": "8x H100 80GB",
       "vramFp16": 2000,
       "vramFp8": 1000,
       "vramInt8": 1000,
       "vramInt4": 500,
-      "recommendedFramework": ["vLLM"],
+      "recommendedFramework": [
+        "vLLM"
+      ],
       "estimatedTps": 10
     },
     "releaseDate": "2025-07-01",
@@ -1303,14 +1479,23 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 88.5,
+      "gpqa": 88.4,
+      "swe_bench": 76.4,
+      "aime": 91.3,
+      "hle": 48.3
+    },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 794,
       "vramFp8": 397,
       "vramInt8": 397,
       "vramInt4": 199,
-      "recommendedFramework": ["vLLM", "llama.cpp"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp"
+      ],
       "estimatedTps": 20
     },
     "releaseDate": "2026-02-16",
@@ -1346,14 +1531,19 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 86.6
+    },
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 244,
       "vramFp8": 122,
       "vramInt8": 122,
       "vramInt4": 61,
-      "recommendedFramework": ["vLLM", "llama.cpp"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp"
+      ],
       "estimatedTps": 35
     },
     "releaseDate": "2026-02-24",
@@ -1389,14 +1579,22 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 84.2,
+      "swe_bench": 69.2,
+      "hle": 22.4
+    },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 70,
       "vramFp8": 35,
       "vramInt8": 35,
       "vramInt4": 18,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 60
     },
     "releaseDate": "2026-02-24",
@@ -1432,14 +1630,22 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 88.5,
+      "gpqa": 85.5,
+      "swe_bench": 72.4
+    },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 54,
       "vramFp8": 27,
       "vramInt8": 27,
       "vramInt4": 14,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 55
     },
     "releaseDate": "2026-02-24",
@@ -1475,14 +1681,20 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 81.7
+    },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 18,
       "vramFp8": 9,
       "vramInt8": 9,
       "vramInt4": 5,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 100
     },
     "releaseDate": "2026-03-02",
@@ -1525,7 +1737,10 @@
       "vramFp8": 4,
       "vramInt8": 4,
       "vramInt4": 2,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 150
     },
     "releaseDate": "2026-03-02",
@@ -1568,7 +1783,10 @@
       "vramFp8": 2,
       "vramInt8": 2,
       "vramInt4": 1,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 200
     },
     "releaseDate": "2026-03-02",
@@ -1611,7 +1829,10 @@
       "vramFp8": 0.8,
       "vramInt8": 0.8,
       "vramInt4": 0.4,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 400
     },
     "releaseDate": "2026-03-02",
@@ -1647,14 +1868,22 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 88.5,
+      "gpqa": 82.4,
+      "swe_bench": 70.0,
+      "aime": 93.1,
+      "hle": 23.9
+    },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1342,
       "vramFp8": 671,
       "vramInt8": 671,
       "vramInt4": 336,
-      "recommendedFramework": ["vLLM"],
+      "recommendedFramework": [
+        "vLLM"
+      ],
       "estimatedTps": 15
     },
     "releaseDate": "2025-12-01",
@@ -1690,14 +1919,21 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 90.8,
+      "gpqa": 71.5,
+      "swe_bench": 49.2,
+      "aime": 79.8
+    },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1342,
       "vramFp8": 671,
       "vramInt8": 671,
       "vramInt4": 336,
-      "recommendedFramework": ["vLLM"],
+      "recommendedFramework": [
+        "vLLM"
+      ],
       "estimatedTps": 15
     },
     "releaseDate": "2025-01-20",
@@ -1733,14 +1969,20 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 65.2,
+      "aime": 86.7
+    },
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 140,
       "vramFp8": 70,
       "vramInt8": 70,
       "vramInt4": 35,
-      "recommendedFramework": ["vLLM", "llama.cpp"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp"
+      ],
       "estimatedTps": 30
     },
     "releaseDate": "2025-01-20",
@@ -1776,14 +2018,22 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "mmlu": 73.9,
+      "gpqa": 62.1,
+      "aime": 72.6
+    },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 64,
       "vramFp8": 32,
       "vramInt8": 32,
       "vramInt4": 16,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 50
     },
     "releaseDate": "2025-01-20",
@@ -1819,14 +2069,21 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 59.1,
+      "aime": 69.7
+    },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 28,
       "vramFp8": 14,
       "vramInt8": 14,
       "vramInt4": 7,
-      "recommendedFramework": ["vLLM", "llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 70
     },
     "releaseDate": "2025-01-20",
@@ -1862,14 +2119,19 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 49.0
+    },
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 16,
       "vramFp8": 8,
       "vramInt8": 8,
       "vramInt4": 4,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 100
     },
     "releaseDate": "2025-01-20",
@@ -1905,14 +2167,20 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 49.1,
+      "aime": 55.5
+    },
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 14,
       "vramFp8": 7,
       "vramInt8": 7,
       "vramInt4": 4,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 110
     },
     "releaseDate": "2025-01-20",
@@ -1948,14 +2216,20 @@
       "dataExclusion": true
     },
     "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "gpqa": 33.8,
+      "aime": 28.9
+    },
     "infrastructure": {
       "minGpu": "CPU or Mobile",
       "vramFp16": 3,
       "vramFp8": 1.5,
       "vramInt8": 1.5,
       "vramInt4": 0.75,
-      "recommendedFramework": ["llama.cpp", "Ollama"],
+      "recommendedFramework": [
+        "llama.cpp",
+        "Ollama"
+      ],
       "estimatedTps": 250
     },
     "releaseDate": "2025-01-20",
