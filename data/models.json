@@ -718,7 +718,7 @@
     "memo": "xAI flagship model with 2M context window.",
     "sourceUrls": [],
     "colorCode": "#1DA1F2",
-    "openRouterModelId": "x-ai/grok-4.1",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -1200,7 +1200,7 @@
     "memo": "Google smallest open model for mobile and embedded use.",
     "sourceUrls": [],
     "colorCode": "#8E44AD",
-    "openRouterModelId": "google/gemma-3-1b-it",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -1747,7 +1747,7 @@
     "memo": "Alibaba small dense model for edge deployment.",
     "sourceUrls": [],
     "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-4b",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -1793,7 +1793,7 @@
     "memo": "Alibaba mini model for mobile and IoT.",
     "sourceUrls": [],
     "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-2b",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -1839,7 +1839,7 @@
     "memo": "Alibaba micro model for embedded and on-device inference.",
     "sourceUrls": [],
     "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-0.8b",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -1989,7 +1989,7 @@
     "memo": "DeepSeek R1 distilled 70B dense variant.",
     "sourceUrls": [],
     "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1:70b",
+    "openRouterModelId": "deepseek/deepseek-r1-distill-llama-70b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -2040,7 +2040,7 @@
     "memo": "DeepSeek R1 distilled 32B dense variant.",
     "sourceUrls": [],
     "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1:32b",
+    "openRouterModelId": "deepseek/deepseek-r1-distill-qwen-32b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -2090,7 +2090,7 @@
     "memo": "DeepSeek R1 distilled 14B variant for consumer GPUs.",
     "sourceUrls": [],
     "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1:14b",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -2138,7 +2138,7 @@
     "memo": "DeepSeek R1 compact 8B variant.",
     "sourceUrls": [],
     "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1:8b",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -2187,7 +2187,7 @@
     "memo": "DeepSeek R1 7B distilled variant.",
     "sourceUrls": [],
     "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1:7b",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
@@ -2236,7 +2236,7 @@
     "memo": "DeepSeek R1 smallest distilled variant for edge devices.",
     "sourceUrls": [],
     "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1:1.5b",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   }
 ]
