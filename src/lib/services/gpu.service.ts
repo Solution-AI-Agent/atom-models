@@ -1,5 +1,5 @@
 import { getConnection } from '@/lib/db/connection'
-import { GpuReferenceModel } from '@/lib/db/models/gpu-reference'
+import { RefGpuModel } from '@/lib/db/models/ref-gpu'
 import { ModelModel } from '@/lib/db/models/model'
 import { serialize } from '@/lib/utils/serialize'
 import { QUANTIZATION_LEVELS } from '@/lib/constants/quantizations'
@@ -17,21 +17,21 @@ export async function getGpuList(query: GpuQuery) {
   if (query.category) filter.category = query.category
   if (query.minVram) filter.vram = { $gte: query.minVram }
 
-  const gpus = await GpuReferenceModel.find(filter).sort({ vram: -1 }).lean()
+  const gpus = await RefGpuModel.find(filter).sort({ vram: -1 }).lean()
   return serialize(gpus)
 }
 
 export async function getGpuBySlug(slug: string) {
   await getConnection()
 
-  const gpu = await GpuReferenceModel.findOne({ slug }).lean()
+  const gpu = await RefGpuModel.findOne({ slug }).lean()
   if (!gpu) return null
 
   return serialize(gpu)
 }
 
 async function getRefGpuTflopsMap(): Promise<ReadonlyMap<string, number>> {
-  const gpus = await GpuReferenceModel.find({}).lean()
+  const gpus = await RefGpuModel.find({}).lean()
   const map = new Map<string, number>()
   for (const gpu of gpus) {
     map.set(gpu.name, gpu.fp16Tflops)
@@ -142,7 +142,7 @@ export async function getCompatibleModels(
     compatible.push({
       name: model.name,
       slug: model.slug,
-      provider: model.provider,
+      provider: model.providerId,
       parameterSize: model.parameterSize ?? null,
       architecture: model.architecture,
       bestQuantization: best.level,

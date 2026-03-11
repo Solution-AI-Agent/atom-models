@@ -2,34 +2,61 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ModelTable } from '@/components/explore/model-table'
 
+const baseFields = {
+  family: null,
+  variant: null,
+  tags: [] as string[],
+  isOpensource: false,
+  status: 'active' as const,
+  deprecationDate: null,
+  trainingCutoff: null,
+  languages: ['en'] as string[],
+  modalityInput: ['text'] as string[],
+  modalityOutput: ['text'] as string[],
+  capabilities: {
+    functionCalling: false,
+    structuredOutput: false,
+    streaming: true,
+    systemPrompt: true,
+    vision: false,
+    toolUse: false,
+    fineTuning: false,
+    batchApi: false,
+    thinkingMode: false,
+  },
+  avgTps: null,
+  ttftMs: null,
+  regions: null,
+}
+
 const mockModelWithBenchmarks = {
-  name: 'Claude Sonnet 4.5', slug: 'claude-sonnet-4-5', provider: 'Anthropic',
+  ...baseFields,
+  name: 'Claude Sonnet 4.5', slug: 'claude-sonnet-4-5', providerId: 'ANTHROPIC',
   type: 'commercial' as const, tier: 'flagship' as const,
-  pricing: { input: 3, output: 15, cachingDiscount: 0.9, batchDiscount: 0.5 },
+  pricing: { inputPer1m: 3, outputPer1m: 15, pricingType: 'api' },
   compliance: { soc2: false, hipaa: false, gdpr: false, onPremise: false, dataExclusion: false },
   contextWindow: 200000,
   releaseDate: '2025-02-24', isRecentlyReleased: false,
   parameterSize: null, activeParameters: null, architecture: 'dense' as const,
   maxOutput: 8192, license: 'Proprietary',
-  languageScores: {},
   benchmarks: { mmlu: 88.7, gpqa: 53.6, swe_bench: 33.2, aime: 26.7, hle: 3.3, mgsm: 90.5 },
   infrastructure: null,
-  memo: '', sourceUrls: [], colorCode: '#D97706', lastVerifiedAt: '2026-03-01',
+  memo: '', sourceUrls: [], lastVerifiedAt: '2026-03-01',
 }
 
 const mockModelNoBenchmarks = {
-  name: 'GPT-4o', slug: 'gpt-4o', provider: 'OpenAI',
+  ...baseFields,
+  name: 'GPT-4o', slug: 'gpt-4o', providerId: 'OPENAI',
   type: 'commercial' as const, tier: 'flagship' as const,
-  pricing: { input: 5, output: 15, cachingDiscount: 0.5, batchDiscount: 0.5 },
+  pricing: { inputPer1m: 5, outputPer1m: 15, pricingType: 'api' },
   compliance: { soc2: false, hipaa: false, gdpr: false, onPremise: false, dataExclusion: false },
   contextWindow: 128000,
   releaseDate: '2025-01-01', isRecentlyReleased: false,
   parameterSize: null, activeParameters: null, architecture: 'dense' as const,
   maxOutput: 16384, license: 'Proprietary',
-  languageScores: {},
   benchmarks: {},
   infrastructure: null,
-  memo: '', sourceUrls: [], colorCode: '#10A37F', lastVerifiedAt: '2026-03-01',
+  memo: '', sourceUrls: [], lastVerifiedAt: '2026-03-01',
 }
 
 const mockModels = [mockModelWithBenchmarks, mockModelNoBenchmarks]
@@ -42,7 +69,7 @@ describe('ModelTable', () => {
   it('should render model rows', () => {
     render(<ModelTable models={mockModels} />)
     expect(screen.getByText('Claude Sonnet 4.5')).toBeInTheDocument()
-    expect(screen.getByText('Anthropic')).toBeInTheDocument()
+    expect(screen.getByText('ANTHROPIC')).toBeInTheDocument()
   })
 
   it('should render table headers', () => {

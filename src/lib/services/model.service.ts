@@ -6,8 +6,8 @@ import type { IModelListQuery } from '@/lib/types/model'
 
 const ALLOWED_SORT_FIELDS = new Set([
   'name',
-  'provider',
-  'pricing.output',
+  'providerId',
+  'pricing.outputPer1m',
   'contextWindow',
   ...Object.keys(BENCHMARKS).map((key) => `benchmarks.${key}`),
 ])
@@ -27,16 +27,24 @@ export async function getModels(query: IModelListQuery): Promise<ModelListResult
   if (query.type) {
     filter.type = query.type
   }
-  if (query.provider) {
-    filter.provider = { $in: query.provider.split(',') }
+  if (query.providerId) {
+    filter.providerId = { $in: query.providerId.split(',') }
   }
   if (query.tier) {
     filter.tier = { $in: query.tier.split(',') }
   }
+  if (query.tags) {
+    filter.tags = { $in: query.tags.split(',') }
+  }
+  if (query.status) {
+    filter.status = query.status
+  } else {
+    filter.status = 'active'
+  }
   if (query.minPrice !== undefined || query.maxPrice !== undefined) {
-    filter['pricing.output'] = {}
-    if (query.minPrice !== undefined) filter['pricing.output'].$gte = query.minPrice
-    if (query.maxPrice !== undefined) filter['pricing.output'].$lte = query.maxPrice
+    filter['pricing.outputPer1m'] = {}
+    if (query.minPrice !== undefined) filter['pricing.outputPer1m'].$gte = query.minPrice
+    if (query.maxPrice !== undefined) filter['pricing.outputPer1m'].$lte = query.maxPrice
   }
   if (query.search) {
     filter.$text = { $search: query.search }
@@ -76,7 +84,7 @@ export async function getSimilarModels(slug: string, limitCount = 4) {
       slug: { $ne: slug },
       $or: [
         { tier: model.tier },
-        { provider: model.provider },
+        { providerId: model.providerId },
       ],
     })
     .limit(limitCount)

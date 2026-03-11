@@ -38,7 +38,7 @@ export function ModelCard({ model }: ModelCardProps) {
                 <span className="truncate">{model.name}</span>
                 {model.isRecentlyReleased && <NewBadge />}
               </CardTitle>
-              <p className="text-sm text-muted-foreground">{model.provider}</p>
+              <p className="text-sm text-muted-foreground">{model.providerId}</p>
             </div>
             <div className="flex shrink-0 items-center gap-2">
               <ModelTypeBadge type={model.type} />
@@ -62,10 +62,10 @@ export function ModelCard({ model }: ModelCardProps) {
 
             <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
               <div>
-                <span className="font-medium">In:</span> {formatPrice(model.pricing.input)}/1M
+                <span className="font-medium">In:</span> {formatPrice(model.pricing.inputPer1m ?? 0)}/1M
               </div>
               <div>
-                <span className="font-medium">Out:</span> {formatPrice(model.pricing.output)}/1M
+                <span className="font-medium">Out:</span> {formatPrice(model.pricing.outputPer1m ?? 0)}/1M
               </div>
               {model.parameterSize && (
                 <div>

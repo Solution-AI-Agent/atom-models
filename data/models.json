@@ -2,20 +2,55 @@
   {
     "name": "GPT-5.4 Pro",
     "slug": "gpt-5-4-pro",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-5",
+    "variant": "5.4 Pro",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "reasoning",
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-03-05",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 1050000,
     "maxOutput": 128000,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": true,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 30,
-      "output": 180,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 30,
+      "outputPer1m": 180,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -24,40 +59,78 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 91.0,
       "gpqa": 94.4,
       "swe_bench": 77.2,
       "aime": 100.0,
       "hle": 58.7,
-      "mgsm": 96.0
+      "mgsm": 96.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-03-05",
+    "openRouterModelId": "openai/gpt-5.4-pro",
     "memo": "OpenAI flagship pro model with extended reasoning capabilities.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": "openai/gpt-5.4-pro",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-5.4",
     "slug": "gpt-5-4",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-5",
+    "variant": "5.4",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-03-05",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 1050000,
     "maxOutput": 128000,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 3,
-      "output": 15,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 3,
+      "outputPer1m": 15,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -66,40 +139,76 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 91.0,
       "gpqa": 92.0,
       "swe_bench": 52.8,
       "aime": 100.0,
       "hle": 42.0,
-      "mgsm": 96.0
+      "mgsm": 96.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-03-05",
+    "openRouterModelId": "openai/gpt-5.4",
     "memo": "OpenAI cost-efficient flagship model.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": "openai/gpt-5.4",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-4o",
     "slug": "gpt-4o",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-4o",
+    "variant": null,
     "type": "commercial",
     "tier": "mid",
+    "tags": [
+      "vision"
+    ],
+    "releaseDate": "2024-05-13",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 16384,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": true,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 2.5,
-      "output": 10,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 2.5,
+      "outputPer1m": 10,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -108,40 +217,76 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 88.7,
       "gpqa": 50.6,
       "swe_bench": 33.2,
       "aime": 12.0,
       "hle": 2.7,
-      "mgsm": 90.6
+      "mgsm": 90.6,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2024-05-13",
+    "openRouterModelId": "openai/gpt-4o",
     "memo": "OpenAI multimodal model with vision and text capabilities.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": "openai/gpt-4o",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-4o Mini",
     "slug": "gpt-4o-mini",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-4o",
+    "variant": "Mini",
     "type": "commercial",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "vision"
+    ],
+    "releaseDate": "2024-07-18",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 16384,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": true,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.15,
-      "output": 0.6,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.15,
+      "outputPer1m": 0.6,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -150,37 +295,75 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 82.0,
       "gpqa": 40.2,
-      "aime": 11.5
+      "aime": 11.5,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2024-07-18",
+    "openRouterModelId": "openai/gpt-4o-mini",
     "memo": "Cost-efficient small model replacing GPT-3.5 Turbo.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": "openai/gpt-4o-mini",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-4.1",
     "slug": "gpt-4-1",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-4.1",
+    "variant": null,
     "type": "commercial",
     "tier": "mid",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2025-04-14",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 1000000,
     "maxOutput": 32768,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": true,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 2,
-      "output": 8,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 2,
+      "outputPer1m": 8,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -189,37 +372,75 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 90.2,
       "gpqa": 66.3,
-      "swe_bench": 54.6
+      "swe_bench": 54.6,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-04-14",
+    "openRouterModelId": "openai/gpt-4.1",
     "memo": "OpenAI mid-tier model with 1M context window.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": "openai/gpt-4.1",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-4.1 Mini",
     "slug": "gpt-4-1-mini",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-4.1",
+    "variant": "Mini",
     "type": "commercial",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2025-04-14",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 1000000,
     "maxOutput": 32768,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": true,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.4,
-      "output": 1.6,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.4,
+      "outputPer1m": 1.6,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -228,37 +449,70 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 87.5,
       "gpqa": 58.5,
-      "swe_bench": 48.2
+      "swe_bench": 48.2,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-04-14",
+    "openRouterModelId": "openai/gpt-4.1-mini",
     "memo": "Compact version of GPT-4.1 with 1M context.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": "openai/gpt-4.1-mini",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-4.1 Nano",
     "slug": "gpt-4-1-nano",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-4.1",
+    "variant": "Nano",
     "type": "commercial",
-    "tier": "mini",
+    "tier": "light",
+    "tags": [
+      "long-context"
+    ],
+    "releaseDate": "2025-04-14",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 1000000,
     "maxOutput": 32768,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": true,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.1,
-      "output": 0.4,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.1,
+      "outputPer1m": 0.4,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -267,36 +521,74 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 80.1,
-      "gpqa": 50.3
+      "gpqa": 50.3,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-04-14",
+    "openRouterModelId": "openai/gpt-4.1-nano",
     "memo": "Smallest and cheapest GPT-4.1 variant.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": "openai/gpt-4.1-nano",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Claude Opus 4.6",
     "slug": "claude-opus-4-6",
-    "provider": "Anthropic",
+    "providerId": "ANTHROPIC",
+    "family": "Claude 4",
+    "variant": "Opus 4.6",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-02-05",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 1000000,
     "maxOutput": 128000,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 5,
-      "output": 25,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 5,
+      "outputPer1m": 25,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -305,40 +597,78 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 91.0,
       "gpqa": 91.3,
       "swe_bench": 80.8,
       "aime": 100.0,
       "hle": 53.1,
-      "mgsm": 96.0
+      "mgsm": 96.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-02-05",
+    "openRouterModelId": "anthropic/claude-opus-4.6",
     "memo": "Anthropic flagship model with deepest reasoning capabilities.",
     "sourceUrls": [],
-    "colorCode": "#D4A574",
-    "openRouterModelId": "anthropic/claude-opus-4.6",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Claude Sonnet 4.6",
     "slug": "claude-sonnet-4-6",
-    "provider": "Anthropic",
+    "providerId": "ANTHROPIC",
+    "family": "Claude 4",
+    "variant": "Sonnet 4.6",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-02-17",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 1000000,
     "maxOutput": 128000,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 3,
-      "output": 15,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 3,
+      "outputPer1m": 15,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -347,38 +677,74 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 74.1,
       "swe_bench": 79.6,
       "aime": 83.0,
-      "hle": 49.0
+      "hle": 49.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-02-17",
+    "openRouterModelId": "anthropic/claude-sonnet-4.6",
     "memo": "Anthropic balanced flagship model for coding and analysis.",
     "sourceUrls": [],
-    "colorCode": "#D4A574",
-    "openRouterModelId": "anthropic/claude-sonnet-4.6",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Claude Haiku 4.5",
     "slug": "claude-haiku-4-5",
-    "provider": "Anthropic",
+    "providerId": "ANTHROPIC",
+    "family": "Claude 4",
+    "variant": "Haiku 4.5",
     "type": "commercial",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "coding",
+      "long-context"
+    ],
+    "releaseDate": "2025-10-01",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 200000,
     "maxOutput": 64000,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": true,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 1,
-      "output": 5,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 1,
+      "outputPer1m": 5,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -387,38 +753,76 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 67.2,
       "swe_bench": 73.3,
       "aime": 83.7,
-      "hle": 9.7
+      "hle": 9.7,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-10-01",
+    "openRouterModelId": "anthropic/claude-haiku-4.5",
     "memo": "Anthropic fast and affordable small model.",
     "sourceUrls": [],
-    "colorCode": "#D4A574",
-    "openRouterModelId": "anthropic/claude-haiku-4.5",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemini 3.1 Pro",
     "slug": "gemini-3-1-pro",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemini 3",
+    "variant": "3.1 Pro",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-02-19",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 1048576,
     "maxOutput": 65536,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 2,
-      "output": 12,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 2,
+      "outputPer1m": 12,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -427,40 +831,78 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 92.6,
       "gpqa": 94.3,
       "swe_bench": 80.6,
       "aime": 92.0,
       "hle": 51.4,
-      "mgsm": 95.5
+      "mgsm": 95.5,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-02-19",
+    "openRouterModelId": "google/gemini-3.1-pro-preview",
     "memo": "Google latest flagship model with 1M context window.",
     "sourceUrls": [],
-    "colorCode": "#4285F4",
-    "openRouterModelId": "google/gemini-3.1-pro-preview",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemini 3 Pro",
     "slug": "gemini-3-pro",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemini 3",
+    "variant": "Pro",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-01-15",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 1048576,
     "maxOutput": 65536,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 2,
-      "output": 12,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 2,
+      "outputPer1m": 12,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -469,39 +911,77 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 91.8,
       "gpqa": 91.9,
       "swe_bench": 76.2,
       "aime": 95.0,
-      "hle": 37.0
+      "hle": 37.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-01-15",
+    "openRouterModelId": "google/gemini-3-pro-preview",
     "memo": "Google Gemini 3 Pro flagship model.",
     "sourceUrls": [],
-    "colorCode": "#4285F4",
-    "openRouterModelId": "google/gemini-3-pro-preview",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemini 3 Flash",
     "slug": "gemini-3-flash",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemini 3",
+    "variant": "Flash",
     "type": "commercial",
     "tier": "mid",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-01-15",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 1048576,
     "maxOutput": 65536,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.5,
-      "output": 3,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.5,
+      "outputPer1m": 3,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -510,39 +990,74 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 91.8,
       "gpqa": 90.4,
       "swe_bench": 78.0,
       "aime": 90.4,
-      "hle": 34.7
+      "hle": 34.7,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-01-15",
+    "openRouterModelId": "google/gemini-3-flash-preview",
     "memo": "Google fast mid-tier model with 1M context.",
     "sourceUrls": [],
-    "colorCode": "#4285F4",
-    "openRouterModelId": "google/gemini-3-flash-preview",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemini 3.1 Flash-Lite",
     "slug": "gemini-3-1-flash-lite",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemini 3",
+    "variant": "3.1 Flash-Lite",
     "type": "commercial",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2026-03-03",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 1048576,
     "maxOutput": 65536,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.25,
-      "output": 1.5,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.25,
+      "outputPer1m": 1.5,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -551,38 +1066,76 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 88.9,
       "gpqa": 86.9,
       "swe_bench": 35.0,
-      "hle": 16.0
+      "hle": 16.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2026-03-03",
+    "openRouterModelId": "google/gemini-3.1-flash-lite-preview",
     "memo": "Google lightweight flash model for cost-sensitive workloads.",
     "sourceUrls": [],
-    "colorCode": "#4285F4",
-    "openRouterModelId": "google/gemini-3.1-flash-lite-preview",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemini 2.5 Pro",
     "slug": "gemini-2-5-pro",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemini 2.5",
+    "variant": "Pro",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2025-06-17",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 1000000,
     "maxOutput": 65536,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 1.25,
-      "output": 10,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 1.25,
+      "outputPer1m": 10,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -591,39 +1144,77 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 89.8,
       "gpqa": 84.0,
       "swe_bench": 63.8,
       "aime": 86.7,
-      "hle": 18.8
+      "hle": 18.8,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-06-17",
+    "openRouterModelId": "google/gemini-2.5-pro",
     "memo": "Google Gemini 2.5 Pro with 1M context window.",
     "sourceUrls": [],
-    "colorCode": "#4285F4",
-    "openRouterModelId": "google/gemini-2.5-pro",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemini 2.5 Flash",
     "slug": "gemini-2-5-flash",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemini 2.5",
+    "variant": "Flash",
     "type": "commercial",
     "tier": "mid",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2025-06-17",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 1000000,
     "maxOutput": 65536,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.3,
-      "output": 2.5,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.3,
+      "outputPer1m": 2.5,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -632,38 +1223,73 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 82.9,
       "gpqa": 82.8,
       "swe_bench": 60.4,
-      "aime": 72.0
+      "aime": 72.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-06-17",
+    "openRouterModelId": "google/gemini-2.5-flash",
     "memo": "Google fast mid-tier model balancing speed and capability.",
     "sourceUrls": [],
-    "colorCode": "#4285F4",
-    "openRouterModelId": "google/gemini-2.5-flash",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemini 2.5 Flash-Lite",
     "slug": "gemini-2-5-flash-lite",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemini 2.5",
+    "variant": "Flash-Lite",
     "type": "commercial",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2025-09-01",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 1048576,
     "maxOutput": 65536,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.1,
-      "output": 0.4,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.1,
+      "outputPer1m": 0.4,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": true,
@@ -672,33 +1298,69 @@
       "onPremise": false,
       "dataExclusion": true
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-09-01",
+    "openRouterModelId": "google/gemini-2.5-flash-lite",
     "memo": "Google cheapest flash model for high-volume tasks.",
     "sourceUrls": [],
-    "colorCode": "#4285F4",
-    "openRouterModelId": "google/gemini-2.5-flash-lite",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Grok 4.1",
     "slug": "grok-4-1",
-    "provider": "xAI",
+    "providerId": "XAI",
+    "family": "Grok 4",
+    "variant": "4.1",
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2025-11-19",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 2000000,
     "maxOutput": 131072,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 3,
-      "output": 15,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 3,
+      "outputPer1m": 15,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": false,
@@ -707,37 +1369,70 @@
       "onPremise": false,
       "dataExclusion": false
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 88.0,
       "gpqa": 88.0,
-      "aime": 95.0
+      "aime": 95.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-11-19",
+    "openRouterModelId": null,
     "memo": "xAI flagship model with 2M context window.",
     "sourceUrls": [],
-    "colorCode": "#1DA1F2",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Grok 4.1 Fast",
     "slug": "grok-4-1-fast",
-    "provider": "xAI",
+    "providerId": "XAI",
+    "family": "Grok 4",
+    "variant": "4.1 Fast",
     "type": "commercial",
     "tier": "mid",
+    "tags": [
+      "long-context"
+    ],
+    "releaseDate": "2025-11-19",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 2000000,
     "maxOutput": 131072,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.2,
-      "output": 0.5,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.2,
+      "outputPer1m": 0.5,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": false,
@@ -746,37 +1441,73 @@
       "onPremise": false,
       "dataExclusion": false
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 63.7,
       "aime": 34.3,
-      "hle": 5.0
+      "hle": 5.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-11-19",
+    "openRouterModelId": "x-ai/grok-4.1-fast",
     "memo": "xAI fast inference model with 2M context.",
     "sourceUrls": [],
-    "colorCode": "#1DA1F2",
-    "openRouterModelId": "x-ai/grok-4.1-fast",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Grok 4",
     "slug": "grok-4",
-    "provider": "xAI",
+    "providerId": "XAI",
+    "family": "Grok 4",
+    "variant": null,
     "type": "commercial",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "vision",
+      "long-context"
+    ],
+    "releaseDate": "2025-07-01",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 256000,
     "maxOutput": 131072,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 3,
-      "output": 15,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 3,
+      "outputPer1m": 15,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": false,
@@ -785,39 +1516,72 @@
       "onPremise": false,
       "dataExclusion": false
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 86.6,
       "gpqa": 88.0,
       "swe_bench": 69.1,
       "aime": 95.0,
-      "hle": 44.4
+      "hle": 44.4,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-07-01",
+    "openRouterModelId": "x-ai/grok-4",
     "memo": "xAI previous-gen flagship reasoning model.",
     "sourceUrls": [],
-    "colorCode": "#1DA1F2",
-    "openRouterModelId": "x-ai/grok-4",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Grok 4 Fast",
     "slug": "grok-4-fast",
-    "provider": "xAI",
+    "providerId": "XAI",
+    "family": "Grok 4",
+    "variant": "Fast",
     "type": "commercial",
     "tier": "mid",
+    "tags": [
+      "long-context"
+    ],
+    "releaseDate": "2025-07-01",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "moe",
     "contextWindow": 256000,
     "maxOutput": 131072,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.2,
-      "output": 0.5,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.2,
+      "outputPer1m": 0.5,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": false,
@@ -826,33 +1590,65 @@
       "onPremise": false,
       "dataExclusion": false
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-07-01",
+    "openRouterModelId": "x-ai/grok-4-fast",
     "memo": "xAI fast inference variant of Grok 4.",
     "sourceUrls": [],
-    "colorCode": "#1DA1F2",
-    "openRouterModelId": "x-ai/grok-4-fast",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Grok 3",
     "slug": "grok-3",
-    "provider": "xAI",
+    "providerId": "XAI",
+    "family": "Grok 3",
+    "variant": null,
     "type": "commercial",
     "tier": "mid",
+    "tags": [],
+    "releaseDate": "2025-02-01",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 131072,
     "maxOutput": 131072,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 3,
-      "output": 15,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 3,
+      "outputPer1m": 15,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": false,
@@ -861,37 +1657,68 @@
       "onPremise": false,
       "dataExclusion": false
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 92.7,
       "gpqa": 84.6,
-      "aime": 93.3
+      "aime": 93.3,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-02-01",
+    "openRouterModelId": "x-ai/grok-3",
     "memo": "xAI Grok 3 dense architecture model.",
     "sourceUrls": [],
-    "colorCode": "#1DA1F2",
-    "openRouterModelId": "x-ai/grok-3",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Grok 3 Mini",
     "slug": "grok-3-mini",
-    "provider": "xAI",
+    "providerId": "XAI",
+    "family": "Grok 3",
+    "variant": "Mini",
     "type": "commercial",
-    "tier": "small",
+    "tier": "light",
+    "tags": [],
+    "releaseDate": "2025-02-01",
+    "license": "Proprietary",
+    "isOpensource": false,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": null,
     "activeParameters": null,
     "architecture": "dense",
     "contextWindow": 131072,
     "maxOutput": 131072,
-    "license": "Proprietary",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0.3,
-      "output": 0.5,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0.3,
+      "outputPer1m": 0.5,
+      "pricingType": "api"
     },
     "compliance": {
       "soc2": false,
@@ -900,35 +1727,69 @@
       "onPremise": false,
       "dataExclusion": false
     },
-    "languageScores": {},
     "benchmarks": {
-      "aime": 95.8
+      "aime": 95.8,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": null,
-    "releaseDate": "2025-02-01",
+    "openRouterModelId": "x-ai/grok-3-mini",
     "memo": "xAI compact model for cost-efficient tasks.",
     "sourceUrls": [],
-    "colorCode": "#1DA1F2",
-    "openRouterModelId": "x-ai/grok-3-mini",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-OSS 120B",
     "slug": "gpt-oss-120b",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-OSS",
+    "variant": "120B",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "large"
+    ],
+    "releaseDate": "2025-08-05",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 120,
     "activeParameters": 120,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 16384,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -937,13 +1798,19 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 90.0,
       "gpqa": 80.1,
       "swe_bench": 62.4,
-      "aime": 96.6
+      "aime": 96.6,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 240,
@@ -956,30 +1823,57 @@
       ],
       "estimatedTps": 30
     },
-    "releaseDate": "2025-08-05",
+    "openRouterModelId": null,
     "memo": "OpenAI first open-source model with 120B parameters.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GPT-OSS 20B",
     "slug": "gpt-oss-20b",
-    "provider": "OpenAI",
+    "providerId": "OPENAI",
+    "family": "GPT-OSS",
+    "variant": "20B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "coding"
+    ],
+    "releaseDate": "2025-08-05",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 20,
     "activeParameters": 20,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 16384,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -988,13 +1882,19 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 85.3,
       "gpqa": 71.5,
       "swe_bench": 60.7,
-      "aime": 98.7
+      "aime": 98.7,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 40,
@@ -1008,30 +1908,58 @@
       ],
       "estimatedTps": 80
     },
-    "releaseDate": "2025-08-05",
+    "openRouterModelId": null,
     "memo": "OpenAI compact open-source model for edge deployment.",
     "sourceUrls": [],
-    "colorCode": "#10A37F",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemma 3 27B",
     "slug": "gemma-3-27b",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemma 3",
+    "variant": "27B",
     "type": "open-source",
     "tier": "mid",
+    "tags": [
+      "vision"
+    ],
+    "releaseDate": "2025-03-10",
+    "license": "Custom Google",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 27,
     "activeParameters": 27,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 8192,
-    "license": "Custom Google",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1040,10 +1968,16 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
-      "gpqa": 42.4
+      "gpqa": 42.4,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 54,
@@ -1057,30 +1991,58 @@
       ],
       "estimatedTps": 60
     },
-    "releaseDate": "2025-03-10",
+    "openRouterModelId": "google/gemma-3-27b-it",
     "memo": "Google open-weight multimodal model with 128K context.",
     "sourceUrls": [],
-    "colorCode": "#8E44AD",
-    "openRouterModelId": "google/gemma-3-27b-it",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemma 3 12B",
     "slug": "gemma-3-12b",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemma 3",
+    "variant": "12B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "vision"
+    ],
+    "releaseDate": "2025-03-10",
+    "license": "Custom Google",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 12,
     "activeParameters": 12,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 8192,
-    "license": "Custom Google",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1089,8 +2051,15 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 24,
@@ -1104,30 +2073,59 @@
       ],
       "estimatedTps": 90
     },
-    "releaseDate": "2025-03-10",
+    "openRouterModelId": "google/gemma-3-12b-it",
     "memo": "Google mid-size open model for on-prem deployment.",
     "sourceUrls": [],
-    "colorCode": "#8E44AD",
-    "openRouterModelId": "google/gemma-3-12b-it",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemma 3 4B",
     "slug": "gemma-3-4b",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemma 3",
+    "variant": "4B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "vision",
+      "lightweight"
+    ],
+    "releaseDate": "2025-03-10",
+    "license": "Custom Google",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 4,
     "activeParameters": 4,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 8192,
-    "license": "Custom Google",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1136,8 +2134,15 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 8,
@@ -1150,30 +2155,57 @@
       ],
       "estimatedTps": 150
     },
-    "releaseDate": "2025-03-10",
+    "openRouterModelId": "google/gemma-3-4b-it",
     "memo": "Google compact open model for edge devices.",
     "sourceUrls": [],
-    "colorCode": "#8E44AD",
-    "openRouterModelId": "google/gemma-3-4b-it",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Gemma 3 1B",
     "slug": "gemma-3-1b",
-    "provider": "Google",
+    "providerId": "GOOGLE",
+    "family": "Gemma 3",
+    "variant": "1B",
     "type": "open-source",
-    "tier": "mini",
+    "tier": "light",
+    "tags": [
+      "lightweight"
+    ],
+    "releaseDate": "2025-03-10",
+    "license": "Custom Google",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 1,
     "activeParameters": 1,
     "architecture": "dense",
     "contextWindow": 32000,
     "maxOutput": 8192,
-    "license": "Custom Google",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1182,8 +2214,15 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "CPU or Mobile",
       "vramFp16": 2,
@@ -1196,30 +2235,61 @@
       ],
       "estimatedTps": 300
     },
-    "releaseDate": "2025-03-10",
+    "openRouterModelId": null,
     "memo": "Google smallest open model for mobile and embedded use.",
     "sourceUrls": [],
-    "colorCode": "#8E44AD",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GLM-5",
     "slug": "glm-5",
-    "provider": "Zhipu AI",
+    "providerId": "ZHIPU",
+    "family": "GLM-5",
+    "variant": null,
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "long-context",
+      "large"
+    ],
+    "releaseDate": "2026-02-11",
+    "license": "MIT",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 745,
     "activeParameters": 44,
     "architecture": "moe",
     "contextWindow": 200000,
     "maxOutput": 131072,
-    "license": "MIT",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1228,13 +2298,19 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 86.0,
       "swe_bench": 77.8,
       "aime": 92.7,
-      "hle": 50.4
+      "hle": 50.4,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1490,
@@ -1246,30 +2322,61 @@
       ],
       "estimatedTps": 15
     },
-    "releaseDate": "2026-02-11",
+    "openRouterModelId": "z-ai/glm-5",
     "memo": "Zhipu AI largest MoE model with 745B total, 44B active parameters.",
     "sourceUrls": [],
-    "colorCode": "#4A90D9",
-    "openRouterModelId": "z-ai/glm-5",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GLM-4.7",
     "slug": "glm-4-7",
-    "provider": "Zhipu AI",
+    "providerId": "ZHIPU",
+    "family": "GLM-4",
+    "variant": "4.7",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "long-context",
+      "large"
+    ],
+    "releaseDate": "2025-12-22",
+    "license": "MIT",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 355,
     "activeParameters": 32,
     "architecture": "moe",
     "contextWindow": 200000,
     "maxOutput": 131072,
-    "license": "MIT",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1278,13 +2385,19 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 85.7,
       "swe_bench": 73.8,
       "aime": 95.7,
-      "hle": 42.8
+      "hle": 42.8,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 710,
@@ -1296,30 +2409,59 @@
       ],
       "estimatedTps": 25
     },
-    "releaseDate": "2025-12-22",
+    "openRouterModelId": "z-ai/glm-4.7",
     "memo": "Zhipu AI MoE model with 355B total, 32B active parameters.",
     "sourceUrls": [],
-    "colorCode": "#4A90D9",
-    "openRouterModelId": "z-ai/glm-4.7",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "GLM-4.7-Flash",
     "slug": "glm-4-7-flash",
-    "provider": "Zhipu AI",
+    "providerId": "ZHIPU",
+    "family": "GLM-4",
+    "variant": "4.7 Flash",
     "type": "open-source",
     "tier": "mid",
+    "tags": [
+      "coding",
+      "long-context",
+      "large"
+    ],
+    "releaseDate": "2025-12-22",
+    "license": "MIT",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 355,
     "activeParameters": 32,
     "architecture": "moe",
     "contextWindow": 200000,
     "maxOutput": 131072,
-    "license": "MIT",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1328,12 +2470,18 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 75.2,
       "swe_bench": 59.2,
-      "aime": 91.6
+      "aime": 91.6,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 710,
@@ -1345,30 +2493,61 @@
       ],
       "estimatedTps": 40
     },
-    "releaseDate": "2025-12-22",
+    "openRouterModelId": "z-ai/glm-4.7-flash",
     "memo": "Zhipu AI fast inference variant of GLM-4.7.",
     "sourceUrls": [],
-    "colorCode": "#4A90D9",
-    "openRouterModelId": "z-ai/glm-4.7-flash",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Kimi K2.5",
     "slug": "kimi-k2-5",
-    "provider": "Moonshot AI",
+    "providerId": "MOONSHOT",
+    "family": "Kimi",
+    "variant": "K2.5",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "long-context",
+      "large"
+    ],
+    "releaseDate": "2026-01-27",
+    "license": "MIT",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 1000,
     "activeParameters": 32,
     "architecture": "moe",
     "contextWindow": 256000,
     "maxOutput": 65536,
-    "license": "MIT",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1377,14 +2556,20 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 94.3,
       "gpqa": 87.6,
       "swe_bench": 76.8,
       "aime": 96.1,
-      "hle": 51.8
+      "hle": 51.8,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "8x H100 80GB",
       "vramFp16": 2000,
@@ -1396,30 +2581,61 @@
       ],
       "estimatedTps": 10
     },
-    "releaseDate": "2026-01-27",
+    "openRouterModelId": "moonshotai/kimi-k2.5",
     "memo": "Moonshot AI massive 1T MoE model with 32B active parameters.",
     "sourceUrls": [],
-    "colorCode": "#6C5CE7",
-    "openRouterModelId": "moonshotai/kimi-k2.5",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Kimi K2",
     "slug": "kimi-k2",
-    "provider": "Moonshot AI",
+    "providerId": "MOONSHOT",
+    "family": "Kimi",
+    "variant": "K2",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "long-context",
+      "large"
+    ],
+    "releaseDate": "2025-07-01",
+    "license": "MIT",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 1000,
     "activeParameters": 32,
     "architecture": "moe",
     "contextWindow": 256000,
     "maxOutput": 65536,
-    "license": "MIT",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1428,13 +2644,19 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 89.5,
       "gpqa": 75.1,
       "swe_bench": 65.8,
-      "aime": 49.5
+      "aime": 49.5,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "8x H100 80GB",
       "vramFp16": 2000,
@@ -1446,30 +2668,64 @@
       ],
       "estimatedTps": 10
     },
-    "releaseDate": "2025-07-01",
+    "openRouterModelId": "moonshotai/kimi-k2",
     "memo": "Moonshot AI original 1T MoE model with agentic capabilities.",
     "sourceUrls": [],
-    "colorCode": "#6C5CE7",
-    "openRouterModelId": "moonshotai/kimi-k2",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 397B-A17B",
     "slug": "qwen-3-5-397b-a17b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "397B-A17B",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "reasoning",
+      "coding",
+      "vision",
+      "long-context",
+      "large"
+    ],
+    "releaseDate": "2026-02-16",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 397,
     "activeParameters": 17,
     "architecture": "moe",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1478,14 +2734,20 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 88.5,
       "gpqa": 88.4,
       "swe_bench": 76.4,
       "aime": 91.3,
-      "hle": 48.3
+      "hle": 48.3,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "4x A100 80GB",
       "vramFp16": 794,
@@ -1498,30 +2760,63 @@
       ],
       "estimatedTps": 20
     },
-    "releaseDate": "2026-02-16",
+    "openRouterModelId": "qwen/qwen3.5-397b-a17b",
     "memo": "Alibaba largest Qwen 3.5 MoE model with 397B total parameters.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-397b-a17b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 122B-A10B",
     "slug": "qwen-3-5-122b-a10b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "122B-A10B",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "reasoning",
+      "vision",
+      "long-context",
+      "large"
+    ],
+    "releaseDate": "2026-02-24",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 122,
     "activeParameters": 10,
     "architecture": "moe",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text",
+      "image"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": true,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1530,10 +2825,16 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
-      "gpqa": 86.6
+      "gpqa": 86.6,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 244,
@@ -1546,30 +2847,61 @@
       ],
       "estimatedTps": 35
     },
-    "releaseDate": "2026-02-24",
+    "openRouterModelId": "qwen/qwen3.5-122b-a10b",
     "memo": "Alibaba mid-size MoE with efficient 10B active parameters.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-122b-a10b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 35B-A3B",
     "slug": "qwen-3-5-35b-a3b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "35B-A3B",
     "type": "open-source",
     "tier": "mid",
+    "tags": [
+      "reasoning",
+      "coding",
+      "long-context"
+    ],
+    "releaseDate": "2026-02-24",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 35,
     "activeParameters": 3,
     "architecture": "moe",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1578,12 +2910,18 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 84.2,
       "swe_bench": 69.2,
-      "hle": 22.4
+      "hle": 22.4,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 70,
@@ -1597,30 +2935,61 @@
       ],
       "estimatedTps": 60
     },
-    "releaseDate": "2026-02-24",
+    "openRouterModelId": "qwen/qwen3.5-35b-a3b",
     "memo": "Alibaba compact MoE with only 3B active parameters.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-35b-a3b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 27B",
     "slug": "qwen-3-5-27b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "27B",
     "type": "open-source",
     "tier": "mid",
+    "tags": [
+      "reasoning",
+      "coding",
+      "long-context"
+    ],
+    "releaseDate": "2026-02-24",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 27,
     "activeParameters": 27,
     "architecture": "dense",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1629,12 +2998,18 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 88.5,
       "gpqa": 85.5,
-      "swe_bench": 72.4
+      "swe_bench": 72.4,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 54,
@@ -1648,30 +3023,59 @@
       ],
       "estimatedTps": 55
     },
-    "releaseDate": "2026-02-24",
+    "openRouterModelId": "qwen/qwen3.5-27b",
     "memo": "Alibaba dense 27B model for on-prem deployment.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-27b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 9B",
     "slug": "qwen-3-5-9b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "9B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "reasoning",
+      "long-context",
+      "lightweight"
+    ],
+    "releaseDate": "2026-03-02",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 9,
     "activeParameters": 9,
     "architecture": "dense",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1680,10 +3084,16 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
-      "gpqa": 81.7
+      "gpqa": 81.7,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 18,
@@ -1697,30 +3107,59 @@
       ],
       "estimatedTps": 100
     },
-    "releaseDate": "2026-03-02",
+    "openRouterModelId": "qwen/qwen3.5-9b",
     "memo": "Alibaba compact dense model for consumer GPUs.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": "qwen/qwen3.5-9b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 4B",
     "slug": "qwen-3-5-4b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "4B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "reasoning",
+      "long-context",
+      "lightweight"
+    ],
+    "releaseDate": "2026-03-02",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 4,
     "activeParameters": 4,
     "architecture": "dense",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1729,8 +3168,15 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 8,
@@ -1743,30 +3189,59 @@
       ],
       "estimatedTps": 150
     },
-    "releaseDate": "2026-03-02",
+    "openRouterModelId": null,
     "memo": "Alibaba small dense model for edge deployment.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 2B",
     "slug": "qwen-3-5-2b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "2B",
     "type": "open-source",
-    "tier": "mini",
+    "tier": "light",
+    "tags": [
+      "reasoning",
+      "long-context",
+      "lightweight"
+    ],
+    "releaseDate": "2026-03-02",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 2,
     "activeParameters": 2,
     "architecture": "dense",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1775,8 +3250,15 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "CPU or Mobile",
       "vramFp16": 4,
@@ -1789,30 +3271,59 @@
       ],
       "estimatedTps": 200
     },
-    "releaseDate": "2026-03-02",
+    "openRouterModelId": null,
     "memo": "Alibaba mini model for mobile and IoT.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "Qwen 3.5 0.8B",
     "slug": "qwen-3-5-0-8b",
-    "provider": "Alibaba",
+    "providerId": "ALIBABA",
+    "family": "Qwen 3.5",
+    "variant": "0.8B",
     "type": "open-source",
-    "tier": "micro",
+    "tier": "light",
+    "tags": [
+      "reasoning",
+      "long-context",
+      "lightweight"
+    ],
+    "releaseDate": "2026-03-02",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 0.8,
     "activeParameters": 0.8,
     "architecture": "dense",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "license": "Apache 2.0",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1821,8 +3332,15 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
-    "benchmarks": {},
+    "benchmarks": {
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "CPU or Mobile",
       "vramFp16": 1.6,
@@ -1835,30 +3353,60 @@
       ],
       "estimatedTps": 400
     },
-    "releaseDate": "2026-03-02",
+    "openRouterModelId": null,
     "memo": "Alibaba micro model for embedded and on-device inference.",
     "sourceUrls": [],
-    "colorCode": "#FF6A00",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek V3.2",
     "slug": "deepseek-v3-2",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek V3",
+    "variant": "V3.2",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "coding",
+      "large"
+    ],
+    "releaseDate": "2025-12-01",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 671,
     "activeParameters": 37,
     "architecture": "moe",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": false
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1867,14 +3415,20 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 88.5,
       "gpqa": 82.4,
       "swe_bench": 70.0,
       "aime": 93.1,
-      "hle": 23.9
+      "hle": 23.9,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1342,
@@ -1886,30 +3440,61 @@
       ],
       "estimatedTps": 15
     },
-    "releaseDate": "2025-12-01",
+    "openRouterModelId": "deepseek/deepseek-chat",
     "memo": "DeepSeek latest chat model with 671B MoE architecture.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-chat",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek R1",
     "slug": "deepseek-r1",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek R1",
+    "variant": null,
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "reasoning",
+      "coding",
+      "large"
+    ],
+    "releaseDate": "2025-01-20",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 671,
     "activeParameters": 37,
     "architecture": "moe",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en",
+      "ko",
+      "multi"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1918,13 +3503,19 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 90.8,
       "gpqa": 71.5,
       "swe_bench": 49.2,
-      "aime": 79.8
+      "aime": 79.8,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "8x A100 80GB",
       "vramFp16": 1342,
@@ -1936,30 +3527,57 @@
       ],
       "estimatedTps": 15
     },
-    "releaseDate": "2025-01-20",
+    "openRouterModelId": "deepseek/deepseek-r1",
     "memo": "DeepSeek reasoning model with chain-of-thought capabilities.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek R1 70B",
     "slug": "deepseek-r1-70b",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek R1",
+    "variant": "70B",
     "type": "open-source",
     "tier": "flagship",
+    "tags": [
+      "reasoning"
+    ],
+    "releaseDate": "2025-01-20",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 70,
     "activeParameters": 70,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -1968,11 +3586,17 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 65.2,
-      "aime": 86.7
+      "aime": 86.7,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "2x A100 80GB",
       "vramFp16": 140,
@@ -1985,30 +3609,57 @@
       ],
       "estimatedTps": 30
     },
-    "releaseDate": "2025-01-20",
+    "openRouterModelId": "deepseek/deepseek-r1-distill-llama-70b",
     "memo": "DeepSeek R1 distilled 70B dense variant.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1-distill-llama-70b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek R1 32B",
     "slug": "deepseek-r1-32b",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek R1",
+    "variant": "32B",
     "type": "open-source",
     "tier": "mid",
+    "tags": [
+      "reasoning"
+    ],
+    "releaseDate": "2025-01-20",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 32,
     "activeParameters": 32,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -2017,12 +3668,18 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "mmlu": 73.9,
       "gpqa": 62.1,
-      "aime": 72.6
+      "aime": 72.6,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x A100 80GB",
       "vramFp16": 64,
@@ -2036,30 +3693,57 @@
       ],
       "estimatedTps": 50
     },
-    "releaseDate": "2025-01-20",
+    "openRouterModelId": "deepseek/deepseek-r1-distill-qwen-32b",
     "memo": "DeepSeek R1 distilled 32B dense variant.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": "deepseek/deepseek-r1-distill-qwen-32b",
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek R1 14B",
     "slug": "deepseek-r1-14b",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek R1",
+    "variant": "14B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "reasoning"
+    ],
+    "releaseDate": "2025-01-20",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 14,
     "activeParameters": 14,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -2068,11 +3752,17 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 59.1,
-      "aime": 69.7
+      "aime": 69.7,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 4090",
       "vramFp16": 28,
@@ -2086,30 +3776,58 @@
       ],
       "estimatedTps": 70
     },
-    "releaseDate": "2025-01-20",
+    "openRouterModelId": null,
     "memo": "DeepSeek R1 distilled 14B variant for consumer GPUs.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek R1 8B",
     "slug": "deepseek-r1-8b",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek R1",
+    "variant": "8B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "reasoning",
+      "lightweight"
+    ],
+    "releaseDate": "2025-01-20",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 8,
     "activeParameters": 8,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -2118,10 +3836,16 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
-      "gpqa": 49.0
+      "gpqa": 49.0,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 16,
@@ -2134,30 +3858,58 @@
       ],
       "estimatedTps": 100
     },
-    "releaseDate": "2025-01-20",
+    "openRouterModelId": null,
     "memo": "DeepSeek R1 compact 8B variant.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek R1 7B",
     "slug": "deepseek-r1-7b",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek R1",
+    "variant": "7B",
     "type": "open-source",
-    "tier": "small",
+    "tier": "light",
+    "tags": [
+      "reasoning",
+      "lightweight"
+    ],
+    "releaseDate": "2025-01-20",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 7,
     "activeParameters": 7,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -2166,11 +3918,17 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 49.1,
-      "aime": 55.5
+      "aime": 55.5,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 3060",
       "vramFp16": 14,
@@ -2183,30 +3941,58 @@
       ],
       "estimatedTps": 110
     },
-    "releaseDate": "2025-01-20",
+    "openRouterModelId": null,
     "memo": "DeepSeek R1 7B distilled variant.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   },
   {
     "name": "DeepSeek R1 1.5B",
     "slug": "deepseek-r1-1-5b",
-    "provider": "DeepSeek",
+    "providerId": "DEEPSEEK",
+    "family": "DeepSeek R1",
+    "variant": "1.5B",
     "type": "open-source",
-    "tier": "mini",
+    "tier": "light",
+    "tags": [
+      "reasoning",
+      "lightweight"
+    ],
+    "releaseDate": "2025-01-20",
+    "license": "DeepSeek License",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
     "parameterSize": 1.5,
     "activeParameters": 1.5,
     "architecture": "dense",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "license": "DeepSeek License",
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": false,
+      "structuredOutput": false,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": false,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
     "pricing": {
-      "input": 0,
-      "output": 0,
-      "cachingDiscount": 0,
-      "batchDiscount": 0
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted"
     },
     "compliance": {
       "soc2": false,
@@ -2215,11 +4001,17 @@
       "onPremise": true,
       "dataExclusion": true
     },
-    "languageScores": {},
     "benchmarks": {
       "gpqa": 33.8,
-      "aime": 28.9
+      "aime": 28.9,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
     },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
     "infrastructure": {
       "minGpu": "CPU or Mobile",
       "vramFp16": 3,
@@ -2232,11 +4024,9 @@
       ],
       "estimatedTps": 250
     },
-    "releaseDate": "2025-01-20",
+    "openRouterModelId": null,
     "memo": "DeepSeek R1 smallest distilled variant for edge devices.",
     "sourceUrls": [],
-    "colorCode": "#4D6BFE",
-    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-11"
   }
 ]

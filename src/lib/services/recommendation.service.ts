@@ -1,5 +1,6 @@
 import { getConnection } from '@/lib/db/connection'
 import { ModelModel } from '@/lib/db/models/model'
+import { ProviderModel } from '@/lib/db/models/provider'
 import {
   calculateDimensionScore,
   calculateCostScore,
@@ -7,7 +8,7 @@ import {
   calculateFitnessBreakdown,
 } from '@/lib/utils/score'
 import { BVA_DIMENSIONS } from '@/lib/constants/bva-dimensions'
-import type { IIndustryPresetDocument } from '@/lib/db/models/industry-preset'
+import type { IBvaPresetDocument } from '@/lib/db/models/bva-preset'
 import type { IRankedModel, IRankedModelInfra } from '@/lib/types/preset'
 import type { BvaDimensionKey } from '@/lib/types/bva'
 
@@ -46,11 +47,15 @@ function extractBenchmarks(
 }
 
 export async function getRankedModelsForPreset(
-  preset: IIndustryPresetDocument,
+  preset: IBvaPresetDocument,
   limitPerType = 5,
 ): Promise<IRankedModel[]> {
   await getConnection()
-  const models = await ModelModel.find().lean()
+  const [models, providers] = await Promise.all([
+    ModelModel.find().lean(),
+    ProviderModel.find().lean(),
+  ])
+  const providerMap = new Map(providers.map((p) => [p._id, p]))
 
   const ranked = models.map((model) => {
     const benchmarks = extractBenchmarks(model.benchmarks)
@@ -96,7 +101,7 @@ export async function getRankedModelsForPreset(
     return {
       slug: model.slug,
       name: model.name,
-      provider: model.provider,
+      provider: providerMap.get(model.providerId)?.name ?? model.providerId,
       type: model.type as 'commercial' | 'open-source',
       score: Math.round(score * 100) / 100,
       breakdown,

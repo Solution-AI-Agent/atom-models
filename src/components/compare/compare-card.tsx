@@ -14,7 +14,7 @@ export function CompareCard({ model, onRemove }: CompareCardProps) {
       <div className="flex w-full items-start justify-between">
         <div className="flex flex-col gap-1">
           <h3 className="font-semibold">{model.name}</h3>
-          <span className="text-sm text-muted-foreground">{model.provider}</span>
+          <span className="text-sm text-muted-foreground">{model.providerId}</span>
         </div>
         <Button
           variant="ghost"

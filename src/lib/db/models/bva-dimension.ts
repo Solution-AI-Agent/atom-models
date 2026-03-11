@@ -22,4 +22,4 @@ export const BvaDimensionSchema = new Schema({
 })
 
 export const BvaDimensionModel: Model<IBvaDimensionDocument> =
-  mongoose.models.BvaDimension || mongoose.model<IBvaDimensionDocument>('BvaDimension', BvaDimensionSchema)
+  mongoose.models.BvaDimension || mongoose.model<IBvaDimensionDocument>('BvaDimension', BvaDimensionSchema, 'bva_dimensions')

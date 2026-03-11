@@ -1,0 +1,818 @@
+[
+  {
+    "category": "고객 서비스",
+    "categorySlug": "customer-service",
+    "taskType": "CS 챗봇",
+    "taskTypeSlug": "cs-chatbot",
+    "weights": {
+      "reasoning": 0.08,
+      "korean": 0.12,
+      "coding": 0.0,
+      "knowledge": 0.16,
+      "cost": 0.44,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "빠른 응답 속도와 낮은 비용으로 대량 CS 처리에 최적"
+        },
+        {
+          "modelSlug": "claude-haiku-4-5",
+          "reason": "자연스러운 한국어 응답과 빠른 처리 속도"
+        },
+        {
+          "modelSlug": "gpt-4o-mini",
+          "reason": "검증된 품질과 매우 낮은 비용"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-0-flash",
+          "reason": "극히 낮은 비용으로 대량 처리 가능"
+        },
+        {
+          "modelSlug": "gpt-4-1-nano",
+          "reason": "가장 저렴한 상용 모델, 간단한 CS에 적합"
+        },
+        {
+          "modelSlug": "nova-lite",
+          "reason": "AWS 환경에서 최저 비용 처리"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-30b-a3b",
+          "reason": "3B 활성 파라미터로 매우 빠른 추론, 한중일 강점"
+        },
+        {
+          "modelSlug": "mistral-small-3-1",
+          "reason": "24B 경량 모델로 빠른 추론, 온프레미스 운영 비용 최소화"
+        },
+        {
+          "modelSlug": "phi-4-mini",
+          "reason": "초소형 모델로 엣지 배포 가능"
+        }
+      ]
+    },
+    "description": "고객 문의에 대한 실시간 자동 응답. 빠른 응답 속도와 비용 효율성이 핵심. FAQ 기반 응답, 간단한 문의 분류 및 처리.",
+    "keyFactors": [
+      "응답 지연 시간 < 2초",
+      "월간 처리 비용",
+      "한국어 자연스러움",
+      "FAQ 정확도"
+    ]
+  },
+  {
+    "category": "고객 서비스",
+    "categorySlug": "customer-service",
+    "taskType": "복합 문의 처리",
+    "taskTypeSlug": "complex-inquiry",
+    "weights": {
+      "reasoning": 0.2,
+      "korean": 0.12,
+      "coding": 0.0,
+      "knowledge": 0.24,
+      "cost": 0.24,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "복잡한 맥락 이해와 정교한 한국어 응답"
+        },
+        {
+          "modelSlug": "gpt-4o",
+          "reason": "멀티턴 대화에서 안정적인 추론 능력"
+        },
+        {
+          "modelSlug": "gemini-2-5-pro",
+          "reason": "긴 대화 이력 처리를 위한 넓은 컨텍스트"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "사고 모드로 복잡한 추론도 가능하면서 저렴"
+        },
+        {
+          "modelSlug": "deepseek-v3",
+          "reason": "상용급 성능에 초저가 API"
+        },
+        {
+          "modelSlug": "gpt-4-1-mini",
+          "reason": "긴 대화 이력 처리 가능, 합리적 비용"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-32b",
+          "reason": "32B 밀집 모델로 추론 품질 우수, 한중일 지원"
+        },
+        {
+          "modelSlug": "deepseek-v3",
+          "reason": "671B MoE로 복잡한 대화 처리 능력 우수"
+        },
+        {
+          "modelSlug": "gemma-3-27b",
+          "reason": "다국어 지원이 뛰어나 글로벌 CS에 적합"
+        }
+      ]
+    },
+    "description": "멀티턴 대화 기반 복잡한 고객 문의 처리. 환불, 클레임, 기술 지원 등 맥락 이해가 필요한 고급 상담.",
+    "keyFactors": [
+      "맥락 유지 능력",
+      "추론 정확도",
+      "한국어 품질",
+      "에스컬레이션 판단"
+    ]
+  },
+  {
+    "category": "개발/IT",
+    "categorySlug": "development",
+    "taskType": "코드 생성/리뷰/디버깅",
+    "taskTypeSlug": "code-generation",
+    "weights": {
+      "reasoning": 0.16,
+      "korean": 0.04,
+      "coding": 0.28,
+      "knowledge": 0.12,
+      "cost": 0.2,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-opus-4-5",
+          "reason": "SWE-bench 최고 점수, 대규모 코드베이스 이해에 탁월"
+        },
+        {
+          "modelSlug": "gemini-2-5-pro",
+          "reason": "1M 컨텍스트로 전체 프로젝트 분석 가능, 코딩 최상위"
+        },
+        {
+          "modelSlug": "o4-mini",
+          "reason": "추론 기반 코딩으로 복잡한 버그 해결에 강점"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "Opus 대비 60% 저렴하면서 코딩 성능 유사"
+        },
+        {
+          "modelSlug": "deepseek-v3",
+          "reason": "코딩 벤치마크 상위, API 비용 극히 낮음"
+        },
+        {
+          "modelSlug": "gpt-4-1",
+          "reason": "1M 컨텍스트 + 코딩 특화, 합리적 가격"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-235b-a22b",
+          "reason": "오픈소스 최상위 코딩 성능, MoE 효율"
+        },
+        {
+          "modelSlug": "deepseek-r1",
+          "reason": "추론 기반 코딩으로 복잡한 문제 해결"
+        },
+        {
+          "modelSlug": "qwen-3-32b",
+          "reason": "32B로 로컬 실행 가능, 준수한 코딩 성능"
+        }
+      ]
+    },
+    "description": "코드 생성, 리뷰, 디버깅, 리팩토링 등 소프트웨어 개발 전반. 정확한 코드 출력과 추론 능력이 핵심.",
+    "keyFactors": [
+      "SWE-bench 점수",
+      "코드 정확도",
+      "디버깅 추론",
+      "대규모 코드베이스 이해"
+    ]
+  },
+  {
+    "category": "개발/IT",
+    "categorySlug": "development",
+    "taskType": "문서화",
+    "taskTypeSlug": "documentation",
+    "weights": {
+      "reasoning": 0.12,
+      "korean": 0.08,
+      "coding": 0.12,
+      "knowledge": 0.24,
+      "cost": 0.24,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "명확하고 체계적인 문서 작성 능력"
+        },
+        {
+          "modelSlug": "gpt-4o",
+          "reason": "안정적인 품질의 기술 문서 생성"
+        },
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "빠른 속도로 대량 문서화 처리 가능"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "저비용으로 대량 문서 생성 가능"
+        },
+        {
+          "modelSlug": "gpt-4-1-mini",
+          "reason": "긴 코드베이스 읽기 + 문서 생성"
+        },
+        {
+          "modelSlug": "deepseek-v3",
+          "reason": "상용급 문서 품질에 최저 비용"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "deepseek-v3-2",
+          "reason": "최신 685B MoE로 고품질 기술 문서 생성"
+        },
+        {
+          "modelSlug": "qwen-3-32b",
+          "reason": "다국어 문서화에 강점"
+        },
+        {
+          "modelSlug": "gemma-3-27b",
+          "reason": "140+ 언어 지원으로 글로벌 문서화"
+        }
+      ]
+    },
+    "description": "API 문서, README, 기술 스펙, 사용자 가이드 등 소프트웨어 문서 작성. 명확성과 일관성이 핵심.",
+    "keyFactors": [
+      "문서 품질",
+      "코드 이해도",
+      "일관성",
+      "다국어 지원"
+    ]
+  },
+  {
+    "category": "개발/IT",
+    "categorySlug": "development",
+    "taskType": "에이전트 워크플로우",
+    "taskTypeSlug": "agent-workflow",
+    "weights": {
+      "reasoning": 0.24,
+      "korean": 0.04,
+      "coding": 0.16,
+      "knowledge": 0.16,
+      "cost": 0.2,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-opus-4-5",
+          "reason": "최고 수준의 도구 사용 및 자율적 추론 능력"
+        },
+        {
+          "modelSlug": "o4-mini",
+          "reason": "에이전트 특화 설계, 도구 호출 + 추론 최적화"
+        },
+        {
+          "modelSlug": "gemini-2-5-pro",
+          "reason": "1M 컨텍스트로 복잡한 에이전트 상태 관리"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "에이전트 성능 대비 비용 최적"
+        },
+        {
+          "modelSlug": "gpt-4-1",
+          "reason": "도구 사용 최적화, 합리적 비용"
+        },
+        {
+          "modelSlug": "claude-haiku-4-5",
+          "reason": "빠른 에이전트 루프에 적합, 저비용"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-235b-a22b",
+          "reason": "오픈소스 최상위 추론, MoE 효율"
+        },
+        {
+          "modelSlug": "deepseek-r1",
+          "reason": "강력한 추론으로 복잡한 워크플로우 처리"
+        },
+        {
+          "modelSlug": "kimi-k2-5",
+          "reason": "에이전트 도구 사용과 자율 추론 능력 최상위"
+        }
+      ]
+    },
+    "description": "AI 에이전트가 도구를 활용하여 자율적으로 복잡한 작업을 수행하는 워크플로우. 도구 호출, 계획 수립, 자가 수정 능력 필요.",
+    "keyFactors": [
+      "도구 사용 정확도",
+      "자율적 추론",
+      "에러 복구 능력",
+      "멀티스텝 계획"
+    ]
+  },
+  {
+    "category": "영업/마케팅",
+    "categorySlug": "sales-marketing",
+    "taskType": "이메일/메시지 생성",
+    "taskTypeSlug": "email-generation",
+    "weights": {
+      "reasoning": 0.08,
+      "korean": 0.2,
+      "coding": 0.0,
+      "knowledge": 0.24,
+      "cost": 0.28,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "자연스러운 한국어 비즈니스 문체, 톤 조절 탁월"
+        },
+        {
+          "modelSlug": "gpt-4o",
+          "reason": "다양한 비즈니스 문체와 안정적인 품질"
+        },
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "빠른 생성 속도로 대량 이메일 처리"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "저비용으로 대량 이메일 생성"
+        },
+        {
+          "modelSlug": "gpt-4o-mini",
+          "reason": "간단한 이메일에 충분한 품질, 매우 저렴"
+        },
+        {
+          "modelSlug": "deepseek-v3",
+          "reason": "상용급 한국어 품질에 최저가"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-32b",
+          "reason": "한중일 비즈니스 커뮤니케이션에 강점"
+        },
+        {
+          "modelSlug": "exaone-3-5-32b",
+          "reason": "한국어 비즈니스 문체에 특화된 국산 모델"
+        },
+        {
+          "modelSlug": "gemma-3-27b",
+          "reason": "다국어 마케팅 콘텐츠 생성"
+        }
+      ]
+    },
+    "description": "세일즈 이메일, 뉴스레터, 고객 커뮤니케이션 메시지 자동 생성. 설득력 있는 문체와 개인화가 핵심.",
+    "keyFactors": [
+      "한국어 비즈니스 문체",
+      "개인화 능력",
+      "톤 일관성",
+      "대량 생성 비용"
+    ]
+  },
+  {
+    "category": "영업/마케팅",
+    "categorySlug": "sales-marketing",
+    "taskType": "콘텐츠 생성",
+    "taskTypeSlug": "content-creation",
+    "weights": {
+      "reasoning": 0.08,
+      "korean": 0.16,
+      "coding": 0.0,
+      "knowledge": 0.36,
+      "cost": 0.2,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-opus-4-5",
+          "reason": "가장 자연스럽고 창의적인 한국어 콘텐츠 생성"
+        },
+        {
+          "modelSlug": "gpt-4o",
+          "reason": "다양한 형식의 마케팅 콘텐츠 생성에 안정적"
+        },
+        {
+          "modelSlug": "gemini-2-5-pro",
+          "reason": "이미지 분석 결합한 멀티모달 콘텐츠 가능"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "Opus급 한국어 품질, 60% 저렴"
+        },
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "사고 모드로 고품질 콘텐츠, 저비용"
+        },
+        {
+          "modelSlug": "deepseek-v3",
+          "reason": "비용 대비 우수한 콘텐츠 품질"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "kimi-k2-5",
+          "reason": "멀티모달 지원과 창의적 콘텐츠 생성 능력"
+        },
+        {
+          "modelSlug": "qwen-3-235b-a22b",
+          "reason": "다국어 콘텐츠 생성 최상위"
+        },
+        {
+          "modelSlug": "qwen-3-32b",
+          "reason": "로컬 실행 가능한 고품질 콘텐츠 모델"
+        }
+      ]
+    },
+    "description": "블로그 포스트, 소셜 미디어 콘텐츠, 광고 카피, 브랜드 스토리 등 마케팅 콘텐츠 생성. 창의성과 브랜드 일관성이 핵심.",
+    "keyFactors": [
+      "콘텐츠 창의성",
+      "한국어 자연스러움",
+      "브랜드 톤 유지",
+      "SEO 최적화"
+    ]
+  },
+  {
+    "category": "영업/마케팅",
+    "categorySlug": "sales-marketing",
+    "taskType": "리드 스코어링",
+    "taskTypeSlug": "lead-scoring",
+    "weights": {
+      "reasoning": 0.24,
+      "korean": 0.04,
+      "coding": 0.04,
+      "knowledge": 0.12,
+      "cost": 0.36,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "빠른 처리 + 사고 모드로 정확한 스코어링"
+        },
+        {
+          "modelSlug": "gpt-4-1-mini",
+          "reason": "긴 고객 데이터 분석, 합리적 비용"
+        },
+        {
+          "modelSlug": "claude-haiku-4-5",
+          "reason": "빠른 분류와 스코어링"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-0-flash",
+          "reason": "대량 리드 처리에 최저 비용"
+        },
+        {
+          "modelSlug": "gpt-4-1-nano",
+          "reason": "간단한 스코어링에 최저가"
+        },
+        {
+          "modelSlug": "nova-lite",
+          "reason": "AWS 환경에서 대량 처리 최적"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-30b-a3b",
+          "reason": "3B 활성으로 매우 빠른 추론, 대량 처리"
+        },
+        {
+          "modelSlug": "phi-4",
+          "reason": "14B로 준수한 추론, 빠른 처리"
+        },
+        {
+          "modelSlug": "mistral-small-3-1",
+          "reason": "24B로 빠른 분류와 스코어링, 파인튜닝 용이"
+        }
+      ]
+    },
+    "description": "고객 데이터 분석 기반 리드 우선순위 자동 판정. 구매 의향, 적합도, 긴급도 등 멀티팩터 스코어링.",
+    "keyFactors": [
+      "분류 정확도",
+      "처리 속도",
+      "대량 처리 비용",
+      "구조화된 출력"
+    ]
+  },
+  {
+    "category": "금융",
+    "categorySlug": "finance",
+    "taskType": "리포트 분석/리스크 평가",
+    "taskTypeSlug": "report-analysis",
+    "weights": {
+      "reasoning": 0.28,
+      "korean": 0.12,
+      "coding": 0.04,
+      "knowledge": 0.24,
+      "cost": 0.12,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-opus-4-5",
+          "reason": "최상위 추론 능력으로 복잡한 금융 분석"
+        },
+        {
+          "modelSlug": "gemini-2-5-pro",
+          "reason": "1M 컨텍스트로 대형 보고서 전체 분석 가능"
+        },
+        {
+          "modelSlug": "o1",
+          "reason": "심층 추론으로 리스크 시나리오 분석"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "o3-mini",
+          "reason": "추론 특화 + 합리적 비용"
+        },
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "Opus급 분석에 60% 비용 절감"
+        },
+        {
+          "modelSlug": "deepseek-r1",
+          "reason": "추론 특화 오픈소스, 초저가 API"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "deepseek-r1",
+          "reason": "추론 특화로 복잡한 금융 분석 가능"
+        },
+        {
+          "modelSlug": "qwen-3-235b-a22b",
+          "reason": "대형 MoE로 정밀한 수치 분석"
+        },
+        {
+          "modelSlug": "glm-4-7",
+          "reason": "355B MoE로 강력한 추론 기반 금융 분석"
+        }
+      ]
+    },
+    "description": "재무제표, 리서치 리포트, 시장 데이터 분석 및 리스크 평가. 정량 분석과 논리적 추론이 핵심.",
+    "keyFactors": [
+      "수치 정확도",
+      "논리적 추론",
+      "리스크 식별",
+      "규제 이해"
+    ]
+  },
+  {
+    "category": "금융",
+    "categorySlug": "finance",
+    "taskType": "고객 상담",
+    "taskTypeSlug": "financial-consulting",
+    "weights": {
+      "reasoning": 0.16,
+      "korean": 0.16,
+      "coding": 0.0,
+      "knowledge": 0.2,
+      "cost": 0.28,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "정확한 금융 정보 전달과 자연스러운 한국어"
+        },
+        {
+          "modelSlug": "gpt-4o",
+          "reason": "안정적인 금융 상담 품질"
+        },
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "빠른 응답과 사고 모드 조합"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "저비용으로 고품질 금융 상담"
+        },
+        {
+          "modelSlug": "claude-haiku-4-5",
+          "reason": "빠른 응답과 합리적 비용"
+        },
+        {
+          "modelSlug": "gpt-4-1-mini",
+          "reason": "긴 상담 이력 관리 가능, 저렴"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-32b",
+          "reason": "금융 용어에 강한 한중일 모델"
+        },
+        {
+          "modelSlug": "exaone-3-5-32b",
+          "reason": "한국어 금융 용어에 강한 국산 32B 모델"
+        },
+        {
+          "modelSlug": "gemma-3-27b",
+          "reason": "다국어 지원으로 글로벌 금융 상담"
+        }
+      ]
+    },
+    "description": "금융 상품 안내, 투자 상담, 포트폴리오 질의 응답 등 고객 대면 금융 상담. 정확성과 신뢰감 있는 커뮤니케이션이 핵심.",
+    "keyFactors": [
+      "금융 용어 정확도",
+      "한국어 신뢰감",
+      "응답 속도",
+      "규정 준수"
+    ]
+  },
+  {
+    "category": "이커머스",
+    "categorySlug": "ecommerce",
+    "taskType": "상품 추천/리뷰 분석",
+    "taskTypeSlug": "product-recommendation",
+    "weights": {
+      "reasoning": 0.16,
+      "korean": 0.08,
+      "coding": 0.0,
+      "knowledge": 0.2,
+      "cost": 0.36,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "빠른 추론 + 이미지 분석으로 상품 매칭"
+        },
+        {
+          "modelSlug": "gpt-4-1-mini",
+          "reason": "긴 상품 카탈로그 분석, 합리적 비용"
+        },
+        {
+          "modelSlug": "claude-haiku-4-5",
+          "reason": "빠른 리뷰 분석과 감성 분류"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-0-flash",
+          "reason": "대량 리뷰 처리에 최저 비용"
+        },
+        {
+          "modelSlug": "gpt-4-1-nano",
+          "reason": "간단한 분류와 추천에 최저가"
+        },
+        {
+          "modelSlug": "nova-lite",
+          "reason": "AWS 환경 대량 처리"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-30b-a3b",
+          "reason": "빠른 추론으로 실시간 추천, 한중 상품 분석"
+        },
+        {
+          "modelSlug": "gemma-3-12b",
+          "reason": "이미지 이해 가능한 소형 멀티모달 모델"
+        },
+        {
+          "modelSlug": "phi-4",
+          "reason": "빠른 분류와 감성 분석"
+        }
+      ]
+    },
+    "description": "고객 행동/선호 기반 상품 추천, 리뷰 감성 분석, 리뷰 요약. 실시간 처리 속도와 비용 효율성이 핵심.",
+    "keyFactors": [
+      "추천 정확도",
+      "리뷰 감성 분석",
+      "실시간 처리",
+      "이미지 이해"
+    ]
+  },
+  {
+    "category": "이커머스",
+    "categorySlug": "ecommerce",
+    "taskType": "상품 설명 생성",
+    "taskTypeSlug": "product-description",
+    "weights": {
+      "reasoning": 0.04,
+      "korean": 0.16,
+      "coding": 0.0,
+      "knowledge": 0.32,
+      "cost": 0.28,
+      "reliability": 0.05,
+      "toolUse": 0.05,
+      "instruction": 0.05,
+      "longContext": 0.05
+    },
+    "recommendations": {
+      "commercial": [
+        {
+          "modelSlug": "claude-sonnet-4-5",
+          "reason": "매력적이고 자연스러운 한국어 상품 설명"
+        },
+        {
+          "modelSlug": "gpt-4o",
+          "reason": "이미지 + 텍스트 결합 상품 설명 생성"
+        },
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "이미지 분석 기반 자동 상품 설명"
+        }
+      ],
+      "costEffective": [
+        {
+          "modelSlug": "gemini-2-5-flash",
+          "reason": "이미지 이해 + 저비용 대량 생성"
+        },
+        {
+          "modelSlug": "deepseek-v3",
+          "reason": "상용급 한국어 품질에 초저가"
+        },
+        {
+          "modelSlug": "gpt-4o-mini",
+          "reason": "간단한 상품 설명에 매우 저렴"
+        }
+      ],
+      "openSource": [
+        {
+          "modelSlug": "qwen-3-32b",
+          "reason": "한중일 이커머스 콘텐츠 생성 특화"
+        },
+        {
+          "modelSlug": "kimi-k2-5",
+          "reason": "멀티모달로 이미지 기반 상품 설명 생성"
+        },
+        {
+          "modelSlug": "gemma-3-27b",
+          "reason": "이미지 이해 가능한 오픈소스 모델"
+        }
+      ]
+    },
+    "description": "상품 이미지/스펙 기반 매력적인 상품 설명 자동 생성. SEO 최적화 및 구매 전환율 향상이 목표.",
+    "keyFactors": [
+      "한국어 매력도",
+      "SEO 최적화",
+      "이미지 이해",
+      "대량 생성 비용"
+    ]
+  }
+]

@@ -7,7 +7,7 @@ import { PresetCard } from '@/components/recommendations/preset-card'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import type { IIndustryPresetDocument } from '@/lib/db/models/industry-preset'
+import type { IBvaPresetDocument } from '@/lib/db/models/bva-preset'
 
 interface PageProps {
   params: Promise<{ categorySlug: string }>
@@ -25,7 +25,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
 
   const presetsWithRankedModels = await Promise.all(
     presets.map(async (preset) => {
-      const rankedModels = await getRankedModelsForPreset(preset as unknown as IIndustryPresetDocument)
+      const rankedModels = await getRankedModelsForPreset(preset as unknown as IBvaPresetDocument)
       return {
         preset: {
           _id: String(preset._id),

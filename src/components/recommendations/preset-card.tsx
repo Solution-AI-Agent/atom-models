@@ -3,10 +3,10 @@ import { Badge } from '@/components/ui/badge'
 import { RecommendationList } from './recommendation-list'
 import { FitnessScoreBar } from './fitness-score-bar'
 import { OssFitnessRanking } from './oss-fitness-ranking'
-import type { IIndustryPreset, IRankedModel } from '@/lib/types/preset'
+import type { IBvaPreset, IRankedModel } from '@/lib/types/preset'
 
 interface PresetCardProps {
-  readonly preset: IIndustryPreset
+  readonly preset: IBvaPreset
   readonly rankedModels: readonly IRankedModel[]
 }
 

@@ -5,6 +5,10 @@ export interface IPresetWeights {
   readonly korean: number
   readonly coding: number
   readonly knowledge: number
+  readonly reliability: number
+  readonly toolUse: number
+  readonly instruction: number
+  readonly longContext: number
   readonly cost: number
 }
 
@@ -19,7 +23,7 @@ export interface IPresetRecommendations {
   readonly openSource: readonly IPresetRecommendation[]
 }
 
-export interface IIndustryPreset {
+export interface IBvaPreset {
   readonly _id?: string
   readonly category: string
   readonly categorySlug: string

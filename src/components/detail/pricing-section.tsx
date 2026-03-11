@@ -21,8 +21,8 @@ const MONTHLY_EXAMPLES = [
 ] as const
 
 function calculateMonthlyCost(pricing: IModelPricing, dailyTokens: number): number {
-  const dailyInput = (dailyTokens / 1_000_000) * pricing.input
-  const dailyOutput = (dailyTokens / 2 / 1_000_000) * pricing.output
+  const dailyInput = (dailyTokens / 1_000_000) * (pricing.inputPer1m ?? 0)
+  const dailyOutput = (dailyTokens / 2 / 1_000_000) * (pricing.outputPer1m ?? 0)
   return (dailyInput + dailyOutput) * 30
 }
 
@@ -36,24 +36,12 @@ export function PricingSection({ pricing }: PricingSectionProps) {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">입력 (1M 토큰)</span>
-            <span className="text-lg font-semibold">{formatPrice(pricing.input)}</span>
+            <span className="text-lg font-semibold">{formatPrice(pricing.inputPer1m ?? 0)}</span>
           </div>
           <div className="flex flex-col gap-1">
             <span className="text-sm text-muted-foreground">출력 (1M 토큰)</span>
-            <span className="text-lg font-semibold">{formatPrice(pricing.output)}</span>
+            <span className="text-lg font-semibold">{formatPrice(pricing.outputPer1m ?? 0)}</span>
           </div>
-          {pricing.cachingDiscount > 0 && (
-            <div className="flex flex-col gap-1">
-              <span className="text-sm text-muted-foreground">캐싱 할인</span>
-              <span className="text-lg font-semibold">{Math.round(pricing.cachingDiscount * 100)}%</span>
-            </div>
-          )}
-          {pricing.batchDiscount > 0 && (
-            <div className="flex flex-col gap-1">
-              <span className="text-sm text-muted-foreground">배치 할인</span>
-              <span className="text-lg font-semibold">{Math.round(pricing.batchDiscount * 100)}%</span>
-            </div>
-          )}
         </div>
 
         <div>

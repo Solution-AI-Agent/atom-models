@@ -102,7 +102,7 @@ describe('calculateDimensionScore', () => {
 describe('calculateCostScore', () => {
   it('should return 100 for open-source models', () => {
     const pricing: IModelPricing = {
-      input: 0, output: 0, cachingDiscount: 0, batchDiscount: 0,
+      inputPer1m: 0, outputPer1m: 0, pricingType: 'api',
     }
 
     const result = calculateCostScore(pricing, 'open-source')
@@ -112,7 +112,7 @@ describe('calculateCostScore', () => {
 
   it('should calculate cost score for commercial models', () => {
     const pricing: IModelPricing = {
-      input: 3, output: 15, cachingDiscount: 0, batchDiscount: 0,
+      inputPer1m: 3, outputPer1m: 15, pricingType: 'api',
     }
 
     const result = calculateCostScore(pricing, 'commercial')
@@ -123,7 +123,7 @@ describe('calculateCostScore', () => {
 
   it('should return 0 for maximum-priced commercial models', () => {
     const pricing: IModelPricing = {
-      input: 15, output: 60, cachingDiscount: 0, batchDiscount: 0,
+      inputPer1m: 15, outputPer1m: 60, pricingType: 'api',
     }
 
     const result = calculateCostScore(pricing, 'commercial')
@@ -133,7 +133,7 @@ describe('calculateCostScore', () => {
 
   it('should clamp to 0 for over-priced models', () => {
     const pricing: IModelPricing = {
-      input: 30, output: 120, cachingDiscount: 0, batchDiscount: 0,
+      inputPer1m: 30, outputPer1m: 120, pricingType: 'api',
     }
 
     const result = calculateCostScore(pricing, 'commercial')
@@ -143,7 +143,7 @@ describe('calculateCostScore', () => {
 
   it('should return close to 100 for very cheap commercial models', () => {
     const pricing: IModelPricing = {
-      input: 0.01, output: 0.06, cachingDiscount: 0, batchDiscount: 0,
+      inputPer1m: 0.01, outputPer1m: 0.06, pricingType: 'api',
     }
 
     const result = calculateCostScore(pricing, 'commercial')
@@ -159,6 +159,10 @@ describe('calculateFitnessScore', () => {
     korean: 0.20,
     coding: 0.15,
     knowledge: 0.15,
+    reliability: 0,
+    toolUse: 0,
+    instruction: 0,
+    longContext: 0,
     cost: 0.25,
   }
 
@@ -168,6 +172,10 @@ describe('calculateFitnessScore', () => {
       korean: 80 as number | null,
       coding: 50 as number | null,
       knowledge: 85 as number | null,
+      reliability: null as number | null,
+      toolUse: null as number | null,
+      instruction: null as number | null,
+      longContext: null as number | null,
     }
     const costScore = 75
 
@@ -184,6 +192,10 @@ describe('calculateFitnessScore', () => {
       korean: null as number | null,
       coding: 50 as number | null,
       knowledge: null as number | null,
+      reliability: null as number | null,
+      toolUse: null as number | null,
+      instruction: null as number | null,
+      longContext: null as number | null,
     }
     const costScore = 75
 
@@ -201,6 +213,10 @@ describe('calculateFitnessScore', () => {
       korean: null as number | null,
       coding: null as number | null,
       knowledge: null as number | null,
+      reliability: null as number | null,
+      toolUse: null as number | null,
+      instruction: null as number | null,
+      longContext: null as number | null,
     }
     const costScore = 80
 
@@ -212,13 +228,19 @@ describe('calculateFitnessScore', () => {
 
   it('should return 0 when all weights are 0', () => {
     const zeroWeights: IPresetWeights = {
-      reasoning: 0, korean: 0, coding: 0, knowledge: 0, cost: 0,
+      reasoning: 0, korean: 0, coding: 0, knowledge: 0,
+      reliability: 0, toolUse: 0, instruction: 0, longContext: 0,
+      cost: 0,
     }
     const dimensionScores = {
       reasoning: 70 as number | null,
       korean: 80 as number | null,
       coding: 50 as number | null,
       knowledge: 85 as number | null,
+      reliability: null as number | null,
+      toolUse: null as number | null,
+      instruction: null as number | null,
+      longContext: null as number | null,
     }
 
     const result = calculateFitnessScore(dimensionScores, 75, zeroWeights)
@@ -232,6 +254,10 @@ describe('calculateFitnessScore', () => {
       korean: 50 as number | null,
       coding: 40 as number | null,
       knowledge: 55 as number | null,
+      reliability: null as number | null,
+      toolUse: null as number | null,
+      instruction: null as number | null,
+      longContext: null as number | null,
     }
 
     const result = calculateFitnessScore(dimensionScores, 100, weights)
@@ -248,6 +274,10 @@ describe('calculateFitnessBreakdown', () => {
     korean: 0.20,
     coding: 0.15,
     knowledge: 0.15,
+    reliability: 0,
+    toolUse: 0,
+    instruction: 0,
+    longContext: 0,
     cost: 0.25,
   }
 
@@ -257,6 +287,10 @@ describe('calculateFitnessBreakdown', () => {
       korean: 80 as number | null,
       coding: 50 as number | null,
       knowledge: 85 as number | null,
+      reliability: null as number | null,
+      toolUse: null as number | null,
+      instruction: null as number | null,
+      longContext: null as number | null,
     }
     const costScore = 75
 
@@ -266,6 +300,10 @@ describe('calculateFitnessBreakdown', () => {
     expect(result.korean).toBeCloseTo(16, 1)
     expect(result.coding).toBeCloseTo(7.5, 1)
     expect(result.knowledge).toBeCloseTo(12.75, 1)
+    expect(result.reliability).toBe(0)
+    expect(result.toolUse).toBe(0)
+    expect(result.instruction).toBe(0)
+    expect(result.longContext).toBe(0)
     expect(result.cost).toBeCloseTo(18.75, 1)
   })
 
@@ -275,6 +313,10 @@ describe('calculateFitnessBreakdown', () => {
       korean: null as number | null,
       coding: 50 as number | null,
       knowledge: null as number | null,
+      reliability: null as number | null,
+      toolUse: null as number | null,
+      instruction: null as number | null,
+      longContext: null as number | null,
     }
     const costScore = 75
 
@@ -284,6 +326,10 @@ describe('calculateFitnessBreakdown', () => {
     expect(result.korean).toBe(0)
     expect(result.coding).toBeCloseTo(7.5, 1)
     expect(result.knowledge).toBe(0)
+    expect(result.reliability).toBe(0)
+    expect(result.toolUse).toBe(0)
+    expect(result.instruction).toBe(0)
+    expect(result.longContext).toBe(0)
     expect(result.cost).toBeCloseTo(18.75, 1)
   })
 })

@@ -28,7 +28,7 @@ export function NewModelsSection({ models }: NewModelsSectionProps) {
                   <span className="truncate">{model.name}</span>
                   <ModelTypeBadge type={model.type} />
                 </CardTitle>
-                <p className="text-sm text-muted-foreground">{model.provider}</p>
+                <p className="text-sm text-muted-foreground">{model.providerId}</p>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-1.5">
@@ -37,7 +37,7 @@ export function NewModelsSection({ models }: NewModelsSectionProps) {
                   {model.benchmarks.swe_bench != null && <ScoreBadge label="SWE-bench" value={model.benchmarks.swe_bench} />}
                 </div>
                 <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
-                  <span>Out: {formatPrice(model.pricing.output)}/1M</span>
+                  <span>Out: {formatPrice(model.pricing.outputPer1m ?? 0)}/1M</span>
                   <span>{formatDate(model.releaseDate)}</span>
                 </div>
               </CardContent>

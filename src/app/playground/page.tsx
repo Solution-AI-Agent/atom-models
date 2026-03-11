@@ -13,8 +13,9 @@ import type {
   IPlaygroundModelConfig,
   IPlaygroundParameters,
 } from '@/lib/types/playground'
+import { PROVIDER_META } from '@/lib/constants/providers'
 
-const EMPTY_PRICING = { input: 0, output: 0 } as const
+const EMPTY_PRICING = { inputPer1m: 0, outputPer1m: 0 } as const
 
 function makeStreamOptions(
   model: IModel | undefined,
@@ -141,9 +142,9 @@ export default function PlaygroundPage() {
             models: selectedModels.map((m) => ({
               modelId: m._id,
               modelName: m.name,
-              provider: m.provider,
+              provider: PROVIDER_META[m.providerId]?.name ?? m.providerId,
               openRouterModelId: m.openRouterModelId,
-              colorCode: m.colorCode,
+              colorCode: PROVIDER_META[m.providerId]?.colorCode ?? '#888888',
               parameters: modelParameters[m._id!] || defaultParameters,
             })),
             systemPrompt,
@@ -285,8 +286,8 @@ export default function PlaygroundPage() {
               key={model._id}
               className="min-h-[300px] md:min-h-0"
               modelName={model.name}
-              provider={model.provider}
-              colorCode={model.colorCode}
+              provider={PROVIDER_META[model.providerId]?.name ?? model.providerId}
+              colorCode={PROVIDER_META[model.providerId]?.colorCode ?? '#888888'}
               messages={getMessagesForModel(model._id!)}
               streamingContent={streams[i].content}
               streamingReasoning={streams[i].reasoning}

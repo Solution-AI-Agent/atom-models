@@ -45,13 +45,13 @@ describe('GET /api/models integration', () => {
   it('should pass filter params to service', async () => {
     mockGetModels.mockResolvedValue({ models: [], total: 0, page: 1, limit: 50 })
 
-    const req = new Request('http://localhost/api/models?type=commercial&provider=OpenAI&page=2&limit=10')
+    const req = new Request('http://localhost/api/models?type=commercial&providerId=OPENAI&page=2&limit=10')
     await GET(req as any)
 
     expect(mockGetModels).toHaveBeenCalledWith(
       expect.objectContaining({
         type: 'commercial',
-        provider: 'OpenAI',
+        providerId: 'OPENAI',
         page: 2,
         limit: 10,
       })

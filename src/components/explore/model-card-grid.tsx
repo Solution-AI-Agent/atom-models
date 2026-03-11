@@ -18,7 +18,7 @@ function groupByTier(models: readonly IModel[]): Record<string, readonly IModel[
   return groups
 }
 
-const tierOrder: readonly ModelTier[] = ['flagship', 'mid', 'small', 'mini', 'micro']
+const tierOrder: readonly ModelTier[] = ['flagship', 'mid', 'light']
 
 export function ModelCardGrid({ models }: ModelCardGridProps) {
   const grouped = groupByTier(models)

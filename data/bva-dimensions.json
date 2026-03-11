@@ -38,5 +38,41 @@
       { "benchmark": "gpqa", "weight": 0.3 }
     ],
     "formulaExplanation": "57개 분야 지식(MMLU 70%) + 대학원 수준 전문 지식(GPQA 30%)"
+  },
+  {
+    "key": "reliability",
+    "displayName": "신뢰성",
+    "description": "환각 방지 및 사실 기반 응답 정확도",
+    "formula": [
+      { "benchmark": "truthfulqa", "weight": 1.0 }
+    ],
+    "formulaExplanation": "사실 기반 응답 정확도(TruthfulQA 100%)"
+  },
+  {
+    "key": "toolUse",
+    "displayName": "도구 호출",
+    "description": "Function calling 및 API 활용 능력",
+    "formula": [
+      { "benchmark": "bfcl", "weight": 1.0 }
+    ],
+    "formulaExplanation": "함수 호출 정확도(BFCL 100%)"
+  },
+  {
+    "key": "instruction",
+    "displayName": "명령어 수행",
+    "description": "프롬프트 지시사항 준수 정확도",
+    "formula": [
+      { "benchmark": "ifeval", "weight": 1.0 }
+    ],
+    "formulaExplanation": "명령어 수행 정확도(IFEval 100%)"
+  },
+  {
+    "key": "longContext",
+    "displayName": "긴 문서 처리",
+    "description": "롱컨텍스트 환경에서의 성능 유지력",
+    "formula": [
+      { "benchmark": "ruler", "weight": 1.0 }
+    ],
+    "formulaExplanation": "롱컨텍스트 성능(RULER 100%)"
   }
 ]

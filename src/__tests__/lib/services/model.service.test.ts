@@ -52,10 +52,10 @@ describe('Model Service', () => {
       )
     })
 
-    it('should apply provider filter with multiple values', async () => {
-      await getModels({ provider: 'OpenAI,Anthropic' })
+    it('should apply providerId filter with multiple values', async () => {
+      await getModels({ providerId: 'OPENAI,ANTHROPIC' })
       expect(mockFind).toHaveBeenCalledWith(
-        expect.objectContaining({ provider: { $in: ['OpenAI', 'Anthropic'] } })
+        expect.objectContaining({ providerId: { $in: ['OPENAI', 'ANTHROPIC'] } })
       )
     })
 
@@ -63,7 +63,7 @@ describe('Model Service', () => {
       await getModels({ minPrice: 1, maxPrice: 10 })
       expect(mockFind).toHaveBeenCalledWith(
         expect.objectContaining({
-          'pricing.output': { $gte: 1, $lte: 10 },
+          'pricing.outputPer1m': { $gte: 1, $lte: 10 },
         })
       )
     })
@@ -122,9 +122,9 @@ describe('Model Service', () => {
     })
 
     it('should apply tier filter', async () => {
-      await getModels({ tier: 'frontier,mid' })
+      await getModels({ tier: 'flagship,mid' })
       expect(mockFind).toHaveBeenCalledWith(
-        expect.objectContaining({ tier: { $in: ['frontier', 'mid'] } })
+        expect.objectContaining({ tier: { $in: ['flagship', 'mid'] } })
       )
     })
 

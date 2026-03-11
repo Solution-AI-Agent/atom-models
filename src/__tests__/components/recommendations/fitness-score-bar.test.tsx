@@ -1,7 +1,11 @@
 import { render, screen } from '@testing-library/react'
 import { FitnessScoreBar } from '@/components/recommendations/fitness-score-bar'
 
-const mockBreakdown = { reasoning: 0, korean: 0, coding: 0, knowledge: 0, cost: 0 }
+const mockBreakdown = {
+  reasoning: 0, korean: 0, coding: 0, knowledge: 0,
+  reliability: 0, toolUse: 0, instruction: 0, longContext: 0,
+  cost: 0,
+}
 
 const mockRankedModels = [
   { slug: 'model-a', name: 'Model A', provider: 'TestCo', type: 'commercial' as const, score: 87.5, breakdown: mockBreakdown, infra: null },

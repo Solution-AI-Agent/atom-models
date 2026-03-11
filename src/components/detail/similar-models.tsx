@@ -22,7 +22,7 @@ export function SimilarModels({ models }: SimilarModelsProps) {
               <CardHeader>
                 <CardTitle className="text-base">{model.name}</CardTitle>
                 <div className="flex items-center gap-2">
-                  <span className="text-sm text-muted-foreground">{model.provider}</span>
+                  <span className="text-sm text-muted-foreground">{model.providerId}</span>
                   <ModelTypeBadge type={model.type} />
                 </div>
               </CardHeader>
@@ -32,7 +32,7 @@ export function SimilarModels({ models }: SimilarModelsProps) {
                   {model.benchmarks.gpqa != null && <ScoreBadge label="GPQA" value={model.benchmarks.gpqa} />}
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Out: {formatPrice(model.pricing.output)}/1M
+                  Out: {formatPrice(model.pricing.outputPer1m ?? 0)}/1M
                 </p>
               </CardContent>
             </Card>

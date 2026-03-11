@@ -32,7 +32,7 @@ export function ModelHeader({ model }: ModelHeaderProps) {
           {model.isRecentlyReleased && <NewBadge />}
         </div>
         <div className="flex items-center gap-2 text-muted-foreground">
-          <span>{model.provider}</span>
+          <span>{model.providerId}</span>
           <span>·</span>
           <ModelTypeBadge type={model.type} />
           <span>·</span>

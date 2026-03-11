@@ -43,7 +43,7 @@ export function MessageBubble({
             <span>생각 중{isReasoningPhase && !content ? '...' : ` (${reasoning.length}자)`}</span>
           </button>
           {reasoningOpen && (
-            <div className="mt-1 rounded-md border border-dashed border-muted-foreground/30 bg-muted/30 px-3 py-2 text-xs text-muted-foreground whitespace-pre-wrap">
+            <div className="mt-1 rounded-md border border-dashed border-muted-foreground/30 bg-muted/30 px-3 py-2 text-xs text-muted-foreground whitespace-pre-wrap break-words">
               {reasoning}
               {isReasoningPhase && (
                 <span className="ml-0.5 inline-block h-3 w-0.5 animate-pulse bg-muted-foreground" />
@@ -55,10 +55,10 @@ export function MessageBubble({
 
       {(content || (!reasoning && !isStreaming)) && (
         <div
-          className={`max-w-full rounded-lg px-3 py-2 text-sm whitespace-pre-wrap ${
+          className={`rounded-lg px-3 py-2 text-sm whitespace-pre-wrap break-words ${
             role === 'user'
-              ? 'bg-primary text-primary-foreground'
-              : 'bg-muted'
+              ? 'max-w-[85%] bg-primary text-primary-foreground'
+              : 'max-w-full bg-muted'
           }`}
         >
           {content}

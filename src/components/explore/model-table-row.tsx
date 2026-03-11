@@ -56,12 +56,12 @@ export function ModelTableRow({ model }: ModelTableRowProps) {
           {model.isRecentlyReleased && <NewBadge />}
         </div>
       </TableCell>
-      <TableCell>{model.provider}</TableCell>
+      <TableCell>{model.providerId}</TableCell>
       <TableCell>
         <ModelTypeBadge type={model.type} />
       </TableCell>
       <TableCell>
-        <PriceDisplay input={model.pricing.input} output={model.pricing.output} />
+        <PriceDisplay input={model.pricing.inputPer1m ?? 0} output={model.pricing.outputPer1m ?? 0} />
       </TableCell>
       {benchmarkKeys.map((key) => (
         <TableCell key={key} className="text-right tabular-nums">

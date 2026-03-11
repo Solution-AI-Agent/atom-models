@@ -11,24 +11,24 @@ const mockGpus = [
 
 const mockOssModels = [
   {
-    name: 'Qwen3 32B', slug: 'qwen3-32b', provider: 'Alibaba Cloud',
+    name: 'Qwen3 32B', slug: 'qwen3-32b', providerId: 'ALIBABA',
     type: 'open-source', parameterSize: 32, architecture: 'dense',
     infrastructure: { minGpu: 'NVIDIA RTX 4090', vramFp16: 64, vramInt8: 32, vramInt4: 18, estimatedTps: 35, recommendedFramework: ['vLLM'] },
   },
   {
-    name: 'Llama 3.3 8B', slug: 'llama-3-3-8b', provider: 'Meta',
+    name: 'Llama 3.3 8B', slug: 'llama-3-3-8b', providerId: 'META',
     type: 'open-source', parameterSize: 8, architecture: 'dense',
     infrastructure: { minGpu: 'NVIDIA RTX 4090', vramFp16: 16, vramInt8: 8, vramInt4: 5, estimatedTps: 80, recommendedFramework: ['vLLM'] },
   },
   {
-    name: 'Big Model 500B', slug: 'big-model-500b', provider: 'BigCo',
+    name: 'Big Model 500B', slug: 'big-model-500b', providerId: 'BIGCO',
     type: 'open-source', parameterSize: 500, architecture: 'dense',
     infrastructure: { minGpu: 'NVIDIA A100 80GB', vramFp16: 1000, vramInt8: 500, vramInt4: 250, estimatedTps: 10, recommendedFramework: ['vLLM'] },
   },
 ]
 
-jest.mock('@/lib/db/models/gpu-reference', () => ({
-  GpuReferenceModel: {
+jest.mock('@/lib/db/models/ref-gpu', () => ({
+  RefGpuModel: {
     find: jest.fn().mockImplementation(() => ({
       sort: jest.fn().mockReturnValue({
         lean: jest.fn().mockResolvedValue(mockGpus),
@@ -136,7 +136,7 @@ describe('GPU Service', () => {
   describe('getCompatibleModels — expanded quantizations', () => {
     const mockModelsWithAllQuant = [
       {
-        name: 'FullQuant 7B', slug: 'fullquant-7b', provider: 'TestCo',
+        name: 'FullQuant 7B', slug: 'fullquant-7b', providerId: 'TESTCO',
         type: 'open-source', parameterSize: 7, architecture: 'dense',
         infrastructure: {
           minGpu: 'NVIDIA RTX 4090', estimatedTps: 60, recommendedFramework: ['vLLM'],
@@ -148,7 +148,7 @@ describe('GPU Service', () => {
 
     const mockModelsLegacyOnly = [
       {
-        name: 'Legacy 7B', slug: 'legacy-7b', provider: 'OldCo',
+        name: 'Legacy 7B', slug: 'legacy-7b', providerId: 'OLDCO',
         type: 'open-source', parameterSize: 7, architecture: 'dense',
         infrastructure: {
           minGpu: 'NVIDIA RTX 4090', estimatedTps: 50, recommendedFramework: ['vLLM'],
@@ -258,7 +258,7 @@ describe('GPU Service', () => {
     it('should have tpsFormula as null when ref GPU TFLOPS cannot be determined', async () => {
       const mockModelsUnknownGpu = [
         {
-          name: 'Unknown GPU Model', slug: 'unknown-gpu', provider: 'TestCo',
+          name: 'Unknown GPU Model', slug: 'unknown-gpu', providerId: 'TESTCO',
           type: 'open-source', parameterSize: 7, architecture: 'dense',
           infrastructure: {
             minGpu: 'Unknown GPU XYZ', estimatedTps: 50, recommendedFramework: ['vLLM'],

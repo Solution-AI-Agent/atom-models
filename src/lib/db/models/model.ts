@@ -3,9 +3,30 @@ import mongoose, { Schema, Document, Model } from 'mongoose'
 export interface IModelDocument extends Document {
   name: string
   slug: string
-  provider: string
+  providerId: string
   type: 'commercial' | 'open-source'
-  tier: 'flagship' | 'mid' | 'small' | 'mini' | 'micro'
+  tier: 'flagship' | 'mid' | 'light'
+  family: string
+  variant: string
+  tags: string[]
+  isOpensource: boolean
+  status: 'active' | 'preview' | 'deprecated' | 'scheduled-deprecation'
+  deprecationDate: Date | null
+  trainingCutoff: Date | null
+  languages: string[]
+  modalityInput: string[]
+  modalityOutput: string[]
+  capabilities: {
+    functionCalling: boolean
+    structuredOutput: boolean
+    streaming: boolean
+    systemPrompt: boolean
+    vision: boolean
+    toolUse: boolean
+    fineTuning: boolean
+    batchApi: boolean
+    thinkingMode: boolean
+  }
   parameterSize: number | null
   activeParameters: number | null
   architecture: 'dense' | 'moe'
@@ -13,10 +34,9 @@ export interface IModelDocument extends Document {
   maxOutput: number
   license: string
   pricing: {
-    input: number
-    output: number
-    cachingDiscount: number
-    batchDiscount: number
+    inputPer1m: number
+    outputPer1m: number
+    pricingType: string
   }
   compliance: {
     soc2: boolean
@@ -25,7 +45,6 @@ export interface IModelDocument extends Document {
     onPremise: boolean
     dataExclusion: boolean
   }
-  languageScores: Map<string, number>
   benchmarks: Map<string, number | null>
   infrastructure: {
     minGpu: string
@@ -41,10 +60,12 @@ export interface IModelDocument extends Document {
     recommendedFramework: string[]
     estimatedTps: number
   } | null
+  avgTps: number | null
+  ttftMs: number | null
+  regions: string[]
   releaseDate: Date
   memo: string
   sourceUrls: string[]
-  colorCode: string
   openRouterModelId: string | null
   lastVerifiedAt: Date
   isRecentlyReleased: boolean
@@ -53,9 +74,32 @@ export interface IModelDocument extends Document {
 export const ModelSchema = new Schema({
   name:          { type: String, required: true, unique: true },
   slug:          { type: String, required: true, unique: true, index: true },
-  provider:      { type: String, required: true, index: true },
+  providerId:    { type: String, required: true, index: true },
   type:          { type: String, enum: ['commercial', 'open-source'], required: true, index: true },
-  tier:          { type: String, enum: ['flagship', 'mid', 'small', 'mini', 'micro'], index: true },
+  tier:          { type: String, enum: ['flagship', 'mid', 'light'], index: true },
+
+  family:        String,
+  variant:       String,
+  tags:          { type: [String], index: true },
+  isOpensource:  { type: Boolean, required: true, index: true },
+  status:        { type: String, enum: ['active', 'preview', 'deprecated', 'scheduled-deprecation'], required: true, index: true },
+  deprecationDate: Date,
+  trainingCutoff:  Date,
+  languages:       [String],
+  modalityInput:   { type: [String], index: true },
+  modalityOutput:  [String],
+
+  capabilities: {
+    functionCalling:  { type: Boolean, default: false },
+    structuredOutput: { type: Boolean, default: false },
+    streaming:        { type: Boolean, default: false },
+    systemPrompt:     { type: Boolean, default: false },
+    vision:           { type: Boolean, default: false },
+    toolUse:          { type: Boolean, default: false },
+    fineTuning:       { type: Boolean, default: false },
+    batchApi:         { type: Boolean, default: false },
+    thinkingMode:     { type: Boolean, default: false },
+  },
 
   parameterSize:    Number,
   activeParameters: Number,
@@ -65,10 +109,9 @@ export const ModelSchema = new Schema({
   license:          String,
 
   pricing: {
-    input:           Number,
-    output:          Number,
-    cachingDiscount: Number,
-    batchDiscount:   Number,
+    inputPer1m:  Number,
+    outputPer1m: Number,
+    pricingType: String,
   },
 
   compliance: {
@@ -79,7 +122,6 @@ export const ModelSchema = new Schema({
     dataExclusion: { type: Boolean, default: false },
   },
 
-  languageScores: { type: Map, of: Number },
   benchmarks:     { type: Map, of: Schema.Types.Mixed },
 
   infrastructure: {
@@ -97,10 +139,13 @@ export const ModelSchema = new Schema({
     estimatedTps:         Number,
   },
 
+  avgTps:  Number,
+  ttftMs:  Number,
+  regions: { type: [String], index: true },
+
   releaseDate:    { type: Date, required: true },
   memo:           String,
   sourceUrls:     [String],
-  colorCode:          String,
   openRouterModelId:  { type: String, default: null },
   lastVerifiedAt: { type: Date, default: Date.now },
 }, {
@@ -115,10 +160,18 @@ ModelSchema.virtual('isRecentlyReleased').get(function() {
   return this.releaseDate >= thirtyDaysAgo
 })
 
-ModelSchema.index({ provider: 1, type: 1 })
-ModelSchema.index({ 'pricing.input': 1 })
+ModelSchema.index({ providerId: 1, type: 1 })
+ModelSchema.index({ 'pricing.inputPer1m': 1 })
 ModelSchema.index({ releaseDate: -1 })
-ModelSchema.index({ name: 'text', provider: 'text' })
+ModelSchema.index({ name: 'text', providerId: 'text' })
+ModelSchema.index({ tags: 1 })
+ModelSchema.index({ status: 1 })
+ModelSchema.index({ family: 1 })
+ModelSchema.index({ isOpensource: 1 })
+ModelSchema.index({ 'capabilities.functionCalling': 1 })
+ModelSchema.index({ 'capabilities.vision': 1 })
+ModelSchema.index({ modalityInput: 1 })
+ModelSchema.index({ regions: 1 })
 
 export const ModelModel: Model<IModelDocument> =
   mongoose.models.Model || mongoose.model<IModelDocument>('Model', ModelSchema)

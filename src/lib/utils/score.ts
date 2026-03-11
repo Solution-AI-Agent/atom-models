@@ -1,4 +1,4 @@
-import type { IModelPricing, ModelType } from '@/lib/types/model'
+import type { ModelType } from '@/lib/types/model'
 import type { IPresetWeights } from '@/lib/types/preset'
 import type { BvaDimensionKey, IBvaFormulaEntry } from '@/lib/types/bva'
 
@@ -6,6 +6,7 @@ const MAX_OUTPUT_PRICE = 60
 
 const DIMENSION_KEYS: readonly BvaDimensionKey[] = [
   'reasoning', 'korean', 'coding', 'knowledge',
+  'reliability', 'toolUse', 'instruction', 'longContext',
 ] as const
 
 export function calculateDimensionScore(
@@ -27,11 +28,12 @@ export function calculateDimensionScore(
 }
 
 export function calculateCostScore(
-  pricing: IModelPricing,
+  pricing: { inputPer1m: number | null; outputPer1m: number | null },
   type: ModelType,
 ): number {
   if (type === 'open-source') return 100
-  return Math.max(0, 100 - (pricing.output / MAX_OUTPUT_PRICE) * 100)
+  const output = pricing.outputPer1m ?? 0
+  return Math.max(0, 100 - (output / MAX_OUTPUT_PRICE) * 100)
 }
 
 export function calculateFitnessScore(
@@ -59,10 +61,14 @@ export function calculateFitnessBreakdown(
   weights: IPresetWeights,
 ): Record<BvaDimensionKey | 'cost', number> {
   return {
-    reasoning:  (dimensionScores.reasoning ?? 0) * weights.reasoning,
-    korean:     (dimensionScores.korean ?? 0) * weights.korean,
-    coding:     (dimensionScores.coding ?? 0) * weights.coding,
-    knowledge:  (dimensionScores.knowledge ?? 0) * weights.knowledge,
-    cost:       costScore * weights.cost,
+    reasoning:    (dimensionScores.reasoning ?? 0) * weights.reasoning,
+    korean:       (dimensionScores.korean ?? 0) * weights.korean,
+    coding:       (dimensionScores.coding ?? 0) * weights.coding,
+    knowledge:    (dimensionScores.knowledge ?? 0) * weights.knowledge,
+    reliability:  (dimensionScores.reliability ?? 0) * weights.reliability,
+    toolUse:      (dimensionScores.toolUse ?? 0) * weights.toolUse,
+    instruction:  (dimensionScores.instruction ?? 0) * weights.instruction,
+    longContext:  (dimensionScores.longContext ?? 0) * weights.longContext,
+    cost:         costScore * weights.cost,
   }
 }

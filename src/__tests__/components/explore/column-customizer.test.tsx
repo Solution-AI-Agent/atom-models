@@ -10,6 +10,10 @@ describe('ColumnCustomizer', () => {
     expect(keys).toContain('hle')
     expect(keys).toContain('mgsm')
     expect(keys).toContain('kmmlu')
+    expect(keys).toContain('truthfulqa')
+    expect(keys).toContain('bfcl')
+    expect(keys).toContain('ifeval')
+    expect(keys).toContain('ruler')
     expect(keys).not.toContain('scores')
   })
 
@@ -22,6 +26,10 @@ describe('ColumnCustomizer', () => {
     expect(labels).toContain('HLE')
     expect(labels).toContain('MGSM')
     expect(labels).toContain('KMMLU')
+    expect(labels).toContain('TruthfulQA')
+    expect(labels).toContain('BFCL')
+    expect(labels).toContain('IFEval')
+    expect(labels).toContain('RULER')
     expect(labels).not.toContain('평가')
   })
 
@@ -32,7 +40,7 @@ describe('ColumnCustomizer', () => {
   })
 
   it('should have correct total number of columns', () => {
-    // type + 7 benchmarks (mmlu, gpqa, swe_bench, aime, hle, mgsm, kmmlu) + context = 9
-    expect(COLUMNS.length).toBe(9)
+    // type + 11 benchmarks (mmlu, gpqa, swe_bench, aime, hle, mgsm, kmmlu, truthfulqa, bfcl, ifeval, ruler) + context = 13
+    expect(COLUMNS.length).toBe(13)
   })
 })

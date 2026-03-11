@@ -76,8 +76,8 @@ export function CompareSpecsRows({ models }: { readonly models: readonly IModel[
 export function ComparePricingRows({ models }: { readonly models: readonly IModel[] }) {
   return (
     <>
-      <CompareRow label="입력 가격 ($/1M)" models={models} getValue={(m) => m.pricing.input} format={(v) => typeof v === 'number' ? formatPrice(v) : '-'} highlightMode="lowest" showPriceDiff />
-      <CompareRow label="출력 가격 ($/1M)" models={models} getValue={(m) => m.pricing.output} format={(v) => typeof v === 'number' ? formatPrice(v) : '-'} highlightMode="lowest" showPriceDiff />
+      <CompareRow label="입력 가격 ($/1M)" models={models} getValue={(m) => m.pricing.inputPer1m} format={(v) => typeof v === 'number' ? formatPrice(v) : '-'} highlightMode="lowest" showPriceDiff />
+      <CompareRow label="출력 가격 ($/1M)" models={models} getValue={(m) => m.pricing.outputPer1m} format={(v) => typeof v === 'number' ? formatPrice(v) : '-'} highlightMode="lowest" showPriceDiff />
     </>
   )
 }

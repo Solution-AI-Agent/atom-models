@@ -1,0 +1,1052 @@
+[
+  {
+    "modelId": "gpt-5-4-pro",
+    "benchmarkId": "mmlu",
+    "score": 91.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4-pro",
+    "benchmarkId": "gpqa",
+    "score": 94.4,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4-pro",
+    "benchmarkId": "swe_bench",
+    "score": 77.2,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4-pro",
+    "benchmarkId": "aime",
+    "score": 100.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4-pro",
+    "benchmarkId": "hle",
+    "score": 58.7,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4-pro",
+    "benchmarkId": "mgsm",
+    "score": 96.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "mmlu",
+    "score": 91.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "gpqa",
+    "score": 92.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "swe_bench",
+    "score": 52.8,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "aime",
+    "score": 100.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "hle",
+    "score": 42.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "mgsm",
+    "score": 96.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o",
+    "benchmarkId": "mmlu",
+    "score": 88.7,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o",
+    "benchmarkId": "gpqa",
+    "score": 50.6,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o",
+    "benchmarkId": "swe_bench",
+    "score": 33.2,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o",
+    "benchmarkId": "aime",
+    "score": 12.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o",
+    "benchmarkId": "hle",
+    "score": 2.7,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o",
+    "benchmarkId": "mgsm",
+    "score": 90.6,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o-mini",
+    "benchmarkId": "mmlu",
+    "score": 82.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o-mini",
+    "benchmarkId": "gpqa",
+    "score": 40.2,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4o-mini",
+    "benchmarkId": "aime",
+    "score": 11.5,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1",
+    "benchmarkId": "mmlu",
+    "score": 90.2,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1",
+    "benchmarkId": "gpqa",
+    "score": 66.3,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1",
+    "benchmarkId": "swe_bench",
+    "score": 54.6,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1-mini",
+    "benchmarkId": "mmlu",
+    "score": 87.5,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1-mini",
+    "benchmarkId": "gpqa",
+    "score": 58.5,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1-mini",
+    "benchmarkId": "swe_bench",
+    "score": 48.2,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1-nano",
+    "benchmarkId": "mmlu",
+    "score": 80.1,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-4-1-nano",
+    "benchmarkId": "gpqa",
+    "score": 50.3,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "mmlu",
+    "score": 91.0,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "gpqa",
+    "score": 91.3,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "swe_bench",
+    "score": 80.8,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "aime",
+    "score": 100.0,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "hle",
+    "score": 53.1,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "mgsm",
+    "score": 96.0,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "gpqa",
+    "score": 74.1,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "swe_bench",
+    "score": 79.6,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "aime",
+    "score": 83.0,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "hle",
+    "score": 49.0,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-haiku-4-5",
+    "benchmarkId": "gpqa",
+    "score": 67.2,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-haiku-4-5",
+    "benchmarkId": "swe_bench",
+    "score": 73.3,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-haiku-4-5",
+    "benchmarkId": "aime",
+    "score": 83.7,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "claude-haiku-4-5",
+    "benchmarkId": "hle",
+    "score": 9.7,
+    "source": "Anthropic official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-pro",
+    "benchmarkId": "mmlu",
+    "score": 92.6,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-pro",
+    "benchmarkId": "gpqa",
+    "score": 94.3,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-pro",
+    "benchmarkId": "swe_bench",
+    "score": 80.6,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-pro",
+    "benchmarkId": "aime",
+    "score": 92.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-pro",
+    "benchmarkId": "hle",
+    "score": 51.4,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-pro",
+    "benchmarkId": "mgsm",
+    "score": 95.5,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "mmlu",
+    "score": 91.8,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "gpqa",
+    "score": 91.9,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "swe_bench",
+    "score": 76.2,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "aime",
+    "score": 95.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "hle",
+    "score": 37.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-flash",
+    "benchmarkId": "mmlu",
+    "score": 91.8,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-flash",
+    "benchmarkId": "gpqa",
+    "score": 90.4,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-flash",
+    "benchmarkId": "swe_bench",
+    "score": 78.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-flash",
+    "benchmarkId": "aime",
+    "score": 90.4,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-flash",
+    "benchmarkId": "hle",
+    "score": 34.7,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-flash-lite",
+    "benchmarkId": "mmlu",
+    "score": 88.9,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-flash-lite",
+    "benchmarkId": "gpqa",
+    "score": 86.9,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-flash-lite",
+    "benchmarkId": "swe_bench",
+    "score": 35.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-3-1-flash-lite",
+    "benchmarkId": "hle",
+    "score": 16.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "mmlu",
+    "score": 89.8,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "gpqa",
+    "score": 84.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "swe_bench",
+    "score": 63.8,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "aime",
+    "score": 86.7,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "hle",
+    "score": 18.8,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-flash",
+    "benchmarkId": "mmlu",
+    "score": 82.9,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-flash",
+    "benchmarkId": "gpqa",
+    "score": 82.8,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-flash",
+    "benchmarkId": "swe_bench",
+    "score": 60.4,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemini-2-5-flash",
+    "benchmarkId": "aime",
+    "score": 72.0,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4-1",
+    "benchmarkId": "mmlu",
+    "score": 88.0,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4-1",
+    "benchmarkId": "gpqa",
+    "score": 88.0,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4-1",
+    "benchmarkId": "aime",
+    "score": 95.0,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4-1-fast",
+    "benchmarkId": "gpqa",
+    "score": 63.7,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4-1-fast",
+    "benchmarkId": "aime",
+    "score": 34.3,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4-1-fast",
+    "benchmarkId": "hle",
+    "score": 5.0,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "mmlu",
+    "score": 86.6,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "gpqa",
+    "score": 88.0,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "swe_bench",
+    "score": 69.1,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "aime",
+    "score": 95.0,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "hle",
+    "score": 44.4,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-3",
+    "benchmarkId": "mmlu",
+    "score": 92.7,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-3",
+    "benchmarkId": "gpqa",
+    "score": 84.6,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-3",
+    "benchmarkId": "aime",
+    "score": 93.3,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "grok-3-mini",
+    "benchmarkId": "aime",
+    "score": 95.8,
+    "source": "xAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-120b",
+    "benchmarkId": "mmlu",
+    "score": 90.0,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-120b",
+    "benchmarkId": "gpqa",
+    "score": 80.1,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-120b",
+    "benchmarkId": "swe_bench",
+    "score": 62.4,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-120b",
+    "benchmarkId": "aime",
+    "score": 96.6,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-20b",
+    "benchmarkId": "mmlu",
+    "score": 85.3,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-20b",
+    "benchmarkId": "gpqa",
+    "score": 71.5,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-20b",
+    "benchmarkId": "swe_bench",
+    "score": 60.7,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gpt-oss-20b",
+    "benchmarkId": "aime",
+    "score": 98.7,
+    "source": "OpenAI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "gemma-3-27b",
+    "benchmarkId": "gpqa",
+    "score": 42.4,
+    "source": "Google official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "gpqa",
+    "score": 86.0,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "swe_bench",
+    "score": 77.8,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "aime",
+    "score": 92.7,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "hle",
+    "score": 50.4,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-4-7",
+    "benchmarkId": "gpqa",
+    "score": 85.7,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-4-7",
+    "benchmarkId": "swe_bench",
+    "score": 73.8,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-4-7",
+    "benchmarkId": "aime",
+    "score": 95.7,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-4-7",
+    "benchmarkId": "hle",
+    "score": 42.8,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-4-7-flash",
+    "benchmarkId": "gpqa",
+    "score": 75.2,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-4-7-flash",
+    "benchmarkId": "swe_bench",
+    "score": 59.2,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "glm-4-7-flash",
+    "benchmarkId": "aime",
+    "score": 91.6,
+    "source": "Zhipu AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "mmlu",
+    "score": 94.3,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "gpqa",
+    "score": 87.6,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "swe_bench",
+    "score": 76.8,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "aime",
+    "score": 96.1,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "hle",
+    "score": 51.8,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2",
+    "benchmarkId": "mmlu",
+    "score": 89.5,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2",
+    "benchmarkId": "gpqa",
+    "score": 75.1,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2",
+    "benchmarkId": "swe_bench",
+    "score": 65.8,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "kimi-k2",
+    "benchmarkId": "aime",
+    "score": 49.5,
+    "source": "Moonshot AI official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-397b-a17b",
+    "benchmarkId": "mmlu",
+    "score": 88.5,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-397b-a17b",
+    "benchmarkId": "gpqa",
+    "score": 88.4,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-397b-a17b",
+    "benchmarkId": "swe_bench",
+    "score": 76.4,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-397b-a17b",
+    "benchmarkId": "aime",
+    "score": 91.3,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-397b-a17b",
+    "benchmarkId": "hle",
+    "score": 48.3,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-122b-a10b",
+    "benchmarkId": "gpqa",
+    "score": 86.6,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-35b-a3b",
+    "benchmarkId": "gpqa",
+    "score": 84.2,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-35b-a3b",
+    "benchmarkId": "swe_bench",
+    "score": 69.2,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-35b-a3b",
+    "benchmarkId": "hle",
+    "score": 22.4,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-27b",
+    "benchmarkId": "mmlu",
+    "score": 88.5,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-27b",
+    "benchmarkId": "gpqa",
+    "score": 85.5,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-27b",
+    "benchmarkId": "swe_bench",
+    "score": 72.4,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "qwen-3-5-9b",
+    "benchmarkId": "gpqa",
+    "score": 81.7,
+    "source": "Alibaba official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "mmlu",
+    "score": 88.5,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "gpqa",
+    "score": 82.4,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "swe_bench",
+    "score": 70.0,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "aime",
+    "score": 93.1,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "hle",
+    "score": 23.9,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1",
+    "benchmarkId": "mmlu",
+    "score": 90.8,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1",
+    "benchmarkId": "gpqa",
+    "score": 71.5,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1",
+    "benchmarkId": "swe_bench",
+    "score": 49.2,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1",
+    "benchmarkId": "aime",
+    "score": 79.8,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-70b",
+    "benchmarkId": "gpqa",
+    "score": 65.2,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-70b",
+    "benchmarkId": "aime",
+    "score": 86.7,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-32b",
+    "benchmarkId": "mmlu",
+    "score": 73.9,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-32b",
+    "benchmarkId": "gpqa",
+    "score": 62.1,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-32b",
+    "benchmarkId": "aime",
+    "score": 72.6,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-14b",
+    "benchmarkId": "gpqa",
+    "score": 59.1,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-14b",
+    "benchmarkId": "aime",
+    "score": 69.7,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-8b",
+    "benchmarkId": "gpqa",
+    "score": 49.0,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-7b",
+    "benchmarkId": "gpqa",
+    "score": 49.1,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-7b",
+    "benchmarkId": "aime",
+    "score": 55.5,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-1-5b",
+    "benchmarkId": "gpqa",
+    "score": 33.8,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  },
+  {
+    "modelId": "deepseek-r1-1-5b",
+    "benchmarkId": "aime",
+    "score": 28.9,
+    "source": "DeepSeek official",
+    "measuredDate": "2026-03-01"
+  }
+]

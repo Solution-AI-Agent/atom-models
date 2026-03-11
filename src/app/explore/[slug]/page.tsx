@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: ModelDetailPageProps): Promis
 
   return {
     title: `${model.name} - Atom Models`,
-    description: `${model.provider}의 ${model.name} 모델 상세 정보. 벤치마크, 가격, 인프라 요구사항을 확인하세요.`,
+    description: `${model.name} 모델 상세 정보. 벤치마크, 가격, 인프라 요구사항을 확인하세요.`,
   }
 }
 

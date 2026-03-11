@@ -1,0 +1,98 @@
+[
+  {
+    "_id": "OPENAI",
+    "name": "OpenAI",
+    "nameEn": "OpenAI",
+    "type": "commercial",
+    "headquarters": "San Francisco, USA",
+    "founded": 2015,
+    "website": "https://openai.com",
+    "apiEndpoint": "https://api.openai.com/v1",
+    "description": "GPT 시리즈를 개발하는 AI 연구기업",
+    "colorCode": "#10A37F"
+  },
+  {
+    "_id": "ANTHROPIC",
+    "name": "Anthropic",
+    "nameEn": "Anthropic",
+    "type": "commercial",
+    "headquarters": "San Francisco, USA",
+    "founded": 2021,
+    "website": "https://anthropic.com",
+    "apiEndpoint": "https://api.anthropic.com/v1",
+    "description": "Claude 시리즈를 개발하는 AI 안전 연구기업",
+    "colorCode": "#D4A574"
+  },
+  {
+    "_id": "GOOGLE",
+    "name": "Google",
+    "nameEn": "Google",
+    "type": "commercial",
+    "headquarters": "Mountain View, USA",
+    "founded": 1998,
+    "website": "https://ai.google",
+    "apiEndpoint": "https://generativelanguage.googleapis.com",
+    "description": "Gemini 시리즈를 개발하는 Google DeepMind",
+    "colorCode": "#4285F4"
+  },
+  {
+    "_id": "XAI",
+    "name": "xAI",
+    "nameEn": "xAI",
+    "type": "commercial+oss",
+    "headquarters": "San Francisco, USA",
+    "founded": 2023,
+    "website": "https://x.ai",
+    "apiEndpoint": "https://api.x.ai/v1",
+    "description": "Grok 시리즈를 개발하는 Elon Musk의 AI 기업",
+    "colorCode": "#1DA1F2"
+  },
+  {
+    "_id": "ALIBABA",
+    "name": "Alibaba",
+    "nameEn": "Alibaba Cloud",
+    "type": "commercial+oss",
+    "headquarters": "Hangzhou, China",
+    "founded": 1999,
+    "website": "https://www.alibabacloud.com",
+    "apiEndpoint": "https://dashscope.aliyuncs.com/api/v1",
+    "description": "Qwen 시리즈를 개발하는 Alibaba Cloud Intelligence",
+    "colorCode": "#FF6A00"
+  },
+  {
+    "_id": "DEEPSEEK",
+    "name": "DeepSeek",
+    "nameEn": "DeepSeek",
+    "type": "commercial+oss",
+    "headquarters": "Hangzhou, China",
+    "founded": 2023,
+    "website": "https://www.deepseek.com",
+    "apiEndpoint": "https://api.deepseek.com/v1",
+    "description": "DeepSeek 시리즈를 개발하는 중국 AI 연구기업",
+    "colorCode": "#4D6BFE"
+  },
+  {
+    "_id": "ZHIPU",
+    "name": "Zhipu AI",
+    "nameEn": "Zhipu AI",
+    "type": "commercial+oss",
+    "headquarters": "Beijing, China",
+    "founded": 2019,
+    "website": "https://www.zhipuai.cn",
+    "apiEndpoint": "https://open.bigmodel.cn/api/v4",
+    "description": "GLM 시리즈를 개발하는 중국 AI 기업",
+    "colorCode": "#4A90D9"
+  },
+  {
+    "_id": "MOONSHOT",
+    "name": "Moonshot AI",
+    "nameEn": "Moonshot AI",
+    "type": "commercial+oss",
+    "headquarters": "Beijing, China",
+    "founded": 2023,
+    "website": "https://www.moonshot.cn",
+    "apiEndpoint": "https://api.moonshot.cn/v1",
+    "description": "Kimi 시리즈를 개발하는 중국 AI 기업",
+    "colorCode": "#6C5CE7"
+  }
+]

@@ -11,15 +11,18 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { Separator } from '@/components/ui/separator'
-import { getAllBenchmarkMeta, getAllBvaDimensions } from '@/lib/services/bva.service'
+import { getAllRefBenchmarks, getAllBvaDimensions } from '@/lib/services/bva.service'
+import type { IRefBenchmark } from '@/lib/types/bva'
 
 export default async function MethodologyPage() {
-  const [benchmarkMetas, dimensions] = await Promise.all([
-    getAllBenchmarkMeta(),
+  const [benchmarks, dimensions] = await Promise.all([
+    getAllRefBenchmarks(),
     getAllBvaDimensions(),
   ])
 
-  const metaMap = new Map(benchmarkMetas.map((m) => [m.key, m]))
+  const benchmarkMap = new Map<string, IRefBenchmark>(
+    benchmarks.map((b) => [b._id, b]),
+  )
 
   return (
     <div className="space-y-8 p-6 max-w-4xl">
@@ -37,7 +40,7 @@ export default async function MethodologyPage() {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">평가 차원</h2>
         <p className="text-sm text-muted-foreground">
-          LLM 모델의 비즈니스 가치를 4개 차원과 비용 효율성으로 평가합니다.
+          LLM 모델의 비즈니스 가치를 {dimensions.length}개 차원과 비용 효율성으로 평가합니다.
           각 차원은 관련 벤치마크의 가중 평균으로 계산됩니다.
         </p>
 
@@ -60,7 +63,7 @@ export default async function MethodologyPage() {
                   <p className="text-xs font-medium text-muted-foreground mb-2">구성 벤치마크</p>
                   <div className="flex flex-wrap gap-2">
                     {dim.formula.map((entry) => {
-                      const meta = metaMap.get(entry.benchmark)
+                      const meta = benchmarkMap.get(entry.benchmark)
                       return (
                         <Badge key={entry.benchmark} variant="secondary" className="text-xs">
                           {meta?.name ?? entry.benchmark} ({Math.round(entry.weight * 100)}%)
@@ -107,29 +110,29 @@ export default async function MethodologyPage() {
             <TableHeader>
               <TableRow>
                 <TableHead className="min-w-[80px]">벤치마크</TableHead>
+                <TableHead className="min-w-[80px]">카테고리</TableHead>
                 <TableHead className="min-w-[120px]">설명</TableHead>
                 <TableHead className="min-w-[80px]">출처</TableHead>
-                <TableHead className="min-w-[80px]">점수 범위</TableHead>
-                <TableHead className="min-w-[140px]">해석 가이드</TableHead>
+                <TableHead className="min-w-[60px]">만점</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {benchmarkMetas.map((meta) => (
-                <TableRow key={meta.key}>
+              {benchmarks.map((meta) => (
+                <TableRow key={meta._id}>
                   <TableCell>
                     <div>
                       <span className="font-medium">{meta.name}</span>
                       <p className="text-xs text-muted-foreground">{meta.displayName}</p>
                     </div>
                   </TableCell>
+                  <TableCell>
+                    <Badge variant="outline" className="text-xs">{meta.category}</Badge>
+                  </TableCell>
                   <TableCell className="text-sm">{meta.description}</TableCell>
                   <TableCell>
                     <Badge variant="outline" className="text-xs">{meta.source}</Badge>
                   </TableCell>
-                  <TableCell className="text-sm">
-                    {meta.scoreRange.min} ~ {meta.scoreRange.max}
-                  </TableCell>
-                  <TableCell className="text-sm">{meta.interpretation}</TableCell>
+                  <TableCell className="text-sm">{meta.maxScore}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

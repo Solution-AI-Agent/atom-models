@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
 
     const query: IModelListQuery = {
       type: searchParams.get('type') as IModelListQuery['type'] || undefined,
-      provider: searchParams.get('provider') || undefined,
+      providerId: searchParams.get('providerId') || searchParams.get('provider') || undefined,
       tier: searchParams.get('tier') || undefined,
       minPrice: searchParams.has('minPrice') ? Number(searchParams.get('minPrice')) : undefined,
       maxPrice: searchParams.has('maxPrice') ? Number(searchParams.get('maxPrice')) : undefined,

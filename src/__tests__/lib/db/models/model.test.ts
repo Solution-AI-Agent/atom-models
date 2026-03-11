@@ -6,7 +6,7 @@ import { ModelModel, ModelSchema } from '@/lib/db/models/model'
 
 describe('Model Schema', () => {
   it('should have required fields', () => {
-    const requiredPaths = ['name', 'slug', 'provider', 'type', 'releaseDate']
+    const requiredPaths = ['name', 'slug', 'providerId', 'type', 'releaseDate']
     for (const path of requiredPaths) {
       expect(ModelSchema.path(path)).toBeDefined()
       expect(ModelSchema.path(path).isRequired).toBeTruthy()
@@ -20,15 +20,16 @@ describe('Model Schema', () => {
 
   it('should have valid enum values for tier', () => {
     const tierPath = ModelSchema.path('tier') as any
-    expect(tierPath.enumValues).toEqual(['flagship', 'mid', 'small', 'mini', 'micro'])
+    expect(tierPath.enumValues).toEqual(['flagship', 'mid', 'light'])
   })
 
   it('should compute isRecentlyReleased virtual for recent models', () => {
     const recentDate = new Date()
     recentDate.setDate(recentDate.getDate() - 10)
     const doc = new ModelModel({
-      name: 'Test', slug: 'test', provider: 'Test', type: 'commercial',
-      releaseDate: recentDate
+      name: 'Test', slug: 'test', providerId: 'OPENAI', type: 'commercial',
+      isOpensource: false, status: 'active',
+      releaseDate: recentDate,
     })
     expect(doc.get('isRecentlyReleased')).toBe(true)
   })
@@ -37,8 +38,9 @@ describe('Model Schema', () => {
     const oldDate = new Date()
     oldDate.setDate(oldDate.getDate() - 60)
     const doc = new ModelModel({
-      name: 'Old', slug: 'old', provider: 'Test', type: 'commercial',
-      releaseDate: oldDate
+      name: 'Old', slug: 'old', providerId: 'OPENAI', type: 'commercial',
+      isOpensource: false, status: 'active',
+      releaseDate: oldDate,
     })
     expect(doc.get('isRecentlyReleased')).toBe(false)
   })
@@ -64,7 +66,8 @@ describe('Model Schema', () => {
 
     it('should accept a document with new VRAM fields', () => {
       const doc = new ModelModel({
-        name: 'VRAM Test', slug: 'vram-test', provider: 'Test', type: 'open-source',
+        name: 'VRAM Test', slug: 'vram-test', providerId: 'META', type: 'open-source',
+        isOpensource: true, status: 'active',
         releaseDate: new Date(),
         infrastructure: {
           minGpu: 'A100 80GB',
@@ -92,7 +95,8 @@ describe('Model Schema', () => {
 
     it('should allow new VRAM fields to be undefined (optional)', () => {
       const doc = new ModelModel({
-        name: 'No VRAM', slug: 'no-vram', provider: 'Test', type: 'open-source',
+        name: 'No VRAM', slug: 'no-vram', providerId: 'META', type: 'open-source',
+        isOpensource: true, status: 'active',
         releaseDate: new Date(),
         infrastructure: {
           minGpu: 'A100 80GB',

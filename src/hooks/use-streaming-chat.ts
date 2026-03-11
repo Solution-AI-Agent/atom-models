@@ -19,7 +19,7 @@ interface UseStreamingChatOptions {
   readonly modelId: string
   readonly openRouterModelId: string
   readonly parameters: IPlaygroundParameters
-  readonly pricing: { readonly input: number; readonly output: number }
+  readonly pricing: { readonly inputPer1m: number | null; readonly outputPer1m: number | null }
 }
 
 export function useStreamingChat(options: UseStreamingChatOptions) {
@@ -140,8 +140,8 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
         const inputTokens = usage?.promptTokens ?? 0
         const outputTokens = usage?.completionTokens ?? tokenCount
         const estimatedCost =
-          (inputTokens * options.pricing.input +
-            outputTokens * options.pricing.output) /
+          (inputTokens * (options.pricing.inputPer1m ?? 0) +
+            outputTokens * (options.pricing.outputPer1m ?? 0)) /
           1_000_000
 
         const metrics: IPlaygroundMessageMetrics = {
@@ -153,7 +153,10 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
           estimatedCost: Math.round(estimatedCost * 1_000_000) / 1_000_000,
         }
 
-        setState({ isStreaming: false, content: fullContent, reasoning: fullReasoning, metrics, error: null })
+        // Clear streaming content — the final values live in the returned message object
+        // which gets added to the messages array. Keeping content here would risk
+        // showing a duplicate if React renders before the messages state update.
+        setState({ isStreaming: false, content: '', reasoning: '', metrics: null, error: null })
 
         return {
           role: 'assistant' as const,

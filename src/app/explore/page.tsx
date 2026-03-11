@@ -19,7 +19,7 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
 
   const query: IModelListQuery = {
     type: params.type as ModelType | undefined,
-    provider: params.provider,
+    providerId: params.providerId || params.provider,
     tier: params.tier,
     minPrice: params.minPrice ? Number(params.minPrice) : undefined,
     maxPrice: params.maxPrice ? Number(params.maxPrice) : undefined,

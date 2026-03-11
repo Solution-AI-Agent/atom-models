@@ -1,4 +1,6 @@
-export type BvaDimensionKey = 'reasoning' | 'korean' | 'coding' | 'knowledge'
+export type BvaDimensionKey =
+  | 'reasoning' | 'korean' | 'coding' | 'knowledge'
+  | 'reliability' | 'toolUse' | 'instruction' | 'longContext'
 
 export interface IBvaFormulaEntry {
   readonly benchmark: string
@@ -13,17 +15,15 @@ export interface IBvaDimension {
   readonly formulaExplanation: string
 }
 
-export interface IBenchmarkMeta {
-  readonly key: string
+export interface IRefBenchmark {
+  readonly _id: string
   readonly name: string
   readonly displayName: string
+  readonly category: string
+  readonly maxScore: number
   readonly description: string
   readonly source: string
-  readonly scoreRange: {
-    readonly min: number
-    readonly max: number
-  }
-  readonly interpretation: string
+  readonly url?: string
 }
 
 export type BvaVolumeTier = 'under-10k' | '10k-100k' | '100k-1m' | 'over-1m'

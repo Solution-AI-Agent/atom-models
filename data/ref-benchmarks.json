@@ -1,0 +1,101 @@
+[
+  {
+    "_id": "mmlu",
+    "name": "MMLU",
+    "displayName": "대학 수준 지식 이해력",
+    "category": "지식",
+    "maxScore": 100,
+    "description": "수학, 역사, 법률 등 57개 분야의 객관식 문제로 모델의 지식 범위를 측정",
+    "source": "UC Berkeley"
+  },
+  {
+    "_id": "gpqa",
+    "name": "GPQA",
+    "displayName": "대학원 수준 과학 추론",
+    "category": "추론",
+    "maxScore": 100,
+    "description": "물리, 화학, 생물 분야의 대학원 수준 질의응답으로 전문 과학 추론력 측정",
+    "source": "NYU"
+  },
+  {
+    "_id": "swe_bench",
+    "name": "SWE-bench",
+    "displayName": "소프트웨어 엔지니어링",
+    "category": "코딩",
+    "maxScore": 100,
+    "description": "실제 GitHub 이슈를 해결하는 능력을 측정. 코드 이해, 수정, 테스트 포함",
+    "source": "Princeton NLP"
+  },
+  {
+    "_id": "aime",
+    "name": "AIME",
+    "displayName": "수학 경시대회 추론",
+    "category": "추론",
+    "maxScore": 100,
+    "description": "미국 수학 경시대회(AIME) 문제로 고급 수학 추론 능력을 측정",
+    "source": "MAA"
+  },
+  {
+    "_id": "hle",
+    "name": "HLE",
+    "displayName": "최고 난이도 추론",
+    "category": "추론",
+    "maxScore": 100,
+    "description": "인간 전문가도 어려운 최고 난이도 문제로 모델의 추론 한계를 측정",
+    "source": "Scale AI"
+  },
+  {
+    "_id": "mgsm",
+    "name": "MGSM",
+    "displayName": "다국어 수학 추론",
+    "category": "한국어",
+    "maxScore": 100,
+    "description": "10개 언어(한국어 포함)로 된 수학 문제를 풀어 다국어 추론 능력 측정",
+    "source": "Google Research"
+  },
+  {
+    "_id": "kmmlu",
+    "name": "KMMLU",
+    "displayName": "한국어 지식 이해력",
+    "category": "한국어",
+    "maxScore": 100,
+    "description": "한국 대학 수준 시험 문제(의학, 법학, 공학 등)로 한국어 전문 지식을 측정",
+    "source": "KAIST"
+  },
+  {
+    "_id": "truthfulqa",
+    "name": "TruthfulQA",
+    "displayName": "사실 기반 응답 정확도",
+    "category": "신뢰성",
+    "maxScore": 100,
+    "description": "모델이 사실에 기반한 응답을 생성하는 정확도. 환각(hallucination) 방지 능력 측정",
+    "source": "University of Oxford"
+  },
+  {
+    "_id": "bfcl",
+    "name": "BFCL",
+    "displayName": "함수 호출 정확도",
+    "category": "도구호출",
+    "maxScore": 100,
+    "description": "Function calling의 정확성과 API 파라미터 매핑 능력",
+    "source": "Gorilla LLM"
+  },
+  {
+    "_id": "ifeval",
+    "name": "IFEval",
+    "displayName": "명령어 수행 정확도",
+    "category": "명령어수행",
+    "maxScore": 100,
+    "description": "프롬프트 지시사항(포맷, 제약 등)을 정확히 따르는 능력",
+    "source": "Google Research"
+  },
+  {
+    "_id": "ruler",
+    "name": "RULER",
+    "displayName": "롱컨텍스트 성능",
+    "category": "긴문서처리",
+    "maxScore": 100,
+    "description": "긴 입력에서 정보 검색, 추론, 요약의 성능 유지력",
+    "source": "NVIDIA"
+  }
+]

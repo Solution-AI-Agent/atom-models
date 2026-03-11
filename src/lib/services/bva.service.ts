@@ -1,8 +1,9 @@
 import { getConnection } from '@/lib/db/connection'
 import { ModelModel } from '@/lib/db/models/model'
-import { BenchmarkMetaModel } from '@/lib/db/models/benchmark-meta'
+import { RefBenchmarkModel } from '@/lib/db/models/ref-benchmark'
 import { BvaDimensionModel } from '@/lib/db/models/bva-dimension'
-import { IndustryPresetModel } from '@/lib/db/models/industry-preset'
+import { BvaPresetModel } from '@/lib/db/models/bva-preset'
+import { ProviderModel } from '@/lib/db/models/provider'
 import {
   calculateDimensionScore,
   calculateCostScore,
@@ -18,7 +19,7 @@ import type {
   IBvaCostEstimate,
   BvaDimensionKey,
   IBvaDimension,
-  IBenchmarkMeta,
+  IRefBenchmark,
 } from '@/lib/types/bva'
 
 const MAX_OUTPUT_PRICE = 60
@@ -45,7 +46,7 @@ function extractBenchmarks(
 }
 
 function calculateCostEstimate(
-  pricing: { input: number; output: number },
+  pricing: { inputPer1m: number | null; outputPer1m: number | null },
   modelType: string,
   volumeTier: string,
 ): IBvaCostEstimate | null {
@@ -54,8 +55,8 @@ function calculateCostEstimate(
   const volume = VOLUME_TOKEN_ESTIMATES[volumeTier]
   if (!volume) return null
 
-  const inputCost = (volume.inputTokens / 1_000_000) * pricing.input
-  const outputCost = (volume.outputTokens / 1_000_000) * pricing.output
+  const inputCost = (volume.inputTokens / 1_000_000) * (pricing.inputPer1m ?? 0)
+  const outputCost = (volume.outputTokens / 1_000_000) * (pricing.outputPer1m ?? 0)
   const monthlyCost = Math.round((inputCost + outputCost) * 100) / 100
   const totalTokens = volume.inputTokens + volume.outputTokens
   const costPerRequest = totalTokens > 0
@@ -141,13 +142,15 @@ export async function generateBvaReport(
 ): Promise<IBvaReport> {
   await getConnection()
 
-  const [models, dimensions, benchmarkMetas] = await Promise.all([
+  const [models, dimensions, benchmarkMetas, providers] = await Promise.all([
     ModelModel.find().lean(),
     BvaDimensionModel.find().lean(),
-    BenchmarkMetaModel.find().lean(),
+    RefBenchmarkModel.find().lean(),
+    ProviderModel.find().lean(),
   ])
 
-  const metaMap = new Map(benchmarkMetas.map((m) => [m.key, m]))
+  const metaMap = new Map(benchmarkMetas.map((m) => [m._id, m]))
+  const providerMap = new Map(providers.map((p) => [p._id, p]))
 
   const ranked: IBvaRankedModel[] = models.map((model) => {
     const benchmarks = extractBenchmarks(model.benchmarks)
@@ -158,7 +161,7 @@ export async function generateBvaReport(
         const meta = metaMap.get(entry.benchmark)
         return {
           benchmark: entry.benchmark,
-          benchmarkName: meta?.name ?? entry.benchmark,
+          benchmarkName: meta?.displayName ?? entry.benchmark,
           score: benchmarks[entry.benchmark] ?? null,
           weight: entry.weight,
         }
@@ -212,7 +215,7 @@ export async function generateBvaReport(
     return {
       slug: model.slug,
       name: model.name,
-      provider: model.provider,
+      provider: providerMap.get(model.providerId)?.name ?? model.providerId,
       type: model.type as 'commercial' | 'open-source',
       totalScore,
       dimensionScores,
@@ -246,7 +249,7 @@ export async function getPresetCategories(): Promise<
   readonly { category: string; categorySlug: string }[]
 > {
   await getConnection()
-  const presets = await IndustryPresetModel.find().lean()
+  const presets = await BvaPresetModel.find().lean()
 
   const seen = new Set<string>()
   const categories: { category: string; categorySlug: string }[] = []
@@ -264,9 +267,9 @@ export async function getPresetCategories(): Promise<
   return categories
 }
 
-export async function getAllBenchmarkMeta(): Promise<readonly IBenchmarkMeta[]> {
+export async function getAllRefBenchmarks(): Promise<readonly IRefBenchmark[]> {
   await getConnection()
-  const metas = await BenchmarkMetaModel.find().lean()
+  const metas = await RefBenchmarkModel.find().lean()
   return serialize(metas)
 }
 

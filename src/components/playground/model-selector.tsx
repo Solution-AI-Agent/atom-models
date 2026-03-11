@@ -51,9 +51,9 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
       (m) =>
         !selectedModels.some((s) => s._id === m._id) &&
         (m.name.toLowerCase().includes(search.toLowerCase()) ||
-          m.provider.toLowerCase().includes(search.toLowerCase())),
+          m.providerId.toLowerCase().includes(search.toLowerCase())),
     )
-    .sort((a, b) => a.provider.localeCompare(b.provider) || a.name.localeCompare(b.name))
+    .sort((a, b) => a.providerId.localeCompare(b.providerId) || a.name.localeCompare(b.name))
 
   const handleAdd = useCallback(
     (model: IModel) => {
@@ -81,9 +81,9 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
           <Badge key={model._id} variant="secondary" className="gap-1 py-1">
             <span
               className="h-2 w-2 rounded-full"
-              style={{ backgroundColor: model.colorCode }}
+              
             />
-            {model.provider} / {model.name}
+            {model.providerId} / {model.name}
             <button onClick={() => handleRemove(model._id!)}>
               <X className="h-3 w-3" />
             </button>
@@ -120,13 +120,13 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
                     (() => {
                       let lastProvider = ''
                       return filtered.map((model) => {
-                        const showHeader = model.provider !== lastProvider
-                        lastProvider = model.provider
+                        const showHeader = model.providerId !== lastProvider
+                        lastProvider = model.providerId
                         return (
                           <div key={model._id}>
                             {showHeader && (
                               <p className="mt-1 px-2 py-1 text-xs font-medium text-muted-foreground first:mt-0">
-                                {model.provider}
+                                {model.providerId}
                               </p>
                             )}
                             <button
@@ -135,7 +135,7 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
                             >
                               <span
                                 className="h-2 w-2 rounded-full"
-                                style={{ backgroundColor: model.colorCode }}
+                                
                               />
                               <span>{model.name}</span>
                             </button>

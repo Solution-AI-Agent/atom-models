@@ -4,8 +4,8 @@
 const mockFind = jest.fn()
 const mockLean = jest.fn()
 
-jest.mock('@/lib/db/models/industry-preset', () => ({
-  IndustryPresetModel: {
+jest.mock('@/lib/db/models/bva-preset', () => ({
+  BvaPresetModel: {
     find: (...args: any[]) => {
       mockFind(...args)
       return { lean: mockLean }
