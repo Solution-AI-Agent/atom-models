@@ -15,6 +15,7 @@ const chatRequestSchema = z.object({
     temperature: z.number().min(0).max(2),
     maxTokens: z.number().int().min(1).max(128000),
     topP: z.number().min(0).max(1),
+    reasoningEffort: z.enum(['low', 'medium', 'high']).optional(),
   }),
 })
 

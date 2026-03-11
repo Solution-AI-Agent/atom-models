@@ -34,6 +34,9 @@ export async function streamChatCompletion(
       temperature: options.parameters.temperature,
       max_tokens: options.parameters.maxTokens,
       top_p: options.parameters.topP,
+      ...(options.parameters.reasoningEffort && {
+        reasoning: { effort: options.parameters.reasoningEffort },
+      }),
       stream: true,
       stream_options: { include_usage: true },
     }),

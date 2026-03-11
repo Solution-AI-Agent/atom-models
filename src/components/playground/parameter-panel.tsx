@@ -2,7 +2,7 @@
 
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
-import type { IPlaygroundParameters } from '@/lib/types/playground'
+import type { IPlaygroundParameters, ReasoningEffort } from '@/lib/types/playground'
 
 interface ParameterPanelProps {
   readonly parameters: IPlaygroundParameters
@@ -16,7 +16,7 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
   return (
     <div className="space-y-3">
       {label && <label className="text-sm font-medium">{label}</label>}
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-4 gap-3">
         <div>
           <Label className="text-xs">Temperature</Label>
           <Input
@@ -55,6 +55,24 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
               onChange({ ...parameters, topP: clamp(parseFloat(e.target.value) || 1, 0, 1) })
             }
           />
+        </div>
+        <div>
+          <Label className="text-xs">Reasoning</Label>
+          <select
+            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs"
+            value={parameters.reasoningEffort || ''}
+            onChange={(e) =>
+              onChange({
+                ...parameters,
+                reasoningEffort: (e.target.value || undefined) as ReasoningEffort | undefined,
+              })
+            }
+          >
+            <option value="">기본값</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
         </div>
       </div>
     </div>
