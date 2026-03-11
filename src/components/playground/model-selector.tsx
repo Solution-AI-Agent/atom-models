@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { Plus, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -17,6 +17,19 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
   const [availableModels, setAvailableModels] = useState<readonly IModel[]>([])
   const [search, setSearch] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!showDropdown) return
+    function handleClickOutside(e: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setShowDropdown(false)
+        setSearch('')
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [showDropdown])
 
   useEffect(() => {
     async function fetchModels() {
@@ -33,12 +46,14 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
     fetchModels()
   }, [])
 
-  const filtered = availableModels.filter(
-    (m) =>
-      !selectedModels.some((s) => s._id === m._id) &&
-      (m.name.toLowerCase().includes(search.toLowerCase()) ||
-        m.provider.toLowerCase().includes(search.toLowerCase())),
-  )
+  const filtered = availableModels
+    .filter(
+      (m) =>
+        !selectedModels.some((s) => s._id === m._id) &&
+        (m.name.toLowerCase().includes(search.toLowerCase()) ||
+          m.provider.toLowerCase().includes(search.toLowerCase())),
+    )
+    .sort((a, b) => a.provider.localeCompare(b.provider) || a.name.localeCompare(b.name))
 
   const handleAdd = useCallback(
     (model: IModel) => {
@@ -76,7 +91,7 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
         ))}
 
         {selectedModels.length < MAX_MODELS && (
-          <div className="relative">
+          <div className="relative" ref={containerRef}>
             <Button
               variant="outline"
               size="sm"
@@ -96,25 +111,38 @@ export function ModelSelector({ selectedModels, onModelsChange }: ModelSelectorP
                   className="mb-2 w-full rounded-md border px-3 py-1.5 text-sm"
                   autoFocus
                 />
-                <div className="max-h-48 overflow-y-auto">
-                  {filtered.slice(0, 20).map((model) => (
-                    <button
-                      key={model._id}
-                      className="flex w-full items-center gap-2 rounded-sm px-2 py-1.5 text-left text-sm hover:bg-muted"
-                      onClick={() => handleAdd(model)}
-                    >
-                      <span
-                        className="h-2 w-2 rounded-full"
-                        style={{ backgroundColor: model.colorCode }}
-                      />
-                      <span className="text-muted-foreground">{model.provider}</span>
-                      <span>{model.name}</span>
-                    </button>
-                  ))}
-                  {filtered.length === 0 && (
+                <div className="max-h-64 overflow-y-auto">
+                  {filtered.length === 0 ? (
                     <p className="px-2 py-1.5 text-sm text-muted-foreground">
                       결과 없음
                     </p>
+                  ) : (
+                    (() => {
+                      let lastProvider = ''
+                      return filtered.map((model) => {
+                        const showHeader = model.provider !== lastProvider
+                        lastProvider = model.provider
+                        return (
+                          <div key={model._id}>
+                            {showHeader && (
+                              <p className="mt-1 px-2 py-1 text-xs font-medium text-muted-foreground first:mt-0">
+                                {model.provider}
+                              </p>
+                            )}
+                            <button
+                              className="flex w-full items-center gap-2 rounded-sm px-2 py-1.5 text-left text-sm hover:bg-muted"
+                              onClick={() => handleAdd(model)}
+                            >
+                              <span
+                                className="h-2 w-2 rounded-full"
+                                style={{ backgroundColor: model.colorCode }}
+                              />
+                              <span>{model.name}</span>
+                            </button>
+                          </div>
+                        )
+                      })
+                    })()
                   )}
                 </div>
               </div>
