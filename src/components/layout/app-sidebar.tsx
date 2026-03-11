@@ -9,6 +9,7 @@ import {
   SparklesIcon,
   ServerIcon,
   BarChart3Icon,
+  FlaskConicalIcon,
   BookOpenIcon,
 } from 'lucide-react'
 import {
@@ -33,6 +34,7 @@ const navItems = [
   { title: '산업별 추천', href: '/recommendations', icon: SparklesIcon },
   { title: '인프라 가이드', href: '/infra', icon: ServerIcon },
   { title: 'BVA 분석', href: '/bva', icon: BarChart3Icon },
+  { title: '플레이그라운드', href: '/playground', icon: FlaskConicalIcon },
   { title: '평가 방법론', href: '/methodology', icon: BookOpenIcon },
 ] as const
 
