@@ -57,11 +57,9 @@ export function PlaygroundHeader({
           새 세션
         </Button>
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="sm">
-              <History className="mr-1 h-4 w-4" />
-              세션 기록
-            </Button>
+          <SheetTrigger render={<Button variant="outline" size="sm" />}>
+            <History className="mr-1 h-4 w-4" />
+            세션 기록
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
