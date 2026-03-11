@@ -39,7 +39,9 @@ export function PlaygroundSetup({
         >
           <span>
             {selectedModels.map((m) => m.name).join(', ')} | 시스템 프롬프트:{' '}
-            {systemPrompt ? systemPrompt.slice(0, 50) + '...' : '없음'}
+            {systemPrompt
+              ? (systemPrompt.length > 50 ? systemPrompt.slice(0, 50) + '...' : systemPrompt)
+              : '없음'}
           </span>
           <ChevronDown className="h-4 w-4" />
         </button>

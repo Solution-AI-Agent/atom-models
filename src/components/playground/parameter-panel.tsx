@@ -10,6 +10,8 @@ interface ParameterPanelProps {
   readonly label?: string
 }
 
+const clamp = (value: number, min: number, max: number) => Math.max(min, Math.min(max, value))
+
 export function ParameterPanel({ parameters, onChange, label }: ParameterPanelProps) {
   return (
     <div className="space-y-3">
@@ -24,7 +26,7 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
             step={0.1}
             value={parameters.temperature}
             onChange={(e) =>
-              onChange({ ...parameters, temperature: parseFloat(e.target.value) || 0 })
+              onChange({ ...parameters, temperature: clamp(parseFloat(e.target.value) || 0, 0, 2) })
             }
           />
         </div>
@@ -37,7 +39,7 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
             step={256}
             value={parameters.maxTokens}
             onChange={(e) =>
-              onChange({ ...parameters, maxTokens: parseInt(e.target.value) || 4096 })
+              onChange({ ...parameters, maxTokens: clamp(parseInt(e.target.value) || 4096, 1, 128000) })
             }
           />
         </div>
@@ -50,7 +52,7 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
             step={0.05}
             value={parameters.topP}
             onChange={(e) =>
-              onChange({ ...parameters, topP: parseFloat(e.target.value) || 1 })
+              onChange({ ...parameters, topP: clamp(parseFloat(e.target.value) || 1, 0, 1) })
             }
           />
         </div>

@@ -27,10 +27,14 @@ export function PlaygroundHeader({
   const [open, setOpen] = useState(false)
 
   const fetchSessions = useCallback(async () => {
-    const res = await fetch('/api/playground/sessions')
-    if (!res.ok) return
-    const json = await res.json()
-    if (json.success) setSessions(json.data)
+    try {
+      const res = await fetch('/api/playground/sessions')
+      if (!res.ok) return
+      const json = await res.json()
+      if (json.success) setSessions(json.data)
+    } catch {
+      // silently ignore network errors
+    }
   }, [])
 
   useEffect(() => {
@@ -43,9 +47,14 @@ export function PlaygroundHeader({
   }, [onSelectSession])
 
   const handleDelete = useCallback(async (id: string) => {
-    await fetch(`/api/playground/sessions/${id}`, { method: 'DELETE' })
-    setSessions((prev) => prev.filter((s) => s._id !== id))
-    if (currentSessionId === id) onNewSession()
+    try {
+      const res = await fetch(`/api/playground/sessions/${id}`, { method: 'DELETE' })
+      if (!res.ok) return
+      setSessions((prev) => prev.filter((s) => s._id !== id))
+      if (currentSessionId === id) onNewSession()
+    } catch {
+      // silently ignore network errors
+    }
   }, [currentSessionId, onNewSession])
 
   return (
