@@ -46,6 +46,7 @@
       "https://openai.com/index/hello-gpt-4o/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-4o",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -94,6 +95,7 @@
       "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-4o-mini",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -142,6 +144,7 @@
       "https://openai.com/index/gpt-4-5/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -190,6 +193,7 @@
       "https://openai.com/index/introducing-o1/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/o1",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -238,6 +242,7 @@
       "https://openai.com/index/openai-o3-mini/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/o3-mini",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -286,6 +291,7 @@
       "https://openai.com/index/introducing-o3-and-o4-mini/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/o3",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -334,6 +340,7 @@
       "https://openai.com/index/introducing-o4-mini/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/o4-mini",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -382,6 +389,7 @@
       "https://openai.com/index/gpt-4-1/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-4.1",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -430,6 +438,7 @@
       "https://openai.com/index/gpt-4-1/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-4.1-mini",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -478,6 +487,7 @@
       "https://openai.com/index/gpt-4-1/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-4.1-nano",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -526,6 +536,7 @@
       "https://openai.com/index/gpt-5/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-5",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -574,6 +585,7 @@
       "https://openai.com/index/gpt-5-2/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-5.2",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -622,6 +634,7 @@
       "https://openai.com/index/gpt-5-4/"
     ],
     "colorCode": "#10A37F",
+    "openRouterModelId": "openai/gpt-5.4",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -670,6 +683,7 @@
       "https://www.anthropic.com/news/claude-opus-4-5"
     ],
     "colorCode": "#D97706",
+    "openRouterModelId": "anthropic/claude-opus-4.5",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -718,6 +732,7 @@
       "https://www.anthropic.com/news/claude-sonnet-4-5"
     ],
     "colorCode": "#D97706",
+    "openRouterModelId": "anthropic/claude-sonnet-4.5",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -766,6 +781,7 @@
       "https://www.anthropic.com/news/claude-3-5-haiku"
     ],
     "colorCode": "#D97706",
+    "openRouterModelId": "anthropic/claude-3.5-haiku",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -814,6 +830,7 @@
       "https://www.anthropic.com/news/claude-haiku-4-5"
     ],
     "colorCode": "#D97706",
+    "openRouterModelId": "anthropic/claude-haiku-4.5",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -863,6 +880,7 @@
       "https://www.anthropic.com/news/claude-opus-4-6"
     ],
     "colorCode": "#D97706",
+    "openRouterModelId": "anthropic/claude-opus-4.6",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -911,6 +929,7 @@
       "https://www.anthropic.com/news/claude-sonnet-4-6"
     ],
     "colorCode": "#D97706",
+    "openRouterModelId": "anthropic/claude-sonnet-4.6",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -959,6 +978,7 @@
       "https://deepmind.google/technologies/gemini/pro/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemini-2.5-pro",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -1007,6 +1027,7 @@
       "https://deepmind.google/technologies/gemini/flash/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemini-2.0-flash-001",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -1055,6 +1076,7 @@
       "https://deepmind.google/technologies/gemini/flash/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemini-2.5-flash",
     "lastVerifiedAt": "2025-07-01"
   },
   {
@@ -1103,6 +1125,7 @@
       "https://deepmind.google/technologies/gemini/flash/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemini-2.5-flash-lite",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -1151,6 +1174,7 @@
       "https://deepmind.google/technologies/gemini/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemini-3-pro-preview",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -1199,6 +1223,7 @@
       "https://deepmind.google/technologies/gemini/flash/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemini-3-flash-preview",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -1248,6 +1273,7 @@
       "https://deepmind.google/technologies/gemini/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemini-3.1-pro-preview",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -1313,6 +1339,7 @@
       "https://deepmind.google/models/gemma/gemma-3/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemma-3-27b-it",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -1378,6 +1405,7 @@
       "https://deepmind.google/models/gemma/gemma-3/"
     ],
     "colorCode": "#4285F4",
+    "openRouterModelId": "google/gemma-3-12b-it",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -1426,6 +1454,7 @@
       "https://mistral.ai/news/mistral-large-2411"
     ],
     "colorCode": "#FF7000",
+    "openRouterModelId": "mistralai/mistral-large",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -1490,6 +1519,7 @@
       "https://mistral.ai/news/mistral-small-3"
     ],
     "colorCode": "#FF7000",
+    "openRouterModelId": "mistralai/mistral-small-24b-instruct-2501",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -1538,6 +1568,7 @@
       "https://mistral.ai/news/mistral-medium-3"
     ],
     "colorCode": "#FF7000",
+    "openRouterModelId": "mistralai/mistral-medium-3",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -1602,6 +1633,7 @@
       "https://mistral.ai/news/mistral-large-3"
     ],
     "colorCode": "#FF7000",
+    "openRouterModelId": "mistralai/mistral-large-2512",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -1666,6 +1698,7 @@
       "https://github.com/deepseek-ai/DeepSeek-V3"
     ],
     "colorCode": "#4D6BFE",
+    "openRouterModelId": "deepseek/deepseek-chat",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -1730,6 +1763,7 @@
       "https://github.com/deepseek-ai/DeepSeek-R1"
     ],
     "colorCode": "#4D6BFE",
+    "openRouterModelId": "deepseek/deepseek-r1",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -1794,6 +1828,7 @@
       "https://github.com/deepseek-ai/DeepSeek-R1"
     ],
     "colorCode": "#4D6BFE",
+    "openRouterModelId": "deepseek/deepseek-r1-0528",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -1858,6 +1893,7 @@
       "https://github.com/deepseek-ai/DeepSeek-V3"
     ],
     "colorCode": "#4D6BFE",
+    "openRouterModelId": "deepseek/deepseek-v3.2",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -1922,6 +1958,7 @@
       "https://qwenlm.github.io/blog/qwen3/"
     ],
     "colorCode": "#6F42C1",
+    "openRouterModelId": "qwen/qwen3-235b-a22b",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -1987,6 +2024,7 @@
       "https://qwenlm.github.io/blog/qwen3/"
     ],
     "colorCode": "#6F42C1",
+    "openRouterModelId": "qwen/qwen3-32b",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -2052,6 +2090,7 @@
       "https://qwenlm.github.io/blog/qwen3/"
     ],
     "colorCode": "#6F42C1",
+    "openRouterModelId": "qwen/qwen3-8b",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -2117,6 +2156,7 @@
       "https://qwenlm.github.io/blog/qwen3/"
     ],
     "colorCode": "#6F42C1",
+    "openRouterModelId": "qwen/qwen3-30b-a3b",
     "lastVerifiedAt": "2025-05-01"
   },
   {
@@ -2181,6 +2221,7 @@
       "https://qwenlm.github.io/blog/qwen3.5/"
     ],
     "colorCode": "#6F42C1",
+    "openRouterModelId": "qwen/qwen3.5-397b-a17b",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -2229,6 +2270,7 @@
       "https://x.ai/blog/grok-3"
     ],
     "colorCode": "#1DA1F2",
+    "openRouterModelId": "x-ai/grok-3",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2277,6 +2319,7 @@
       "https://x.ai/blog/grok-3-mini"
     ],
     "colorCode": "#1DA1F2",
+    "openRouterModelId": "x-ai/grok-3-mini",
     "lastVerifiedAt": "2025-07-01"
   },
   {
@@ -2325,6 +2368,7 @@
       "https://x.ai/blog/grok-4"
     ],
     "colorCode": "#1DA1F2",
+    "openRouterModelId": "x-ai/grok-4",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -2373,6 +2417,7 @@
       "https://x.ai/news/grok-4-fast"
     ],
     "colorCode": "#1DA1F2",
+    "openRouterModelId": "x-ai/grok-4-fast",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -2422,6 +2467,7 @@
       "https://x.ai/blog/grok-4-1"
     ],
     "colorCode": "#1DA1F2",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -2470,6 +2516,7 @@
       "https://cohere.com/blog/command-r-plus"
     ],
     "colorCode": "#39594D",
+    "openRouterModelId": "cohere/command-r-plus-08-2024",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2518,6 +2565,7 @@
       "https://cohere.com/blog/command-r"
     ],
     "colorCode": "#39594D",
+    "openRouterModelId": "cohere/command-r-08-2024",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2582,6 +2630,7 @@
       "https://cohere.com/blog/command-a"
     ],
     "colorCode": "#39594D",
+    "openRouterModelId": "cohere/command-a",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -2630,6 +2679,7 @@
       "https://aws.amazon.com/ai/generative-ai/nova/"
     ],
     "colorCode": "#FF9900",
+    "openRouterModelId": "amazon/nova-pro-v1",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2678,6 +2728,7 @@
       "https://aws.amazon.com/ai/generative-ai/nova/"
     ],
     "colorCode": "#FF9900",
+    "openRouterModelId": "amazon/nova-lite-v1",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2743,6 +2794,7 @@
       "https://huggingface.co/microsoft/phi-4"
     ],
     "colorCode": "#00A4EF",
+    "openRouterModelId": "microsoft/phi-4",
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2808,6 +2860,7 @@
       "https://huggingface.co/microsoft/Phi-4-mini-instruct"
     ],
     "colorCode": "#00A4EF",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2872,6 +2925,7 @@
       "https://www.lingyiwanwu.com/en"
     ],
     "colorCode": "#E8590C",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2025-04-01"
   },
   {
@@ -2936,6 +2990,7 @@
       "https://github.com/MoonshotAI/Kimi-K2"
     ],
     "colorCode": "#5B21B6",
+    "openRouterModelId": "moonshotai/kimi-k2",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3000,6 +3055,7 @@
       "https://kimi.moonshot.cn/"
     ],
     "colorCode": "#5B21B6",
+    "openRouterModelId": "moonshotai/kimi-k2.5",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3064,6 +3120,7 @@
       "https://github.com/THUDM/GLM-5"
     ],
     "colorCode": "#2563EB",
+    "openRouterModelId": "z-ai/glm-5",
     "lastVerifiedAt": "2026-03-08"
   },
   {
@@ -3129,6 +3186,7 @@
       "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-32B-Instruct"
     ],
     "colorCode": "#A50034",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3194,6 +3252,7 @@
       "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
     ],
     "colorCode": "#C0003A",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3258,6 +3317,7 @@
       "https://huggingface.co/upstage/solar-pro-preview-instruct"
     ],
     "colorCode": "#FF6B00",
+    "openRouterModelId": "upstage/solar-pro-3",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3323,6 +3383,7 @@
       "https://mistral.ai/news/mistral-small-3-1"
     ],
     "colorCode": "#FF7000",
+    "openRouterModelId": "mistralai/mistral-small-3.1-24b-instruct",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3388,6 +3449,7 @@
       "https://huggingface.co/ibm-granite/granite-3.1-8b-instruct"
     ],
     "colorCode": "#0F62FE",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3453,6 +3515,7 @@
       "https://huggingface.co/tiiuae/Falcon3-10B-Instruct"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3518,6 +3581,7 @@
       "https://huggingface.co/internlm/internlm3-8b-instruct"
     ],
     "colorCode": "#06B6D4",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3581,6 +3645,7 @@
       "https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large"
     ],
     "colorCode": "#8B5CF6",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3646,6 +3711,7 @@
       "https://huggingface.co/allenai/OLMo-2-0225-13B-Instruct"
     ],
     "colorCode": "#10B981",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3711,6 +3777,7 @@
       "https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1"
     ],
     "colorCode": "#76B900",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3776,6 +3843,7 @@
       "https://huggingface.co/Qwen/Qwen3-0.6B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3841,6 +3909,7 @@
       "https://huggingface.co/Qwen/Qwen3-1.7B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3906,6 +3975,7 @@
       "https://huggingface.co/Qwen/Qwen3-4B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwen3-4b:free",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -3971,6 +4041,7 @@
       "https://huggingface.co/Qwen/Qwen3-14B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwen3-14b",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4036,6 +4107,7 @@
       "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwen-2.5-coder-32b-instruct",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4101,6 +4173,7 @@
       "https://huggingface.co/Qwen/QwQ-32B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwq-32b",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4165,6 +4238,7 @@
       "https://huggingface.co/THUDM/glm-4-9b-chat"
     ],
     "colorCode": "#3B82F6",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4230,6 +4304,7 @@
       "https://huggingface.co/Qwen/Qwen3.5-27B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwen3.5-27b",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4293,6 +4368,7 @@
       "https://huggingface.co/Qwen/Qwen3.5-35B-A3B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwen3.5-35b-a3b",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4355,6 +4431,7 @@
       "https://huggingface.co/Qwen/Qwen3.5-122B-A10B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwen3.5-122b-a10b",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4418,6 +4495,7 @@
       "https://huggingface.co/Qwen/Qwen3.5-9B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": "qwen/qwen3.5-9b",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4479,6 +4557,7 @@
       "https://huggingface.co/Qwen/Qwen3.5-4B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4540,6 +4619,7 @@
       "https://huggingface.co/Qwen/Qwen3.5-2B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4601,6 +4681,7 @@
       "https://huggingface.co/Qwen/Qwen3.5-0.8B"
     ],
     "colorCode": "#6366F1",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4661,6 +4742,7 @@
       "https://huggingface.co/zai-org/GLM-4.5"
     ],
     "colorCode": "#3B82F6",
+    "openRouterModelId": "z-ai/glm-4.5",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4720,6 +4802,7 @@
       "https://huggingface.co/zai-org/GLM-4.5"
     ],
     "colorCode": "#3B82F6",
+    "openRouterModelId": "z-ai/glm-4.5-air",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4783,6 +4866,7 @@
       "https://huggingface.co/zai-org/GLM-4.7"
     ],
     "colorCode": "#3B82F6",
+    "openRouterModelId": "z-ai/glm-4.7",
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4845,6 +4929,7 @@
       "https://github.com/MoonshotAI/Kimi-VL"
     ],
     "colorCode": "#F59E0B",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4904,6 +4989,7 @@
       "https://huggingface.co/moonshotai/Kimi-Dev-72B"
     ],
     "colorCode": "#F59E0B",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   },
   {
@@ -4964,6 +5050,7 @@
       "https://huggingface.co/moonshotai/Kimi-Linear-48B-A3B-Instruct"
     ],
     "colorCode": "#F59E0B",
+    "openRouterModelId": null,
     "lastVerifiedAt": "2026-03-09"
   }
 ]
