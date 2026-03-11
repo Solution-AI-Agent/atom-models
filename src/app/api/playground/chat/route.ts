@@ -165,9 +165,13 @@ export async function POST(request: Request) {
         'Connection': 'keep-alive',
       },
     })
-  } catch {
+  } catch (error) {
+    const message = error instanceof Error ? error.message : 'Failed to start chat stream'
+    // Extract readable part from OpenRouter error
+    const match = message.match(/"message":"([^"]+)"/)
+    const userMessage = match ? match[1] : message.replace(/^OpenRouter API error \(\d+\): /, '')
     return new Response(
-      JSON.stringify({ success: false, error: 'Failed to start chat stream' }),
+      JSON.stringify({ success: false, error: userMessage }),
       { status: 500, headers: { 'Content-Type': 'application/json' } },
     )
   }
