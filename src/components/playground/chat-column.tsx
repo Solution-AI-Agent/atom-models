@@ -13,6 +13,7 @@ interface ChatColumnProps {
   readonly colorCode: string
   readonly messages: readonly IPlaygroundMessage[]
   readonly streamingContent: string
+  readonly streamingReasoning: string
   readonly isStreaming: boolean
   readonly error: string | null
   readonly parameters: IPlaygroundParameters
@@ -31,6 +32,7 @@ export function ChatColumn({
   colorCode,
   messages,
   streamingContent,
+  streamingReasoning,
   isStreaming,
   error,
   parameters,
@@ -89,6 +91,7 @@ export function ChatColumn({
             key={i}
             role={msg.role}
             content={msg.content}
+            reasoning={msg.reasoning}
             metrics={msg.metrics}
             isFastest={
               msg.metrics
@@ -101,11 +104,13 @@ export function ChatColumn({
           />
         ))}
 
-        {isStreaming && streamingContent && (
+        {isStreaming && (streamingContent || streamingReasoning) && (
           <MessageBubble
             role="assistant"
             content={streamingContent}
+            reasoning={streamingReasoning}
             isStreaming
+            isReasoningPhase={streamingReasoning.length > 0 && streamingContent.length === 0}
           />
         )}
 

@@ -289,6 +289,7 @@ export default function PlaygroundPage() {
               colorCode={model.colorCode}
               messages={getMessagesForModel(model._id!)}
               streamingContent={streams[i].content}
+              streamingReasoning={streams[i].reasoning}
               isStreaming={streams[i].isStreaming}
               error={streams[i].error}
               parameters={modelParameters[model._id!] || defaultParameters}

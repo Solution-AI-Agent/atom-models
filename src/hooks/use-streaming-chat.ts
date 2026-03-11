@@ -10,6 +10,7 @@ import type {
 interface StreamingState {
   readonly isStreaming: boolean
   readonly content: string
+  readonly reasoning: string
   readonly metrics: IPlaygroundMessageMetrics | null
   readonly error: string | null
 }
@@ -25,6 +26,7 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
   const [state, setState] = useState<StreamingState>({
     isStreaming: false,
     content: '',
+    reasoning: '',
     metrics: null,
     error: null,
   })
@@ -34,13 +36,14 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
     async (
       messages: readonly { readonly role: 'system' | 'user' | 'assistant'; readonly content: string }[],
     ): Promise<IPlaygroundMessage | null> => {
-      setState({ isStreaming: true, content: '', metrics: null, error: null })
+      setState({ isStreaming: true, content: '', reasoning: '', metrics: null, error: null })
       abortControllerRef.current = new AbortController()
 
       const startTime = performance.now()
       let firstTokenTime: number | null = null
       let tokenCount = 0
       let fullContent = ''
+      let fullReasoning = ''
       let usage: { promptTokens: number; completionTokens: number } | null = null
 
       try {
@@ -86,6 +89,18 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
 
             try {
               const event = JSON.parse(data)
+
+              if (event.type === 'reasoning' && event.content) {
+                if (firstTokenTime === null) {
+                  firstTokenTime = performance.now()
+                }
+                tokenCount++
+                fullReasoning += event.content
+                setState((prev) => ({
+                  ...prev,
+                  reasoning: prev.reasoning + event.content,
+                }))
+              }
 
               if (event.type === 'token' && event.content) {
                 if (firstTokenTime === null) {
@@ -138,11 +153,12 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
           estimatedCost: Math.round(estimatedCost * 1_000_000) / 1_000_000,
         }
 
-        setState({ isStreaming: false, content: fullContent, metrics, error: null })
+        setState({ isStreaming: false, content: fullContent, reasoning: fullReasoning, metrics, error: null })
 
         return {
           role: 'assistant' as const,
           content: fullContent,
+          reasoning: fullReasoning || undefined,
           modelId: options.modelId,
           metrics,
         }

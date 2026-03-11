@@ -58,6 +58,7 @@ export interface IModel {
   readonly memo: string
   readonly sourceUrls: readonly string[]
   readonly colorCode: string
+  readonly openRouterModelId?: string
   readonly lastVerifiedAt: string
   readonly isRecentlyReleased?: boolean
 }

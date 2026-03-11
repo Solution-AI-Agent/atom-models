@@ -117,21 +117,31 @@ export async function POST(request: Request) {
 
               try {
                 const parsed = JSON.parse(data)
-                const content = parsed.choices?.[0]?.delta?.content || ''
+                const delta = parsed.choices?.[0]?.delta
+                const content = delta?.content || ''
+                const reasoning = delta?.reasoning || ''
                 const usage = parsed.usage || null
 
-                const event: Record<string, unknown> = { type: 'token', content }
                 if (usage) {
-                  event.type = 'done'
-                  event.usage = {
-                    promptTokens: usage.prompt_tokens,
-                    completionTokens: usage.completion_tokens,
+                  const event = {
+                    type: 'done',
+                    usage: {
+                      promptTokens: usage.prompt_tokens,
+                      completionTokens: usage.completion_tokens,
+                    },
                   }
+                  controller.enqueue(
+                    encoder.encode(`data: ${JSON.stringify(event)}\n\n`),
+                  )
+                } else if (reasoning) {
+                  controller.enqueue(
+                    encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
+                  )
+                } else if (content) {
+                  controller.enqueue(
+                    encoder.encode(`data: ${JSON.stringify({ type: 'token', content })}\n\n`),
+                  )
                 }
-
-                controller.enqueue(
-                  encoder.encode(`data: ${JSON.stringify(event)}\n\n`),
-                )
               } catch {
                 // skip unparseable lines
               }
