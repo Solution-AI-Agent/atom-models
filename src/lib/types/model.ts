@@ -5,12 +5,12 @@ export interface IModelPricing {
   readonly batchDiscount: number
 }
 
-export interface IModelScores {
-  readonly quality: number
-  readonly speed: number
-  readonly reasoning: number
-  readonly coding: number
-  readonly multimodal: number
+export interface IModelCompliance {
+  readonly soc2: boolean
+  readonly hipaa: boolean
+  readonly gdpr: boolean
+  readonly onPremise: boolean
+  readonly dataExclusion: boolean
 }
 
 export interface IModelInfrastructure {
@@ -27,6 +27,10 @@ export interface IModelInfrastructure {
   readonly recommendedFramework: readonly string[]
   readonly estimatedTps: number
 }
+
+export type BenchmarkKey =
+  | 'mmlu' | 'gpqa' | 'swe_bench' | 'aime' | 'hle' | 'mgsm'
+  | 'kmmlu'
 
 export type ModelType = 'commercial' | 'open-source'
 export type ModelTier = 'flagship' | 'mid' | 'small' | 'mini' | 'micro'
@@ -46,9 +50,9 @@ export interface IModel {
   readonly maxOutput: number
   readonly license: string
   readonly pricing: IModelPricing
-  readonly scores: IModelScores
+  readonly compliance: IModelCompliance
   readonly languageScores: Record<string, number>
-  readonly benchmarks: Record<string, number>
+  readonly benchmarks: Partial<Record<BenchmarkKey, number | null>>
   readonly infrastructure: IModelInfrastructure | null
   readonly releaseDate: string
   readonly memo: string

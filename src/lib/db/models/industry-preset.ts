@@ -6,13 +6,11 @@ export interface IIndustryPresetDocument extends Document {
   taskType: string
   taskTypeSlug: string
   weights: {
-    quality: number
-    speed: number
     reasoning: number
-    coding: number
-    multimodal: number
-    cost: number
     korean: number
+    coding: number
+    knowledge: number
+    cost: number
   }
   recommendations: {
     commercial: { modelSlug: string; reason: string }[]
@@ -30,13 +28,11 @@ export const IndustryPresetSchema = new Schema({
   taskTypeSlug: { type: String, required: true },
 
   weights: {
-    quality:    { type: Number, default: 0 },
-    speed:      { type: Number, default: 0 },
     reasoning:  { type: Number, default: 0 },
-    coding:     { type: Number, default: 0 },
-    multimodal: { type: Number, default: 0 },
-    cost:       { type: Number, default: 0 },
     korean:     { type: Number, default: 0 },
+    coding:     { type: Number, default: 0 },
+    knowledge:  { type: Number, default: 0 },
+    cost:       { type: Number, default: 0 },
   },
 
   recommendations: {

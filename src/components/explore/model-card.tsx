@@ -53,10 +53,11 @@ export function ModelCard({ model }: ModelCardProps) {
         <CardContent>
           <div className="flex flex-col gap-3">
             <div className="flex flex-wrap gap-1.5">
-              <ScoreBadge label="품질" value={model.scores.quality} />
-              <ScoreBadge label="속도" value={model.scores.speed} />
-              <ScoreBadge label="추론" value={model.scores.reasoning} />
-              <ScoreBadge label="코딩" value={model.scores.coding} />
+              {Object.entries(model.benchmarks).map(([key, value]) =>
+                value != null ? (
+                  <ScoreBadge key={key} label={key.toUpperCase()} value={value} />
+                ) : null,
+              )}
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">

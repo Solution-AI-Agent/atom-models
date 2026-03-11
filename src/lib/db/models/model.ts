@@ -18,15 +18,15 @@ export interface IModelDocument extends Document {
     cachingDiscount: number
     batchDiscount: number
   }
-  scores: {
-    quality: number
-    speed: number
-    reasoning: number
-    coding: number
-    multimodal: number
+  compliance: {
+    soc2: boolean
+    hipaa: boolean
+    gdpr: boolean
+    onPremise: boolean
+    dataExclusion: boolean
   }
   languageScores: Map<string, number>
-  benchmarks: Map<string, number>
+  benchmarks: Map<string, number | null>
   infrastructure: {
     minGpu: string
     vramFp16: number
@@ -70,12 +70,12 @@ export const ModelSchema = new Schema({
     batchDiscount:   Number,
   },
 
-  scores: {
-    quality:    Number,
-    speed:      Number,
-    reasoning:  Number,
-    coding:     Number,
-    multimodal: Number,
+  compliance: {
+    soc2:          { type: Boolean, default: false },
+    hipaa:         { type: Boolean, default: false },
+    gdpr:          { type: Boolean, default: false },
+    onPremise:     { type: Boolean, default: false },
+    dataExclusion: { type: Boolean, default: false },
   },
 
   languageScores: { type: Map, of: Number },

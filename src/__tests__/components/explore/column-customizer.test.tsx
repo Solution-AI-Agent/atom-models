@@ -9,6 +9,7 @@ describe('ColumnCustomizer', () => {
     expect(keys).toContain('aime')
     expect(keys).toContain('hle')
     expect(keys).toContain('mgsm')
+    expect(keys).toContain('kmmlu')
     expect(keys).not.toContain('scores')
   })
 
@@ -20,6 +21,7 @@ describe('ColumnCustomizer', () => {
     expect(labels).toContain('AIME')
     expect(labels).toContain('HLE')
     expect(labels).toContain('MGSM')
+    expect(labels).toContain('KMMLU')
     expect(labels).not.toContain('평가')
   })
 
@@ -30,7 +32,7 @@ describe('ColumnCustomizer', () => {
   })
 
   it('should have correct total number of columns', () => {
-    // type + 6 benchmarks + context = 8
-    expect(COLUMNS.length).toBe(8)
+    // type + 7 benchmarks (mmlu, gpqa, swe_bench, aime, hle, mgsm, kmmlu) + context = 9
+    expect(COLUMNS.length).toBe(9)
   })
 })

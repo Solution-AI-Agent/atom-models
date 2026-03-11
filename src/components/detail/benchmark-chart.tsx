@@ -13,11 +13,11 @@ import {
 import { BENCHMARKS } from '@/lib/constants/benchmarks'
 
 interface BenchmarkChartProps {
-  readonly benchmarks: Record<string, number>
+  readonly benchmarks: Partial<Record<string, number | null>>
 }
 
 export function BenchmarkChart({ benchmarks }: BenchmarkChartProps) {
-  const entries = Object.entries(benchmarks)
+  const entries = Object.entries(benchmarks).filter(([, v]) => v != null)
 
   if (entries.length === 0) {
     return (

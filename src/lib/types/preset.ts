@@ -1,11 +1,11 @@
+import type { BvaDimensionKey } from './bva'
+
 export interface IPresetWeights {
-  readonly quality: number
-  readonly speed: number
   readonly reasoning: number
-  readonly coding: number
-  readonly multimodal: number
-  readonly cost: number
   readonly korean: number
+  readonly coding: number
+  readonly knowledge: number
+  readonly cost: number
 }
 
 export interface IPresetRecommendation {
@@ -48,6 +48,6 @@ export interface IRankedModel {
   readonly provider: string
   readonly type: 'commercial' | 'open-source'
   readonly score: number
-  readonly breakdown: Record<string, number>
+  readonly breakdown: Record<BvaDimensionKey | 'cost', number>
   readonly infra: IRankedModelInfra | null
 }

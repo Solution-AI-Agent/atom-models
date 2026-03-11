@@ -85,11 +85,11 @@ export function ComparePricingRows({ models }: { readonly models: readonly IMode
 export function CompareScoresRows({ models }: { readonly models: readonly IModel[] }) {
   return (
     <>
-      <CompareRow label="품질" models={models} getValue={(m) => m.scores.quality} highlightMode="highest" />
-      <CompareRow label="속도" models={models} getValue={(m) => m.scores.speed} highlightMode="highest" />
-      <CompareRow label="추론" models={models} getValue={(m) => m.scores.reasoning} highlightMode="highest" />
-      <CompareRow label="코딩" models={models} getValue={(m) => m.scores.coding} highlightMode="highest" />
-      <CompareRow label="멀티모달" models={models} getValue={(m) => m.scores.multimodal} highlightMode="highest" />
+      <CompareRow label="SOC2" models={models} getValue={(m) => m.compliance.soc2 ? 'Yes' : 'No'} />
+      <CompareRow label="HIPAA" models={models} getValue={(m) => m.compliance.hipaa ? 'Yes' : 'No'} />
+      <CompareRow label="GDPR" models={models} getValue={(m) => m.compliance.gdpr ? 'Yes' : 'No'} />
+      <CompareRow label="On-Premise" models={models} getValue={(m) => m.compliance.onPremise ? 'Yes' : 'No'} />
+      <CompareRow label="Data Exclusion" models={models} getValue={(m) => m.compliance.dataExclusion ? 'Yes' : 'No'} />
     </>
   )
 }
@@ -104,7 +104,7 @@ export function CompareBenchmarkRows({ models }: { readonly models: readonly IMo
           key={key}
           label={key.toUpperCase()}
           models={models}
-          getValue={(m) => m.benchmarks?.[key] ?? null}
+          getValue={(m) => (m.benchmarks as Record<string, number | null>)?.[key] ?? null}
           format={(v) => v === null ? '-' : String(v)}
           highlightMode="highest"
         />

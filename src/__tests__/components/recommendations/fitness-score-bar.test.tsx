@@ -1,9 +1,11 @@
 import { render, screen } from '@testing-library/react'
 import { FitnessScoreBar } from '@/components/recommendations/fitness-score-bar'
 
+const mockBreakdown = { reasoning: 0, korean: 0, coding: 0, knowledge: 0, cost: 0 }
+
 const mockRankedModels = [
-  { slug: 'model-a', name: 'Model A', provider: 'TestCo', type: 'commercial' as const, score: 87.5, breakdown: {}, infra: null },
-  { slug: 'model-b', name: 'Model B', provider: 'TestCo', type: 'open-source' as const, score: 72.3, breakdown: {}, infra: null },
+  { slug: 'model-a', name: 'Model A', provider: 'TestCo', type: 'commercial' as const, score: 87.5, breakdown: mockBreakdown, infra: null },
+  { slug: 'model-b', name: 'Model B', provider: 'TestCo', type: 'open-source' as const, score: 72.3, breakdown: mockBreakdown, infra: null },
 ]
 
 describe('FitnessScoreBar', () => {

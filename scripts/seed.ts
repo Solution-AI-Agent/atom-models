@@ -36,6 +36,12 @@ async function seed() {
   const { PriceHistoryModel } = await import(
     '../src/lib/db/models/price-history'
   )
+  const { BenchmarkMetaModel } = await import(
+    '../src/lib/db/models/benchmark-meta'
+  )
+  const { BvaDimensionModel } = await import(
+    '../src/lib/db/models/bva-dimension'
+  )
 
   const dataDir = path.resolve(__dirname, '..', 'data')
 
@@ -96,6 +102,46 @@ async function seed() {
   }
   console.log(`GPUs: ${gpuCount} upserted`)
 
+  // --- Benchmark Meta ---
+  const benchmarkMetaRaw = JSON.parse(
+    fs.readFileSync(path.join(dataDir, 'benchmark-meta.json'), 'utf-8'),
+  ) as Record<string, unknown>[]
+
+  if (forceMode) {
+    await BenchmarkMetaModel.deleteMany({})
+  }
+
+  let benchmarkMetaCount = 0
+  for (const meta of benchmarkMetaRaw) {
+    await BenchmarkMetaModel.updateOne(
+      { key: (meta as any).key },
+      meta as any,
+      { upsert: true },
+    )
+    benchmarkMetaCount++
+  }
+  console.log(`Benchmark Meta: ${benchmarkMetaCount} upserted`)
+
+  // --- BVA Dimensions ---
+  const bvaDimensionsRaw = JSON.parse(
+    fs.readFileSync(path.join(dataDir, 'bva-dimensions.json'), 'utf-8'),
+  ) as Record<string, unknown>[]
+
+  if (forceMode) {
+    await BvaDimensionModel.deleteMany({})
+  }
+
+  let bvaDimensionCount = 0
+  for (const dim of bvaDimensionsRaw) {
+    await BvaDimensionModel.updateOne(
+      { key: (dim as any).key },
+      dim as any,
+      { upsert: true },
+    )
+    bvaDimensionCount++
+  }
+  console.log(`BVA Dimensions: ${bvaDimensionCount} upserted`)
+
   // --- Price History (initial records) ---
   const existingModels = await ModelModel.find().lean()
   let priceCount = 0
@@ -132,6 +178,8 @@ async function seed() {
   console.log(`Models:           ${modelCount}`)
   console.log(`Industry Presets: ${presetCount}`)
   console.log(`GPUs:             ${gpuCount}`)
+  console.log(`Benchmark Meta:   ${benchmarkMetaCount}`)
+  console.log(`BVA Dimensions:   ${bvaDimensionCount}`)
   console.log(`Price History:    ${priceCount}`)
   console.log('-------------------')
 

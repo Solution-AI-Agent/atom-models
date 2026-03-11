@@ -3,28 +3,66 @@
  */
 const mockModels = [
   {
-    name: 'Model A', slug: 'model-a', provider: 'ProviderA', type: 'commercial',
-    scores: { quality: 90, speed: 80, reasoning: 85, coding: 92, multimodal: 70 },
-    pricing: { input: 3, output: 15, cachingDiscount: 0, batchDiscount: 0 },
+    name: 'Claude 3.5 Sonnet', slug: 'claude-3-5-sonnet', provider: 'Anthropic',
+    type: 'commercial',
+    pricing: { input: 3, output: 15, cachingDiscount: 0.9, batchDiscount: 0.5 },
+    benchmarks: new Map([
+      ['mmlu', 88.7], ['gpqa', 65.0], ['swe_bench', 49.0],
+      ['aime', 16.0], ['hle', 8.7], ['mgsm', 91.6], ['kmmlu', 68.0],
+    ]),
     languageScores: new Map([['ko', 85]]),
+    compliance: { soc2: true, hipaa: false, gdpr: true, onPremise: false, dataExclusion: true },
+    infrastructure: null,
   },
   {
-    name: 'Model B', slug: 'model-b', provider: 'ProviderA', type: 'commercial',
-    scores: { quality: 70, speed: 95, reasoning: 60, coding: 65, multimodal: 50 },
-    pricing: { input: 0.15, output: 0.6, cachingDiscount: 0, batchDiscount: 0 },
-    languageScores: new Map([['ko', 75]]),
-  },
-  {
-    name: 'Model C', slug: 'model-c', provider: 'ProviderA', type: 'commercial',
-    scores: { quality: 80, speed: 85, reasoning: 75, coding: 80, multimodal: 60 },
-    pricing: { input: 1, output: 5, cachingDiscount: 0, batchDiscount: 0 },
+    name: 'GPT-4o', slug: 'gpt-4o', provider: 'OpenAI',
+    type: 'commercial',
+    pricing: { input: 2.5, output: 10, cachingDiscount: 0.5, batchDiscount: 0.5 },
+    benchmarks: new Map([
+      ['mmlu', 88.7], ['gpqa', 53.6], ['swe_bench', 33.2],
+      ['aime', 26.7], ['hle', 3.3], ['mgsm', 90.5], ['kmmlu', null],
+    ]),
     languageScores: new Map([['ko', 80]]),
+    compliance: { soc2: true, hipaa: true, gdpr: true, onPremise: false, dataExclusion: false },
+    infrastructure: null,
   },
   {
-    name: 'Model D', slug: 'model-d', provider: 'ProviderB', type: 'commercial',
-    scores: { quality: 75, speed: 90, reasoning: 70, coding: 70, multimodal: 55 },
-    pricing: { input: 0.5, output: 2, cachingDiscount: 0, batchDiscount: 0 },
-    languageScores: new Map([['ko', 78]]),
+    name: 'Cheap Model', slug: 'cheap-model', provider: 'OpenAI',
+    type: 'commercial',
+    pricing: { input: 0.15, output: 0.6, cachingDiscount: 0, batchDiscount: 0 },
+    benchmarks: new Map([
+      ['mmlu', 70.0], ['gpqa', 40.0], ['swe_bench', 20.0],
+      ['aime', 10.0], ['hle', 2.0], ['mgsm', 80.0], ['kmmlu', 50.0],
+    ]),
+    languageScores: new Map([['ko', 70]]),
+    compliance: { soc2: false, hipaa: false, gdpr: false, onPremise: false, dataExclusion: false },
+    infrastructure: null,
+  },
+  {
+    name: 'Third OpenAI', slug: 'third-openai', provider: 'OpenAI',
+    type: 'commercial',
+    pricing: { input: 5, output: 20, cachingDiscount: 0, batchDiscount: 0 },
+    benchmarks: new Map([
+      ['mmlu', 92.0], ['gpqa', 70.0], ['swe_bench', 55.0],
+      ['aime', 40.0], ['hle', 12.0], ['mgsm', 93.0], ['kmmlu', 72.0],
+    ]),
+    languageScores: new Map([['ko', 90]]),
+    compliance: { soc2: true, hipaa: true, gdpr: true, onPremise: false, dataExclusion: true },
+    infrastructure: null,
+  },
+  {
+    name: 'OSS Model', slug: 'oss-model', provider: 'Meta',
+    type: 'open-source',
+    pricing: { input: 0, output: 0, cachingDiscount: 0, batchDiscount: 0 },
+    benchmarks: new Map([
+      ['mmlu', 75.0], ['gpqa', 45.0], ['swe_bench', 30.0],
+      ['aime', 15.0], ['hle', 4.0], ['mgsm', 85.0], ['kmmlu', 55.0],
+    ]),
+    languageScores: new Map([['ko', 75]]),
+    compliance: { soc2: false, hipaa: false, gdpr: false, onPremise: true, dataExclusion: true },
+    parameterSize: 70, activeParameters: 70, architecture: 'dense',
+    contextWindow: 128000, license: 'Llama 3.1',
+    infrastructure: { minGpu: '1x A100 80GB', vramInt4: 35, estimatedTps: 45 },
   },
 ]
 
@@ -42,8 +80,11 @@ import { getRankedModelsForPreset } from '@/lib/services/recommendation.service'
 
 const mockPreset = {
   weights: {
-    quality: 0.20, speed: 0.25, reasoning: 0.10,
-    coding: 0, multimodal: 0, cost: 0.20, korean: 0.25,
+    reasoning: 0.25,
+    korean: 0.20,
+    coding: 0.15,
+    knowledge: 0.15,
+    cost: 0.25,
   },
 }
 
@@ -55,6 +96,26 @@ describe('Recommendation Service', () => {
     expect(result[0].slug).toBeDefined()
     expect(result[0].score).toBeGreaterThan(0)
     expect(result[0].breakdown).toBeDefined()
+  })
+
+  it('should include BVA dimension keys in breakdown', async () => {
+    const result = await getRankedModelsForPreset(mockPreset as any)
+
+    const model = result[0]
+    expect(model.breakdown).toHaveProperty('reasoning')
+    expect(model.breakdown).toHaveProperty('korean')
+    expect(model.breakdown).toHaveProperty('coding')
+    expect(model.breakdown).toHaveProperty('knowledge')
+    expect(model.breakdown).toHaveProperty('cost')
+  })
+
+  it('should not include old dimension keys in breakdown', async () => {
+    const result = await getRankedModelsForPreset(mockPreset as any)
+
+    const model = result[0]
+    expect(model.breakdown).not.toHaveProperty('quality')
+    expect(model.breakdown).not.toHaveProperty('speed')
+    expect(model.breakdown).not.toHaveProperty('multimodal')
   })
 
   it('should limit to max 2 models per provider', async () => {
@@ -70,10 +131,38 @@ describe('Recommendation Service', () => {
     }
   })
 
+  it('should give OSS models costScore of 100', async () => {
+    const result = await getRankedModelsForPreset(mockPreset as any)
+
+    const ossModel = result.find((m) => m.type === 'open-source')
+    expect(ossModel).toBeDefined()
+    // costScore * weight = 100 * 0.25 = 25
+    expect(ossModel!.breakdown.cost).toBeCloseTo(25, 1)
+  })
+
+  it('should include infra for open-source models only', async () => {
+    const result = await getRankedModelsForPreset(mockPreset as any)
+
+    const commercial = result.find((m) => m.type === 'commercial')
+    const oss = result.find((m) => m.type === 'open-source')
+
+    expect(commercial?.infra).toBeNull()
+    expect(oss?.infra).not.toBeNull()
+    expect(oss?.infra?.minGpu).toBe('1x A100 80GB')
+  })
+
   it('should include models from multiple providers when available', async () => {
     const result = await getRankedModelsForPreset(mockPreset as any)
 
     const providers = new Set(result.map((m) => m.provider))
     expect(providers.size).toBeGreaterThan(1)
+  })
+
+  it('should separate commercial and OSS in output', async () => {
+    const result = await getRankedModelsForPreset(mockPreset as any)
+
+    const types = new Set(result.map((m) => m.type))
+    expect(types.has('commercial')).toBe(true)
+    expect(types.has('open-source')).toBe(true)
   })
 })

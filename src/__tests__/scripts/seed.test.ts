@@ -100,7 +100,7 @@ describe('Seed helpers', () => {
     const raw = {
       category: 'Test Category',
       categorySlug: 'test-category',
-      weights: { quality: 0.5, speed: 0.5 },
+      weights: { reasoning: 0.3, korean: 0.2, coding: 0, knowledge: 0.2, cost: 0.3 },
     }
     const parsed = parsePresetData(raw)
     expect(parsed.category).toBe('Test Category')

@@ -13,16 +13,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 2.5,
-      "output": 10.0,
+      "output": 10,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 88,
-      "speed": 82,
-      "reasoning": 82,
-      "coding": 85,
-      "multimodal": 90
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 82,
@@ -36,7 +36,8 @@
       "swe_bench": 33.2,
       "aime": 26.7,
       "hle": 3.3,
-      "mgsm": 90.5
+      "mgsm": 90.5,
+      "kmmlu": 70.57
     },
     "infrastructure": null,
     "releaseDate": "2024-05-13",
@@ -65,12 +66,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 72,
-      "speed": 95,
-      "reasoning": 65,
-      "coding": 70,
-      "multimodal": 75
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 70,
@@ -79,12 +80,12 @@
       "zh": 74
     },
     "benchmarks": {
-      "mmlu": 82.0,
-      "gpqa": 43.0,
+      "mmlu": 82,
+      "gpqa": 43,
       "swe_bench": 21.5,
-      "aime": 12.0,
-      "hle": 1.0,
-      "mgsm": 87.0
+      "aime": 12,
+      "hle": 1,
+      "mgsm": 87
     },
     "infrastructure": null,
     "releaseDate": "2024-07-18",
@@ -108,17 +109,17 @@
     "maxOutput": 16384,
     "license": "Proprietary",
     "pricing": {
-      "input": 75.0,
-      "output": 150.0,
+      "input": 75,
+      "output": 150,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 90,
-      "speed": 55,
-      "reasoning": 80,
-      "coding": 82,
-      "multimodal": 85
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 85,
@@ -128,11 +129,11 @@
     },
     "benchmarks": {
       "mmlu": 90.2,
-      "gpqa": 65.0,
-      "swe_bench": 38.0,
-      "aime": 36.0,
+      "gpqa": 65,
+      "swe_bench": 38,
+      "aime": 36,
       "hle": 6.2,
-      "mgsm": 91.0
+      "mgsm": 91
     },
     "infrastructure": null,
     "releaseDate": "2025-02-27",
@@ -156,17 +157,17 @@
     "maxOutput": 100000,
     "license": "Proprietary",
     "pricing": {
-      "input": 15.0,
-      "output": 60.0,
+      "input": 15,
+      "output": 60,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 92,
-      "speed": 40,
-      "reasoning": 97,
-      "coding": 92,
-      "multimodal": 70
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 85,
@@ -176,11 +177,11 @@
     },
     "benchmarks": {
       "mmlu": 91.8,
-      "gpqa": 78.0,
+      "gpqa": 78,
       "swe_bench": 48.9,
       "aime": 83.3,
       "hle": 9.1,
-      "mgsm": 94.0
+      "mgsm": 94
     },
     "infrastructure": null,
     "releaseDate": "2024-12-17",
@@ -209,12 +210,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 82,
-      "speed": 70,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 30
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 78,
@@ -228,7 +229,7 @@
       "swe_bench": 43.7,
       "aime": 86.5,
       "hle": 5.8,
-      "mgsm": 91.0
+      "mgsm": 91
     },
     "infrastructure": null,
     "releaseDate": "2025-01-31",
@@ -252,17 +253,17 @@
     "maxOutput": 100000,
     "license": "Proprietary",
     "pricing": {
-      "input": 2.0,
-      "output": 8.0,
+      "input": 2,
+      "output": 8,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 93,
-      "speed": 35,
-      "reasoning": 97,
-      "coding": 94,
-      "multimodal": 75
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 85,
@@ -275,8 +276,8 @@
       "gpqa": 83.4,
       "swe_bench": 69.1,
       "aime": 98.1,
-      "hle": 14.0,
-      "mgsm": 95.0
+      "hle": 14,
+      "mgsm": 95
     },
     "infrastructure": null,
     "releaseDate": "2025-04-16",
@@ -305,12 +306,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 85,
-      "speed": 72,
-      "reasoning": 93,
-      "coding": 93,
-      "multimodal": 78
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 80,
@@ -319,12 +320,12 @@
       "zh": 84
     },
     "benchmarks": {
-      "mmlu": 88.0,
+      "mmlu": 88,
       "gpqa": 81.4,
       "swe_bench": 49.2,
       "aime": 92.7,
       "hle": 10.5,
-      "mgsm": 93.0
+      "mgsm": 93
     },
     "infrastructure": null,
     "releaseDate": "2025-04-16",
@@ -348,17 +349,17 @@
     "maxOutput": 32768,
     "license": "Proprietary",
     "pricing": {
-      "input": 2.0,
-      "output": 8.0,
+      "input": 2,
+      "output": 8,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 88,
-      "speed": 78,
-      "reasoning": 82,
-      "coding": 90,
-      "multimodal": 85
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 83,
@@ -367,12 +368,12 @@
       "zh": 86
     },
     "benchmarks": {
-      "mmlu": 89.0,
-      "gpqa": 60.0,
+      "mmlu": 89,
+      "gpqa": 60,
       "swe_bench": 54.6,
-      "aime": 30.0,
-      "hle": 4.0,
-      "mgsm": 91.0
+      "aime": 30,
+      "hle": 4,
+      "mgsm": 91
     },
     "infrastructure": null,
     "releaseDate": "2025-04-14",
@@ -401,12 +402,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 78,
-      "speed": 90,
-      "reasoning": 72,
-      "coding": 80,
-      "multimodal": 78
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 75,
@@ -415,12 +416,12 @@
       "zh": 80
     },
     "benchmarks": {
-      "mmlu": 85.0,
-      "gpqa": 48.0,
-      "swe_bench": 38.0,
-      "aime": 18.0,
-      "hle": 2.0,
-      "mgsm": 88.0
+      "mmlu": 85,
+      "gpqa": 48,
+      "swe_bench": 38,
+      "aime": 18,
+      "hle": 2,
+      "mgsm": 88
     },
     "infrastructure": null,
     "releaseDate": "2025-04-14",
@@ -449,12 +450,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 65,
-      "speed": 96,
-      "reasoning": 55,
-      "coding": 62,
-      "multimodal": 65
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 62,
@@ -463,12 +464,12 @@
       "zh": 68
     },
     "benchmarks": {
-      "mmlu": 78.0,
-      "gpqa": 35.0,
-      "swe_bench": 22.0,
-      "aime": 8.0,
+      "mmlu": 78,
+      "gpqa": 35,
+      "swe_bench": 22,
+      "aime": 8,
       "hle": 0.8,
-      "mgsm": 80.0
+      "mgsm": 80
     },
     "infrastructure": null,
     "releaseDate": "2025-04-14",
@@ -493,16 +494,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 1.25,
-      "output": 10.0,
+      "output": 10,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 93,
-      "speed": 65,
-      "reasoning": 95,
-      "coding": 94,
-      "multimodal": 92
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 88,
@@ -512,11 +513,11 @@
     },
     "benchmarks": {
       "mmlu": 93.5,
-      "gpqa": 80.0,
-      "swe_bench": 55.0,
-      "aime": 88.0,
-      "hle": 15.0,
-      "mgsm": 95.0
+      "gpqa": 80,
+      "swe_bench": 55,
+      "aime": 88,
+      "hle": 15,
+      "mgsm": 95
     },
     "infrastructure": null,
     "releaseDate": "2025-06-15",
@@ -541,16 +542,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 1.75,
-      "output": 14.0,
+      "output": 14,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 95,
-      "speed": 60,
-      "reasoning": 96,
-      "coding": 95,
-      "multimodal": 93
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 90,
@@ -559,12 +560,12 @@
       "zh": 92
     },
     "benchmarks": {
-      "mmlu": 94.0,
-      "gpqa": 82.0,
-      "swe_bench": 60.0,
-      "aime": 90.0,
-      "hle": 18.0,
-      "mgsm": 96.0
+      "mmlu": 94,
+      "gpqa": 82,
+      "swe_bench": 60,
+      "aime": 90,
+      "hle": 18,
+      "mgsm": 96
     },
     "infrastructure": null,
     "releaseDate": "2025-11-10",
@@ -589,16 +590,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 2.5,
-      "output": 15.0,
+      "output": 15,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 96,
-      "speed": 55,
-      "reasoning": 97,
-      "coding": 96,
-      "multimodal": 94
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 92,
@@ -607,12 +608,12 @@
       "zh": 93
     },
     "benchmarks": {
-      "mmlu": 95.0,
-      "gpqa": 85.0,
-      "swe_bench": 65.0,
-      "aime": 93.0,
-      "hle": 22.0,
-      "mgsm": 97.0
+      "mmlu": 95,
+      "gpqa": 85,
+      "swe_bench": 65,
+      "aime": 93,
+      "hle": 22,
+      "mgsm": 97
     },
     "infrastructure": null,
     "releaseDate": "2026-03-05",
@@ -636,17 +637,17 @@
     "maxOutput": 32000,
     "license": "Proprietary",
     "pricing": {
-      "input": 5.0,
-      "output": 25.0,
+      "input": 5,
+      "output": 25,
       "cachingDiscount": 0.9,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 95,
-      "speed": 45,
-      "reasoning": 95,
-      "coding": 96,
-      "multimodal": 82
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 90,
@@ -660,7 +661,7 @@
       "swe_bench": 80.9,
       "aime": 76.7,
       "hle": 9.3,
-      "mgsm": 95.0
+      "mgsm": 95
     },
     "infrastructure": null,
     "releaseDate": "2025-11-24",
@@ -684,17 +685,17 @@
     "maxOutput": 16000,
     "license": "Proprietary",
     "pricing": {
-      "input": 3.0,
-      "output": 15.0,
+      "input": 3,
+      "output": 15,
       "cachingDiscount": 0.9,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 90,
-      "speed": 72,
-      "reasoning": 88,
-      "coding": 93,
-      "multimodal": 80
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 88,
@@ -703,12 +704,12 @@
       "zh": 86
     },
     "benchmarks": {
-      "mmlu": 89.0,
+      "mmlu": 89,
       "gpqa": 83.4,
       "swe_bench": 77.2,
-      "aime": 55.0,
+      "aime": 55,
       "hle": 5.5,
-      "mgsm": 93.0
+      "mgsm": 93
     },
     "infrastructure": null,
     "releaseDate": "2025-09-29",
@@ -733,16 +734,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 0.8,
-      "output": 4.0,
+      "output": 4,
       "cachingDiscount": 0.9,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 75,
-      "speed": 95,
-      "reasoning": 68,
-      "coding": 74,
-      "multimodal": 65
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 75,
@@ -751,12 +752,12 @@
       "zh": 78
     },
     "benchmarks": {
-      "mmlu": 83.0,
+      "mmlu": 83,
       "gpqa": 41.5,
-      "swe_bench": 24.0,
-      "aime": 15.0,
+      "swe_bench": 24,
+      "aime": 15,
       "hle": 1.5,
-      "mgsm": 88.0
+      "mgsm": 88
     },
     "infrastructure": null,
     "releaseDate": "2024-10-29",
@@ -780,17 +781,17 @@
     "maxOutput": 8192,
     "license": "Proprietary",
     "pricing": {
-      "input": 1.0,
-      "output": 5.0,
+      "input": 1,
+      "output": 5,
       "cachingDiscount": 0.9,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 78,
-      "speed": 92,
-      "reasoning": 72,
-      "coding": 78,
-      "multimodal": 68
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 78,
@@ -799,12 +800,12 @@
       "zh": 80
     },
     "benchmarks": {
-      "mmlu": 85.0,
-      "gpqa": 45.0,
-      "swe_bench": 30.0,
-      "aime": 20.0,
-      "hle": 2.0,
-      "mgsm": 89.0
+      "mmlu": 85,
+      "gpqa": 45,
+      "swe_bench": 30,
+      "aime": 20,
+      "hle": 2,
+      "mgsm": 89
     },
     "infrastructure": null,
     "releaseDate": "2025-05-22",
@@ -828,17 +829,17 @@
     "maxOutput": 32000,
     "license": "Proprietary",
     "pricing": {
-      "input": 5.0,
-      "output": 25.0,
+      "input": 5,
+      "output": 25,
       "cachingDiscount": 0.9,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 97,
-      "speed": 42,
-      "reasoning": 97,
-      "coding": 97,
-      "multimodal": 85
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 92,
@@ -847,13 +848,13 @@
       "zh": 90
     },
     "benchmarks": {
-      "mmlu": 92.0,
-      "gpqa": 78.0,
-      "swe_bench": 72.0,
-      "aime": 82.0,
-      "hle": 12.0,
+      "mmlu": 92,
+      "gpqa": 78,
+      "swe_bench": 72,
+      "aime": 82,
+      "hle": 12,
       "arc_agi_2": 68.8,
-      "mgsm": 96.0
+      "mgsm": 96
     },
     "infrastructure": null,
     "releaseDate": "2026-02-05",
@@ -877,17 +878,17 @@
     "maxOutput": 16000,
     "license": "Proprietary",
     "pricing": {
-      "input": 3.0,
-      "output": 15.0,
+      "input": 3,
+      "output": 15,
       "cachingDiscount": 0.9,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 93,
-      "speed": 70,
-      "reasoning": 92,
-      "coding": 95,
-      "multimodal": 82
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 90,
@@ -896,12 +897,12 @@
       "zh": 88
     },
     "benchmarks": {
-      "mmlu": 91.0,
-      "gpqa": 72.0,
+      "mmlu": 91,
+      "gpqa": 72,
       "swe_bench": 79.6,
-      "aime": 68.0,
-      "hle": 8.0,
-      "mgsm": 95.0
+      "aime": 68,
+      "hle": 8,
+      "mgsm": 95
     },
     "infrastructure": null,
     "releaseDate": "2026-02-17",
@@ -926,16 +927,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 1.25,
-      "output": 10.0,
+      "output": 10,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 93,
-      "speed": 60,
-      "reasoning": 94,
-      "coding": 94,
-      "multimodal": 95
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 88,
@@ -944,12 +945,12 @@
       "zh": 90
     },
     "benchmarks": {
-      "mmlu": 92.0,
-      "gpqa": 74.0,
+      "mmlu": 92,
+      "gpqa": 74,
       "swe_bench": 63.8,
       "aime": 86.7,
       "hle": 18.8,
-      "mgsm": 94.0
+      "mgsm": 94
     },
     "infrastructure": null,
     "releaseDate": "2025-03-25",
@@ -978,12 +979,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 78,
-      "speed": 95,
-      "reasoning": 72,
-      "coding": 75,
-      "multimodal": 82
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 75,
@@ -993,9 +994,9 @@
     },
     "benchmarks": {
       "mmlu": 84.5,
-      "gpqa": 48.0,
-      "swe_bench": 28.0,
-      "aime": 27.0,
+      "gpqa": 48,
+      "swe_bench": 28,
+      "aime": 27,
       "hle": 2.5,
       "mgsm": 89.5
     },
@@ -1026,12 +1027,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 85,
-      "speed": 90,
-      "reasoning": 88,
-      "coding": 86,
-      "multimodal": 88
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 82,
@@ -1041,11 +1042,11 @@
     },
     "benchmarks": {
       "mmlu": 88.5,
-      "gpqa": 67.0,
+      "gpqa": 67,
       "swe_bench": 49.2,
       "aime": 73.3,
       "hle": 11.2,
-      "mgsm": 92.0
+      "mgsm": 92
     },
     "infrastructure": null,
     "releaseDate": "2025-06-17",
@@ -1074,12 +1075,12 @@
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 72,
-      "speed": 96,
-      "reasoning": 60,
-      "coding": 65,
-      "multimodal": 78
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 68,
@@ -1088,12 +1089,12 @@
       "zh": 72
     },
     "benchmarks": {
-      "mmlu": 80.0,
-      "gpqa": 38.0,
-      "swe_bench": 20.0,
-      "aime": 15.0,
-      "hle": 1.0,
-      "mgsm": 82.0
+      "mmlu": 80,
+      "gpqa": 38,
+      "swe_bench": 20,
+      "aime": 15,
+      "hle": 1,
+      "mgsm": 82
     },
     "infrastructure": null,
     "releaseDate": "2025-06-17",
@@ -1118,16 +1119,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 1.5,
-      "output": 10.0,
+      "output": 10,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 94,
-      "speed": 58,
-      "reasoning": 95,
-      "coding": 93,
-      "multimodal": 96
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 90,
@@ -1136,12 +1137,12 @@
       "zh": 92
     },
     "benchmarks": {
-      "mmlu": 93.0,
-      "gpqa": 78.0,
-      "swe_bench": 65.0,
-      "aime": 90.0,
-      "hle": 20.0,
-      "mgsm": 95.0
+      "mmlu": 93,
+      "gpqa": 78,
+      "swe_bench": 65,
+      "aime": 90,
+      "hle": 20,
+      "mgsm": 95
     },
     "infrastructure": null,
     "releaseDate": "2025-11-15",
@@ -1166,16 +1167,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 0.5,
-      "output": 3.0,
+      "output": 3,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 88,
-      "speed": 88,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 90
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 85,
@@ -1184,12 +1185,12 @@
       "zh": 87
     },
     "benchmarks": {
-      "mmlu": 90.0,
-      "gpqa": 70.0,
-      "swe_bench": 78.0,
-      "aime": 78.0,
-      "hle": 13.0,
-      "mgsm": 93.0
+      "mmlu": 90,
+      "gpqa": 70,
+      "swe_bench": 78,
+      "aime": 78,
+      "hle": 13,
+      "mgsm": 93
     },
     "infrastructure": null,
     "releaseDate": "2025-12-05",
@@ -1213,17 +1214,17 @@
     "maxOutput": 65536,
     "license": "Proprietary",
     "pricing": {
-      "input": 2.0,
-      "output": 12.0,
+      "input": 2,
+      "output": 12,
       "cachingDiscount": 0.5,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 96,
-      "speed": 55,
-      "reasoning": 97,
-      "coding": 95,
-      "multimodal": 97
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 92,
@@ -1233,12 +1234,12 @@
     },
     "benchmarks": {
       "mmlu": 94.5,
-      "gpqa": 82.0,
-      "swe_bench": 70.0,
-      "aime": 92.0,
-      "hle": 25.0,
+      "gpqa": 82,
+      "swe_bench": 70,
+      "aime": 92,
+      "hle": 25,
       "arc_agi_2": 77.1,
-      "mgsm": 96.0
+      "mgsm": 96
     },
     "infrastructure": null,
     "releaseDate": "2026-02-19",
@@ -1262,17 +1263,17 @@
     "maxOutput": 8192,
     "license": "Gemma",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 72,
-      "reasoning": 72,
-      "coding": 74,
-      "multimodal": 75
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 68,
@@ -1281,12 +1282,12 @@
       "zh": 75
     },
     "benchmarks": {
-      "mmlu": 83.0,
-      "gpqa": 45.0,
-      "swe_bench": 25.0,
-      "aime": 22.0,
+      "mmlu": 83,
+      "gpqa": 45,
+      "swe_bench": 25,
+      "aime": 22,
       "hle": 1.5,
-      "mgsm": 86.0
+      "mgsm": 86
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -1327,17 +1328,17 @@
     "maxOutput": 8192,
     "license": "Gemma",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 70,
-      "speed": 85,
-      "reasoning": 65,
-      "coding": 66,
-      "multimodal": 68
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 60,
@@ -1346,12 +1347,12 @@
       "zh": 68
     },
     "benchmarks": {
-      "mmlu": 79.0,
-      "gpqa": 36.0,
-      "swe_bench": 18.0,
-      "aime": 14.0,
+      "mmlu": 79,
+      "gpqa": 36,
+      "swe_bench": 18,
+      "aime": 14,
       "hle": 0.8,
-      "mgsm": 80.0
+      "mgsm": 80
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -1392,17 +1393,17 @@
     "maxOutput": 8192,
     "license": "Mistral Research",
     "pricing": {
-      "input": 2.0,
-      "output": 6.0,
+      "input": 2,
+      "output": 6,
       "cachingDiscount": 0,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 84,
-      "speed": 60,
-      "reasoning": 80,
-      "coding": 82,
-      "multimodal": 72
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 70,
@@ -1412,11 +1413,11 @@
     },
     "benchmarks": {
       "mmlu": 86.5,
-      "gpqa": 56.0,
-      "swe_bench": 32.0,
-      "aime": 25.0,
+      "gpqa": 56,
+      "swe_bench": 32,
+      "aime": 25,
       "hle": 2.8,
-      "mgsm": 90.0
+      "mgsm": 90
     },
     "infrastructure": null,
     "releaseDate": "2024-11-18",
@@ -1445,12 +1446,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 70,
-      "speed": 90,
-      "reasoning": 62,
-      "coding": 68,
-      "multimodal": 40
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 60,
@@ -1459,12 +1460,12 @@
       "zh": 65
     },
     "benchmarks": {
-      "mmlu": 81.0,
-      "gpqa": 38.0,
-      "swe_bench": 18.0,
-      "aime": 10.0,
-      "hle": 1.0,
-      "mgsm": 83.0
+      "mmlu": 81,
+      "gpqa": 38,
+      "swe_bench": 18,
+      "aime": 10,
+      "hle": 1,
+      "mgsm": 83
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -1505,16 +1506,16 @@
     "license": "Proprietary",
     "pricing": {
       "input": 0.4,
-      "output": 2.0,
+      "output": 2,
       "cachingDiscount": 0,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 85,
-      "speed": 72,
-      "reasoning": 82,
-      "coding": 84,
-      "multimodal": 78
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 72,
@@ -1523,12 +1524,12 @@
       "zh": 78
     },
     "benchmarks": {
-      "mmlu": 87.0,
-      "gpqa": 58.0,
-      "swe_bench": 40.0,
-      "aime": 35.0,
+      "mmlu": 87,
+      "gpqa": 58,
+      "swe_bench": 40,
+      "aime": 35,
       "hle": 3.5,
-      "mgsm": 90.0
+      "mgsm": 90
     },
     "infrastructure": null,
     "releaseDate": "2025-05-07",
@@ -1552,17 +1553,17 @@
     "maxOutput": 16384,
     "license": "Apache 2.0",
     "pricing": {
-      "input": 2.0,
-      "output": 6.0,
+      "input": 2,
+      "output": 6,
       "cachingDiscount": 0,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 88,
-      "speed": 62,
-      "reasoning": 86,
-      "coding": 88,
-      "multimodal": 80
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 75,
@@ -1571,12 +1572,12 @@
       "zh": 80
     },
     "benchmarks": {
-      "mmlu": 89.0,
-      "gpqa": 62.0,
-      "swe_bench": 42.0,
-      "aime": 40.0,
-      "hle": 4.0,
-      "mgsm": 92.0
+      "mmlu": 89,
+      "gpqa": 62,
+      "swe_bench": 42,
+      "aime": 40,
+      "hle": 4,
+      "mgsm": 92
     },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
@@ -1621,12 +1622,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 88,
-      "speed": 75,
-      "reasoning": 82,
-      "coding": 88,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 72,
@@ -1637,10 +1638,10 @@
     "benchmarks": {
       "mmlu": 88.5,
       "gpqa": 59.1,
-      "swe_bench": 42.0,
+      "swe_bench": 42,
       "aime": 39.2,
       "hle": 3.5,
-      "mgsm": 90.0
+      "mgsm": 90
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -1685,12 +1686,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 90,
-      "speed": 40,
-      "reasoning": 96,
-      "coding": 90,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 75,
@@ -1704,7 +1705,7 @@
       "swe_bench": 49.2,
       "aime": 79.8,
       "hle": 8.5,
-      "mgsm": 94.0
+      "mgsm": 94
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -1749,12 +1750,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 92,
-      "speed": 38,
-      "reasoning": 97,
-      "coding": 92,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 78,
@@ -1763,12 +1764,12 @@
       "zh": 97
     },
     "benchmarks": {
-      "mmlu": 91.0,
-      "gpqa": 75.0,
-      "swe_bench": 52.0,
-      "aime": 85.0,
-      "hle": 10.0,
-      "mgsm": 94.0
+      "mmlu": 91,
+      "gpqa": 75,
+      "swe_bench": 52,
+      "aime": 85,
+      "hle": 10,
+      "mgsm": 94
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -1813,12 +1814,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 92,
-      "speed": 72,
-      "reasoning": 93,
-      "coding": 90,
-      "multimodal": 20
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 78,
@@ -1828,11 +1829,11 @@
     },
     "benchmarks": {
       "mmlu": 91.5,
-      "gpqa": 72.0,
-      "swe_bench": 58.0,
-      "aime": 75.0,
-      "hle": 9.0,
-      "mgsm": 94.0
+      "gpqa": 72,
+      "swe_bench": 58,
+      "aime": 75,
+      "hle": 9,
+      "mgsm": 94
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -1872,17 +1873,17 @@
     "maxOutput": 8192,
     "license": "Apache 2.0",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 88,
-      "speed": 65,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 75,
@@ -1892,11 +1893,11 @@
     },
     "benchmarks": {
       "mmlu": 89.5,
-      "gpqa": 68.0,
-      "swe_bench": 45.0,
+      "gpqa": 68,
+      "swe_bench": 45,
       "aime": 56.7,
-      "hle": 6.0,
-      "mgsm": 92.0
+      "hle": 6,
+      "mgsm": 92
     },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
@@ -1936,17 +1937,17 @@
     "maxOutput": 8192,
     "license": "Apache 2.0",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 82,
-      "speed": 68,
-      "reasoning": 84,
-      "coding": 82,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 70,
@@ -1956,11 +1957,11 @@
     },
     "benchmarks": {
       "mmlu": 85.5,
-      "gpqa": 55.0,
-      "swe_bench": 35.0,
-      "aime": 43.0,
+      "gpqa": 55,
+      "swe_bench": 35,
+      "aime": 43,
       "hle": 3.5,
-      "mgsm": 89.0
+      "mgsm": 89
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -2001,17 +2002,17 @@
     "maxOutput": 8192,
     "license": "Apache 2.0",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 68,
-      "speed": 92,
-      "reasoning": 65,
-      "coding": 66,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 60,
@@ -2020,12 +2021,12 @@
       "zh": 90
     },
     "benchmarks": {
-      "mmlu": 78.0,
-      "gpqa": 38.0,
-      "swe_bench": 18.0,
-      "aime": 22.0,
-      "hle": 1.0,
-      "mgsm": 82.0
+      "mmlu": 78,
+      "gpqa": 38,
+      "swe_bench": 18,
+      "aime": 22,
+      "hle": 1,
+      "mgsm": 82
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -2066,17 +2067,17 @@
     "maxOutput": 8192,
     "license": "Apache 2.0",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 70,
-      "speed": 92,
-      "reasoning": 68,
-      "coding": 68,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 62,
@@ -2085,12 +2086,12 @@
       "zh": 90
     },
     "benchmarks": {
-      "mmlu": 80.0,
-      "gpqa": 42.0,
-      "swe_bench": 22.0,
-      "aime": 28.0,
+      "mmlu": 80,
+      "gpqa": 42,
+      "swe_bench": 22,
+      "aime": 28,
       "hle": 1.5,
-      "mgsm": 82.0
+      "mgsm": 82
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -2131,17 +2132,17 @@
     "maxOutput": 16384,
     "license": "Apache 2.0",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 92,
-      "speed": 65,
-      "reasoning": 93,
-      "coding": 92,
-      "multimodal": 20
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 80,
@@ -2154,8 +2155,8 @@
       "gpqa": 88.4,
       "swe_bench": 76.4,
       "aime": 91.3,
-      "hle": 10.0,
-      "mgsm": 94.0
+      "hle": 10,
+      "mgsm": 94
     },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
@@ -2195,17 +2196,17 @@
     "maxOutput": 16384,
     "license": "Proprietary",
     "pricing": {
-      "input": 3.0,
-      "output": 15.0,
+      "input": 3,
+      "output": 15,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 88,
-      "speed": 65,
-      "reasoning": 86,
-      "coding": 85,
-      "multimodal": 60
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": false,
+      "dataExclusion": false
     },
     "languageScores": {
       "ko": 70,
@@ -2214,12 +2215,12 @@
       "zh": 75
     },
     "benchmarks": {
-      "mmlu": 88.0,
-      "gpqa": 65.0,
-      "swe_bench": 38.0,
-      "aime": 60.0,
-      "hle": 5.0,
-      "mgsm": 90.0
+      "mmlu": 88,
+      "gpqa": 65,
+      "swe_bench": 38,
+      "aime": 60,
+      "hle": 5,
+      "mgsm": 90
     },
     "infrastructure": null,
     "releaseDate": "2025-02-19",
@@ -2248,12 +2249,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 74,
-      "speed": 88,
-      "reasoning": 76,
-      "coding": 72,
-      "multimodal": 45
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": false,
+      "dataExclusion": false
     },
     "languageScores": {
       "ko": 62,
@@ -2262,12 +2263,12 @@
       "zh": 68
     },
     "benchmarks": {
-      "mmlu": 83.0,
-      "gpqa": 48.0,
-      "swe_bench": 25.0,
-      "aime": 35.0,
+      "mmlu": 83,
+      "gpqa": 48,
+      "swe_bench": 25,
+      "aime": 35,
       "hle": 2.5,
-      "mgsm": 86.0
+      "mgsm": 86
     },
     "infrastructure": null,
     "releaseDate": "2025-06-10",
@@ -2291,17 +2292,17 @@
     "maxOutput": 32768,
     "license": "Proprietary",
     "pricing": {
-      "input": 3.0,
-      "output": 15.0,
+      "input": 3,
+      "output": 15,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 90,
-      "speed": 60,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 75
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": false,
+      "dataExclusion": false
     },
     "languageScores": {
       "ko": 75,
@@ -2310,12 +2311,12 @@
       "zh": 80
     },
     "benchmarks": {
-      "mmlu": 90.0,
-      "gpqa": 72.0,
-      "swe_bench": 48.0,
-      "aime": 72.0,
-      "hle": 8.0,
-      "mgsm": 92.0
+      "mmlu": 90,
+      "gpqa": 72,
+      "swe_bench": 48,
+      "aime": 72,
+      "hle": 8,
+      "mgsm": 92
     },
     "infrastructure": null,
     "releaseDate": "2025-07-15",
@@ -2344,12 +2345,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 90,
-      "speed": 75,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 70
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": false,
+      "dataExclusion": false
     },
     "languageScores": {
       "ko": 72,
@@ -2358,12 +2359,12 @@
       "zh": 78
     },
     "benchmarks": {
-      "mmlu": 88.0,
-      "gpqa": 82.0,
-      "swe_bench": 50.0,
-      "aime": 78.0,
-      "hle": 8.0,
-      "mgsm": 92.0
+      "mmlu": 88,
+      "gpqa": 82,
+      "swe_bench": 50,
+      "aime": 78,
+      "hle": 8,
+      "mgsm": 92
     },
     "infrastructure": null,
     "releaseDate": "2025-09-19",
@@ -2392,12 +2393,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 94,
-      "speed": 72,
-      "reasoning": 93,
-      "coding": 92,
-      "multimodal": 80
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": false,
+      "dataExclusion": false
     },
     "languageScores": {
       "ko": 82,
@@ -2406,12 +2407,12 @@
       "zh": 85
     },
     "benchmarks": {
-      "mmlu": 92.0,
-      "gpqa": 78.0,
-      "swe_bench": 55.0,
-      "aime": 85.0,
-      "hle": 14.0,
-      "mgsm": 94.0,
+      "mmlu": 92,
+      "gpqa": 78,
+      "swe_bench": 55,
+      "aime": 85,
+      "hle": 14,
+      "mgsm": 94,
       "lmarena_elo": 1483
     },
     "infrastructure": null,
@@ -2437,16 +2438,16 @@
     "license": "CC-BY-NC-4.0",
     "pricing": {
       "input": 2.5,
-      "output": 10.0,
+      "output": 10,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 55,
-      "reasoning": 68,
-      "coding": 65,
-      "multimodal": 10
+    "compliance": {
+      "soc2": true,
+      "hipaa": false,
+      "gdpr": true,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 72,
@@ -2455,12 +2456,12 @@
       "zh": 72
     },
     "benchmarks": {
-      "mmlu": 82.0,
-      "gpqa": 40.0,
-      "swe_bench": 20.0,
-      "aime": 12.0,
-      "hle": 1.0,
-      "mgsm": 85.0
+      "mmlu": 82,
+      "gpqa": 40,
+      "swe_bench": 20,
+      "aime": 12,
+      "hle": 1,
+      "mgsm": 85
     },
     "infrastructure": null,
     "releaseDate": "2024-08-01",
@@ -2489,12 +2490,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 68,
-      "speed": 78,
-      "reasoning": 58,
-      "coding": 55,
-      "multimodal": 10
+    "compliance": {
+      "soc2": true,
+      "hipaa": false,
+      "gdpr": true,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 65,
@@ -2503,12 +2504,12 @@
       "zh": 64
     },
     "benchmarks": {
-      "mmlu": 75.0,
-      "gpqa": 32.0,
-      "swe_bench": 12.0,
-      "aime": 8.0,
+      "mmlu": 75,
+      "gpqa": 32,
+      "swe_bench": 12,
+      "aime": 8,
       "hle": 0.5,
-      "mgsm": 78.0
+      "mgsm": 78
     },
     "infrastructure": null,
     "releaseDate": "2024-08-01",
@@ -2533,16 +2534,16 @@
     "license": "CC-BY-NC-4.0",
     "pricing": {
       "input": 2.5,
-      "output": 10.0,
+      "output": 10,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 82,
-      "speed": 55,
-      "reasoning": 75,
-      "coding": 72,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 72,
@@ -2551,12 +2552,12 @@
       "zh": 73
     },
     "benchmarks": {
-      "mmlu": 84.0,
-      "gpqa": 45.0,
-      "swe_bench": 28.0,
-      "aime": 18.0,
-      "hle": 2.0,
-      "mgsm": 87.0
+      "mmlu": 84,
+      "gpqa": 45,
+      "swe_bench": 28,
+      "aime": 18,
+      "hle": 2,
+      "mgsm": 87
     },
     "infrastructure": {
       "minGpu": "2x A100 80GB",
@@ -2601,12 +2602,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 75,
-      "speed": 80,
-      "reasoning": 68,
-      "coding": 70,
-      "multimodal": 78
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 62,
@@ -2615,12 +2616,12 @@
       "zh": 68
     },
     "benchmarks": {
-      "mmlu": 80.0,
-      "gpqa": 38.0,
-      "swe_bench": 18.0,
-      "aime": 15.0,
-      "hle": 1.0,
-      "mgsm": 82.0
+      "mmlu": 80,
+      "gpqa": 38,
+      "swe_bench": 18,
+      "aime": 15,
+      "hle": 1,
+      "mgsm": 82
     },
     "infrastructure": null,
     "releaseDate": "2024-12-03",
@@ -2649,12 +2650,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0.5
     },
-    "scores": {
-      "quality": 62,
-      "speed": 92,
-      "reasoning": 52,
-      "coding": 55,
-      "multimodal": 70
+    "compliance": {
+      "soc2": true,
+      "hipaa": true,
+      "gdpr": true,
+      "onPremise": false,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 50,
@@ -2663,12 +2664,12 @@
       "zh": 58
     },
     "benchmarks": {
-      "mmlu": 72.0,
-      "gpqa": 28.0,
-      "swe_bench": 10.0,
-      "aime": 5.0,
+      "mmlu": 72,
+      "gpqa": 28,
+      "swe_bench": 10,
+      "aime": 5,
       "hle": 0.3,
-      "mgsm": 72.0
+      "mgsm": 72
     },
     "infrastructure": null,
     "releaseDate": "2024-12-03",
@@ -2692,17 +2693,17 @@
     "maxOutput": 4096,
     "license": "MIT",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 72,
-      "speed": 88,
-      "reasoning": 75,
-      "coding": 74,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 55,
@@ -2713,10 +2714,10 @@
     "benchmarks": {
       "mmlu": 84.8,
       "gpqa": 56.1,
-      "swe_bench": 22.0,
-      "aime": 45.0,
+      "swe_bench": 22,
+      "aime": 45,
       "hle": 2.5,
-      "mgsm": 80.0
+      "mgsm": 80
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -2757,17 +2758,17 @@
     "maxOutput": 4096,
     "license": "MIT",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 60,
-      "speed": 96,
-      "reasoning": 62,
-      "coding": 60,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 45,
@@ -2776,12 +2777,12 @@
       "zh": 52
     },
     "benchmarks": {
-      "mmlu": 72.0,
-      "gpqa": 38.0,
-      "swe_bench": 12.0,
-      "aime": 20.0,
+      "mmlu": 72,
+      "gpqa": 38,
+      "swe_bench": 12,
+      "aime": 20,
       "hle": 0.5,
-      "mgsm": 72.0
+      "mgsm": 72
     },
     "infrastructure": {
       "minGpu": "1x RTX 3060",
@@ -2827,12 +2828,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 90,
-      "reasoning": 72,
-      "coding": 74,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 60,
@@ -2841,12 +2842,12 @@
       "zh": 92
     },
     "benchmarks": {
-      "mmlu": 85.0,
-      "gpqa": 48.0,
-      "swe_bench": 25.0,
-      "aime": 20.0,
+      "mmlu": 85,
+      "gpqa": 48,
+      "swe_bench": 25,
+      "aime": 20,
       "hle": 1.5,
-      "mgsm": 85.0
+      "mgsm": 85
     },
     "infrastructure": {
       "minGpu": "2x A100 80GB",
@@ -2891,12 +2892,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 88,
-      "speed": 60,
-      "reasoning": 85,
-      "coding": 90,
-      "multimodal": 20
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 68,
@@ -2905,12 +2906,12 @@
       "zh": 95
     },
     "benchmarks": {
-      "mmlu": 89.0,
-      "gpqa": 65.0,
-      "swe_bench": 55.0,
-      "aime": 70.0,
-      "hle": 6.0,
-      "mgsm": 90.0
+      "mmlu": 89,
+      "gpqa": 65,
+      "swe_bench": 55,
+      "aime": 70,
+      "hle": 6,
+      "mgsm": 90
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -2955,12 +2956,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 92,
-      "speed": 55,
-      "reasoning": 92,
-      "coding": 92,
-      "multimodal": 82
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 72,
@@ -2969,12 +2970,12 @@
       "zh": 96
     },
     "benchmarks": {
-      "mmlu": 90.0,
+      "mmlu": 90,
       "gpqa": 78.5,
-      "swe_bench": 58.0,
+      "swe_bench": 58,
       "aime": 96.1,
       "hle": 50.2,
-      "mgsm": 93.0
+      "mgsm": 93
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -3014,17 +3015,17 @@
     "maxOutput": 16384,
     "license": "Apache 2.0",
     "pricing": {
-      "input": 0.0,
-      "output": 0.0,
+      "input": 0,
+      "output": 0,
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 92,
-      "speed": 58,
-      "reasoning": 93,
-      "coding": 90,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 70,
@@ -3033,12 +3034,12 @@
       "zh": 94
     },
     "benchmarks": {
-      "mmlu": 90.0,
-      "gpqa": 82.0,
-      "swe_bench": 68.0,
-      "aime": 82.0,
+      "mmlu": 90,
+      "gpqa": 82,
+      "swe_bench": 68,
+      "aime": 82,
       "hle": 50.4,
-      "mgsm": 92.0
+      "mgsm": 92
     },
     "infrastructure": {
       "minGpu": "8x A100 80GB",
@@ -3083,12 +3084,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 80,
-      "speed": 65,
-      "reasoning": 78,
-      "coding": 76,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 88,
@@ -3097,12 +3098,12 @@
       "zh": 72
     },
     "benchmarks": {
-      "mmlu": 82.0,
-      "gpqa": 50.0,
-      "swe_bench": 28.0,
-      "aime": 25.0,
-      "hle": 2.0,
-      "mgsm": 88.0
+      "mmlu": 82,
+      "gpqa": 50,
+      "swe_bench": 28,
+      "aime": 25,
+      "hle": 2,
+      "mgsm": 88
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -3148,12 +3149,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 68,
-      "speed": 88,
-      "reasoning": 62,
-      "coding": 60,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 82,
@@ -3162,12 +3163,12 @@
       "zh": 62
     },
     "benchmarks": {
-      "mmlu": 72.0,
-      "gpqa": 35.0,
-      "swe_bench": 15.0,
-      "aime": 12.0,
+      "mmlu": 72,
+      "gpqa": 35,
+      "swe_bench": 15,
+      "aime": 12,
       "hle": 0.5,
-      "mgsm": 80.0
+      "mgsm": 80
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -3213,12 +3214,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 75,
-      "speed": 72,
-      "reasoning": 70,
-      "coding": 68,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 85,
@@ -3227,12 +3228,12 @@
       "zh": 65
     },
     "benchmarks": {
-      "mmlu": 78.0,
-      "gpqa": 42.0,
-      "swe_bench": 20.0,
-      "aime": 15.0,
-      "hle": 1.0,
-      "mgsm": 82.0
+      "mmlu": 78,
+      "gpqa": 42,
+      "swe_bench": 20,
+      "aime": 15,
+      "hle": 1,
+      "mgsm": 82
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -3277,12 +3278,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 82,
-      "reasoning": 72,
-      "coding": 76,
-      "multimodal": 72
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 65,
@@ -3291,12 +3292,12 @@
       "zh": 70
     },
     "benchmarks": {
-      "mmlu": 81.0,
-      "gpqa": 48.0,
-      "swe_bench": 30.0,
-      "aime": 22.0,
+      "mmlu": 81,
+      "gpqa": 48,
+      "swe_bench": 30,
+      "aime": 22,
       "hle": 1.5,
-      "mgsm": 85.0
+      "mgsm": 85
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -3342,12 +3343,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 65,
-      "speed": 90,
-      "reasoning": 60,
-      "coding": 62,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 45,
@@ -3356,12 +3357,12 @@
       "zh": 55
     },
     "benchmarks": {
-      "mmlu": 70.0,
-      "gpqa": 32.0,
-      "swe_bench": 18.0,
-      "aime": 10.0,
+      "mmlu": 70,
+      "gpqa": 32,
+      "swe_bench": 18,
+      "aime": 10,
       "hle": 0.5,
-      "mgsm": 72.0
+      "mgsm": 72
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -3407,12 +3408,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 66,
-      "speed": 88,
-      "reasoning": 62,
-      "coding": 60,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 48,
@@ -3421,12 +3422,12 @@
       "zh": 55
     },
     "benchmarks": {
-      "mmlu": 72.0,
-      "gpqa": 35.0,
-      "swe_bench": 16.0,
-      "aime": 12.0,
+      "mmlu": 72,
+      "gpqa": 35,
+      "swe_bench": 16,
+      "aime": 12,
       "hle": 0.5,
-      "mgsm": 70.0
+      "mgsm": 70
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -3472,12 +3473,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 70,
-      "speed": 88,
-      "reasoning": 68,
-      "coding": 70,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 55,
@@ -3486,12 +3487,12 @@
       "zh": 90
     },
     "benchmarks": {
-      "mmlu": 76.0,
-      "gpqa": 40.0,
-      "swe_bench": 22.0,
-      "aime": 18.0,
-      "hle": 1.0,
-      "mgsm": 78.0
+      "mmlu": 76,
+      "gpqa": 40,
+      "swe_bench": 22,
+      "aime": 18,
+      "hle": 1,
+      "mgsm": 78
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -3537,12 +3538,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 55,
-      "reasoning": 72,
-      "coding": 68,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 58,
@@ -3551,12 +3552,12 @@
       "zh": 62
     },
     "benchmarks": {
-      "mmlu": 80.0,
-      "gpqa": 45.0,
-      "swe_bench": 22.0,
-      "aime": 18.0,
+      "mmlu": 80,
+      "gpqa": 45,
+      "swe_bench": 22,
+      "aime": 18,
       "hle": 1.5,
-      "mgsm": 76.0
+      "mgsm": 76
     },
     "infrastructure": {
       "minGpu": "4x A100 80GB",
@@ -3600,12 +3601,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 65,
-      "speed": 82,
-      "reasoning": 60,
-      "coding": 58,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 42,
@@ -3614,12 +3615,12 @@
       "zh": 48
     },
     "benchmarks": {
-      "mmlu": 68.0,
-      "gpqa": 32.0,
-      "swe_bench": 14.0,
-      "aime": 8.0,
+      "mmlu": 68,
+      "gpqa": 32,
+      "swe_bench": 14,
+      "aime": 8,
       "hle": 0.3,
-      "mgsm": 65.0
+      "mgsm": 65
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -3665,12 +3666,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 86,
-      "speed": 42,
-      "reasoning": 88,
-      "coding": 86,
-      "multimodal": 20
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 72,
@@ -3679,12 +3680,12 @@
       "zh": 75
     },
     "benchmarks": {
-      "mmlu": 88.0,
-      "gpqa": 60.0,
-      "swe_bench": 40.0,
-      "aime": 35.0,
+      "mmlu": 88,
+      "gpqa": 60,
+      "swe_bench": 40,
+      "aime": 35,
       "hle": 3.5,
-      "mgsm": 88.0
+      "mgsm": 88
     },
     "infrastructure": {
       "minGpu": "4x H100 80GB",
@@ -3730,12 +3731,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 35,
-      "speed": 98,
-      "reasoning": 25,
-      "coding": 28,
-      "multimodal": 5
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 30,
@@ -3744,12 +3745,12 @@
       "zh": 60
     },
     "benchmarks": {
-      "mmlu": 40.0,
-      "gpqa": 10.0,
-      "swe_bench": 2.0,
-      "aime": 2.0,
-      "hle": 0.0,
-      "mgsm": 35.0
+      "mmlu": 40,
+      "gpqa": 10,
+      "swe_bench": 2,
+      "aime": 2,
+      "hle": 0,
+      "mgsm": 35
     },
     "infrastructure": {
       "minGpu": "CPU",
@@ -3795,12 +3796,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 45,
-      "speed": 96,
-      "reasoning": 38,
-      "coding": 40,
-      "multimodal": 5
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 38,
@@ -3809,12 +3810,12 @@
       "zh": 70
     },
     "benchmarks": {
-      "mmlu": 52.0,
-      "gpqa": 15.0,
-      "swe_bench": 5.0,
-      "aime": 5.0,
+      "mmlu": 52,
+      "gpqa": 15,
+      "swe_bench": 5,
+      "aime": 5,
       "hle": 0.1,
-      "mgsm": 48.0
+      "mgsm": 48
     },
     "infrastructure": {
       "minGpu": "CPU",
@@ -3860,12 +3861,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 55,
-      "speed": 94,
-      "reasoning": 50,
-      "coding": 52,
-      "multimodal": 8
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 48,
@@ -3874,12 +3875,12 @@
       "zh": 80
     },
     "benchmarks": {
-      "mmlu": 62.0,
-      "gpqa": 22.0,
-      "swe_bench": 10.0,
-      "aime": 8.0,
+      "mmlu": 62,
+      "gpqa": 22,
+      "swe_bench": 10,
+      "aime": 8,
       "hle": 0.2,
-      "mgsm": 58.0
+      "mgsm": 58
     },
     "infrastructure": {
       "minGpu": "1x RTX 3060",
@@ -3925,12 +3926,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 75,
-      "speed": 78,
-      "reasoning": 72,
-      "coding": 74,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 65,
@@ -3939,12 +3940,12 @@
       "zh": 88
     },
     "benchmarks": {
-      "mmlu": 79.0,
-      "gpqa": 42.0,
-      "swe_bench": 25.0,
-      "aime": 20.0,
+      "mmlu": 79,
+      "gpqa": 42,
+      "swe_bench": 25,
+      "aime": 20,
       "hle": 1.2,
-      "mgsm": 78.0
+      "mgsm": 78
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -3990,12 +3991,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 65,
-      "reasoning": 75,
-      "coding": 92,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 60,
@@ -4004,12 +4005,12 @@
       "zh": 85
     },
     "benchmarks": {
-      "mmlu": 78.0,
-      "gpqa": 45.0,
-      "swe_bench": 48.0,
-      "aime": 25.0,
+      "mmlu": 78,
+      "gpqa": 45,
+      "swe_bench": 48,
+      "aime": 25,
       "hle": 1.5,
-      "mgsm": 75.0
+      "mgsm": 75
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -4055,12 +4056,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 82,
-      "speed": 45,
-      "reasoning": 92,
-      "coding": 85,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 72,
@@ -4069,12 +4070,12 @@
       "zh": 92
     },
     "benchmarks": {
-      "mmlu": 85.0,
-      "gpqa": 62.0,
-      "swe_bench": 38.0,
-      "aime": 58.0,
-      "hle": 4.0,
-      "mgsm": 88.0
+      "mmlu": 85,
+      "gpqa": 62,
+      "swe_bench": 38,
+      "aime": 58,
+      "hle": 4,
+      "mgsm": 88
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -4120,12 +4121,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 72,
-      "speed": 85,
-      "reasoning": 68,
-      "coding": 70,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 55,
@@ -4134,12 +4135,12 @@
       "zh": 90
     },
     "benchmarks": {
-      "mmlu": 75.0,
-      "gpqa": 38.0,
-      "swe_bench": 18.0,
-      "aime": 15.0,
+      "mmlu": 75,
+      "gpqa": 38,
+      "swe_bench": 18,
+      "aime": 15,
       "hle": 0.8,
-      "mgsm": 75.0
+      "mgsm": 75
     },
     "infrastructure": {
       "minGpu": "1x RTX 4090",
@@ -4184,12 +4185,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 90,
-      "speed": 60,
-      "reasoning": 90,
-      "coding": 88,
-      "multimodal": 78
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 78,
@@ -4203,7 +4204,7 @@
       "swe_bench": 72.4,
       "hle": 24.3,
       "mmmu": 82.3,
-      "mgsm": 92.0
+      "mgsm": 92
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -4249,12 +4250,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 80,
-      "speed": 88,
-      "reasoning": 82,
-      "coding": 78,
-      "multimodal": 65
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 70,
@@ -4263,10 +4264,10 @@
       "zh": 88
     },
     "benchmarks": {
-      "mmlu": 88.0,
-      "gpqa": 72.0,
-      "aime": 65.0,
-      "mgsm": 88.0
+      "mmlu": 88,
+      "gpqa": 72,
+      "aime": 65,
+      "mgsm": 88
     },
     "infrastructure": {
       "minGpu": "1x A100 80GB",
@@ -4312,12 +4313,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 88,
-      "speed": 70,
-      "reasoning": 88,
-      "coding": 86,
-      "multimodal": 75
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 75,
@@ -4326,10 +4327,10 @@
       "zh": 90
     },
     "benchmarks": {
-      "gpqa": 82.0,
-      "aime": 85.0,
+      "gpqa": 82,
+      "aime": 85,
       "bfcl_v4": 72.2,
-      "mgsm": 90.0
+      "mgsm": 90
     },
     "infrastructure": {
       "minGpu": "2x A100 80GB",
@@ -4374,12 +4375,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 82,
-      "reasoning": 82,
-      "coding": 75,
-      "multimodal": 70
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 68,
@@ -4437,12 +4438,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 62,
-      "speed": 92,
-      "reasoning": 60,
-      "coding": 58,
-      "multimodal": 55
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 55,
@@ -4451,8 +4452,8 @@
       "zh": 82
     },
     "benchmarks": {
-      "gpqa": 55.0,
-      "mgsm": 70.0
+      "gpqa": 55,
+      "mgsm": 70
     },
     "infrastructure": {
       "minGpu": "1x RTX 3060",
@@ -4498,12 +4499,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 50,
-      "speed": 95,
-      "reasoning": 45,
-      "coding": 45,
-      "multimodal": 40
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 42,
@@ -4512,8 +4513,8 @@
       "zh": 75
     },
     "benchmarks": {
-      "gpqa": 38.0,
-      "mgsm": 55.0
+      "gpqa": 38,
+      "mgsm": 55
     },
     "infrastructure": {
       "minGpu": "CPU",
@@ -4559,12 +4560,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 38,
-      "speed": 98,
-      "reasoning": 30,
-      "coding": 32,
-      "multimodal": 30
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 32,
@@ -4573,8 +4574,8 @@
       "zh": 65
     },
     "benchmarks": {
-      "gpqa": 25.0,
-      "mgsm": 40.0
+      "gpqa": 25,
+      "mgsm": 40
     },
     "infrastructure": {
       "minGpu": "CPU",
@@ -4620,12 +4621,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 86,
-      "speed": 55,
-      "reasoning": 85,
-      "coding": 85,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 65,
@@ -4680,12 +4681,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 78,
-      "speed": 70,
-      "reasoning": 76,
-      "coding": 74,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 58,
@@ -4739,12 +4740,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 92,
-      "speed": 62,
-      "reasoning": 95,
-      "coding": 93,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 70,
@@ -4802,12 +4803,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 62,
-      "speed": 90,
-      "reasoning": 55,
-      "coding": 48,
-      "multimodal": 78
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 50,
@@ -4816,7 +4817,7 @@
       "zh": 85
     },
     "benchmarks": {
-      "mmmu": 64.0,
+      "mmmu": 64,
       "mathvision": 36.8,
       "longvideobench": 64.5,
       "mmbench": 84.4
@@ -4864,12 +4865,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 82,
-      "speed": 50,
-      "reasoning": 80,
-      "coding": 90,
-      "multimodal": 15
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 62,
@@ -4923,12 +4924,12 @@
       "cachingDiscount": 0,
       "batchDiscount": 0
     },
-    "scores": {
-      "quality": 70,
-      "speed": 92,
-      "reasoning": 65,
-      "coding": 62,
-      "multimodal": 10
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
     },
     "languageScores": {
       "ko": 55,
@@ -4937,7 +4938,7 @@
       "zh": 86
     },
     "benchmarks": {
-      "mmlu_pro": 51.0,
+      "mmlu_pro": 51,
       "ruler_128k": 84.3
     },
     "infrastructure": {

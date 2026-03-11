@@ -8,6 +8,8 @@ import {
   GitCompareArrowsIcon,
   SparklesIcon,
   ServerIcon,
+  BarChart3Icon,
+  BookOpenIcon,
 } from 'lucide-react'
 import {
   Sidebar,
@@ -30,6 +32,8 @@ const navItems = [
   { title: '비교', href: '/compare', icon: GitCompareArrowsIcon },
   { title: '산업별 추천', href: '/recommendations', icon: SparklesIcon },
   { title: '인프라 가이드', href: '/infra', icon: ServerIcon },
+  { title: 'BVA 분석', href: '/bva', icon: BarChart3Icon },
+  { title: '평가 방법론', href: '/methodology', icon: BookOpenIcon },
 ] as const
 
 export function AppSidebar() {

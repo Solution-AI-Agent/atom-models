@@ -28,8 +28,8 @@ export function SimilarModels({ models }: SimilarModelsProps) {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-1 mb-2">
-                  <ScoreBadge label="품질" value={model.scores.quality} />
-                  <ScoreBadge label="속도" value={model.scores.speed} />
+                  {model.benchmarks.mmlu != null && <ScoreBadge label="MMLU" value={model.benchmarks.mmlu} />}
+                  {model.benchmarks.gpqa != null && <ScoreBadge label="GPQA" value={model.benchmarks.gpqa} />}
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Out: {formatPrice(model.pricing.output)}/1M

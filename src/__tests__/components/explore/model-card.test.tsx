@@ -9,7 +9,7 @@ const mockModel = {
   name: 'DeepSeek V3.2', slug: 'deepseek-v3-2', provider: 'DeepSeek',
   type: 'open-source' as const, tier: 'flagship' as const, parameterSize: 685,
   pricing: { input: 0.1, output: 0.2, cachingDiscount: 0, batchDiscount: 0 },
-  scores: { quality: 92, speed: 72, reasoning: 93, coding: 90, multimodal: 20 },
+  compliance: { soc2: false, hipaa: false, gdpr: false, onPremise: false, dataExclusion: false },
   contextWindow: 163840,
   infrastructure: { minGpu: '8x A100 80GB', vramFp16: 1370, vramInt8: 685, vramInt4: 343, recommendedFramework: ['vLLM', 'SGLang'], estimatedTps: 55 },
   releaseDate: '2025-06-25', isRecentlyReleased: false,

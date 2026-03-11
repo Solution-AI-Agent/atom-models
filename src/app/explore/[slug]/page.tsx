@@ -57,7 +57,7 @@ export default async function ModelDetailPage({ params }: ModelDetailPageProps) 
           maxOutput={model.maxOutput}
           license={model.license}
         />
-        <ScoreOverview scores={model.scores} />
+        <ScoreOverview benchmarks={model.benchmarks} />
       </div>
 
       <BenchmarkChart benchmarks={model.benchmarks} />

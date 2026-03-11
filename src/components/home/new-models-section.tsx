@@ -32,9 +32,9 @@ export function NewModelsSection({ models }: NewModelsSectionProps) {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-1.5">
-                  <ScoreBadge label="품질" value={model.scores.quality} />
-                  <ScoreBadge label="속도" value={model.scores.speed} />
-                  <ScoreBadge label="추론" value={model.scores.reasoning} />
+                  {model.benchmarks.mmlu != null && <ScoreBadge label="MMLU" value={model.benchmarks.mmlu} />}
+                  {model.benchmarks.gpqa != null && <ScoreBadge label="GPQA" value={model.benchmarks.gpqa} />}
+                  {model.benchmarks.swe_bench != null && <ScoreBadge label="SWE-bench" value={model.benchmarks.swe_bench} />}
                 </div>
                 <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
                   <span>Out: {formatPrice(model.pricing.output)}/1M</span>

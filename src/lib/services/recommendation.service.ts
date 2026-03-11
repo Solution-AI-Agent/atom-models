@@ -1,8 +1,15 @@
 import { getConnection } from '@/lib/db/connection'
 import { ModelModel } from '@/lib/db/models/model'
-import { calculateFitnessScore, calculateFitnessBreakdown } from '@/lib/utils/score'
+import {
+  calculateDimensionScore,
+  calculateCostScore,
+  calculateFitnessScore,
+  calculateFitnessBreakdown,
+} from '@/lib/utils/score'
+import { BVA_DIMENSIONS } from '@/lib/constants/bva-dimensions'
 import type { IIndustryPresetDocument } from '@/lib/db/models/industry-preset'
 import type { IRankedModel, IRankedModelInfra } from '@/lib/types/preset'
+import type { BvaDimensionKey } from '@/lib/types/bva'
 
 const MAX_PER_PROVIDER = 2
 
@@ -25,6 +32,19 @@ function diversify(
   return result
 }
 
+function extractBenchmarks(
+  benchmarksField: unknown,
+): Partial<Record<string, number | null>> {
+  if (benchmarksField instanceof Map) {
+    const result: Record<string, number | null> = {}
+    benchmarksField.forEach((value: number | null, key: string) => {
+      result[key] = value
+    })
+    return result
+  }
+  return (benchmarksField as Record<string, number | null>) ?? {}
+}
+
 export async function getRankedModelsForPreset(
   preset: IIndustryPresetDocument,
   limitPerType = 5,
@@ -33,21 +53,30 @@ export async function getRankedModelsForPreset(
   const models = await ModelModel.find().lean()
 
   const ranked = models.map((model) => {
-    const koreanScore = model.languageScores instanceof Map
-      ? (model.languageScores.get('ko') || 0)
-      : ((model.languageScores as any)?.ko || 0)
+    const benchmarks = extractBenchmarks(model.benchmarks)
+
+    const dimensionScores = BVA_DIMENSIONS.reduce(
+      (acc, dim) => ({
+        ...acc,
+        [dim.key]: calculateDimensionScore(benchmarks, dim.formula),
+      }),
+      {} as Record<BvaDimensionKey, number | null>,
+    )
+
+    const costScore = calculateCostScore(
+      model.pricing,
+      model.type as 'commercial' | 'open-source',
+    )
 
     const score = calculateFitnessScore(
-      model.scores,
-      model.pricing,
-      koreanScore,
+      dimensionScores,
+      costScore,
       preset.weights,
     )
 
     const breakdown = calculateFitnessBreakdown(
-      model.scores,
-      model.pricing,
-      koreanScore,
+      dimensionScores,
+      costScore,
       preset.weights,
     )
 

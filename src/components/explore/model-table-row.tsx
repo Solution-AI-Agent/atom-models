@@ -16,7 +16,7 @@ interface ModelTableRowProps {
   readonly model: IModel
 }
 
-function getBenchmarkValue(benchmarks: Record<string, number>, key: string): string {
+function getBenchmarkValue(benchmarks: Partial<Record<string, number | null>>, key: string): string {
   const value = benchmarks[key]
   if (value === undefined || value === null) return '-'
   return String(value)

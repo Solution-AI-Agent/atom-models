@@ -13,7 +13,7 @@ describe('IndustryPreset Schema', () => {
   })
 
   it('should have weights with default values', () => {
-    const qualityPath = IndustryPresetSchema.path('weights.quality') as any
-    expect(qualityPath.defaultValue).toBe(0)
+    const reasoningPath = IndustryPresetSchema.path('weights.reasoning') as any
+    expect(reasoningPath.defaultValue).toBe(0)
   })
 })
