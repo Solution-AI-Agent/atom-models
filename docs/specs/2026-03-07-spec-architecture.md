@@ -215,8 +215,12 @@ const GpuReferenceSchema = new Schema({
 ```
 atom-models/
 ├── docs/
-│   ├── prd.md
-│   └── architecture.md
+│   ├── specs/                        # 제품/아키텍처 스펙
+│   ├── plans/                        # 설계/구현 계획
+│   ├── schemas/                      # DB/데이터 스키마
+│   ├── retros/                       # 회고
+│   ├── adrs/                         # 아키텍처 의사결정 기록
+│   └── refs/                         # 참고 자료
 │
 ├── scripts/
 │   └── seed.ts                      # 시드 데이터 import 스크립트

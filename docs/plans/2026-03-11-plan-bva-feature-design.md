@@ -267,5 +267,5 @@ fitness-score-bar.test.tsx, seed.test.ts
 
 ## 9. 상세 설계 참조
 
-- 데이터 모델 상세: `docs/plans/2026-03-11-bva-data-model-spec.md`
-- 벤치마크 리서치: `docs/plans/2026-03-11-bva-benchmark-research.md`
+- 데이터 모델 상세: `docs/plans/2026-03-11-plan-bva-data-model-spec.md`
+- 벤치마크 리서치: `docs/plans/2026-03-11-plan-bva-benchmark-research.md`

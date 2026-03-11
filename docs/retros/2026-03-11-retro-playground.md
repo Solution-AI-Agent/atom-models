@@ -203,7 +203,7 @@ GLM-4.7 등 리즈닝 모델은 `delta.reasoning` 필드로 사고 과정을 전
 
 | 문서 | 경로 |
 |------|------|
-| 플레이그라운드 설계서 | docs/plans/2026-03-11-playground-design.md |
-| 구현 계획서 (18 Tasks) | docs/plans/2026-03-11-playground-implementation.md |
+| 플레이그라운드 설계서 | docs/plans/2026-03-11-plan-playground-design.md |
+| 구현 계획서 (18 Tasks) | docs/plans/2026-03-11-plan-playground-implementation.md |
 | OpenRouter 모델 매핑 | data/openrouter-model-mapping.json |
-| 본 회고록 | docs/retrospective-playground.md |
+| 본 회고록 | docs/retros/2026-03-11-retro-playground.md |

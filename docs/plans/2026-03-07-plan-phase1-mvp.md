@@ -4,7 +4,7 @@
 
 **Goal:** LLM 비교/최적화 플랫폼 Phase 1 MVP — 모델 탐색, 비교, 산업별 추천, GPU 레퍼런스 기능을 갖춘 웹 애플리케이션 구축
 
-**Architecture:** Next.js App Router + MongoDB(Mongoose) + shadcn/ui + Tailwind CSS. 서버 컴포넌트 우선, 서비스 레이어 분리, URL 기반 상태 관리. 사이드바 메뉴 레이아웃, 모바일 반응형. 상세 설계는 `docs/architecture.md` 참조.
+**Architecture:** Next.js App Router + MongoDB(Mongoose) + shadcn/ui + Tailwind CSS. 서버 컴포넌트 우선, 서비스 레이어 분리, URL 기반 상태 관리. 사이드바 메뉴 레이아웃, 모바일 반응형. 상세 설계는 `docs/specs/2026-03-07-spec-architecture.md` 참조.
 
 **Tech Stack:** Next.js 15, React 19, TypeScript, MongoDB, Mongoose, shadcn/ui, Tailwind CSS, Recharts, Jest, React Testing Library, Playwright
 

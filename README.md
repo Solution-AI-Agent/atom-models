@@ -88,7 +88,7 @@ src/
     context/              # React Context (CompareContext)
 data/                     # 시드 데이터 (JSON)
 scripts/                  # 시드 스크립트
-docs/                     # 설계 문서, 회고록
+docs/                     # 문서 (specs, plans, schemas, retros, adrs, refs)
 ```
 
 ## 사용 가능한 스크립트
