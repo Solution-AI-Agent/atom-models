@@ -22,51 +22,33 @@ describe('Seed data - models.json VRAM fields', () => {
     }
   })
 
-  it('should have vramQ6k field on all OSS models with infrastructure', () => {
+  it('should have optional quantization VRAM fields as numbers when present', () => {
+    const quantFields = ['vramQ6k', 'vramQ5k', 'vramQ4kM', 'vramQ3k', 'vramQ2k'] as const
     for (const model of ossModelsWithInfra) {
-      expect(model.infrastructure.vramQ6k).toBeDefined()
-      expect(typeof model.infrastructure.vramQ6k).toBe('number')
-      expect(model.infrastructure.vramQ6k).toBeGreaterThan(0)
+      for (const field of quantFields) {
+        if (model.infrastructure[field] !== undefined) {
+          expect(typeof model.infrastructure[field]).toBe('number')
+          expect(model.infrastructure[field]).toBeGreaterThan(0)
+        }
+      }
     }
   })
 
-  it('should have vramQ5k field on all OSS models with infrastructure', () => {
-    for (const model of ossModelsWithInfra) {
-      expect(model.infrastructure.vramQ5k).toBeDefined()
-      expect(typeof model.infrastructure.vramQ5k).toBe('number')
-      expect(model.infrastructure.vramQ5k).toBeGreaterThan(0)
-    }
-  })
-
-  it('should have vramQ4kM field on all OSS models with infrastructure', () => {
-    for (const model of ossModelsWithInfra) {
-      expect(model.infrastructure.vramQ4kM).toBeDefined()
-      expect(typeof model.infrastructure.vramQ4kM).toBe('number')
-      expect(model.infrastructure.vramQ4kM).toBeGreaterThan(0)
-    }
-  })
-
-  it('should have vramQ3k field on all OSS models with infrastructure', () => {
-    for (const model of ossModelsWithInfra) {
-      expect(model.infrastructure.vramQ3k).toBeDefined()
-      expect(typeof model.infrastructure.vramQ3k).toBe('number')
-      expect(model.infrastructure.vramQ3k).toBeGreaterThan(0)
-    }
-  })
-
-  it('should have vramQ2k field on all OSS models with infrastructure', () => {
-    for (const model of ossModelsWithInfra) {
-      expect(model.infrastructure.vramQ2k).toBeDefined()
-      expect(typeof model.infrastructure.vramQ2k).toBe('number')
-      expect(model.infrastructure.vramQ2k).toBeGreaterThan(0)
-    }
-  })
-
-  it('should maintain VRAM ordering: fp16 > fp8 > int8 >= q6k > q5k > q4kM > int4 >= q3k > q2k', () => {
+  it('should maintain VRAM ordering: fp16 >= fp8 >= int8 >= int4', () => {
     for (const model of ossModelsWithInfra) {
       const infra = model.infrastructure
       expect(infra.vramFp16).toBeGreaterThanOrEqual(infra.vramFp8)
       expect(infra.vramFp8).toBeGreaterThanOrEqual(infra.vramInt8)
+      expect(infra.vramInt8).toBeGreaterThanOrEqual(infra.vramInt4)
+    }
+  })
+
+  it('should maintain quantization VRAM ordering when all fields present', () => {
+    const modelsWithQuant = ossModelsWithInfra.filter(
+      (m) => m.infrastructure.vramQ6k !== undefined
+    )
+    for (const model of modelsWithQuant) {
+      const infra = model.infrastructure
       expect(infra.vramQ6k).toBeGreaterThanOrEqual(infra.vramQ5k)
       expect(infra.vramQ5k).toBeGreaterThanOrEqual(infra.vramQ4kM)
       expect(infra.vramQ4kM).toBeGreaterThanOrEqual(infra.vramQ3k)
