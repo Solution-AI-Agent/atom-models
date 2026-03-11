@@ -22,6 +22,7 @@ interface ChatColumnProps {
     readonly ttft: string | null
     readonly tps: string | null
   }
+  readonly className?: string
 }
 
 export function ChatColumn({
@@ -36,6 +37,7 @@ export function ChatColumn({
   onParametersChange,
   onStop,
   fastestMetrics,
+  className,
 }: ChatColumnProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [showParams, setShowParams] = useState(false)
@@ -47,7 +49,7 @@ export function ChatColumn({
   }, [messages, streamingContent])
 
   return (
-    <div className="flex h-full flex-col rounded-lg border">
+    <div className={`flex h-full flex-col rounded-lg border ${className || ''}`}>
       <div className="flex items-center justify-between border-b px-3 py-2">
         <div className="flex items-center gap-2">
           <span

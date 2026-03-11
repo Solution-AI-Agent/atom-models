@@ -251,9 +251,9 @@ export default function PlaygroundPage() {
 
   const gridColsClass =
     selectedModels.length === 3
-      ? 'grid-cols-3'
+      ? 'grid-cols-1 md:grid-cols-3'
       : selectedModels.length === 2
-        ? 'grid-cols-2'
+        ? 'grid-cols-1 md:grid-cols-2'
         : 'grid-cols-1'
 
   return (
@@ -278,11 +278,12 @@ export default function PlaygroundPage() {
 
       {selectedModels.length > 0 ? (
         <div
-          className={`grid flex-1 gap-4 overflow-hidden p-4 ${gridColsClass}`}
+          className={`grid flex-1 gap-4 overflow-y-auto md:overflow-hidden p-4 ${gridColsClass}`}
         >
           {selectedModels.map((model, i) => (
             <ChatColumn
               key={model._id}
+              className="min-h-[300px] md:min-h-0"
               modelName={model.name}
               provider={model.provider}
               colorCode={model.colorCode}
