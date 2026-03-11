@@ -40,7 +40,12 @@ describe('POST /api/playground/sessions', () => {
   it('creates a new session', async () => {
     const input = {
       title: 'New Session',
-      models: [],
+      models: [{
+        modelId: '507f1f77bcf86cd799439011',
+        modelName: 'GPT-4o',
+        provider: 'OpenAI',
+        openRouterModelId: 'openai/gpt-4o',
+      }],
       systemPrompt: '',
       defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0 },
     }
@@ -57,5 +62,49 @@ describe('POST /api/playground/sessions', () => {
     expect(body.success).toBe(true)
     expect(body.data._id).toBe('123')
     expect(response.status).toBe(201)
+  })
+
+  it('returns 400 for invalid body', async () => {
+    const request = new Request('http://localhost/api/playground/sessions', {
+      method: 'POST',
+      body: JSON.stringify({ title: '' }),
+    })
+    const response = await POST(request)
+    const body = await response.json()
+
+    expect(response.status).toBe(400)
+    expect(body.success).toBe(false)
+    expect(body.error).toContain('Validation error')
+  })
+
+  it('returns 400 when models array is empty', async () => {
+    const request = new Request('http://localhost/api/playground/sessions', {
+      method: 'POST',
+      body: JSON.stringify({
+        title: 'Test',
+        models: [],
+        defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0 },
+      }),
+    })
+    const response = await POST(request)
+    expect(response.status).toBe(400)
+  })
+
+  it('returns 400 when title exceeds max length', async () => {
+    const request = new Request('http://localhost/api/playground/sessions', {
+      method: 'POST',
+      body: JSON.stringify({
+        title: 'x'.repeat(201),
+        models: [{
+          modelId: '507f1f77bcf86cd799439011',
+          modelName: 'GPT-4o',
+          provider: 'OpenAI',
+          openRouterModelId: 'openai/gpt-4o',
+        }],
+        defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0 },
+      }),
+    })
+    const response = await POST(request)
+    expect(response.status).toBe(400)
   })
 })
