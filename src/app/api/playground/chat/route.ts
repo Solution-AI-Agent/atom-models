@@ -1,21 +1,72 @@
+import { z } from 'zod'
+import { getConnection } from '@/lib/db/connection'
+import { ModelModel } from '@/lib/db/models/model'
 import { streamChatCompletion } from '@/lib/services/openrouter.service'
-import type { IPlaygroundChatRequest } from '@/lib/types/playground'
+
+const chatRequestSchema = z.object({
+  sessionId: z.string(),
+  modelId: z.string(),
+  openRouterModelId: z.string(),
+  messages: z.array(z.object({
+    role: z.enum(['system', 'user', 'assistant']),
+    content: z.string().min(1).max(50000),
+  })).min(1),
+  parameters: z.object({
+    temperature: z.number().min(0).max(2),
+    maxTokens: z.number().int().min(1).max(128000),
+    topP: z.number().min(0).max(1),
+  }),
+})
+
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+const MAX_REQUESTS_PER_MINUTE = 20
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now()
+  const entry = rateLimitMap.get(ip)
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + 60_000 })
+    return true
+  }
+  if (entry.count >= MAX_REQUESTS_PER_MINUTE) return false
+  rateLimitMap.set(ip, { ...entry, count: entry.count + 1 })
+  return true
+}
 
 export async function POST(request: Request) {
   try {
-    const body: IPlaygroundChatRequest = await request.json()
-
-    if (!body.openRouterModelId || !body.messages || body.messages.length === 0) {
+    const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+    if (!checkRateLimit(clientIp)) {
       return new Response(
-        JSON.stringify({ success: false, error: 'Missing required fields' }),
+        JSON.stringify({ success: false, error: 'Rate limit exceeded' }),
+        { status: 429, headers: { 'Content-Type': 'application/json' } },
+      )
+    }
+
+    const body = await request.json()
+    const parsed = chatRequestSchema.safeParse(body)
+    if (!parsed.success) {
+      return new Response(
+        JSON.stringify({ success: false, error: `Validation error: ${parsed.error.issues.map((i) => i.message).join(', ')}` }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } },
+      )
+    }
+
+    const validated = parsed.data
+
+    await getConnection()
+    const model = await ModelModel.findOne({ openRouterModelId: validated.openRouterModelId }).lean()
+    if (!model) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'Unknown model' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } },
       )
     }
 
     const openRouterResponse = await streamChatCompletion({
-      model: body.openRouterModelId,
-      messages: body.messages,
-      parameters: body.parameters,
+      model: validated.openRouterModelId,
+      messages: validated.messages,
+      parameters: validated.parameters,
     })
 
     if (!openRouterResponse.body) {
@@ -31,17 +82,28 @@ export async function POST(request: Request) {
     const stream = new ReadableStream({
       async start(controller) {
         const encoder = new TextEncoder()
+        let closed = false
+        let buffer = ''
+
+        function closeStream() {
+          if (!closed) {
+            closed = true
+            controller.close()
+          }
+        }
+
         try {
           while (true) {
             const { done, value } = await reader.read()
             if (done) {
               controller.enqueue(encoder.encode('data: [DONE]\n\n'))
-              controller.close()
+              closeStream()
               break
             }
 
-            const chunk = decoder.decode(value, { stream: true })
-            const lines = chunk.split('\n')
+            buffer += decoder.decode(value, { stream: true })
+            const lines = buffer.split('\n')
+            buffer = lines.pop() || ''
 
             for (const line of lines) {
               if (!line.startsWith('data: ')) continue
@@ -49,7 +111,7 @@ export async function POST(request: Request) {
 
               if (data === '[DONE]') {
                 controller.enqueue(encoder.encode('data: [DONE]\n\n'))
-                controller.close()
+                closeStream()
                 return
               }
 
@@ -80,7 +142,7 @@ export async function POST(request: Request) {
           controller.enqueue(
             encoder.encode(`data: ${JSON.stringify({ type: 'error', error: message })}\n\n`),
           )
-          controller.close()
+          closeStream()
         }
       },
     })
