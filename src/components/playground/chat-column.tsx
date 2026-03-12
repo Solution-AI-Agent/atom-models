@@ -44,11 +44,15 @@ export function ChatColumn({
   const scrollRef = useRef<HTMLDivElement>(null)
   const [showParams, setShowParams] = useState(false)
 
+  // Use messages.length (primitive) instead of messages (object reference) to prevent
+  // cross-column scroll interference. Since messages are append-only, length is sufficient.
+  // Without this, getMessagesForModel creates a new array reference every render,
+  // causing ALL columns' scroll effects to fire when any model receives a token.
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight
     }
-  }, [messages, streamingContent])
+  }, [messages.length, streamingContent, streamingReasoning])
 
   return (
     <div className={`flex h-full flex-col rounded-lg border ${className || ''}`}>

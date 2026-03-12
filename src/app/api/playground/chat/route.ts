@@ -134,11 +134,13 @@ export async function POST(request: Request) {
                   controller.enqueue(
                     encoder.encode(`data: ${JSON.stringify(event)}\n\n`),
                   )
-                } else if (reasoning) {
+                }
+                if (!usage && reasoning) {
                   controller.enqueue(
                     encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
                   )
-                } else if (content) {
+                }
+                if (!usage && content) {
                   controller.enqueue(
                     encoder.encode(`data: ${JSON.stringify({ type: 'token', content })}\n\n`),
                   )

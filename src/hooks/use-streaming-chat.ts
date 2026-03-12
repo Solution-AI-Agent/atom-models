@@ -153,15 +153,19 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
           estimatedCost: Math.round(estimatedCost * 1_000_000) / 1_000_000,
         }
 
-        // Clear streaming content — the final values live in the returned message object
-        // which gets added to the messages array. Keeping content here would risk
-        // showing a duplicate if React renders before the messages state update.
-        setState({ isStreaming: false, content: '', reasoning: '', metrics: null, error: null })
+        // If reasoning exists but content is empty (model timeout during reasoning phase),
+        // fall back to showing reasoning as the content so the user sees something useful.
+        const finalContent = fullContent || (fullReasoning ? `[리즈닝만 생성됨]\n\n${fullReasoning}` : '')
+
+        // Do NOT clear state here — the parent calls reset() after adding the result
+        // to the messages array. This ensures both state updates are batched by React
+        // in a single render, preventing the flash/duplicate where streaming content
+        // and the final message are both visible.
 
         return {
           role: 'assistant' as const,
-          content: fullContent,
-          reasoning: fullReasoning || undefined,
+          content: finalContent,
+          reasoning: fullContent ? (fullReasoning || undefined) : undefined,
           modelId: options.modelId,
           metrics,
         }
@@ -182,5 +186,9 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
     abortControllerRef.current?.abort()
   }, [])
 
-  return { ...state, sendMessage, stop }
+  const reset = useCallback(() => {
+    setState({ isStreaming: false, content: '', reasoning: '', metrics: null, error: null })
+  }, [])
+
+  return { ...state, sendMessage, stop, reset }
 }

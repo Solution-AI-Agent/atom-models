@@ -68,7 +68,7 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
               })
             }
           >
-            <option value="">기본값</option>
+            <option value="">끄기</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>

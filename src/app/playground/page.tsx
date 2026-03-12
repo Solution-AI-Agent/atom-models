@@ -166,8 +166,12 @@ export default function PlaygroundPage() {
       const history = buildMessageHistory(model._id!, message)
       const result = await streams[i].sendMessage(history)
       if (result) {
+        // Both calls in the same synchronous context → React batches into one render.
+        // This prevents the flash/duplicate where streaming bubble and final message
+        // are both visible between separate renders.
         setMessages((prev) => [...prev, result])
       }
+      streams[i].reset()
       return result
     })
 
