@@ -13,7 +13,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { GalleryVerticalEndIcon, AudioLinesIcon, TerminalIcon, TerminalSquareIcon, BotIcon, BookOpenIcon, Settings2Icon, FrameIcon, PieChartIcon, MapIcon } from "lucide-react"
+import { GalleryVerticalEndIcon, AudioLinesIcon, TerminalIcon, TerminalSquareIcon, BotIcon, BookOpenIcon, Settings2Icon, FrameIcon, PieChartIcon, MapIcon, ClipboardCheckIcon } from "lucide-react"
 
 // This is sample data.
 const data = {
@@ -69,6 +69,24 @@ const data = {
         {
           title: "Settings",
           url: "#",
+        },
+      ],
+    },
+    {
+      title: "Evaluation",
+      url: "/evaluation",
+      icon: (
+        <ClipboardCheckIcon
+        />
+      ),
+      items: [
+        {
+          title: "New Evaluation",
+          url: "/evaluation",
+        },
+        {
+          title: "History",
+          url: "/evaluation/history",
         },
       ],
     },

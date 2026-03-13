@@ -48,6 +48,7 @@ export interface IEvaluationSessionDocument extends Document {
       estimatedCost: number
     }
   }[]
+  createdAt: Date
   startedAt?: Date
   completedAt?: Date
 }

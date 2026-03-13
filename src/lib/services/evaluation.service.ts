@@ -43,15 +43,26 @@ export async function createEvaluationSession(
     name: input.name,
     status: 'pending',
     config: {
-      models: input.config.models,
-      evaluators: input.config.evaluators,
+      models: input.config.models.map((m) => ({
+        modelId: m.modelId,
+        slug: m.slug,
+        openRouterModelId: m.openRouterModelId,
+        modelName: m.modelName,
+        provider: m.provider,
+        parameters: { temperature: m.parameters.temperature, maxTokens: m.parameters.maxTokens },
+      })),
+      evaluators: [...input.config.evaluators] as string[],
       systemPrompt: input.config.systemPrompt,
     },
-    dataset: input.dataset,
+    dataset: {
+      fileName: input.dataset.fileName,
+      rowCount: input.dataset.rowCount,
+      columns: [...input.dataset.columns],
+    },
     experiments,
   })
 
-  return serialize(doc.toJSON())
+  return serialize(doc.toJSON()) as unknown as IEvaluationSession
 }
 
 export async function getEvaluationSessions(): Promise<readonly IEvaluationSessionSummary[]> {
@@ -72,7 +83,7 @@ export async function getEvaluationSessions(): Promise<readonly IEvaluationSessi
       modelCount: s.config?.models?.length ?? 0,
       createdAt: s.createdAt,
     })),
-  )
+  ) as unknown as readonly IEvaluationSessionSummary[]
 }
 
 export async function getEvaluationSessionById(
@@ -83,7 +94,7 @@ export async function getEvaluationSessionById(
   const session = await EvaluationSessionModel.findById(id).lean()
   if (!session) return null
 
-  return serialize(session)
+  return serialize(session) as unknown as IEvaluationSession
 }
 
 export async function updateSessionStatus(
