@@ -19,7 +19,7 @@ const jestConfig = async () => {
   return {
     ...resolved,
     transformIgnorePatterns: [
-      'node_modules/(?!(bson)/)',
+      'node_modules/(?!(bson|zod)/)',
     ],
   }
 }
