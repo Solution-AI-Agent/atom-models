@@ -49,3 +49,60 @@ export async function streamChatCompletion(
 
   return response
 }
+
+interface CompleteChatOptions {
+  readonly model: string
+  readonly messages: readonly ChatMessage[]
+  readonly temperature?: number
+  readonly maxTokens?: number
+}
+
+interface CompleteChatResult {
+  readonly content: string
+  readonly usage: {
+    readonly promptTokens: number
+    readonly completionTokens: number
+  }
+}
+
+export async function completeChatCompletion(
+  options: CompleteChatOptions,
+): Promise<CompleteChatResult> {
+  const apiKey = process.env.OPENROUTER_API_KEY
+  if (!apiKey) {
+    throw new Error('OPENROUTER_API_KEY environment variable is not set')
+  }
+
+  const response = await fetch(OPENROUTER_API_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+    },
+    body: JSON.stringify({
+      model: options.model,
+      messages: options.messages,
+      temperature: options.temperature ?? 0,
+      max_tokens: options.maxTokens ?? 1024,
+      stream: false,
+    }),
+  })
+
+  if (!response.ok) {
+    const error = await response.text()
+    throw new Error(`OpenRouter API error (${response.status}): ${error}`)
+  }
+
+  const data = await response.json()
+  const content = data.choices?.[0]?.message?.content ?? ''
+  const usage = data.usage ?? { prompt_tokens: 0, completion_tokens: 0 }
+
+  return {
+    content,
+    usage: {
+      promptTokens: usage.prompt_tokens,
+      completionTokens: usage.completion_tokens,
+    },
+  }
+}
