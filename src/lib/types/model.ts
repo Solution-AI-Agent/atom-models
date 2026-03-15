@@ -2,6 +2,9 @@ export interface IModelPricing {
   readonly inputPer1m: number | null
   readonly outputPer1m: number | null
   readonly pricingType: string
+  readonly cachedInputPer1m: number | null
+  readonly batchInputPer1m: number | null
+  readonly batchOutputPer1m: number | null
 }
 
 export interface IModelCompliance {

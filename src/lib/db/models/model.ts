@@ -37,6 +37,9 @@ export interface IModelDocument extends Document {
     inputPer1m: number
     outputPer1m: number
     pricingType: string
+    cachedInputPer1m: number | null
+    batchInputPer1m: number | null
+    batchOutputPer1m: number | null
   }
   compliance: {
     soc2: boolean
@@ -112,6 +115,9 @@ export const ModelSchema = new Schema({
     inputPer1m:  Number,
     outputPer1m: Number,
     pricingType: String,
+    cachedInputPer1m: Number,
+    batchInputPer1m: Number,
+    batchOutputPer1m: Number,
   },
 
   compliance: {
