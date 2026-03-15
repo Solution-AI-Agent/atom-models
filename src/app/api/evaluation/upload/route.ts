@@ -16,7 +16,11 @@ export async function POST(request: Request) {
     }
 
     const buffer = await file.arrayBuffer()
-    const workbook = XLSX.read(buffer, { type: 'array' })
+
+    const isCSV = file.name.endsWith('.csv')
+    const workbook = isCSV
+      ? XLSX.read(new TextDecoder('utf-8').decode(buffer), { type: 'string' })
+      : XLSX.read(buffer, { type: 'array' })
     const sheetName = workbook.SheetNames[0]
 
     if (!sheetName) {
