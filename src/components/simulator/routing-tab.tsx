@@ -72,7 +72,7 @@ export function RoutingTab({ models, inputs, apiInputs, ratios, onRatiosChange }
                 </div>
                 <Slider
                   value={[Math.round(ratios[i] * 100)]}
-                  onValueChange={([v]) => handleRatioChange(i, v)}
+                  onValueChange={(v) => handleRatioChange(i, Array.isArray(v) ? v[0] : v)}
                   max={100}
                   step={5}
                 />

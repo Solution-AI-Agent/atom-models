@@ -43,7 +43,7 @@ export function ApiCostTab({ models, inputs, apiInputs, onApiInputsChange }: Api
               <Label>프롬프트 캐싱 적용률: {Math.round(apiInputs.cacheRate * 100)}%</Label>
               <Slider
                 value={[apiInputs.cacheRate * 100]}
-                onValueChange={([v]) => onApiInputsChange({ ...apiInputs, cacheRate: v / 100 })}
+                onValueChange={(v) => onApiInputsChange({ ...apiInputs, cacheRate: (Array.isArray(v) ? v[0] : v) / 100 })}
                 max={100}
                 step={5}
               />
@@ -52,7 +52,7 @@ export function ApiCostTab({ models, inputs, apiInputs, onApiInputsChange }: Api
               <Label>Batch API 활용 비율: {Math.round(apiInputs.batchRate * 100)}%</Label>
               <Slider
                 value={[apiInputs.batchRate * 100]}
-                onValueChange={([v]) => onApiInputsChange({ ...apiInputs, batchRate: v / 100 })}
+                onValueChange={(v) => onApiInputsChange({ ...apiInputs, batchRate: (Array.isArray(v) ? v[0] : v) / 100 })}
                 max={100}
                 step={5}
               />

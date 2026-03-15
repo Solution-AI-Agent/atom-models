@@ -93,7 +93,7 @@ export function BreakevenTab({ models, inputs, apiInputs }: BreakevenTabProps) {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             <div className="space-y-2">
               <Label>GPU 모델</Label>
-              <Select value={selectedGpuSlug} onValueChange={setSelectedGpuSlug}>
+              <Select value={selectedGpuSlug} onValueChange={(v) => setSelectedGpuSlug(v ?? '')}>
                 <SelectTrigger><SelectValue placeholder="GPU 선택" /></SelectTrigger>
                 <SelectContent>
                   {gpus.map((gpu) => (

@@ -16,15 +16,15 @@ export function CostBarChart({ breakdowns, mode }: CostBarChartProps) {
     cost: mode === 'monthly' ? b.totalMonthlyCost : b.totalAnnualCost,
   }))
 
-  const formatter = (value: number) => `$${value.toLocaleString(undefined, { maximumFractionDigits: 2 })}`
+  const tickFormatter = (value: number) => `$${value.toLocaleString(undefined, { maximumFractionDigits: 2 })}`
 
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
         <XAxis dataKey="name" className="text-xs" />
-        <YAxis tickFormatter={formatter} className="text-xs" />
-        <Tooltip formatter={formatter} />
+        <YAxis tickFormatter={tickFormatter} className="text-xs" />
+        <Tooltip formatter={(value: unknown) => `$${Number(value).toLocaleString(undefined, { maximumFractionDigits: 2 })}`} />
         <Bar dataKey="cost" name={mode === 'monthly' ? '월간 비용' : '연간 비용'}>
           {data.map((_, i) => (
             <Cell key={i} fill={COLORS[i % COLORS.length]} />

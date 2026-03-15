@@ -9,7 +9,7 @@ interface BreakevenLineChartProps {
 }
 
 export function BreakevenLineChart({ chartData, breakevenPoint }: BreakevenLineChartProps) {
-  const formatter = (value: number) => `$${value.toLocaleString()}`
+  const tickFormatter = (value: number) => `$${value.toLocaleString()}`
   const xFormatter = (value: number) => value.toLocaleString()
 
   const breakevenData = breakevenPoint !== null
@@ -27,12 +27,12 @@ export function BreakevenLineChart({ chartData, breakevenPoint }: BreakevenLineC
           label={{ value: '일 요청 수', position: 'insideBottom', offset: -5 }}
         />
         <YAxis
-          tickFormatter={formatter}
+          tickFormatter={tickFormatter}
           className="text-xs"
           label={{ value: '월 비용 ($)', angle: -90, position: 'insideLeft' }}
         />
         <Tooltip
-          formatter={formatter}
+          formatter={(value: unknown) => `$${Number(value).toLocaleString()}`}
           labelFormatter={(v) => `일 ${Number(v).toLocaleString()}건`}
         />
         <Legend />
