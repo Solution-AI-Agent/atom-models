@@ -50,7 +50,10 @@
     "pricing": {
       "inputPer1m": 30,
       "outputPer1m": 180,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 15,
+      "batchInputPer1m": 15,
+      "batchOutputPer1m": 90
     },
     "compliance": {
       "soc2": true,
@@ -60,12 +63,12 @@
       "dataExclusion": true
     },
     "benchmarks": {
-      "mmlu": 91.0,
+      "mmlu": 91,
       "gpqa": 94.4,
       "swe_bench": 77.2,
-      "aime": 100.0,
+      "aime": 100,
       "hle": 58.7,
-      "mgsm": 96.0,
+      "mgsm": 96,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -130,7 +133,10 @@
     "pricing": {
       "inputPer1m": 3,
       "outputPer1m": 15,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 1.5,
+      "batchInputPer1m": 1.5,
+      "batchOutputPer1m": 7.5
     },
     "compliance": {
       "soc2": true,
@@ -140,12 +146,12 @@
       "dataExclusion": true
     },
     "benchmarks": {
-      "mmlu": 91.0,
-      "gpqa": 92.0,
+      "mmlu": 91,
+      "gpqa": 92,
       "swe_bench": 52.8,
-      "aime": 100.0,
-      "hle": 42.0,
-      "mgsm": 96.0,
+      "aime": 100,
+      "hle": 42,
+      "mgsm": 96,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -208,7 +214,10 @@
     "pricing": {
       "inputPer1m": 2.5,
       "outputPer1m": 10,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 1.25,
+      "batchInputPer1m": 1.25,
+      "batchOutputPer1m": 5
     },
     "compliance": {
       "soc2": true,
@@ -221,7 +230,7 @@
       "mmlu": 88.7,
       "gpqa": 50.6,
       "swe_bench": 33.2,
-      "aime": 12.0,
+      "aime": 12,
       "hle": 2.7,
       "mgsm": 90.6,
       "truthfulqa": null,
@@ -286,7 +295,10 @@
     "pricing": {
       "inputPer1m": 0.15,
       "outputPer1m": 0.6,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.075,
+      "batchInputPer1m": 0.075,
+      "batchOutputPer1m": 0.3
     },
     "compliance": {
       "soc2": true,
@@ -296,7 +308,7 @@
       "dataExclusion": true
     },
     "benchmarks": {
-      "mmlu": 82.0,
+      "mmlu": 82,
       "gpqa": 40.2,
       "aime": 11.5,
       "truthfulqa": null,
@@ -363,7 +375,10 @@
     "pricing": {
       "inputPer1m": 2,
       "outputPer1m": 8,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 1,
+      "batchInputPer1m": 1,
+      "batchOutputPer1m": 4
     },
     "compliance": {
       "soc2": true,
@@ -440,7 +455,10 @@
     "pricing": {
       "inputPer1m": 0.4,
       "outputPer1m": 1.6,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.2,
+      "batchInputPer1m": 0.2,
+      "batchOutputPer1m": 0.8
     },
     "compliance": {
       "soc2": true,
@@ -512,7 +530,10 @@
     "pricing": {
       "inputPer1m": 0.1,
       "outputPer1m": 0.4,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.05,
+      "batchInputPer1m": 0.05,
+      "batchOutputPer1m": 0.2
     },
     "compliance": {
       "soc2": true,
@@ -588,7 +609,10 @@
     "pricing": {
       "inputPer1m": 5,
       "outputPer1m": 25,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.5,
+      "batchInputPer1m": 2.5,
+      "batchOutputPer1m": 12.5
     },
     "compliance": {
       "soc2": true,
@@ -598,12 +622,12 @@
       "dataExclusion": true
     },
     "benchmarks": {
-      "mmlu": 91.0,
+      "mmlu": 91,
       "gpqa": 91.3,
       "swe_bench": 80.8,
-      "aime": 100.0,
+      "aime": 100,
       "hle": 53.1,
-      "mgsm": 96.0,
+      "mgsm": 96,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -668,7 +692,10 @@
     "pricing": {
       "inputPer1m": 3,
       "outputPer1m": 15,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.3,
+      "batchInputPer1m": 1.5,
+      "batchOutputPer1m": 7.5
     },
     "compliance": {
       "soc2": true,
@@ -680,8 +707,8 @@
     "benchmarks": {
       "gpqa": 74.1,
       "swe_bench": 79.6,
-      "aime": 83.0,
-      "hle": 49.0,
+      "aime": 83,
+      "hle": 49,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -744,7 +771,10 @@
     "pricing": {
       "inputPer1m": 1,
       "outputPer1m": 5,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.1,
+      "batchInputPer1m": 0.5,
+      "batchOutputPer1m": 2.5
     },
     "compliance": {
       "soc2": true,
@@ -822,7 +852,10 @@
     "pricing": {
       "inputPer1m": 2,
       "outputPer1m": 12,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.5,
+      "batchInputPer1m": 1,
+      "batchOutputPer1m": 6
     },
     "compliance": {
       "soc2": true,
@@ -835,7 +868,7 @@
       "mmlu": 92.6,
       "gpqa": 94.3,
       "swe_bench": 80.6,
-      "aime": 92.0,
+      "aime": 92,
       "hle": 51.4,
       "mgsm": 95.5,
       "truthfulqa": null,
@@ -902,7 +935,10 @@
     "pricing": {
       "inputPer1m": 2,
       "outputPer1m": 12,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.5,
+      "batchInputPer1m": 1,
+      "batchOutputPer1m": 6
     },
     "compliance": {
       "soc2": true,
@@ -915,8 +951,8 @@
       "mmlu": 91.8,
       "gpqa": 91.9,
       "swe_bench": 76.2,
-      "aime": 95.0,
-      "hle": 37.0,
+      "aime": 95,
+      "hle": 37,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -981,7 +1017,10 @@
     "pricing": {
       "inputPer1m": 0.5,
       "outputPer1m": 3,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.125,
+      "batchInputPer1m": 0.25,
+      "batchOutputPer1m": 1.5
     },
     "compliance": {
       "soc2": true,
@@ -993,7 +1032,7 @@
     "benchmarks": {
       "mmlu": 91.8,
       "gpqa": 90.4,
-      "swe_bench": 78.0,
+      "swe_bench": 78,
       "aime": 90.4,
       "hle": 34.7,
       "truthfulqa": null,
@@ -1057,7 +1096,10 @@
     "pricing": {
       "inputPer1m": 0.25,
       "outputPer1m": 1.5,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.0625,
+      "batchInputPer1m": 0.125,
+      "batchOutputPer1m": 0.75
     },
     "compliance": {
       "soc2": true,
@@ -1069,8 +1111,8 @@
     "benchmarks": {
       "mmlu": 88.9,
       "gpqa": 86.9,
-      "swe_bench": 35.0,
-      "hle": 16.0,
+      "swe_bench": 35,
+      "hle": 16,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -1135,7 +1177,10 @@
     "pricing": {
       "inputPer1m": 1.25,
       "outputPer1m": 10,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.3125,
+      "batchInputPer1m": 0.625,
+      "batchOutputPer1m": 5
     },
     "compliance": {
       "soc2": true,
@@ -1146,7 +1191,7 @@
     },
     "benchmarks": {
       "mmlu": 89.8,
-      "gpqa": 84.0,
+      "gpqa": 84,
       "swe_bench": 63.8,
       "aime": 86.7,
       "hle": 18.8,
@@ -1214,7 +1259,10 @@
     "pricing": {
       "inputPer1m": 0.3,
       "outputPer1m": 2.5,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.075,
+      "batchInputPer1m": 0.15,
+      "batchOutputPer1m": 1.25
     },
     "compliance": {
       "soc2": true,
@@ -1227,7 +1275,7 @@
       "mmlu": 82.9,
       "gpqa": 82.8,
       "swe_bench": 60.4,
-      "aime": 72.0,
+      "aime": 72,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -1289,7 +1337,10 @@
     "pricing": {
       "inputPer1m": 0.1,
       "outputPer1m": 0.4,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": 0.025,
+      "batchInputPer1m": 0.05,
+      "batchOutputPer1m": 0.2
     },
     "compliance": {
       "soc2": true,
@@ -1360,7 +1411,10 @@
     "pricing": {
       "inputPer1m": 3,
       "outputPer1m": 15,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1370,9 +1424,9 @@
       "dataExclusion": false
     },
     "benchmarks": {
-      "mmlu": 88.0,
-      "gpqa": 88.0,
-      "aime": 95.0,
+      "mmlu": 88,
+      "gpqa": 88,
+      "aime": 95,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -1432,7 +1486,10 @@
     "pricing": {
       "inputPer1m": 0.2,
       "outputPer1m": 0.5,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1444,7 +1501,7 @@
     "benchmarks": {
       "gpqa": 63.7,
       "aime": 34.3,
-      "hle": 5.0,
+      "hle": 5,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -1507,7 +1564,10 @@
     "pricing": {
       "inputPer1m": 3,
       "outputPer1m": 15,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1518,9 +1578,9 @@
     },
     "benchmarks": {
       "mmlu": 86.6,
-      "gpqa": 88.0,
+      "gpqa": 88,
       "swe_bench": 69.1,
-      "aime": 95.0,
+      "aime": 95,
       "hle": 44.4,
       "truthfulqa": null,
       "bfcl": null,
@@ -1581,7 +1641,10 @@
     "pricing": {
       "inputPer1m": 0.2,
       "outputPer1m": 0.5,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1648,7 +1711,10 @@
     "pricing": {
       "inputPer1m": 3,
       "outputPer1m": 15,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1718,7 +1784,10 @@
     "pricing": {
       "inputPer1m": 0.3,
       "outputPer1m": 0.5,
-      "pricingType": "api"
+      "pricingType": "api",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1789,7 +1858,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1799,7 +1871,7 @@
       "dataExclusion": true
     },
     "benchmarks": {
-      "mmlu": 90.0,
+      "mmlu": 90,
       "gpqa": 80.1,
       "swe_bench": 62.4,
       "aime": 96.6,
@@ -1873,7 +1945,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -1959,7 +2034,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2042,7 +2120,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2125,7 +2206,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2205,7 +2289,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2289,7 +2376,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2299,7 +2389,7 @@
       "dataExclusion": true
     },
     "benchmarks": {
-      "gpqa": 86.0,
+      "gpqa": 86,
       "swe_bench": 77.8,
       "aime": 92.7,
       "hle": 50.4,
@@ -2376,7 +2466,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2461,7 +2554,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2547,7 +2643,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2635,7 +2734,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2725,7 +2827,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2816,7 +2921,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2901,7 +3009,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -2989,7 +3100,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3075,7 +3189,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3159,7 +3276,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3241,7 +3361,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3323,7 +3446,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3406,7 +3532,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3418,7 +3547,7 @@
     "benchmarks": {
       "mmlu": 88.5,
       "gpqa": 82.4,
-      "swe_bench": 70.0,
+      "swe_bench": 70,
       "aime": 93.1,
       "hle": 23.9,
       "truthfulqa": null,
@@ -3494,7 +3623,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3577,7 +3709,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3659,7 +3794,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3743,7 +3881,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3827,7 +3968,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3837,7 +3981,7 @@
       "dataExclusion": true
     },
     "benchmarks": {
-      "gpqa": 49.0,
+      "gpqa": 49,
       "truthfulqa": null,
       "bfcl": null,
       "ifeval": null,
@@ -3909,7 +4053,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
@@ -3992,7 +4139,10 @@
     "pricing": {
       "inputPer1m": 0,
       "outputPer1m": 0,
-      "pricingType": "self-hosted"
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
     },
     "compliance": {
       "soc2": false,
