@@ -36,7 +36,7 @@ export interface IPlaygroundParameters {
 
 export const DEFAULT_PARAMETERS: IPlaygroundParameters = {
   temperature: 0.7,
-  maxTokens: 4096,
+  maxTokens: 16384,
   topP: 1.0,
   reasoningEffort: 'low',
 }
