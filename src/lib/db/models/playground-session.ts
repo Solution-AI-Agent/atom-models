@@ -12,12 +12,14 @@ export interface IPlaygroundSessionDocument extends Document {
       temperature?: number
       maxTokens?: number
       topP?: number
+      reasoningEffort?: 'low' | 'medium' | 'high'
     }
   }[]
   systemPrompt: string
   messages: {
     role: 'user' | 'assistant'
     content: string
+    reasoning?: string
     modelId?: mongoose.Types.ObjectId
     metrics?: {
       ttft: number
@@ -33,6 +35,7 @@ export interface IPlaygroundSessionDocument extends Document {
     temperature: number
     maxTokens: number
     topP: number
+    reasoningEffort: 'low' | 'medium' | 'high'
   }
 }
 
@@ -45,15 +48,17 @@ const PlaygroundSessionSchema = new Schema({
     openRouterModelId: { type: String, required: true },
     colorCode:         { type: String, default: '#888888' },
     parameters: {
-      temperature: Number,
-      maxTokens:   Number,
-      topP:        Number,
+      temperature:     Number,
+      maxTokens:       Number,
+      topP:            Number,
+      reasoningEffort: { type: String, enum: ['low', 'medium', 'high'] },
     },
   }],
   systemPrompt: { type: String, default: '' },
   messages: [{
     role:      { type: String, enum: ['user', 'assistant'], required: true },
-    content:   { type: String, required: true },
+    content:   { type: String, default: '' },
+    reasoning: { type: String },
     modelId:   { type: Schema.Types.ObjectId, ref: 'Model' },
     metrics: {
       ttft:           Number,
@@ -66,9 +71,10 @@ const PlaygroundSessionSchema = new Schema({
     createdAt: { type: Date, default: Date.now },
   }],
   defaultParameters: {
-    temperature: { type: Number, default: 0.7 },
-    maxTokens:   { type: Number, default: 4096 },
-    topP:        { type: Number, default: 1.0 },
+    temperature:     { type: Number, default: 0.7 },
+    maxTokens:       { type: Number, default: 4096 },
+    topP:            { type: Number, default: 1.0 },
+    reasoningEffort: { type: String, enum: ['low', 'medium', 'high'], default: 'low' },
   },
 }, {
   timestamps: true,

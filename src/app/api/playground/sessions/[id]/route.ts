@@ -16,7 +16,8 @@ const patchSessionSchema = z.object({
   title: z.string().min(1).max(200).optional(),
   messages: z.array(z.object({
     role: z.enum(['user', 'assistant']),
-    content: z.string().min(1).max(50000),
+    content: z.string().max(50000),
+    reasoning: z.string().max(100000).optional(),
     modelId: z.string().optional(),
     metrics: z.object({
       ttft: z.number(),
