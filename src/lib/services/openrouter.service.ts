@@ -22,10 +22,10 @@ function buildReasoningParam(
     return { reasoning: { effort } }
   }
   // Reasoning off by default for thinking models:
-  // effort:'none' disables reasoning on models that support it (O-series, Grok, GPT-5)
-  // exclude:true hides reasoning output for models that can't disable it (R1, Qwen)
+  // exclude:true suppresses reasoning output for all models.
+  // (effort:'none' is NOT safe — some models like GPT-OSS reject it with 400)
   if (thinkingMode) {
-    return { reasoning: { effort: 'none', exclude: true } }
+    return { reasoning: { exclude: true } }
   }
   return {}
 }

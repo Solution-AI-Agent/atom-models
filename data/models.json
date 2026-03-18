@@ -2460,7 +2460,7 @@
       "toolUse": true,
       "fineTuning": false,
       "batchApi": false,
-      "thinkingMode": false
+      "thinkingMode": true
     },
     "pricing": {
       "inputPer1m": 0,
@@ -2550,7 +2550,7 @@
       "toolUse": true,
       "fineTuning": false,
       "batchApi": false,
-      "thinkingMode": false
+      "thinkingMode": true
     },
     "pricing": {
       "inputPer1m": 0,
@@ -2638,7 +2638,7 @@
       "toolUse": true,
       "fineTuning": false,
       "batchApi": false,
-      "thinkingMode": false
+      "thinkingMode": true
     },
     "pricing": {
       "inputPer1m": 0,
