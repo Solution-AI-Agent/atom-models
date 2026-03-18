@@ -11,23 +11,6 @@ interface StreamChatOptions {
   readonly model: string
   readonly messages: readonly ChatMessage[]
   readonly parameters: IPlaygroundParameters
-  readonly thinkingMode?: boolean
-}
-
-function buildReasoningParam(
-  effort: IPlaygroundParameters['reasoningEffort'],
-  thinkingMode?: boolean,
-): { reasoning: Record<string, unknown> } | Record<string, never> {
-  if (effort) {
-    return { reasoning: { effort } }
-  }
-  // Reasoning off by default for thinking models:
-  // exclude:true suppresses reasoning output for all models.
-  // (effort:'none' is NOT safe — some models like GPT-OSS reject it with 400)
-  if (thinkingMode) {
-    return { reasoning: { exclude: true } }
-  }
-  return {}
 }
 
 export async function streamChatCompletion(
@@ -51,7 +34,9 @@ export async function streamChatCompletion(
       temperature: options.parameters.temperature,
       max_tokens: options.parameters.maxTokens,
       top_p: options.parameters.topP,
-      ...buildReasoningParam(options.parameters.reasoningEffort, options.thinkingMode),
+      ...(options.parameters.reasoningEffort && {
+        reasoning: { effort: options.parameters.reasoningEffort },
+      }),
       stream: true,
       stream_options: { include_usage: true },
     }),

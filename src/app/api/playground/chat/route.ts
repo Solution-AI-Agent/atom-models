@@ -68,8 +68,9 @@ export async function POST(request: Request) {
       model: validated.openRouterModelId,
       messages: validated.messages,
       parameters: validated.parameters,
-      thinkingMode: !!model.capabilities?.thinkingMode,
     })
+
+    const forwardReasoning = !!validated.parameters.reasoningEffort
 
     if (!openRouterResponse.body) {
       return new Response(
@@ -136,7 +137,7 @@ export async function POST(request: Request) {
                     encoder.encode(`data: ${JSON.stringify(event)}\n\n`),
                   )
                 }
-                if (!usage && reasoning) {
+                if (!usage && reasoning && forwardReasoning) {
                   controller.enqueue(
                     encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
                   )
