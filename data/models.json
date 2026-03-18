@@ -1829,11 +1829,11 @@
     "isOpensource": true,
     "status": "active",
     "deprecationDate": null,
-    "parameterSize": 120,
-    "activeParameters": 120,
-    "architecture": "dense",
-    "contextWindow": 128000,
-    "maxOutput": 16384,
+    "parameterSize": 117,
+    "activeParameters": 5.1,
+    "architecture": "moe",
+    "contextWindow": 131072,
+    "maxOutput": 65536,
     "trainingCutoff": null,
     "languages": [
       "en"
@@ -1845,15 +1845,15 @@
       "text"
     ],
     "capabilities": {
-      "functionCalling": false,
-      "structuredOutput": false,
+      "functionCalling": true,
+      "structuredOutput": true,
       "streaming": true,
       "systemPrompt": true,
       "vision": false,
-      "toolUse": false,
+      "toolUse": true,
       "fineTuning": false,
       "batchApi": false,
-      "thinkingMode": false
+      "thinkingMode": true
     },
     "pricing": {
       "inputPer1m": 0,
@@ -1884,10 +1884,10 @@
     "ttftMs": null,
     "regions": null,
     "infrastructure": {
-      "minGpu": "2x A100 80GB",
-      "vramFp16": 240,
-      "vramFp8": 120,
-      "vramInt8": 120,
+      "minGpu": "1x H100 80GB",
+      "vramFp16": 234,
+      "vramFp8": 117,
+      "vramInt8": 117,
       "vramInt4": 60,
       "recommendedFramework": [
         "vLLM",
@@ -1895,8 +1895,8 @@
       ],
       "estimatedTps": 30
     },
-    "openRouterModelId": null,
-    "memo": "OpenAI first open-source model with 120B parameters.",
+    "openRouterModelId": "openai/gpt-oss-120b",
+    "memo": "OpenAI first open-source MoE model. 117B total params, 5.1B active per forward pass. Optimized for single H100 with MXFP4 quantization.",
     "sourceUrls": [],
     "lastVerifiedAt": "2026-03-11"
   },
@@ -1916,11 +1916,11 @@
     "isOpensource": true,
     "status": "active",
     "deprecationDate": null,
-    "parameterSize": 20,
-    "activeParameters": 20,
-    "architecture": "dense",
-    "contextWindow": 128000,
-    "maxOutput": 16384,
+    "parameterSize": 21,
+    "activeParameters": 3.6,
+    "architecture": "moe",
+    "contextWindow": 131072,
+    "maxOutput": 65536,
     "trainingCutoff": null,
     "languages": [
       "en"
@@ -1932,15 +1932,15 @@
       "text"
     ],
     "capabilities": {
-      "functionCalling": false,
-      "structuredOutput": false,
+      "functionCalling": true,
+      "structuredOutput": true,
       "streaming": true,
       "systemPrompt": true,
       "vision": false,
-      "toolUse": false,
+      "toolUse": true,
       "fineTuning": false,
       "batchApi": false,
-      "thinkingMode": false
+      "thinkingMode": true
     },
     "pricing": {
       "inputPer1m": 0,
@@ -1972,10 +1972,10 @@
     "regions": null,
     "infrastructure": {
       "minGpu": "1x RTX 4090",
-      "vramFp16": 40,
-      "vramFp8": 20,
-      "vramInt8": 20,
-      "vramInt4": 10,
+      "vramFp16": 42,
+      "vramFp8": 21,
+      "vramInt8": 21,
+      "vramInt4": 11,
       "recommendedFramework": [
         "vLLM",
         "llama.cpp",
@@ -1983,10 +1983,99 @@
       ],
       "estimatedTps": 80
     },
-    "openRouterModelId": null,
-    "memo": "OpenAI compact open-source model for edge deployment.",
+    "openRouterModelId": "openai/gpt-oss-20b",
+    "memo": "OpenAI compact open-source MoE model. 21B total params, 3.6B active per forward pass. Optimized for consumer/single-GPU hardware.",
     "sourceUrls": [],
     "lastVerifiedAt": "2026-03-11"
+  },
+  {
+    "name": "GPT-OSS Safeguard 20B",
+    "slug": "gpt-oss-safeguard-20b",
+    "providerId": "OPENAI",
+    "family": "GPT-OSS",
+    "variant": "Safeguard 20B",
+    "type": "open-source",
+    "tier": "light",
+    "tags": [
+      "safety",
+      "moderation"
+    ],
+    "releaseDate": "2025-10-28",
+    "license": "Apache 2.0",
+    "isOpensource": true,
+    "status": "active",
+    "deprecationDate": null,
+    "parameterSize": 21,
+    "activeParameters": 3.6,
+    "architecture": "moe",
+    "contextWindow": 131072,
+    "maxOutput": 65536,
+    "trainingCutoff": null,
+    "languages": [
+      "en"
+    ],
+    "modalityInput": [
+      "text"
+    ],
+    "modalityOutput": [
+      "text"
+    ],
+    "capabilities": {
+      "functionCalling": true,
+      "structuredOutput": true,
+      "streaming": true,
+      "systemPrompt": true,
+      "vision": false,
+      "toolUse": true,
+      "fineTuning": false,
+      "batchApi": false,
+      "thinkingMode": true
+    },
+    "pricing": {
+      "inputPer1m": 0,
+      "outputPer1m": 0,
+      "pricingType": "self-hosted",
+      "cachedInputPer1m": null,
+      "batchInputPer1m": null,
+      "batchOutputPer1m": null
+    },
+    "compliance": {
+      "soc2": false,
+      "hipaa": false,
+      "gdpr": false,
+      "onPremise": true,
+      "dataExclusion": true
+    },
+    "benchmarks": {
+      "mmlu": null,
+      "gpqa": null,
+      "swe_bench": null,
+      "aime": null,
+      "truthfulqa": null,
+      "bfcl": null,
+      "ifeval": null,
+      "ruler": null
+    },
+    "avgTps": null,
+    "ttftMs": null,
+    "regions": null,
+    "infrastructure": {
+      "minGpu": "1x RTX 4090",
+      "vramFp16": 42,
+      "vramFp8": 21,
+      "vramInt8": 21,
+      "vramInt4": 11,
+      "recommendedFramework": [
+        "vLLM",
+        "llama.cpp",
+        "Ollama"
+      ],
+      "estimatedTps": 80
+    },
+    "openRouterModelId": "openai/gpt-oss-safeguard-20b",
+    "memo": "Safety reasoning model built on gpt-oss-20b. Specialized for content classification, LLM filtering, and trust & safety labeling.",
+    "sourceUrls": [],
+    "lastVerifiedAt": "2026-03-18"
   },
   {
     "name": "Gemma 3 27B",

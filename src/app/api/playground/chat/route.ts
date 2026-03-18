@@ -68,6 +68,7 @@ export async function POST(request: Request) {
       model: validated.openRouterModelId,
       messages: validated.messages,
       parameters: validated.parameters,
+      thinkingMode: !!model.capabilities?.thinkingMode,
     })
 
     if (!openRouterResponse.body) {

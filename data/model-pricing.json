@@ -748,5 +748,20 @@
     "gpuRequirement": null,
     "costPerHour": null,
     "notes": null
+  },
+  {
+    "modelId": "gpt-oss-safeguard-20b",
+    "pricingType": "self-hosted",
+    "currency": "USD",
+    "effectiveFrom": "2026-03-18",
+    "effectiveTo": null,
+    "inputPer1m": 0,
+    "outputPer1m": 0,
+    "cachedInput": null,
+    "batchInput": null,
+    "batchOutput": null,
+    "gpuRequirement": null,
+    "costPerHour": null,
+    "notes": null
   }
 ]
