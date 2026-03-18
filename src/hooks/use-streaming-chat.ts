@@ -153,10 +153,6 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
           estimatedCost: Math.round(estimatedCost * 1_000_000) / 1_000_000,
         }
 
-        // If reasoning exists but content is empty (model timeout during reasoning phase),
-        // fall back to showing reasoning as the content so the user sees something useful.
-        const finalContent = fullContent || (fullReasoning ? `[리즈닝만 생성됨]\n\n${fullReasoning}` : '')
-
         // Do NOT clear state here — the parent calls reset() after adding the result
         // to the messages array. This ensures both state updates are batched by React
         // in a single render, preventing the flash/duplicate where streaming content
@@ -164,8 +160,8 @@ export function useStreamingChat(options: UseStreamingChatOptions) {
 
         return {
           role: 'assistant' as const,
-          content: finalContent,
-          reasoning: fullContent ? (fullReasoning || undefined) : undefined,
+          content: fullContent,
+          reasoning: fullReasoning || undefined,
           modelId: options.modelId,
           metrics,
         }
