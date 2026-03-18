@@ -47,7 +47,7 @@ describe('POST /api/playground/sessions', () => {
         openRouterModelId: 'openai/gpt-4o',
       }],
       systemPrompt: '',
-      defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0 },
+      defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0, reasoningEffort: 'low' },
     }
     const mockResult = { ...input, _id: '123', messages: [] }
     mockedCreateSession.mockResolvedValueOnce(mockResult as any)
@@ -83,7 +83,7 @@ describe('POST /api/playground/sessions', () => {
       body: JSON.stringify({
         title: 'Test',
         models: [],
-        defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0 },
+        defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0, reasoningEffort: 'low' },
       }),
     })
     const response = await POST(request)
@@ -101,7 +101,7 @@ describe('POST /api/playground/sessions', () => {
           provider: 'OpenAI',
           openRouterModelId: 'openai/gpt-4o',
         }],
-        defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0 },
+        defaultParameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0, reasoningEffort: 'low' },
       }),
     })
     const response = await POST(request)

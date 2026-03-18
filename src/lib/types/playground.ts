@@ -31,13 +31,14 @@ export interface IPlaygroundParameters {
   readonly temperature: number
   readonly maxTokens: number
   readonly topP: number
-  readonly reasoningEffort?: ReasoningEffort
+  readonly reasoningEffort: ReasoningEffort
 }
 
 export const DEFAULT_PARAMETERS: IPlaygroundParameters = {
   temperature: 0.7,
   maxTokens: 4096,
   topP: 1.0,
+  reasoningEffort: 'low',
 }
 
 export interface IPlaygroundSession {

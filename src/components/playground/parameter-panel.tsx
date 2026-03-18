@@ -60,15 +60,14 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
           <Label className="text-xs">Reasoning</Label>
           <select
             className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs"
-            value={parameters.reasoningEffort || ''}
+            value={parameters.reasoningEffort}
             onChange={(e) =>
               onChange({
                 ...parameters,
-                reasoningEffort: (e.target.value || undefined) as ReasoningEffort | undefined,
+                reasoningEffort: e.target.value as ReasoningEffort,
               })
             }
           >
-            <option value="">끄기</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>

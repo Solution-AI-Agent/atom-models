@@ -25,7 +25,7 @@ function makeValidBody(overrides: Record<string, unknown> = {}) {
     modelId: '507f1f77bcf86cd799439011',
     openRouterModelId: 'openai/gpt-4o',
     messages: [{ role: 'user', content: 'hello' }],
-    parameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0 },
+    parameters: { temperature: 0.7, maxTokens: 4096, topP: 1.0, reasoningEffort: 'low' },
     ...overrides,
   }
 }
