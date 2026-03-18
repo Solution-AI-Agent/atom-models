@@ -10,15 +10,32 @@ export async function getSessions(): Promise<readonly IPlaygroundSessionSummary[
   const sessions = await PlaygroundSessionModel
     .find()
     .sort({ createdAt: -1 })
-    .select('title models.modelName models.provider messages createdAt')
+    .select('title models.modelId models.modelName models.provider messages.role messages.modelId createdAt')
     .lean()
 
   return sessions.map((s) => {
-    const doc = s as unknown as { _id: unknown; title: string; models: { modelName: string; provider: string }[]; messages: unknown[]; createdAt: Date }
+    const doc = s as unknown as {
+      _id: unknown
+      title: string
+      models: { modelId: unknown; modelName: string; provider: string }[]
+      messages: { role: string; modelId?: unknown }[]
+      createdAt: Date
+    }
+
+    // Derive active models from actual assistant messages
+    const respondedIds = new Set(
+      doc.messages
+        .filter((m) => m.role === 'assistant' && m.modelId)
+        .map((m) => String(m.modelId)),
+    )
+    const activeModels = respondedIds.size > 0
+      ? doc.models.filter((m) => respondedIds.has(String(m.modelId)))
+      : doc.models
+
     return serialize<IPlaygroundSessionSummary>({
       _id: String(doc._id),
       title: doc.title,
-      models: doc.models.map((m) => ({
+      models: activeModels.map((m) => ({
         modelName: m.modelName,
         provider: m.provider,
       })),
