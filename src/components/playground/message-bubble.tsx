@@ -68,10 +68,16 @@ export function MessageBubble({
         </div>
       )}
 
-      {isStreaming && isReasoningPhase && !content && !reasoningOpen && (
+      {isStreaming && !content && !reasoningOpen && (
         <div className="flex items-center gap-1.5 rounded-lg bg-muted px-3 py-2 text-sm text-muted-foreground">
-          <BrainCircuit className="h-4 w-4 animate-pulse" />
-          <span>생각 중...</span>
+          {isReasoningPhase ? (
+            <>
+              <BrainCircuit className="h-4 w-4 animate-pulse" />
+              <span>생각 중...</span>
+            </>
+          ) : (
+            <span className="inline-block h-4 w-1 animate-pulse bg-muted-foreground" />
+          )}
         </div>
       )}
 

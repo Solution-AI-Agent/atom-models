@@ -108,7 +108,7 @@ export function ChatColumn({
           />
         ))}
 
-        {isStreaming && (streamingContent || streamingReasoning) && (
+        {isStreaming && (
           <MessageBubble
             role="assistant"
             content={streamingContent}
