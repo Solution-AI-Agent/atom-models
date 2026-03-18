@@ -70,8 +70,6 @@ export async function POST(request: Request) {
       parameters: validated.parameters,
     })
 
-    const forwardReasoning = !!validated.parameters.reasoningEffort
-
     if (!openRouterResponse.body) {
       return new Response(
         JSON.stringify({ success: false, error: 'No stream body from OpenRouter' }),
@@ -137,7 +135,7 @@ export async function POST(request: Request) {
                     encoder.encode(`data: ${JSON.stringify(event)}\n\n`),
                   )
                 }
-                if (!usage && reasoning && forwardReasoning) {
+                if (!usage && reasoning) {
                   controller.enqueue(
                     encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
                   )
