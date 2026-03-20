@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import type { IModel } from '@/lib/types/model'
 
-const MAX_MODELS = 3
+const MAX_MODELS = 4
 
 interface ModelSelectorProps {
   readonly selectedModels: readonly IModel[]

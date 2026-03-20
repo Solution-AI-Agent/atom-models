@@ -5,11 +5,12 @@ import { PlaygroundHeader } from '@/components/playground/playground-header'
 import { PlaygroundSetup } from '@/components/playground/playground-setup'
 import { ChatColumn } from '@/components/playground/chat-column'
 import { ChatInput } from '@/components/playground/chat-input'
-import { useStreamingChat } from '@/hooks/use-streaming-chat'
+import { useWorkerChat } from '@/hooks/use-worker-chat'
 import { DEFAULT_PARAMETERS } from '@/lib/types/playground'
 import type { IModel } from '@/lib/types/model'
 import type {
   IPlaygroundMessage,
+  IPlaygroundMessageMetrics,
   IPlaygroundModelConfig,
   IPlaygroundParameters,
 } from '@/lib/types/playground'
@@ -37,6 +38,23 @@ function makeStreamOptions(
   }
 }
 
+function migrateMetrics(metrics: any): IPlaygroundMessageMetrics {
+  if (metrics?.ttft !== undefined && metrics?.contentTtft === undefined) {
+    return {
+      reasoningTtft: null,
+      reasoningTps: null,
+      reasoningTokens: 0,
+      contentTtft: metrics.ttft ?? 0,
+      contentTps: metrics.tps ?? 0,
+      contentTokens: metrics.outputTokens ?? 0,
+      totalTime: metrics.totalTime ?? 0,
+      inputTokens: metrics.inputTokens ?? 0,
+      estimatedCost: metrics.estimatedCost ?? 0,
+    }
+  }
+  return metrics
+}
+
 export default function PlaygroundPage() {
   const [selectedModels, setSelectedModels] = useState<readonly IModel[]>([])
   const [systemPrompt, setSystemPrompt] = useState('')
@@ -52,17 +70,20 @@ export default function PlaygroundPage() {
   const paramsFor = (m: IModel | undefined) =>
     m ? modelParameters[m._id!] || defaultParameters : DEFAULT_PARAMETERS
 
-  // Always call 3 hooks unconditionally (React rules of hooks)
-  const stream0 = useStreamingChat(
+  // Always call 4 hooks unconditionally (React rules of hooks)
+  const stream0 = useWorkerChat(
     makeStreamOptions(selectedModels[0], paramsFor(selectedModels[0])),
   )
-  const stream1 = useStreamingChat(
+  const stream1 = useWorkerChat(
     makeStreamOptions(selectedModels[1], paramsFor(selectedModels[1])),
   )
-  const stream2 = useStreamingChat(
+  const stream2 = useWorkerChat(
     makeStreamOptions(selectedModels[2], paramsFor(selectedModels[2])),
   )
-  const streams = [stream0, stream1, stream2]
+  const stream3 = useWorkerChat(
+    makeStreamOptions(selectedModels[3], paramsFor(selectedModels[3])),
+  )
+  const streams = [stream0, stream1, stream2, stream3]
 
   const anyStreaming = selectedModels.some((_, i) => streams[i].isStreaming)
 
@@ -82,23 +103,23 @@ export default function PlaygroundPage() {
 
     if (assistantMsgs.length < 2) return undefined
 
-    let fastestTtft: string | null = null
-    let lowestTtft = Infinity
-    let fastestTps: string | null = null
-    let highestTps = -Infinity
+    let fastestContentTtft: string | null = null
+    let lowestContentTtft = Infinity
+    let fastestContentTps: string | null = null
+    let highestContentTps = -Infinity
 
     for (const msg of assistantMsgs) {
-      if (msg.metrics!.ttft < lowestTtft) {
-        lowestTtft = msg.metrics!.ttft
-        fastestTtft = msg.modelId || null
+      if (msg.metrics!.contentTtft < lowestContentTtft) {
+        lowestContentTtft = msg.metrics!.contentTtft
+        fastestContentTtft = msg.modelId || null
       }
-      if (msg.metrics!.tps > highestTps) {
-        highestTps = msg.metrics!.tps
-        fastestTps = msg.modelId || null
+      if (msg.metrics!.contentTps > highestContentTps) {
+        highestContentTps = msg.metrics!.contentTps
+        fastestContentTps = msg.modelId || null
       }
     }
 
-    return { ttft: fastestTtft, tps: fastestTps }
+    return { contentTtft: fastestContentTtft, contentTps: fastestContentTps }
   }, [messages])
 
   function buildMessageHistory(modelId: string, newMessage: string) {
@@ -218,7 +239,12 @@ export default function PlaygroundPage() {
 
       const session = json.data
       setSessionId(id)
-      setMessages(session.messages || [])
+      setMessages(
+        (session.messages || []).map((m: any) => ({
+          ...m,
+          metrics: m.metrics ? migrateMetrics(m.metrics) : undefined,
+        })),
+      )
       setSystemPrompt(session.systemPrompt || '')
       setDefaultParameters(session.defaultParameters || DEFAULT_PARAMETERS)
       setSetupCollapsed(true)
@@ -255,11 +281,13 @@ export default function PlaygroundPage() {
   }
 
   const gridColsClass =
-    selectedModels.length === 3
-      ? 'grid-cols-1 md:grid-cols-3'
-      : selectedModels.length === 2
-        ? 'grid-cols-1 md:grid-cols-2'
-        : 'grid-cols-1'
+    selectedModels.length === 4
+      ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+      : selectedModels.length === 3
+        ? 'grid-cols-1 md:grid-cols-3'
+        : selectedModels.length === 2
+          ? 'grid-cols-1 md:grid-cols-2'
+          : 'grid-cols-1'
 
   return (
     <div className="flex h-[calc(100vh-3.5rem)] flex-col md:h-screen">

@@ -20,8 +20,8 @@ interface ChatColumnProps {
   readonly onParametersChange: (params: IPlaygroundParameters) => void
   readonly onStop: () => void
   readonly fastestMetrics?: {
-    readonly ttft: string | null
-    readonly tps: string | null
+    readonly contentTtft: string | null
+    readonly contentTps: string | null
   }
   readonly className?: string
 }
@@ -100,8 +100,8 @@ export function ChatColumn({
             isFastest={
               msg.metrics
                 ? {
-                    ttft: fastestMetrics?.ttft === msg.modelId,
-                    tps: fastestMetrics?.tps === msg.modelId,
+                    contentTtft: fastestMetrics?.contentTtft === msg.modelId,
+                    contentTps: fastestMetrics?.contentTps === msg.modelId,
                   }
                 : undefined
             }
