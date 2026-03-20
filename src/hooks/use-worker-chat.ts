@@ -31,6 +31,8 @@ export function useWorkerChat(options: UseWorkerChatOptions) {
   const workerRef = useRef<Worker | null>(null)
   const resolveRef = useRef<((msg: IPlaygroundMessage | null) => void) | null>(null)
   const isStreamingRef = useRef(false)
+  const modelIdRef = useRef(options.modelId)
+  modelIdRef.current = options.modelId
 
   useEffect(() => {
     workerRef.current = createStreamWorker()
@@ -47,7 +49,7 @@ export function useWorkerChat(options: UseWorkerChatOptions) {
           role: 'assistant',
           content: msg.content,
           reasoning: msg.reasoning || undefined,
-          modelId: options.modelId,
+          modelId: modelIdRef.current,
           metrics: msg.metrics,
         }
         isStreamingRef.current = false
