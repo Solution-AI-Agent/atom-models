@@ -1,9 +1,12 @@
 export interface IPlaygroundMessageMetrics {
-  readonly ttft: number
+  readonly reasoningTtft: number | null
+  readonly reasoningTps: number | null
+  readonly reasoningTokens: number
+  readonly contentTtft: number
+  readonly contentTps: number
+  readonly contentTokens: number
   readonly totalTime: number
-  readonly tps: number
   readonly inputTokens: number
-  readonly outputTokens: number
   readonly estimatedCost: number
 }
 
@@ -80,6 +83,7 @@ export interface IPlaygroundChatStreamEvent {
   readonly usage?: {
     readonly promptTokens: number
     readonly completionTokens: number
+    readonly reasoningTokens?: number
   }
   readonly error?: string
 }
