@@ -14,15 +14,6 @@ interface StreamChatOptions {
   readonly thinkingMode?: boolean
 }
 
-// For thinking models, boost max_tokens so reasoning doesn't starve content.
-// effort controls how much reasoning the model does; the boosted budget
-// ensures there's always room for the actual answer.
-const THINKING_MAX_TOKENS_MULTIPLIER: Record<string, number> = {
-  low: 1.5,
-  medium: 2.0,
-  high: 3.0,
-}
-
 export async function streamChatCompletion(
   options: StreamChatOptions,
 ): Promise<Response> {
@@ -30,16 +21,6 @@ export async function streamChatCompletion(
   if (!apiKey) {
     throw new Error('OPENROUTER_API_KEY environment variable is not set')
   }
-
-  const effectiveMaxTokens = options.thinkingMode
-    ? Math.min(
-        Math.floor(
-          options.parameters.maxTokens *
-            (THINKING_MAX_TOKENS_MULTIPLIER[options.parameters.reasoningEffort] ?? 1.5),
-        ),
-        128000,
-      )
-    : options.parameters.maxTokens
 
   const response = await fetch(OPENROUTER_API_URL, {
     method: 'POST',
@@ -52,7 +33,7 @@ export async function streamChatCompletion(
       model: options.model,
       messages: options.messages,
       temperature: options.parameters.temperature,
-      max_tokens: effectiveMaxTokens,
+      max_tokens: options.parameters.maxTokens,
       top_p: options.parameters.topP,
       ...(options.thinkingMode
         ? { reasoning: { effort: options.parameters.reasoningEffort } }
