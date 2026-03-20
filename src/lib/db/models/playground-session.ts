@@ -22,12 +22,20 @@ export interface IPlaygroundSessionDocument extends Document {
     reasoning?: string
     modelId?: mongoose.Types.ObjectId
     metrics?: {
-      ttft: number
-      totalTime: number
-      tps: number
-      inputTokens: number
-      outputTokens: number
-      estimatedCost: number
+      // Legacy
+      ttft?: number
+      totalTime?: number
+      tps?: number
+      inputTokens?: number
+      outputTokens?: number
+      estimatedCost?: number
+      // New
+      reasoningTtft?: number
+      reasoningTps?: number
+      reasoningTokens?: number
+      contentTtft?: number
+      contentTps?: number
+      contentTokens?: number
     }
     createdAt: Date
   }[]
@@ -61,12 +69,20 @@ const PlaygroundSessionSchema = new Schema({
     reasoning: { type: String },
     modelId:   { type: Schema.Types.ObjectId, ref: 'Model' },
     metrics: {
-      ttft:           Number,
-      totalTime:      Number,
-      tps:            Number,
-      inputTokens:    Number,
-      outputTokens:   Number,
-      estimatedCost:  Number,
+      // Legacy fields (kept for existing documents)
+      ttft:            Number,
+      totalTime:       Number,
+      tps:             Number,
+      inputTokens:     Number,
+      outputTokens:    Number,
+      estimatedCost:   Number,
+      // New split fields
+      reasoningTtft:   Number,
+      reasoningTps:    Number,
+      reasoningTokens: Number,
+      contentTtft:     Number,
+      contentTps:      Number,
+      contentTokens:   Number,
     },
     createdAt: { type: Date, default: Date.now },
   }],

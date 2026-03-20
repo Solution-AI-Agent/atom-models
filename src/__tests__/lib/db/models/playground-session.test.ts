@@ -23,4 +23,17 @@ describe('PlaygroundSession Model', () => {
     expect(schemaPaths['defaultParameters.maxTokens']).toBeDefined()
     expect(schemaPaths['defaultParameters.topP']).toBeDefined()
   })
+
+  it('should have new split metrics fields in message schema', async () => {
+    const { PlaygroundSessionModel } = await import(
+      '@/lib/db/models/playground-session'
+    )
+    const schemaPaths = PlaygroundSessionModel.schema.subpaths
+    expect(schemaPaths['messages.metrics.reasoningTtft']).toBeDefined()
+    expect(schemaPaths['messages.metrics.reasoningTps']).toBeDefined()
+    expect(schemaPaths['messages.metrics.reasoningTokens']).toBeDefined()
+    expect(schemaPaths['messages.metrics.contentTtft']).toBeDefined()
+    expect(schemaPaths['messages.metrics.contentTps']).toBeDefined()
+    expect(schemaPaths['messages.metrics.contentTokens']).toBeDefined()
+  })
 })
