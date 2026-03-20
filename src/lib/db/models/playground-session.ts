@@ -88,7 +88,7 @@ const PlaygroundSessionSchema = new Schema({
   }],
   defaultParameters: {
     temperature:     { type: Number, default: 0.7 },
-    maxTokens:       { type: Number, default: 16384 },
+    maxTokens:       { type: Number, default: 4096 },
     topP:            { type: Number, default: 1.0 },
     reasoningEffort: { type: String, enum: ['low', 'medium', 'high'], default: 'low' },
   },
