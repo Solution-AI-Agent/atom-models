@@ -12,7 +12,7 @@ interface MessageBubbleProps {
   readonly isStreaming?: boolean
   readonly isReasoningPhase?: boolean
   readonly metrics?: IPlaygroundMessageMetrics
-  readonly isFastest?: { readonly ttft: boolean; readonly tps: boolean }
+  readonly isFastest?: { readonly contentTtft: boolean; readonly contentTps: boolean }
 }
 
 export function MessageBubble({
