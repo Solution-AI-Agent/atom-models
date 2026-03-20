@@ -85,6 +85,7 @@ export async function POST(request: Request) {
         const encoder = new TextEncoder()
         let closed = false
         let buffer = ''
+        let reasoningChunkCount = 0
 
         function closeStream() {
           if (!closed) {
@@ -93,12 +94,62 @@ export async function POST(request: Request) {
           }
         }
 
+        function processSSELine(line: string) {
+          if (!line.startsWith('data: ')) return
+          const data = line.slice(6).trim()
+
+          if (data === '[DONE]') {
+            if (buffer.trim()) processSSELine(buffer)
+            controller.enqueue(encoder.encode('data: [DONE]\n\n'))
+            closeStream()
+            return
+          }
+
+          try {
+            const parsed = JSON.parse(data)
+            const delta = parsed.choices?.[0]?.delta
+            const content = delta?.content || ''
+            const reasoning = delta?.reasoning || ''
+            const usage = parsed.usage || null
+
+            if (reasoning) {
+              reasoningChunkCount++
+              controller.enqueue(
+                encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
+              )
+            }
+            if (content) {
+              controller.enqueue(
+                encoder.encode(`data: ${JSON.stringify({ type: 'token', content })}\n\n`),
+              )
+            }
+            if (usage) {
+              const event = {
+                type: 'done',
+                usage: {
+                  promptTokens: usage.prompt_tokens,
+                  completionTokens: usage.completion_tokens,
+                  reasoningTokens: usage.reasoning_tokens ?? reasoningChunkCount,
+                },
+              }
+              controller.enqueue(
+                encoder.encode(`data: ${JSON.stringify(event)}\n\n`),
+              )
+            }
+          } catch {
+            // skip unparseable lines
+          }
+        }
+
         try {
           while (true) {
             const { done, value } = await reader.read()
             if (done) {
-              controller.enqueue(encoder.encode('data: [DONE]\n\n'))
-              closeStream()
+              if (buffer.trim()) processSSELine(buffer)
+              if (!closed) {
+                controller.enqueue(encoder.encode('data: [DONE]\n\n'))
+                closeStream()
+              }
               break
             }
 
@@ -107,47 +158,8 @@ export async function POST(request: Request) {
             buffer = lines.pop() || ''
 
             for (const line of lines) {
-              if (!line.startsWith('data: ')) continue
-              const data = line.slice(6).trim()
-
-              if (data === '[DONE]') {
-                controller.enqueue(encoder.encode('data: [DONE]\n\n'))
-                closeStream()
-                return
-              }
-
-              try {
-                const parsed = JSON.parse(data)
-                const delta = parsed.choices?.[0]?.delta
-                const content = delta?.content || ''
-                const reasoning = delta?.reasoning || ''
-                const usage = parsed.usage || null
-
-                if (usage) {
-                  const event = {
-                    type: 'done',
-                    usage: {
-                      promptTokens: usage.prompt_tokens,
-                      completionTokens: usage.completion_tokens,
-                    },
-                  }
-                  controller.enqueue(
-                    encoder.encode(`data: ${JSON.stringify(event)}\n\n`),
-                  )
-                }
-                if (!usage && reasoning) {
-                  controller.enqueue(
-                    encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
-                  )
-                }
-                if (!usage && content) {
-                  controller.enqueue(
-                    encoder.encode(`data: ${JSON.stringify({ type: 'token', content })}\n\n`),
-                  )
-                }
-              } catch {
-                // skip unparseable lines
-              }
+              if (closed) return
+              processSSELine(line)
             }
           }
         } catch (error) {

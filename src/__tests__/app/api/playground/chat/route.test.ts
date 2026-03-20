@@ -112,4 +112,108 @@ describe('POST /api/playground/chat', () => {
     const response = await POST(request)
     expect(response.status).toBe(400)
   })
+
+  it('should not drop content when usage arrives in same chunk', async () => {
+    const mockBody = new ReadableStream({
+      start(controller) {
+        controller.enqueue(
+          new TextEncoder().encode(
+            'data: {"choices":[{"delta":{"content":"final"}}],"usage":{"prompt_tokens":10,"completion_tokens":5}}\n\n',
+          ),
+        )
+        controller.enqueue(new TextEncoder().encode('data: [DONE]\n\n'))
+        controller.close()
+      },
+    })
+    mockedStream.mockResolvedValueOnce(
+      new Response(mockBody, { status: 200, headers: { 'Content-Type': 'text/event-stream' } }),
+    )
+
+    const request = new Request('http://localhost/api/playground/chat', {
+      method: 'POST',
+      body: JSON.stringify(makeValidBody()),
+    })
+
+    const response = await POST(request)
+    const text = await response.text()
+    const events = text
+      .split('\n\n')
+      .filter((l) => l.startsWith('data: ') && !l.includes('[DONE]'))
+      .map((l) => JSON.parse(l.slice(6)))
+
+    const tokenEvent = events.find((e: any) => e.type === 'token')
+    const doneEvent = events.find((e: any) => e.type === 'done')
+    expect(tokenEvent).toBeDefined()
+    expect(tokenEvent.content).toBe('final')
+    expect(doneEvent).toBeDefined()
+    expect(doneEvent.usage.promptTokens).toBe(10)
+  })
+
+  it('should flush buffer when reader signals done', async () => {
+    const mockBody = new ReadableStream({
+      start(controller) {
+        controller.enqueue(
+          new TextEncoder().encode(
+            'data: {"choices":[{"delta":{"content":"buffered"}}]}',
+          ),
+        )
+        controller.close()
+      },
+    })
+    mockedStream.mockResolvedValueOnce(
+      new Response(mockBody, { status: 200, headers: { 'Content-Type': 'text/event-stream' } }),
+    )
+
+    const request = new Request('http://localhost/api/playground/chat', {
+      method: 'POST',
+      body: JSON.stringify(makeValidBody()),
+    })
+
+    const response = await POST(request)
+    const text = await response.text()
+    const events = text
+      .split('\n\n')
+      .filter((l) => l.startsWith('data: ') && !l.includes('[DONE]'))
+      .map((l) => JSON.parse(l.slice(6)))
+
+    expect(events.some((e: any) => e.type === 'token' && e.content === 'buffered')).toBe(true)
+  })
+
+  it('should include reasoningTokens in done event', async () => {
+    const mockBody = new ReadableStream({
+      start(controller) {
+        const enc = new TextEncoder()
+        controller.enqueue(enc.encode('data: {"choices":[{"delta":{"reasoning":"think1"}}]}\n\n'))
+        controller.enqueue(enc.encode('data: {"choices":[{"delta":{"reasoning":"think2"}}]}\n\n'))
+        controller.enqueue(enc.encode('data: {"choices":[{"delta":{"content":"answer"}}]}\n\n'))
+        controller.enqueue(
+          enc.encode(
+            'data: {"choices":[],"usage":{"prompt_tokens":50,"completion_tokens":30}}\n\n',
+          ),
+        )
+        controller.enqueue(enc.encode('data: [DONE]\n\n'))
+        controller.close()
+      },
+    })
+    mockedStream.mockResolvedValueOnce(
+      new Response(mockBody, { status: 200, headers: { 'Content-Type': 'text/event-stream' } }),
+    )
+
+    const request = new Request('http://localhost/api/playground/chat', {
+      method: 'POST',
+      body: JSON.stringify(makeValidBody()),
+    })
+
+    const response = await POST(request)
+    const text = await response.text()
+    const events = text
+      .split('\n\n')
+      .filter((l) => l.startsWith('data: ') && !l.includes('[DONE]'))
+      .map((l) => JSON.parse(l.slice(6)))
+
+    const doneEvent = events.find((e: any) => e.type === 'done')
+    expect(doneEvent).toBeDefined()
+    expect(doneEvent.usage.reasoningTokens).toBe(2)
+    expect(doneEvent.usage.completionTokens).toBe(30)
+  })
 })
