@@ -11,6 +11,13 @@ interface StreamChatOptions {
   readonly model: string
   readonly messages: readonly ChatMessage[]
   readonly parameters: IPlaygroundParameters
+  readonly thinkingMode?: boolean
+}
+
+const REASONING_MAX_TOKENS_RATIO: Record<string, number> = {
+  low: 0.25,
+  medium: 0.5,
+  high: 0.75,
 }
 
 export async function streamChatCompletion(
@@ -34,7 +41,17 @@ export async function streamChatCompletion(
       temperature: options.parameters.temperature,
       max_tokens: options.parameters.maxTokens,
       top_p: options.parameters.topP,
-      reasoning: { effort: options.parameters.reasoningEffort },
+      ...(options.thinkingMode
+        ? {
+            reasoning: {
+              effort: options.parameters.reasoningEffort,
+              max_tokens: Math.floor(
+                options.parameters.maxTokens *
+                  (REASONING_MAX_TOKENS_RATIO[options.parameters.reasoningEffort] ?? 0.25),
+              ),
+            },
+          }
+        : {}),
       stream: true,
       stream_options: { include_usage: true },
     }),
