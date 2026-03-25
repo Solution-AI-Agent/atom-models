@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { Plus, History } from 'lucide-react'
+import { Plus, History, RotateCcw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
@@ -15,13 +15,17 @@ import type { IPlaygroundSessionSummary } from '@/lib/types/playground'
 interface PlaygroundHeaderProps {
   readonly currentSessionId: string | null
   readonly onNewSession: () => void
+  readonly onClearConversation: () => void
   readonly onSelectSession: (id: string) => void
+  readonly hasMessages: boolean
 }
 
 export function PlaygroundHeader({
   currentSessionId,
   onNewSession,
+  onClearConversation,
   onSelectSession,
+  hasMessages,
 }: PlaygroundHeaderProps) {
   const [sessions, setSessions] = useState<readonly IPlaygroundSessionSummary[]>([])
   const [open, setOpen] = useState(false)
@@ -61,6 +65,12 @@ export function PlaygroundHeader({
     <div className="flex items-center justify-between border-b px-4 py-3">
       <h1 className="text-lg font-semibold">플레이그라운드</h1>
       <div className="flex items-center gap-2">
+        {hasMessages && (
+          <Button variant="outline" size="sm" onClick={onClearConversation}>
+            <RotateCcw className="mr-1 h-4 w-4" />
+            대화 초기화
+          </Button>
+        )}
         <Button variant="outline" size="sm" onClick={onNewSession}>
           <Plus className="mr-1 h-4 w-4" />
           새 세션

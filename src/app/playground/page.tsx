@@ -221,6 +221,15 @@ export default function PlaygroundPage() {
     }
   }
 
+  function handleClearConversation() {
+    for (const s of streams) {
+      s.stop()
+      s.reset()
+    }
+    setSessionId(null)
+    setMessages([])
+  }
+
   function handleNewSession() {
     for (const s of streams) {
       s.stop()
@@ -302,7 +311,9 @@ export default function PlaygroundPage() {
       <PlaygroundHeader
         currentSessionId={sessionId}
         onNewSession={handleNewSession}
+        onClearConversation={handleClearConversation}
         onSelectSession={handleSelectSession}
+        hasMessages={messages.length > 0}
       />
 
       <PlaygroundSetup
