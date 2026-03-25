@@ -35,6 +35,7 @@ export interface IPlaygroundParameters {
   readonly maxTokens: number
   readonly topP: number
   readonly reasoningEffort: ReasoningEffort
+  readonly reasoningEnabled: boolean
 }
 
 export const DEFAULT_PARAMETERS: IPlaygroundParameters = {
@@ -42,6 +43,7 @@ export const DEFAULT_PARAMETERS: IPlaygroundParameters = {
   maxTokens: 4096,
   topP: 1.0,
   reasoningEffort: 'low',
+  reasoningEnabled: true,
 }
 
 export interface IPlaygroundSession {

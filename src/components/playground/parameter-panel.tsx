@@ -2,6 +2,7 @@
 
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
+import { Switch } from '@/components/ui/switch'
 import type { IPlaygroundParameters, ReasoningEffort } from '@/lib/types/playground'
 
 interface ParameterPanelProps {
@@ -58,20 +59,29 @@ export function ParameterPanel({ parameters, onChange, label }: ParameterPanelPr
         </div>
         <div>
           <Label className="text-xs">Reasoning</Label>
-          <select
-            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs"
-            value={parameters.reasoningEffort}
-            onChange={(e) =>
-              onChange({
-                ...parameters,
-                reasoningEffort: e.target.value as ReasoningEffort,
-              })
-            }
-          >
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
+          <div className="flex items-center gap-2">
+            <Switch
+              checked={parameters.reasoningEnabled}
+              onCheckedChange={(checked) =>
+                onChange({ ...parameters, reasoningEnabled: checked })
+              }
+            />
+            <select
+              className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs disabled:cursor-not-allowed disabled:opacity-50"
+              value={parameters.reasoningEffort}
+              disabled={!parameters.reasoningEnabled}
+              onChange={(e) =>
+                onChange({
+                  ...parameters,
+                  reasoningEffort: e.target.value as ReasoningEffort,
+                })
+              }
+            >
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>

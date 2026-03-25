@@ -222,6 +222,10 @@ export default function PlaygroundPage() {
   }
 
   function handleNewSession() {
+    for (const s of streams) {
+      s.stop()
+      s.reset()
+    }
     setSessionId(null)
     setSelectedModels([])
     setSystemPrompt('')
@@ -232,6 +236,10 @@ export default function PlaygroundPage() {
   }
 
   async function handleSelectSession(id: string) {
+    for (const s of streams) {
+      s.stop()
+      s.reset()
+    }
     try {
       const res = await fetch(`/api/playground/sessions/${id}`)
       const json = await res.json()

@@ -12,6 +12,7 @@ interface StreamChatOptions {
   readonly messages: readonly ChatMessage[]
   readonly parameters: IPlaygroundParameters
   readonly thinkingMode?: boolean
+  readonly reasoningEnabled?: boolean
 }
 
 export async function streamChatCompletion(
@@ -36,7 +37,9 @@ export async function streamChatCompletion(
       max_tokens: options.parameters.maxTokens,
       top_p: options.parameters.topP,
       ...(options.thinkingMode
-        ? { reasoning: { effort: options.parameters.reasoningEffort } }
+        ? options.reasoningEnabled === false
+          ? { reasoning: { effort: 'none' } }
+          : { reasoning: { effort: options.parameters.reasoningEffort } }
         : {}),
       stream: true,
       stream_options: { include_usage: true },

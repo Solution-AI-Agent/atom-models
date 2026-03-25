@@ -15,6 +15,7 @@ const createSessionSchema = z.object({
       maxTokens: z.number().int().min(1).max(128000).optional(),
       topP: z.number().min(0).max(1).optional(),
       reasoningEffort: z.enum(['low', 'medium', 'high']).optional(),
+      reasoningEnabled: z.boolean().optional(),
     }).optional(),
   })).min(1).max(3),
   systemPrompt: z.string().max(10000).default(''),
@@ -23,6 +24,7 @@ const createSessionSchema = z.object({
     maxTokens: z.number().int().min(1).max(128000),
     topP: z.number().min(0).max(1),
     reasoningEffort: z.enum(['low', 'medium', 'high']),
+    reasoningEnabled: z.boolean().default(true),
   }),
 })
 

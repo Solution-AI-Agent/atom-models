@@ -13,6 +13,7 @@ export interface IPlaygroundSessionDocument extends Document {
       maxTokens?: number
       topP?: number
       reasoningEffort?: 'low' | 'medium' | 'high'
+      reasoningEnabled?: boolean
     }
   }[]
   systemPrompt: string
@@ -44,6 +45,7 @@ export interface IPlaygroundSessionDocument extends Document {
     maxTokens: number
     topP: number
     reasoningEffort: 'low' | 'medium' | 'high'
+    reasoningEnabled: boolean
   }
 }
 
@@ -56,10 +58,11 @@ const PlaygroundSessionSchema = new Schema({
     openRouterModelId: { type: String, required: true },
     colorCode:         { type: String, default: '#888888' },
     parameters: {
-      temperature:     Number,
-      maxTokens:       Number,
-      topP:            Number,
-      reasoningEffort: { type: String, enum: ['low', 'medium', 'high'] },
+      temperature:      Number,
+      maxTokens:        Number,
+      topP:             Number,
+      reasoningEffort:  { type: String, enum: ['low', 'medium', 'high'] },
+      reasoningEnabled: { type: Boolean, default: true },
     },
   }],
   systemPrompt: { type: String, default: '' },
@@ -87,10 +90,11 @@ const PlaygroundSessionSchema = new Schema({
     createdAt: { type: Date, default: Date.now },
   }],
   defaultParameters: {
-    temperature:     { type: Number, default: 0.7 },
-    maxTokens:       { type: Number, default: 4096 },
-    topP:            { type: Number, default: 1.0 },
-    reasoningEffort: { type: String, enum: ['low', 'medium', 'high'], default: 'low' },
+    temperature:      { type: Number, default: 0.7 },
+    maxTokens:        { type: Number, default: 4096 },
+    topP:             { type: Number, default: 1.0 },
+    reasoningEffort:  { type: String, enum: ['low', 'medium', 'high'], default: 'low' },
+    reasoningEnabled: { type: Boolean, default: true },
   },
 }, {
   timestamps: true,
