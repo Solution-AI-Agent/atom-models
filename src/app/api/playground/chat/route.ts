@@ -65,12 +65,15 @@ export async function POST(request: Request) {
       )
     }
 
+    const thinkingMode = (model as any).capabilities?.thinkingMode === true
+    const reasoningEnabled = validated.parameters.reasoningEnabled
+
     const openRouterResponse = await streamChatCompletion({
       model: validated.openRouterModelId,
       messages: validated.messages,
       parameters: validated.parameters,
-      thinkingMode: (model as any).capabilities?.thinkingMode === true,
-      reasoningEnabled: validated.parameters.reasoningEnabled,
+      thinkingMode,
+      reasoningEnabled,
     })
 
     if (!openRouterResponse.body) {
@@ -117,9 +120,11 @@ export async function POST(request: Request) {
 
             if (reasoning) {
               reasoningChunkCount++
-              controller.enqueue(
-                encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
-              )
+              if (reasoningEnabled) {
+                controller.enqueue(
+                  encoder.encode(`data: ${JSON.stringify({ type: 'reasoning', content: reasoning })}\n\n`),
+                )
+              }
             }
             if (content) {
               controller.enqueue(

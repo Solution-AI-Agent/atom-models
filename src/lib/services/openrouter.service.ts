@@ -36,10 +36,8 @@ export async function streamChatCompletion(
       temperature: options.parameters.temperature,
       max_tokens: options.parameters.maxTokens,
       top_p: options.parameters.topP,
-      ...(options.thinkingMode
-        ? options.reasoningEnabled === false
-          ? { reasoning: { effort: 'none' } }
-          : { reasoning: { effort: options.parameters.reasoningEffort } }
+      ...(options.thinkingMode && options.reasoningEnabled !== false
+        ? { reasoning: { effort: options.parameters.reasoningEffort } }
         : {}),
       stream: true,
       stream_options: { include_usage: true },
