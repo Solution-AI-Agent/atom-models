@@ -7,12 +7,15 @@ const nextConfig: NextConfig = {
   // standalone output is for Docker (Railway); skip for Cloudflare Pages
   ...(!isCloudflare && { output: "standalone" }),
   images: { unoptimized: true },
-  rewrites: async () => [
-    {
-      source: "/api/:path*",
-      destination: `${apiUrl}/api/:path*`,
-    },
-  ],
+  // Cloudflare에서만 API를 Railway 백엔드로 프록시
+  ...(isCloudflare && {
+    rewrites: async () => [
+      {
+        source: "/api/:path*",
+        destination: `${apiUrl}/api/:path*`,
+      },
+    ],
+  }),
 };
 
 export default nextConfig;
